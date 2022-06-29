@@ -1,0 +1,10 @@
+// Partial SCSS file forwarding all partials under '/sass'
+
+
+
+// === FORWARD ================================\
+@forward 'colors';
+@forward 'global';
+@forward 'resets';
+@forward 'typefaces';
+@forward 'variables';
