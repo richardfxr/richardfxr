@@ -1,4 +1,6 @@
 // === IMPORTS ============================
+// React
+import { NavLink } from 'react-router-dom';
 // Sass
 import './Navbar.scss';
 // SVGs
@@ -16,10 +18,10 @@ export default function Navbar({ setCurrentPage }) {
                 <Logo className='logo'/>
                 <nav>
                     <ul>
-                        <li><NavLink href="/" label="Home." setCurrentPage={setCurrentPage}/></li>
-                        <li><NavLink href="/projects" label="Projects." setCurrentPage={setCurrentPage}/></li>
-                        <li><NavLink href="/about" label="About me." setCurrentPage={setCurrentPage}/></li>
-                        <li><NavLink href="/info" label="Site information." setCurrentPage={setCurrentPage}/></li>
+                        <li><NavigationLink href="/" label="Home." setCurrentPage={setCurrentPage}/></li>
+                        <li><NavigationLink href="/projects" label="Projects." setCurrentPage={setCurrentPage}/></li>
+                        <li><NavigationLink href="/about" label="About me." setCurrentPage={setCurrentPage}/></li>
+                        <li><NavigationLink href="/info" label="Site information." setCurrentPage={setCurrentPage}/></li>
                     </ul>
                 </nav>
             </header>
@@ -30,14 +32,14 @@ export default function Navbar({ setCurrentPage }) {
 
 
 // === INTERNAL COMPONENTS ================
-function NavLink({ href, label, setCurrentPage }) {
+function NavigationLink({ href, label, setCurrentPage }) {
     return (
-        <a href={href} aria-label={label} onClick={() => {setCurrentPage(href)}}>
+        <NavLink to={href} aria-label={label} onClick={() => {setCurrentPage(href)}}>
             {/* conditional icon */}
             {href === "/" && <HomeIcon />}
             {href === "/projects" && <ProjectsIcon />}
             {href === "/about" && <AboutIcon />}
             {href === "/info" && <InfoIcon />}
-        </a>
+        </NavLink>
     )
 }

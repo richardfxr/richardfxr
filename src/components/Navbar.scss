@@ -71,7 +71,7 @@
                 padding: calc((var(--_link-height) - var(--_icon-height)) / 2)
                          calc((var(--_link-width) - var(--_icon-width)) / 2);
 
-                &.current, &:hover, &:focus {
+                &.active, &:hover, &:focus {
                     .stroke--md {
                         // change page icon stroke color
                         stroke: var(--clr-1000);
