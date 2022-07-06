@@ -22,6 +22,7 @@ export default function Navbar({ setCurrentPage }) {
                         <li><NavigationLink href="/projects" label="Projects." setCurrentPage={setCurrentPage}/></li>
                         <li><NavigationLink href="/about" label="About me." setCurrentPage={setCurrentPage}/></li>
                         <li><NavigationLink href="/info" label="Site information." setCurrentPage={setCurrentPage}/></li>
+                        <li className='magicLine' aria-hidden="true"></li>
                     </ul>
                 </nav>
             </header>
