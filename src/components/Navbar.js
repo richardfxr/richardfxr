@@ -11,26 +11,28 @@ import {ReactComponent as InfoIcon} from '../assets/SVGs/info.svg';
 
 export default function Navbar({ setCurrentPage }) {
     return (
-        <header className='navbar'>
-            <Logo />
-            <nav>
-                <ul>
-                    <li><NavLink href="/" text="Home." setCurrentPage={setCurrentPage}/></li>
-                    <li><NavLink href="/projects" text="Projects." setCurrentPage={setCurrentPage}/></li>
-                    <li><NavLink href="/about" text="About me." setCurrentPage={setCurrentPage}/></li>
-                    <li><NavLink href="/info" text="Site information." setCurrentPage={setCurrentPage}/></li>
-                </ul>
-            </nav>
-        </header>
+        <div className='navbar'>
+            <header>
+                <Logo className='logo'/>
+                <nav>
+                    <ul>
+                        <li><NavLink href="/" label="Home." setCurrentPage={setCurrentPage}/></li>
+                        <li><NavLink href="/projects" label="Projects." setCurrentPage={setCurrentPage}/></li>
+                        <li><NavLink href="/about" label="About me." setCurrentPage={setCurrentPage}/></li>
+                        <li><NavLink href="/info" label="Site information." setCurrentPage={setCurrentPage}/></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
     )
 }
 
 
 
 // === INTERNAL COMPONENTS ================
-function NavLink({ href, text, setCurrentPage }) {
+function NavLink({ href, label, setCurrentPage }) {
     return (
-        <a href={href} arialabel={text} onClick={() => {setCurrentPage(href)}}>
+        <a href={href} aria-label={label} onClick={() => {setCurrentPage(href)}}>
             {/* conditional icon */}
             {href === "/" && <HomeIcon />}
             {href === "/projects" && <ProjectsIcon />}
