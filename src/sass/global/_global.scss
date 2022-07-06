@@ -10,6 +10,10 @@
 /* ============================================
    GLOBAL
    ============================================ */
+html {
+   background-color: var(--clr-100);
+}
+
 body {
    margin: 0;
    font-family: 'Manrope', sans-serif;
@@ -24,13 +28,15 @@ code {
 
 
 svg {
+   display: block;
+
    .stroke {
       &--md {
          fill: none;
          stroke: var(--clr-600);
          stroke-linecap: round;
          stroke-linejoin: round;
-         stroke-width: 2px;
+         stroke-width: 2.5px;
       }
    }
 }
