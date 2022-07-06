@@ -1,12 +1,83 @@
 // === NAVBAR =============================
 .navbar {
-    .logo {
-        fill: var(--clr-rblue);
-    }
+    // internal variables
+    --_bradius-special: 35px;         // size of the one large border radius
+    --_gradient-end: 150px;           // position of the var(--clr-300) point in the gradient border
+    --_logo-width: 34px;
+    --_logo-height: 35px;
+    --_logo-pad: 22px;
+    --_link-width: 100%;              // width of the <a> that contain page icons
+    --_link-height: 55px;             // height of the <a> that contain page icons
+    --_icon-width: 1.3rem;
+    --_icon-height: 1.3rem;
 
-    nav {
-        a {
-            display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: calc((100% - min(100%, var(--max-width))) / 2);
+    
+    width: var(--nav-size);
+
+    overflow-y: auto;
+
+    header {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        position: relative;
+
+        min-height: calc(100% - (2 * var(--pad-sm)));
+
+        border: solid var(--border-width) transparent;
+        border-radius: var(--bradius-sm) var(--_bradius-special) var(--bradius-sm) var(--bradius-sm);
+        margin: var(--pad-sm);
+
+        // background color to cover ::before gradient to form border
+        background: var(--clr-100);
+        background-clip: padding-box;
+
+        &::before {
+            // background gradient clipped to create gradient border
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: calc(-1 * var(--border-width));
+            border-radius: inherit;
+            background: linear-gradient(180deg, var(--clr-rblue) 0px, var(--clr-300) var(--_gradient-end));
+        }
+        
+        .logo {
+            // 20px top padding and moved 1px to the left to appear more centered
+            padding: var(--_logo-pad)
+                     calc((var(--_link-width) - var(--_logo-width)) / 2 + 1px)
+                     calc(var(--_logo-pad) / 2)
+                     calc((var(--_link-width) - var(--_logo-width)) / 2 - 1px);
+
+            &__path {
+                fill: var(--clr-rblue);
+            }
+        }
+
+        nav {
+            // add slight padding to top and bottom of <ul>
+            padding: calc(var(--_link-width) - var(--_link-height)) 0;
+            margin-top: auto;
+
+            a {
+                display: block;
+                
+                // calculate appropriate padding so icons are the specified size
+                padding: calc((var(--_link-height) - var(--_icon-height)) / 2)
+                         calc((var(--_link-width) - var(--_icon-width)) / 2);
+
+                &.current, &:hover, &:focus {
+                    .stroke--md {
+                        // change page icon stroke color
+                        stroke: var(--clr-1000);
+                    }
+                }
+            }
         }
     }
 }
