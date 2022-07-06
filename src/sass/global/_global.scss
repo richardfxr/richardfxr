@@ -10,6 +10,19 @@
 /* ============================================
    GLOBAL
    ============================================ */
+body {
+   margin: 0;
+   font-family: 'Manrope', sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+
+code {
+   font-family: 'Courier New', monospace;
+}
+
+
 svg {
    .stroke {
       &--md {
