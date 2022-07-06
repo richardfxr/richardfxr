@@ -10,3 +10,14 @@
 /* ============================================
    GLOBAL
    ============================================ */
+svg {
+   .stroke {
+      &--md {
+         fill: none;
+         stroke: var(--clr-600);
+         stroke-linecap: round;
+         stroke-linejoin: round;
+         stroke-width: 2px;
+      }
+   }
+}
