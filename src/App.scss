@@ -1,0 +1,15 @@
+/* ============================================
+   APP
+   ============================================ */
+.App {
+    max-width: var(--max-width);
+
+    padding-left: var(--nav-size);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    height: 200vh;
+    // border: 1px solid red;
+}
