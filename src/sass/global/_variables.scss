@@ -14,4 +14,13 @@
    --border-width: 1.4px;
    --bradius-xs: 2px;
    --bradius-sm: 6px;
+
+   // === TRANSITIONS ========================
+   // transitions
+   --trans-standard: var(--transTime-standard) ease;
+   // timings
+   --transTime-standard: 0.15s;
+   --transTime-slowest: 0.35s;
+   // timing functions
+   --transFunc-enhancedEase: cubic-bezier(.57,-0.01,.22,1.04);
 }

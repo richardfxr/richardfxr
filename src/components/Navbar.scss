@@ -61,10 +61,6 @@
         }
 
         nav {
-            // positioning and z-index to allow .magicLine::before to hide behind .magicLine
-            position: relative;
-            z-index: 2;
-
             // add slight padding to top and bottom of <ul>
             padding: calc(var(--_link-width) - var(--_link-height)) 0;
             margin-top: auto;
@@ -90,8 +86,26 @@
             }
 
             .magicLine {
+                // styling that applies to both #magicLineVrt and #magicLineHrz
                 position: absolute;
-                // no z-index to allow ::before to hide behind
+
+                // transition on transform change (set through JS)
+                transition: transform var(--transTime-slowest) var(--transFunc-enhancedEase);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+
+                    width: var(--_indicator-size);
+                    height: var(--_indicator-size);
+
+                    background-color: #fff;
+                    // 1px border to avoid clipping AA bug on Firefox
+                    border: solid 1px var(--clr-100);
+                }
+            }
+
+            #magicLineVrt {
                 top: 0;
                 right: calc(-1 * var(--border-width));
 
@@ -101,19 +115,11 @@
                 background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--clr-1000) 30%, var(--clr-1000) 70%, rgba(255, 255, 255, 0) 100%);
             
                 &::before {
-                    content: "";
-                    position: absolute;
-                    z-index: -1;
                     // top margin to vertically center ::before
                     top: calc((var(--_link-height) - var(--_indicator-size)) / 2);
                     // slight shift right to avoid AA issues
-                    right: calc(-1 * (var(--_indicator-size) / 2) + (var(--border-width) / 2)); 
-                    width: var(--_indicator-size);
-                    height: var(--_indicator-size);
+                    right: calc(-1 * (var(--_indicator-size) / 2) + var(--border-width)); 
 
-                    background-color: #fff;
-                    // 1px border to avoid clipping AA bug on Firefox
-                    border: solid 1px var(--clr-100);
                     border-top-left-radius: var(--bradius-xs);
 
                     // rotate square to become a rhombus
@@ -121,6 +127,11 @@
                     // clip rhombus to become a triangle
                     clip-path: polygon(0 0, 0% 100%, 100% 0);
                 }
+            }
+
+            #magicLineHrz {
+                // hide horizontal magic line when showing vertical <NavBar /> layout
+                display: none;
             }
         }
     }
