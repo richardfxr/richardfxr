@@ -1,7 +1,6 @@
 // === IMPORTS ============================
 // React
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
 // Sass
 import './App.scss';
 // pages
@@ -13,12 +12,10 @@ import About from './pages/About';
 import Info from './pages/Info';
 
 function App() {
-    const [currentPage, setCurrentPage] = useState('home')
-
     return (
         <div className="App">
             <BrowserRouter>
-                <Navbar setCurrentPage={setCurrentPage} />
+                <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/projects" element={<Projects />} />
