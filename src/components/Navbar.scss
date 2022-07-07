@@ -77,11 +77,22 @@
                 padding: calc((var(--_link-height) - var(--_icon-height)) / 2)
                          calc((var(--_link-width) - var(--_icon-width)) / 2);
 
+                transition: transform var(--trans-standard);
+
                 &.active, &:hover, &:focus {
                     .stroke--md {
                         // change page icon stroke color
                         stroke: var(--clr-1000);
                     }
+                }
+
+                &:focus-visible {
+                    outline: solid var(--outline-width) var(--clr-focus);
+                    border-radius: var(--bradius-xxs);
+                }
+
+                &:active {
+                    transform: var(--active-translateY);
                 }
             }
 
@@ -120,7 +131,7 @@
                     // slight shift right to avoid AA issues
                     right: calc(-1 * (var(--_indicator-size) / 2) + var(--border-width)); 
 
-                    border-top-left-radius: var(--bradius-xs);
+                    border-top-left-radius: var(--bradius-xxs);
 
                     // rotate square to become a rhombus
                     transform: rotate(-45deg);

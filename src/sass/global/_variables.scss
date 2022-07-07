@@ -11,9 +11,17 @@
 
    --pad-sm: 12px;
 
+   // === BORDER & OUTLINE ===================
+   // border
    --border-width: 1.4px;
-   --bradius-xs: 2px;
+   --bradius-xxs: 2px;
+   --bradius-xs: 4px;
    --bradius-sm: 6px;
+   // outline
+   --outline-width: 3px;
+
+   // === TRANSFORMS =========================
+   --active-translateY: translateY(3px);
 
    // === TRANSITIONS ========================
    // transitions
