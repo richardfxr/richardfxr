@@ -38,10 +38,10 @@ export default function Navbar() {
                 <Logo className='logo'/>
                 <nav>
                     <ul ref={navUl} aria-label="main navigation">
-                        <li><NavigationLink href="/" label="Home." /></li>
-                        <li><NavigationLink href="/projects" label="Projects." /></li>
-                        <li><NavigationLink href="/about" label="About me." /></li>
-                        <li><NavigationLink href="/info" label="Site information." /></li>
+                        <li><NavigationLink href="/" label="Home" /></li>
+                        <li><NavigationLink href="/projects" label="Projects" /></li>
+                        <li><NavigationLink href="/about" label="About me" /></li>
+                        <li><NavigationLink href="/info" label="Site information" /></li>
                         <li className='magicLine' id="magicLineVrt" ref={magicLineVrt} aria-hidden="true"></li>
                         <li className='magicLine' id="magicLineHrz" ref={magicLineHrz} aria-hidden="true"></li>
                     </ul>
