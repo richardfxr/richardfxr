@@ -17,14 +17,11 @@ export default function Breadcrumbs() {
     const [breadcrumbs, setBreadcrumbs] = useState([]);
 
     useEffect(() => {
-        console.log('location:', location);
         // parse location string
         let breadcrumbsTemp = location.pathname.split('/');
-        console.log('breadcrumbs(1):', breadcrumbsTemp);
 
         // remove first element from breadcrumbs array since it is always ''
         if (breadcrumbsTemp.length > 1) breadcrumbsTemp.shift();
-        console.log('breadcrumbs(2):', breadcrumbsTemp);
 
         // get corresponding object from routes array
         breadcrumbsTemp.forEach(function(breadcrumb, index) {
@@ -36,8 +33,6 @@ export default function Breadcrumbs() {
         breadcrumbsTemp[breadcrumbsTemp.length - 1].isCurrent = true;
 
         setBreadcrumbs(breadcrumbsTemp);
-
-        console.log('breadcrumbs(3):', breadcrumbsTemp);
     }, [location])
 
     return (
