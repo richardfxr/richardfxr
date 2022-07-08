@@ -1,5 +1,11 @@
+// === IMPORTS ============================
+// components
+import PageTemplate from "../components/PageTemplate"
+
 export default function Projects() {
     return (
-        <main></main>
+        <PageTemplate>
+            <main></main>
+        </PageTemplate>
     )
 }

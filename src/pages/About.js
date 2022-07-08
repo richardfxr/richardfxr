@@ -1,5 +1,11 @@
+// === IMPORTS ============================
+// components
+import PageTemplate from "../components/PageTemplate"
+
 export default function About() {
     return (
-        <main></main>
+        <PageTemplate>
+            <main></main>
+        </PageTemplate>
     )
 }

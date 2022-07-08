@@ -4,6 +4,8 @@ import { useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 // Sass
 import './Navbar.scss';
+// components
+import { routes } from '../App';
 // SVGs
 import {ReactComponent as Logo} from '../assets/SVGs/logo.svg';
 import {ReactComponent as HomeIcon} from '../assets/SVGs/home.svg';
@@ -38,10 +40,9 @@ export default function Navbar() {
                 <Logo className='logo'/>
                 <nav>
                     <ul ref={navUl} aria-label="main navigation">
-                        <li><NavigationLink href="/" label="Home" /></li>
-                        <li><NavigationLink href="/projects" label="Projects" /></li>
-                        <li><NavigationLink href="/about" label="About me" /></li>
-                        <li><NavigationLink href="/info" label="Site information" /></li>
+                        {routes.slice(0, 4).map(({ path, title }) => (
+                            <li key={path}><NavigationLink path={path} label={title} /></li>
+                        ))}
                         <li className='magicLine' id="magicLineVrt" ref={magicLineVrt} aria-hidden="true"></li>
                         <li className='magicLine' id="magicLineHrz" ref={magicLineHrz} aria-hidden="true"></li>
                     </ul>
@@ -54,14 +55,14 @@ export default function Navbar() {
 
 
 // === INTERNAL COMPONENTS ================
-function NavigationLink({ href, label }) {
+function NavigationLink({ path, label }) {
     return (
-        <NavLink to={href} aria-label={label}>
+        <NavLink to={path} aria-label={label}>
             {/* conditional icon */}
-            {href === "/" && <HomeIcon />}
-            {href === "/projects" && <ProjectsIcon />}
-            {href === "/about" && <AboutIcon />}
-            {href === "/info" && <InfoIcon />}
+            {path === "/" && <HomeIcon />}
+            {path === "/projects" && <ProjectsIcon />}
+            {path === "/about" && <AboutIcon />}
+            {path === "/info" && <InfoIcon />}
         </NavLink>
     )
 }
