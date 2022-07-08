@@ -23,6 +23,10 @@ body {
 }
 
 
+h1, h2, h3, h4, p {
+   overflow-wrap: break-word;
+}
+
 code {
    font-family: 'Courier New', monospace;
 }
@@ -41,5 +45,19 @@ svg {
 
          transition: stroke var(--trans-standard);
       }
+   }
+}
+
+#main {
+   h1 {
+      color: var(--clr-1000);
+      font-size: var(--font-xxl);
+      font-weight: 500;
+      line-height: 1em;
+      text-transform: uppercase;
+
+      padding: var(--pad-xxxl) var(--pad-xxl) 0 var(--pad-xxl);
+      // negative margin for better alignment
+      margin: 0 calc(-0.04 * var(--font-xxl))
    }
 }

@@ -3,6 +3,7 @@
     --_gap: 1rem;                     // horizontal gap in the breadcrumbs <ol> flexbox
 
     overflow-x: auto;
+    overflow-y: hidden;
     border-radius: calc(var(--bradius-xxl) - var(--border-width))
                    calc(var(--bradius-sm) - var(--border-width))
                    0
@@ -13,7 +14,7 @@
         flex-flow: row nowrap;
         gap: var(--_gap);
 
-        padding: calc(var(--pad-xl) - var(--pad-sm)) calc(var(--pad-xxl) - var(--padRem-md));
+        padding: calc(var(--pad-xl) - var(--pad-sm)) 0;
     }
 
     li {
@@ -26,7 +27,8 @@
             font-size: var(--font-xs);
             color: var(--clr-600);
 
-            padding: var(--pad-sm) var(--padRem-md);
+            padding: max(var(--pad-sm), calc(0.35 * var(--font-xs)))
+                     var(--padRem-md);
             // negative margin for better alignment
             margin: calc(-0.35 * var(--font-xs)) 0;
 
@@ -58,7 +60,7 @@
             }
 
             &:active {
-                transform: var(--active-translateY);
+                transform: var(--active-translateY-sm);
             }
 
             svg {
@@ -66,9 +68,19 @@
             }
         }
 
+        &:first-child {
+            a {
+                // prevent first left padding from expanding with rem
+                padding-left: var(--pad-xxl);
+            }
+        }
+
         &:last-child {
             a {
                 color: var(--clr-800);
+
+                // prevent last right padding from expanding with rem
+                padding-right: var(--pad-xxl);
     
                 .stroke--md {
                     stroke: var(--clr-800);

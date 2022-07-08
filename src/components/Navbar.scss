@@ -6,8 +6,8 @@
     --_logo-height: 35px;
     --_link-width: 100%;              // width of the <a> that contain page icons
     --_link-height: 55px;             // height of the <a> that contain page icons
-    --_icon-width: 1.3rem;
-    --_icon-height: 1.3rem;
+    --_icon-width: min(1.3rem, 40px); // width of <Navbar /> icons
+    --_icon-height: min(1.3rem, 40px);// height of <Navbar /> icons
     --_indicator-size: 12px;          // width and height of the small triangular indicator next to the magic line
 
     position: fixed;
@@ -90,7 +90,7 @@
                 }
 
                 &:active {
-                    transform: var(--active-translateY);
+                    transform: var(--active-translateY-md);
                 }
             }
 

@@ -5,7 +5,9 @@ import PageTemplate from "../components/PageTemplate"
 export default function Info() {
     return (
         <PageTemplate>
-            <main></main>
+            <main id="main">
+                <h1>Info</h1>
+            </main>
         </PageTemplate>
     )
 }

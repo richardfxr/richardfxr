@@ -16,6 +16,7 @@
    --pad-lg: 20px;
    --pad-xl: 24px;
    --pad-xxl: 30px;
+   --pad-xxxl: 40px;
 
    // === BORDER & OUTLINE ===================
    // border
@@ -28,9 +29,11 @@
    --outline-width: 3px;
 
    --font-xs: 1rem;
+   --font-xxl: 7rem;
 
    // === TRANSFORMS =========================
-   --active-translateY: translateY(3px);
+   --active-translateY-sm: translateY(2px);
+   --active-translateY-md: translateY(3px);
 
    // === TRANSITIONS ========================
    // transitions
