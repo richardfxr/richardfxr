@@ -10,6 +10,19 @@ import Navbar from './components/Navbar';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import Info from './pages/Info';
+import Archive from './pages/Archive';
+
+// === ROUTES =============================
+export const routes = [
+    // main pages (<Navbar /> only show first 4 objects)
+    {path: '/', element: () => <Home />, title: 'Home'},
+    {path: '/projects', element: () => <Projects />, title: 'Projects'},
+    {path: '/about', element: () => <About />, title: 'About'},
+    {path: '/info', element: () => <Info />, title: 'Info'},
+
+    // secondary pages
+    {path: '/projects/archive', element: () => <Archive />, title: 'Archive'},
+]
 
 function App() {
     return (
@@ -17,10 +30,9 @@ function App() {
             <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/info" element={<Info />} />
+                    {routes.map(({ path, element }) => (
+                        <Route key={path} path={path} element={element()} />
+                    ))}
                 </Routes>
             </BrowserRouter>
         </div>
