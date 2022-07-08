@@ -11,6 +11,7 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Info from './pages/Info';
 import Archive from './pages/Archive';
+import A11yMenu from './components/A11yMenu';
 
 // === ROUTES =============================
 export const routes = [
@@ -28,6 +29,7 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
+                <A11yMenu />
                 <Navbar />
                 <Routes>
                     {routes.map(({ path, element }) => (

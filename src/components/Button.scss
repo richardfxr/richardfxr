@@ -1,0 +1,31 @@
+.button {
+    display: block;
+
+    color: var(--clr-800);
+    border: solid var(--border-width) var(--clr-300);
+    border-radius: var(--bradius-round);
+
+    transition: color var(--trans-standard),
+                border var(--trans-standard),
+                transform var(--trans-standard);
+
+    &:hover, &:focus {
+        color: var(--clr-1000);
+        border-color: var(--clr-600);
+    }
+
+    &:focus-visible {
+        outline: solid var(--outline-width) var(--clr-focus);
+        outline-offset: calc(-1 * var(--outline-width));
+    }
+
+    &.sm {
+        font-size: var(--font-sm);
+
+        padding: var(--pad-xxs) calc(var(--font-sm) - 0.3rem + var(--pad-xxs));
+
+        &:active {
+            transform: var(--active-translateY-sm);
+        }
+    }
+}

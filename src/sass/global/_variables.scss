@@ -9,8 +9,11 @@
    --max-width: 1400px;
    --nav-size: 100px;
 
+   --padRem-xxs: 0.5rem;
    --padRem-md: 1rem;
 
+   --pad-xxs: 8px;
+   --pad-xs: 10px;
    --pad-sm: 12px;
    --pad-md: 16px;
    --pad-lg: 20px;
@@ -25,10 +28,12 @@
    --bradius-xs: 4px;                         
    --bradius-sm: 6px;                         // standard border radius for wrapper borders
    --bradius-xxl: 35px;                       // largest border radius for special corners
+   --bradius-round: 1e5px;                    // extremely larg border radius to produce circular sides
    // outline
    --outline-width: 3px;
 
    --font-xs: 1rem;
+   --font-sm: 1.15rem;
    --font-xxl: 7rem;
 
    // === TRANSFORMS =========================
@@ -40,7 +45,7 @@
    --trans-standard: var(--transTime-standard) ease;
    // timings
    --transTime-standard: 0.15s;
-   --transTime-slowest: 0.35s;
+   --transTime-slowest: 0.30s;
    // timing functions
    --transFunc-enhancedEase: cubic-bezier(.57,-0.01,.22,1.04);
 }

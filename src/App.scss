@@ -2,6 +2,8 @@
    APP
    ============================================ */
 .App {
+    position: relative;
+    
     max-width: var(--max-width);
 
     padding: 0 0 var(--pad-sm) var(--nav-size);
