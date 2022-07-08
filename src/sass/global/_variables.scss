@@ -9,16 +9,25 @@
    --max-width: 1400px;
    --nav-size: 100px;
 
+   --padRem-md: 1rem;
+
    --pad-sm: 12px;
+   --pad-md: 16px;
+   --pad-lg: 20px;
+   --pad-xl: 24px;
+   --pad-xxl: 30px;
 
    // === BORDER & OUTLINE ===================
    // border
-   --border-width: 1.4px;
-   --bradius-xxs: 2px;
-   --bradius-xs: 4px;
-   --bradius-sm: 6px;
+   --border-width: 1.4px;                     // standard border width
+   --bradius-xxs: 2px;                        // border radius of <NavBar /> page indicator
+   --bradius-xs: 4px;                         
+   --bradius-sm: 6px;                         // standard border radius for wrapper borders
+   --bradius-xxl: 35px;                       // largest border radius for special corners
    // outline
    --outline-width: 3px;
+
+   --font-xs: 1rem;
 
    // === TRANSFORMS =========================
    --active-translateY: translateY(3px);
