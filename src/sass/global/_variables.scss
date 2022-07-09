@@ -8,10 +8,16 @@
 :root {
    --max-width: 1400px;
    --nav-size: 100px;
+   --h2-width: 280px;
 
    --padRem-xxs: 0.5rem;
-   --padRem-md: 1rem;
+   --padRem-xs: 0.625rem;
+   --padRem-md: 1rem;                        // gap between list elements
 
+   --pad-6xs: 1px;
+   --pad-5xs: 2px;
+   --pad-4xs: 4px;
+   --pad-xxxs: 6px;
    --pad-xxs: 8px;
    --pad-xs: 10px;
    --pad-sm: 12px;
@@ -20,6 +26,11 @@
    --pad-xl: 24px;
    --pad-xxl: 30px;
    --pad-xxxl: 40px;
+   --pad-4xl: 55px;
+   --pad-5xl: 70px;
+   --pad-6xl: 90px;
+   --pad-7xl: 110px;
+   --pad-8xl: 140px;
 
    // === BORDER & OUTLINE ===================
    // border
@@ -32,8 +43,11 @@
    // outline
    --outline-width: 3px;
 
+   // === TYPOGRAPHY =========================
    --font-xs: 1rem;
    --font-sm: 1.15rem;
+   --font-md: 1.3rem;
+   --font-lg: 1.5rem;
    --font-xxl: 7rem;
 
    // === TRANSFORMS =========================
