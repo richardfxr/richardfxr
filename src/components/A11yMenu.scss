@@ -2,9 +2,6 @@
     // internal variables
     --_button-padHrz: min(calc(var(--font-sm) - 0.3rem + var(--pad-xxs)), 35px); // horizontal padding for .button.sm
 
-    display: flex;
-    flex-flow: row wrap;
-    gap: var(--padRem-xxs);
     position: absolute;
     top: var(--border-width);
     right: calc(var(--pad-sm) + var(--border-width));

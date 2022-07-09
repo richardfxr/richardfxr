@@ -37,7 +37,7 @@ export default function Breadcrumbs() {
 
     return (
         <nav className='breadcrumbs' aria-label="breadcrumbs">
-            <ol>
+            <ol className='row'>
                 {breadcrumbs.map(({ path, title, isCurrent }) => (
                     <li key={path}><BreadcrumbLink path={path} label={title} isCurrent={isCurrent} /></li>
                 ))}

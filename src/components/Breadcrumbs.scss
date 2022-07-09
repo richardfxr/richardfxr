@@ -1,7 +1,5 @@
 .breadcrumbs {
-    // internal variables
-    --_gap: 1rem;                     // horizontal gap in the breadcrumbs <ol> flexbox
-
+    position: relative;
     overflow-x: auto;
     overflow-y: hidden;
     border-radius: calc(var(--bradius-xxl) - var(--border-width))
@@ -10,10 +8,9 @@
                    0;
 
     ol {
-        display: flex;
-        flex-flow: row nowrap;
-        gap: var(--_gap);
-
+        // prevent wrapping to force horzontal overflow
+        flex-wrap: nowrap;
+        gap: var(--padRem-md);
         padding: calc(var(--pad-xl) - var(--pad-sm)) 0;
     }
 
@@ -39,7 +36,7 @@
                 // arrow after each breadcrumb (except for last child)
                 content: '→';
                 position: absolute;
-                right: calc(-1 * var(--_gap));
+                right: calc(-1 * var(--padRem-md));
 
                 font-family: 'Inter', sans-serif;
                 color: var(--clr-600);
