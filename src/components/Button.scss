@@ -9,7 +9,7 @@
                 border var(--trans-standard),
                 transform var(--trans-standard);
 
-    &:hover, &:focus {
+    &:hover, &:focus, &:focus-visible {
         color: var(--clr-1000);
         border-color: var(--clr-600);
     }
@@ -26,6 +26,30 @@
 
         &:active {
             transform: var(--active-translateY-sm);
+        }
+    }
+
+    &.rblue {
+        font-weight: 500;
+        color: var(--clr-0);
+        background-color: var(--clr-rblue);
+
+        border: none;
+
+        transition: color var(--trans-standard),
+                    background-color var(--trans-standard),
+                    transform var(--trans-standard);
+
+        &:hover, &:active, &:focus-visible {
+            background-color: var(--clr-rblue-hover);
+        }
+
+        &:focus-visible {
+            outline-offset: var(--pad-4xs);
+        }
+
+        &:active {
+            background-color: var(--clr-rblue-active);
         }
     }
 }
