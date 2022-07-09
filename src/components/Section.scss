@@ -1,15 +1,19 @@
 .section {
+    display: grid;
+    grid-template-columns: var(--h2-width) auto;
+    align-items: start;
+    gap: var(--pad-lg);
+
     padding: 0 var(--pad-xxl);
 
-    &__main {
-        display: grid;
-        grid-template-columns: var(--h2-width) auto;
-        align-items: start;
-        gap: var(--pad-lg);
-
-        h2 {
-            position: sticky;
-            top: calc(var(--pad-sm) + var(--border-width));
-        }
+    &__side {
+        position: sticky;
+        top:0;
     }
+
+    h2 {
+        // top & bottom padding to ensure proper spacing between its own <Separator /> and next <Section />
+        padding-top: calc(2 * var(--pad-sm) + var(--padRem-xs));
+        padding-bottom: calc(var(--pad-sm) + var(--padRem-xs) - var(--pad-sm));
+     }
 }

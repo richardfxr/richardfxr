@@ -1,7 +1,7 @@
 #intro {
 
     .section {
-        &__content {
+        &__main {
             display: flex;
             flex-flow: column nowrap;
             gap: var(--pad-6xl);
@@ -14,7 +14,7 @@
 #works {
 
     .section {
-        &__content {
+        &__main {
             display: flex;
             flex-flow: column nowrap;
             gap: var(--pad-6xl);

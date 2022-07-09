@@ -47,10 +47,6 @@ svg {
       // negative margin for better alignment
       margin-left: calc(-0.04 * var(--font-xxl))
    }
-
-   h2 {
-      padding-top: calc(var(--pad-sm) + var(--padRem-xs));
-   }
 }
 
 ul, ol {

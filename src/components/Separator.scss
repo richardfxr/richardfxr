@@ -1,11 +1,16 @@
 .separator {
-    position: sticky;
+    position: absolute;
     top: 0;
+    left: 0;
     z-index: 999;
+
+    // calculate width of separator to span all of <PageTemplate /> minus its padding
+    width: min(calc(100vw - var(--nav-size) - var(--pad-sm) - (2 * var(--border-width)) - (2 * var(--pad-xxl))),
+               calc(var(--max-width) - var(--nav-size) - var(--pad-sm) - (2 * var(--border-width)) - (2 * var(--pad-xxl))));    
     
     padding-top: var(--pad-sm);
     border: none;
-    margin: 0 0 var(--border-width) 0;
+    margin: 0;
 
     background-color: var(--clr-100);
 
