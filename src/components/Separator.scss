@@ -1,0 +1,26 @@
+.separator {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    
+    padding-top: var(--pad-sm);
+    border: none;
+    margin: 0 0 var(--border-width) 0;
+
+    background-color: var(--clr-100);
+
+    overflow: visible;
+
+    &::before {
+        // background gradient clipped to create gradient border
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: calc(-1 * var(--border-width));
+        left: 0;
+
+        height: var(--border-width);
+
+        background: linear-gradient(90deg, var(--clr-1000) calc(var(--h2-width) / 2), var(--clr-300) calc(1.5 * var(--h2-width)));
+    }
+}

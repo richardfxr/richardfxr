@@ -1,0 +1,15 @@
+.section {
+    padding: 0 var(--pad-xxl);
+
+    &__main {
+        display: grid;
+        grid-template-columns: var(--h2-width) auto;
+        align-items: start;
+        gap: var(--pad-lg);
+
+        h2 {
+            position: sticky;
+            top: calc(var(--pad-sm) + var(--border-width));
+        }
+    }
+}
