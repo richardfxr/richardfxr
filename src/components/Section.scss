@@ -1,6 +1,6 @@
 .section {
     display: grid;
-    grid-template-columns: var(--h2-width) auto;
+    grid-template-columns: var(--section-side-width) auto;
     align-items: start;
     gap: var(--pad-lg);
 
@@ -9,11 +9,14 @@
     &__side {
         position: sticky;
         top:0;
+        right: 0;
+        left: 0;
     }
 
     h2 {
         // top & bottom padding to ensure proper spacing between its own <Separator /> and next <Section />
-        padding-top: calc(2 * var(--pad-sm) + var(--padRem-xs));
+        padding-top: calc(2 * var(--pad-sm) + var(--padRem-xs) - var(--border-width));
         padding-bottom: calc(var(--pad-sm) + var(--padRem-xs) - var(--pad-sm));
      }
+
 }
