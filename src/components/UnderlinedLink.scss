@@ -1,0 +1,68 @@
+// === PROPERTIES =========================
+@property --underlineOffset {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 0;
+}
+
+.link {
+    // internal variables
+    --_outlineOffsetMin: 0.2em;
+    --_outlineOffsetMax: 0.4em;
+
+    color: var(--clr-600);
+    text-decoration: underline transparent;
+    text-decoration-thickness: var(--border-width);
+    text-underline-offset: var(--underlineOffset, var(--_outlineOffsetMin));;
+
+    transition: color var(--trans-standard),
+                text-decoration-color var(--trans-standard),
+                --underlineOffset var(--trans-standard),
+                transform var(--trans-standard);
+
+    &:hover, &:focus, &:focus-visible {
+        --underlineOffset: var(--_outlineOffsetMax);
+        color: var(--clr-1000);
+        text-decoration-color: var(--clr-1000);
+    }
+
+    &.block {
+        display: flex;
+        flex-flow: row wrap;
+
+        font-weight: 500;
+
+        &:active {
+            transform: var(--active-translateY-sm);
+        }
+    }
+
+    &.em {
+        color: var(--clr-1000);
+    }
+
+    &.sm {
+        font-size: var(--font-sm);
+    }
+
+    &.md {
+        font-size: var(--font-md);
+    }
+}
+
+// === SUPPORTS ===========================
+@supports not (background: paint(something)) {
+    .link {
+        // transition text-underline-offset instead of --underlineOffset in browsers that do not support the Paint API
+        text-underline-offset: var(--_outlineOffsetMin);
+
+        transition: color var(--trans-standard),
+                    text-decoration-color var(--trans-standard),
+                    text-underline-offset var(--trans-standard),
+                    transform var(--trans-standard);
+
+        &:hover, &:focus, &:focus-visible {
+            text-underline-offset: var(--_outlineOffsetMax);
+        }
+    }
+}
