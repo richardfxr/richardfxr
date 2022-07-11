@@ -20,10 +20,16 @@
                 --underlineOffset var(--trans-standard),
                 transform var(--trans-standard);
 
-    &:hover, &:focus, &:focus-visible {
+    &:hover, &:focus {
         --underlineOffset: var(--_outlineOffsetMax);
         color: var(--clr-1000);
         text-decoration-color: var(--clr-1000);
+    }
+
+    &:focus-visible {
+        color: var(--clr-1000);
+        outline: solid var(--outline-width) var(--clr-focus);
+        text-decoration-color: transparent;
     }
 
     &.block {
@@ -61,7 +67,7 @@
                     text-underline-offset var(--trans-standard),
                     transform var(--trans-standard);
 
-        &:hover, &:focus, &:focus-visible {
+        &:hover, &:focus {
             text-underline-offset: var(--_outlineOffsetMax);
         }
     }
