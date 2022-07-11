@@ -1,17 +1,17 @@
 // === IMPORTS ============================
 // React
-// import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 // Sass
 import './App.scss'
 // pages
-// import Home from './pages/Home'
+import Home from './pages/Home'
+import Projects from './pages/Projects'
+import About from './pages/About'
+import Info from './pages/info'
+import Archive from './pages/Archive'
 // components
-// import Navbar from './components/Navbar'
-// import Projects from './pages/Projects'
-// import About from './pages/About'
-// import Info from './pages/Info'
-// import Archive from './pages/Archive'
-// import A11yMenu from './components/A11yMenu'
+import Navbar from './components/Navbar'
+import A11yMenu from './components/A11yMenu'
 
 // === ROUTES =============================
 export const routes = [
@@ -51,60 +51,12 @@ export const projects = [
         ],
         labels: ['product design', 'photgraphy', 'risd']
     },
-    {
-        path: '/projects/eggholders',
-        element: () => <Archive />,
-        title: 'Eggholders',
-        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
-        colors: [
-            {hex: '#f8d363', name: 'light mustard'},
-            {hex: '#f0eeef', name: 'light grey'} , 
-            {hex: '#f09170', name: 'dark salmon'}
-        ],
-        labels: ['product design', 'risd']
-    },
-    {
-        path: '/projects/something',
-        element: () => <Archive />,
-        title: 'Something Else',
-        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
-        colors: [
-            {hex: '#f8d363', name: 'light mustard'},
-            {hex: '#f0eeef', name: 'light grey'} , 
-            {hex: '#f09170', name: 'dark salmon'}
-        ],
-        labels: ['product design', 'photgraphy', 'risd']
-    },
-    {
-        path: '/projects/eggholders',
-        element: () => <Archive />,
-        title: 'Eggholders',
-        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
-        colors: [
-            {hex: '#f8d363', name: 'light mustard'},
-            {hex: '#f0eeef', name: 'light grey'} , 
-            {hex: '#f09170', name: 'dark salmon'}
-        ],
-        labels: ['product design', 'risd']
-    },
-    {
-        path: '/projects/something',
-        element: () => <Archive />,
-        title: 'Something Else',
-        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
-        colors: [
-            {hex: '#f8d363', name: 'light mustard'},
-            {hex: '#f0eeef', name: 'light grey'} , 
-            {hex: '#f09170', name: 'dark salmon'}
-        ],
-        labels: ['product design', 'photgraphy', 'risd']
-    },
 ]
 
 function App() {
     return (
         <div className="App">
-            {/* <BrowserRouter>
+            <BrowserRouter>
                 <A11yMenu />
                 <Navbar />
                 <Routes>
@@ -115,7 +67,7 @@ function App() {
                         <Route key={path} path={path} element={element()} />
                     ))}
                 </Routes>
-            </BrowserRouter> */}
+            </BrowserRouter>
         </div>
     )
 }
