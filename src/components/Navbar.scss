@@ -1,0 +1,147 @@
+// === NAVBAR =============================
+.navbar {
+    // internal variables
+    --_gradient-end: 250px;           // position of the var(--clr-300) point in the gradient border
+    --_logo-width: 34px;
+    --_logo-height: 35px;
+    --_link-width: 100%;              // width of the <a> that contain page icons
+    --_link-height: 55px;             // height of the <a> that contain page icons
+    --_icon-width: min(1.3rem, 40px); // width of <Navbar /> icons
+    --_icon-height: min(1.3rem, 40px);// height of <Navbar /> icons
+    --_indicator-size: 12px;          // width and height of the small triangular indicator next to the magic line
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: calc((100% - min(100%, var(--max-width))) / 2);
+    
+    width: var(--nav-size);
+
+    overflow-y: auto;
+
+    header {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        position: relative;
+
+        min-height: calc(100% - (2 * var(--pad-sm)));
+
+        border: solid var(--border-width) transparent;
+        border-radius: var(--bradius-sm) var(--bradius-xxl) var(--bradius-sm) var(--bradius-sm);
+        margin: var(--pad-sm);
+
+        // background color to cover ::before gradient to form border
+        background: var(--clr-100);
+        background-clip: padding-box;
+
+        &::before {
+            // background gradient clipped to create gradient border
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: calc(-1 * var(--border-width));
+            border-radius: inherit;
+            background: linear-gradient(180deg, var(--clr-rblue) 0px, var(--clr-300) var(--_gradient-end));
+        }
+        
+        .logo {
+            // 20px top padding and moved 1px to the left to appear more centered
+            padding: var(--pad-xl)
+                     calc((var(--_link-width) - var(--_logo-width)) / 2 + 1px)
+                     calc(var(--pad-xl) / 2)
+                     calc((var(--_link-width) - var(--_logo-width)) / 2 - 1px);
+
+            &__path {
+                fill: var(--clr-rblue);
+            }
+        }
+
+        nav {
+            // add slight padding to top and bottom of <ul>
+            padding: calc(var(--_link-width) - var(--_link-height)) 0;
+            margin-top: auto;
+            
+
+            ul {
+                position: relative;
+            }
+
+            a {
+                display: block;
+                
+                // calculate appropriate padding so icons are the specified size
+                padding: calc((var(--_link-height) - var(--_icon-height)) / 2)
+                         calc((var(--_link-width) - var(--_icon-width)) / 2);
+
+                transition: transform var(--trans-standard);
+
+                &.active, &:hover, &:focus {
+                    .stroke--md {
+                        // change page icon stroke color
+                        stroke: var(--clr-1000);
+                    }
+                }
+
+                &:focus-visible {
+                    outline: solid var(--outline-width) var(--clr-focus);
+                    border-radius: var(--bradius-xxs);
+                }
+
+                &:active {
+                    transform: var(--active-translateY-md);
+                }
+            }
+
+            .magicLine {
+                // styling that applies to both #magicLineVrt and #magicLineHrz
+                position: absolute;
+
+                // transition on transform change (set through JS)
+                transition: transform var(--transTime-slowest) var(--transFunc-enhancedEase);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+
+                    width: var(--_indicator-size);
+                    height: var(--_indicator-size);
+
+                    background-color: #fff;
+                    // 1px border to avoid clipping AA bug on Firefox
+                    border: solid 1px var(--clr-100);
+                }
+            }
+
+            #magicLineVrt {
+                top: 0;
+                right: calc(-1 * var(--border-width));
+
+                width: var(--border-width);
+                height: var(--_link-height);
+
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--clr-1000) 30%, var(--clr-1000) 70%, rgba(255, 255, 255, 0) 100%);
+            
+                &::before {
+                    // top margin to vertically center ::before
+                    top: calc((var(--_link-height) - var(--_indicator-size)) / 2);
+                    // slight shift right to avoid AA issues
+                    right: calc(-1 * (var(--_indicator-size) / 2) + var(--border-width)); 
+
+                    border-top-left-radius: var(--bradius-xxs);
+
+                    // rotate square to become a rhombus
+                    transform: rotate(-45deg);
+                    // clip rhombus to become a triangle
+                    clip-path: polygon(0 0, 0% 100%, 100% 0);
+                }
+            }
+
+            #magicLineHrz {
+                // hide horizontal magic line when showing vertical <NavBar /> layout
+                display: none;
+            }
+        }
+    }
+}

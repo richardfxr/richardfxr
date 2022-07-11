@@ -1,0 +1,105 @@
+.breadcrumbs {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: calc(var(--bradius-xxl) - var(--border-width))
+                   calc(var(--bradius-sm) - var(--border-width))
+                   0
+                   0;
+
+    ol {
+        // prevent wrapping to force horzontal overflow
+        flex-wrap: nowrap;
+        gap: var(--padRem-md);
+        padding: calc(var(--pad-xl) - var(--pad-sm)) 0;
+    }
+
+    li {
+        a {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 0.5rem;
+            position: relative;
+
+            font-size: var(--font-xs);
+            color: var(--clr-600);
+
+            padding: max(var(--pad-sm), calc(0.35 * var(--font-xs)))
+                     var(--padRem-md);
+            // negative margin for better alignment
+            margin: calc(-0.35 * var(--font-xs)) 0;
+
+            transition: color var(--trans-standard),
+                        transform var(--trans-standard);
+
+            &::after {
+                // arrow after each breadcrumb (except for last child)
+                content: '→';
+                position: absolute;
+                right: calc(-1 * var(--padRem-md));
+
+                font-family: 'Inter', sans-serif;
+                color: var(--clr-600);
+            }
+
+            &:hover, &:focus {
+                color: var(--clr-1000);
+
+                .stroke--md {
+                    stroke: var(--clr-1000);
+                }
+            }
+
+            &:focus-visible {
+                outline: solid var(--outline-width) var(--clr-focus);
+                outline-offset: calc(-1 * var(--outline-width));
+                border-radius: calc(var(--bradius-xxs) + var(--outline-width));
+            }
+
+            &:active {
+                transform: var(--active-translateY-sm);
+            }
+
+            svg {
+                width: 1rem;
+            }
+        }
+
+        &:first-child {
+            a {
+                // prevent first left padding from expanding with rem
+                padding-left: var(--pad-xxl);
+            }
+        }
+
+        &:last-child {
+            a {
+                color: var(--clr-800);
+
+                // prevent last right padding from expanding with rem
+                padding-right: var(--pad-xxl);
+    
+                .stroke--md {
+                    stroke: var(--clr-800);
+                }
+    
+                &:hover, &:focus {
+                    color: var(--clr-1000);
+    
+                    .stroke--md {
+                        stroke: var(--clr-1000);
+                    }
+                }
+    
+                &::after {
+                    // remove arrow on last breadcrumb
+                    display: none;
+                }
+            }
+        }
+    }
+
+    
+
+
+}

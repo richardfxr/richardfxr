@@ -1,0 +1,30 @@
+.separator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    // calculate width of separator to span all of <PageTemplate /> minus its padding
+    width: calc(min(100vw, var(--max-width)) - var(--nav-size) - var(--pad-sm) - (2 * var(--border-width)) - (2 * var(--pad-xxl)));
+    
+    padding-top: calc(var(--pad-sm) + var(--border-width));
+    border: none;
+    margin: 0;
+
+    background-color: var(--clr-100);
+
+    overflow: visible;
+
+    &::before {
+        // background gradient clipped to create gradient border
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        height: var(--border-width);
+
+        background: linear-gradient(90deg, var(--clr-1000) calc(var(--section-side-width) / 2), var(--clr-300) calc(1.5 * var(--section-side-width)));
+    }
+}
