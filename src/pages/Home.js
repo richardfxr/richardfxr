@@ -9,27 +9,22 @@ import Button from '../components/Button';
 export default function Home() {
     return (
         <PageTemplate>
-            <main id="main">
-                <h1>Hello</h1>
+            <h1>Hello</h1>
 
-                <Section heading="Introduction" id="intro">
-                    <p className="lg">I’m <em>Richard Fu</em>, an <em>artist</em>, <em>designer</em>, and <em>developer</em> who loves blue - <em className="rblue">#11d3e7</em> to be exact.</p>
-                    <ul className='row md'>
-                        <li><Button href='#works' target="_self" styling="sm rblue"><span className='inter upDw pad--right'>↓</span> Works</Button></li>
-                        <li><Button to='/about' styling="sm">About</Button></li>
-                        <li><Button to='/about' styling="sm">Contact</Button></li>
-                    </ul>
-                </Section>
+            <Section heading="Introduction" id="intro">
+                <p className="lg">I’m <em>Richard Fu</em>, an <em>artist</em>, <em>designer</em>, and <em>developer</em> who loves blue - <em className="rblue">#11d3e7</em> to be exact.</p>
+                <ul className='row md'>
+                    <li><Button href='#works' target="_self" styling="sm rblue"><span className='inter upDw pad--right'>↓</span> Works</Button></li>
+                    <li><Button to='/about' styling="sm">About</Button></li>
+                    <li><Button to='/about' styling="sm">Contact</Button></li>
+                </ul>
+            </Section>
 
-                <Section heading="Selected Works" id="works">
-                    <p className="lg">I’m <em>Richard Fu</em>, an <em>artist</em>, <em>designer</em>, and <em>developer</em> who loves blue - <em className="rblue">#11d3e7</em> to be exact.</p>
-                    <ul className='row md'>
-                        <li><Button href='#works' target="_self" styling="sm">Works</Button></li>
-                        <li><Button to='/about' styling="sm">About</Button></li>
-                        <li><Button to='/about' styling="sm">Contact</Button></li>
-                    </ul>
-                </Section>
-            </main>
+            <Section heading="Selected Works" id="works">
+                <ul className='2col'>
+                    <li></li>
+                </ul>
+            </Section>
         </PageTemplate>
     )
 }

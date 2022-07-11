@@ -19,4 +19,8 @@
         padding-bottom: calc(var(--pad-sm) + var(--padRem-xs) - var(--pad-sm));
      }
 
+     &__main {
+         padding-top: var(--pad-sm)
+     }
+
 }
