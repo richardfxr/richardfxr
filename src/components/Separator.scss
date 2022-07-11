@@ -7,7 +7,7 @@
     // calculate width of separator to span all of <PageTemplate /> minus its padding
     width: calc(min(100vw, var(--max-width)) - var(--nav-size) - var(--pad-sm) - (2 * var(--border-width)) - (2 * var(--pad-xxl)));
     
-    padding-top: var(--pad-sm);
+    padding-top: calc(var(--pad-sm) + var(--border-width));
     border: none;
     margin: 0;
 

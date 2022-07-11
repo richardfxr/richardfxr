@@ -15,7 +15,7 @@
 
     h2 {
         // top & bottom padding to ensure proper spacing between its own <Separator /> and next <Section />
-        padding-top: calc(2 * var(--pad-sm) + var(--padRem-xs) - var(--border-width));
+        padding-top: calc(2 * var(--pad-sm) + var(--padRem-xs));
         padding-bottom: calc(var(--pad-sm) + var(--padRem-xs) - var(--pad-sm));
      }
 
