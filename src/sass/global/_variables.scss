@@ -1,0 +1,66 @@
+// Partial SCSS file containing variables
+
+
+
+/* ============================================
+   VARIABLES
+   ============================================ */
+:root {
+   --max-width: 1400px;
+   --nav-size: 100px;
+   --section-side-width: 280px;
+
+   --padRem-xxs: 0.5rem;
+   --padRem-xs: 0.625rem;
+   --padRem-sm: 0.75rem;
+   --padRem-md: 1rem;                        // gap between list elements
+
+   --pad-6xs: 1px;
+   --pad-5xs: 2px;
+   --pad-4xs: 4px;
+   --pad-xxxs: 6px;
+   --pad-xxs: 8px;
+   --pad-xs: 10px;
+   --pad-sm: 12px;
+   --pad-md: 16px;
+   --pad-lg: 20px;
+   --pad-xl: 24px;
+   --pad-xxl: 30px;
+   --pad-xxxl: 40px;
+   --pad-4xl: 55px;
+   --pad-5xl: 70px;
+   --pad-6xl: 90px;
+   --pad-7xl: 110px;
+   --pad-8xl: 140px;
+
+   // === BORDER & OUTLINE ===================
+   // border
+   --border-width: 1.4px;                     // standard border width
+   --bradius-xxs: 2px;                        // border radius of <NavBar /> page indicator
+   --bradius-xs: 4px;                         
+   --bradius-sm: 6px;                         // standard border radius for wrapper borders
+   --bradius-xxl: 35px;                       // largest border radius for special corners
+   --bradius-round: 1e5px;                    // extremely larg border radius to produce circular sides
+   // outline
+   --outline-width: 3px;
+
+   // === TYPOGRAPHY =========================
+   --font-xs: 1rem;
+   --font-sm: 1.15rem;
+   --font-md: 1.3rem;
+   --font-lg: 1.5rem;
+   --font-xxl: 7rem;
+
+   // === TRANSFORMS =========================
+   --active-translateY-sm: translateY(2px);
+   --active-translateY-md: translateY(3px);
+
+   // === TRANSITIONS ========================
+   // transitions
+   --trans-standard: var(--transTime-standard) ease;
+   // timings
+   --transTime-standard: 0.15s;
+   --transTime-slowest: 0.30s;
+   // timing functions
+   --transFunc-enhancedEase: cubic-bezier(.57,-0.01,.22,1.04);
+}
