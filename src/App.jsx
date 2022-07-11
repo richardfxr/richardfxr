@@ -1,45 +1,123 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+// === IMPORTS ============================
+// React
+// import { BrowserRouter, Route, Routes } from 'react-router-dom'
+// Sass
+import './App.scss'
+// pages
+// import Home from './pages/Home'
+// components
+// import Navbar from './components/Navbar'
+// import Projects from './pages/Projects'
+// import About from './pages/About'
+// import Info from './pages/Info'
+// import Archive from './pages/Archive'
+// import A11yMenu from './components/A11yMenu'
+
+// === ROUTES =============================
+export const routes = [
+    // main pages (<Navbar /> only show first 4 objects)
+    {path: '/', element: () => <Home />, title: 'Home'},
+    {path: '/projects', element: () => <Projects />, title: 'Projects'},
+    {path: '/about', element: () => <About />, title: 'About'},
+    {path: '/info', element: () => <Info />, title: 'Info'},
+
+    // secondary pages
+    {path: '/projects/archive', element: () => <Archive />, title: 'Archive'},
+]
+
+// === PROJECTS ===========================
+export const projects = [
+    {
+        path: '/projects/eggholders',
+        element: () => <Archive />,
+        title: 'Eggholders',
+        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
+        colors: [
+            {hex: '#f8d363', name: 'light mustard'},
+            {hex: '#f0eeef', name: 'light grey'} , 
+            {hex: '#f09170', name: 'dark salmon'}
+        ],
+        labels: ['product design', 'risd']
+    },
+    {
+        path: '/projects/something',
+        element: () => <Archive />,
+        title: 'Something Else',
+        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
+        colors: [
+            {hex: '#f8d363', name: 'light mustard'},
+            {hex: '#f0eeef', name: 'light grey'} , 
+            {hex: '#f09170', name: 'dark salmon'}
+        ],
+        labels: ['product design', 'photgraphy', 'risd']
+    },
+    {
+        path: '/projects/eggholders',
+        element: () => <Archive />,
+        title: 'Eggholders',
+        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
+        colors: [
+            {hex: '#f8d363', name: 'light mustard'},
+            {hex: '#f0eeef', name: 'light grey'} , 
+            {hex: '#f09170', name: 'dark salmon'}
+        ],
+        labels: ['product design', 'risd']
+    },
+    {
+        path: '/projects/something',
+        element: () => <Archive />,
+        title: 'Something Else',
+        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
+        colors: [
+            {hex: '#f8d363', name: 'light mustard'},
+            {hex: '#f0eeef', name: 'light grey'} , 
+            {hex: '#f09170', name: 'dark salmon'}
+        ],
+        labels: ['product design', 'photgraphy', 'risd']
+    },
+    {
+        path: '/projects/eggholders',
+        element: () => <Archive />,
+        title: 'Eggholders',
+        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
+        colors: [
+            {hex: '#f8d363', name: 'light mustard'},
+            {hex: '#f0eeef', name: 'light grey'} , 
+            {hex: '#f09170', name: 'dark salmon'}
+        ],
+        labels: ['product design', 'risd']
+    },
+    {
+        path: '/projects/something',
+        element: () => <Archive />,
+        title: 'Something Else',
+        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
+        colors: [
+            {hex: '#f8d363', name: 'light mustard'},
+            {hex: '#f0eeef', name: 'light grey'} , 
+            {hex: '#f09170', name: 'dark salmon'}
+        ],
+        labels: ['product design', 'photgraphy', 'risd']
+    },
+]
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+    return (
+        <div className="App">
+            {/* <BrowserRouter>
+                <A11yMenu />
+                <Navbar />
+                <Routes>
+                    {routes.map(({ path, element }) => (
+                        <Route key={path} path={path} element={element()} />
+                    ))}
+                    {projects.map(({ path, element }) => (
+                        <Route key={path} path={path} element={element()} />
+                    ))}
+                </Routes>
+            </BrowserRouter> */}
+        </div>
+    )
 }
 
 export default App
