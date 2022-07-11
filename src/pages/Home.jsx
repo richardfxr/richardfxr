@@ -23,7 +23,7 @@ export default function Home() {
             </Section>
 
             <Section heading="Selected Works" id="works">
-                <ul className='twoCol'>
+                <ul className='twoCol cards'>
                     {projects.map((project) => (
                         <li key={project.path}><ProjectCard {...project} /></li>
                     ))}

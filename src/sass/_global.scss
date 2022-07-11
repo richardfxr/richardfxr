@@ -54,6 +54,10 @@ svg {
    grid-template-columns: 1fr 1fr;
    align-items: start;
    gap: var(--pad-xl);
+
+   &.cards {
+      padding: calc(var(--pad-sm) + var(--padRem-sm)) 0;
+   }
 }
 
 ul, ol {
@@ -122,6 +126,13 @@ h2 {
    font-weight: 400;
    line-height: 1em;
    text-transform: uppercase;
+}
+
+h3 {
+   color: var(--clr-1000);
+   font-size: var(--font-md);
+   font-weight: 400;
+   line-height: 1em;
 }
 
 p {
