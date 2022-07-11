@@ -1,0 +1,8 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 28 28"
+    aria-hidden="true">
+    <circle className="stroke--md" cx="14" cy="14" r="11.5"/>
+    <line className="stroke--md" x1="14" y1="12.74" x2="14" y2="20.06"/>
+    <line className="stroke--md" x1="14" y1="7.96" x2="14" y2="7.96"/>
+</svg>

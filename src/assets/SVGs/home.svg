@@ -1,0 +1,8 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 28 28"
+    aria-hidden="true">
+    <polyline className="stroke--md" points="26.5 12.49 14 1.54 1.5 12.49"/>
+    <polygon className="stroke--md" points="5.95 15.61 14 8.94 22.05 15.61 22.05 24.5 5.95 24.5 5.95 15.61"/>
+    <line className="stroke--md" x1="22.05" y1="8.58" x2="22.05" y2="2.79"/>
+</svg>

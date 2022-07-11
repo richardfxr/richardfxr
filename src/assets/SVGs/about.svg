@@ -1,0 +1,7 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 28 28"
+    aria-hidden="true">
+    <path className="stroke--md" d="M2.87,24.5c0-5.4,4.98-9.78,11.13-9.78s11.13,4.38,11.13,9.78H2.87Z"/>
+    <circle className="stroke--md" cx="14" cy="6.04" r="3.8"/>
+</svg>
