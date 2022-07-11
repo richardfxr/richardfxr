@@ -10,7 +10,7 @@ export default function ProjectCard({ image, path, title, colors, labels }) {
     return(
         <article className="projectCard">
             <Image {...image} />
-            <Link to={path}>
+            <Link to={path} className="projectCard__link">
                 <h3>{title}</h3>
             </Link>
             <div className='projectCard__details'>

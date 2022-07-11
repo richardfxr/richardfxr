@@ -10,6 +10,7 @@
    --nav-size: 100px;
    --section-side-width: 280px;
 
+   --padRem-xxxs: 0.375rem;
    --padRem-xxs: 0.5rem;
    --padRem-xs: 0.625rem;
    --padRem-sm: 0.75rem;
@@ -60,6 +61,7 @@
    --trans-standard: var(--transTime-standard) ease;
    // timings
    --transTime-standard: 0.15s;
+   --transTime-slow: 0.2s;
    --transTime-slowest: 0.30s;
    // timing functions
    --transFunc-enhancedEase: cubic-bezier(.57,-0.01,.22,1.04);
