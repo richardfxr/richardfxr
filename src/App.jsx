@@ -3,15 +3,20 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 // Sass
 import './App.scss'
-// pages
+// primary pages
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import About from './pages/About'
 import Info from './pages/info'
+// secondary pages
 import Archive from './pages/Archive'
+// project pages
+import EggHolders from './pages/EggHolders'
+import PFrame from './pages/PFrame'
 // components
 import Navbar from './components/Navbar'
 import A11yMenu from './components/A11yMenu'
+
 
 // === ROUTES =============================
 export const routes = [
@@ -29,7 +34,7 @@ export const routes = [
 export const projects = [
     {
         path: '/projects/eggholders',
-        element: () => <Archive />,
+        element: () => <EggHolders />,
         title: 'Eggholders',
         image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
         colors: [
@@ -37,19 +42,19 @@ export const projects = [
             {hex: '#f0eeef', name: 'light grey'} , 
             {hex: '#f09170', name: 'dark salmon'}
         ],
-        labels: ['product design', 'risd']
+        labels: ['product design', 'photgraphy', 'risd']
     },
     {
         path: '/projects/something',
-        element: () => <Archive />,
-        title: 'Something Else',
-        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
+        element: () => <PFrame />,
+        title: 'P-Frame',
+        image: {folder: 'test', fileName: 'P-Frame', alt: 'test image'},
         colors: [
             {hex: '#f8d363', name: 'light mustard'},
             {hex: '#f0eeef', name: 'light grey'} , 
             {hex: '#f09170', name: 'dark salmon'}
         ],
-        labels: ['product design', 'photgraphy', 'risd']
+        labels: ['product design', 'CAD', 'risd']
     },
 ]
 
