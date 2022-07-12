@@ -7,8 +7,9 @@ import Separator from "./Separator"
 export default function Section({ heading, id, children }) {
     return (
         <section className="section" id={id} aria-labelledby={id + "__heading"}>
+            <Separator />
+            
             <div className='section__side' >
-                <Separator />
                 <h2 id={id + "__heading"}>{heading}</h2>
             </div>
             

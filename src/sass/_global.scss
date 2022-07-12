@@ -44,7 +44,7 @@ svg {
 
 #main {
    h1 {
-      padding: var(--pad-xxxl) var(--pad-xxl) 0 var(--pad-xxl);
+      padding: var(--pad-xxxl) var(--pad-xxl) var(--pad-md) var(--pad-xxl);
       // negative margin for better alignment
       margin-left: calc(-0.04 * var(--font-xxl))
    }
@@ -57,7 +57,7 @@ svg {
    gap: var(--pad-xl);
 
    &.cards {
-      padding: calc(var(--pad-sm) + var(--padRem-sm)) 0;
+      padding: var(--pad-xl) 0;
    }
 }
 

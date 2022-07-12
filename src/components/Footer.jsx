@@ -11,8 +11,9 @@ import {ReactComponent as GitHubQR} from '../assets/SVGs/QR-GitHubrepo-richardfx
 export default function Footer() {
     return (
         <footer className="section" id='footer' aria-labelledby='footer__heading'>
+            <Separator />
+            
             <div className='section__side' >
-                <Separator />
                 <h2 id='footer__heading'>Footer</h2>
             </div>
             

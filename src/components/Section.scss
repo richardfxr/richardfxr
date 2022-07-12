@@ -3,25 +3,25 @@
     grid-template-columns: var(--section-side-width) auto;
     align-items: start;
     gap: var(--pad-lg);
+    position: relative;
 
     padding: 0 var(--pad-xxl);
 
     &__side {
         position: sticky;
-        top:0;
+        top: var(--pad-sm);
         right: 0;
         left: 0;
-        z-index: 999;
     }
 
     h2 {
-        // top & bottom padding to ensure proper spacing between its own <Separator /> and next <Section />
-        padding-top: calc(2 * var(--pad-sm) + var(--padRem-xs));
-        padding-bottom: calc(var(--pad-sm) + var(--padRem-xs) - var(--pad-sm));
+        // top & bottom padding with alignment compensation
+        padding-top: calc(var(--pad-xl) - var(--padRem-5xs));
+        padding-bottom: var(--pad-xl);
      }
 
      &__main {
-         padding-top: var(--pad-sm)
+         position: relative;
      }
 
 }
