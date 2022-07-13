@@ -6,9 +6,7 @@ import Image from "../components/Image"
 
 export default function PFrame() {
     return (
-        <PageTemplate>
-            <h1>P-Frame</h1>
-
+        <PageTemplate heading="P-Frame">
             <Section heading="Test" id="test">
                 <Image animate='layout' folder='test' fileName='P-Frame' alt='test image' />
             </Section>

@@ -1,38 +1,35 @@
 // === IMPORTS ============================
-// React
-import { useEffect } from "react"
-import { useLocation } from "react-router-dom"
 // Framer Motion
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 // Sass
 import './PageTemplate.scss'
 // components
 import Breadcrumbs from './Breadcrumbs'
+import PageHeading from "./PageHeading"
 import Footer from '../components/Footer'
 
-export default function PageTemplate({ children }) {
-    const location = useLocation()
-    
-    useEffect(() => {
-        console.log("location changed")
-        // scroll page to top on route change
-        window.scrollTo(0, 0);
-    }, [location])
+// === FRAMER VARIANTS ====================
+const pageTransition = {
+    // hidden: { y: 100, opacity: 0 },
+    // show: { y: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.3 } },
+    // exit: { y: -100, opacity: 0, transition: { ease: "easeIn", duration: 0.25 } },
+}
 
+export default function PageTemplate({ heading, children }) {
     return (
-        <AnimatePresence exitBeforeEnter>
-            <motion.div 
-                className="pageWrapper"
-                initial={{ y: 10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -10, opacity: 0 }}
-                transition={{ duration: 0.2 }}>
-                <Breadcrumbs />
-                <main id="main">
-                    {children}
-                </main>
-                <Footer />
-            </motion.div>
-        </AnimatePresence>
+        <motion.div 
+            key={heading}
+            variants={pageTransition}
+            className="pageWrapper"
+            initial="hidden"
+            animate="show"
+            exit="exit">
+            <Breadcrumbs />
+            <main id="main">
+                <PageHeading heading={heading} />
+                {children}
+            </main>
+            <Footer />
+        </motion.div>
     )
 }
