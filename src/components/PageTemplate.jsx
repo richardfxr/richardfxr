@@ -7,23 +7,33 @@ import './PageTemplate.scss'
 import Breadcrumbs from './Breadcrumbs'
 import PageHeading from "./PageHeading"
 import Footer from '../components/Footer'
+// hooks
+import { useSettings } from '../hooks/useSettings'
 
 // === FRAMER VARIANTS ====================
-const pageTransition = {
-    // hidden: { y: 100, opacity: 0 },
-    // show: { y: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.3 } },
-    // exit: { y: -100, opacity: 0, transition: { ease: "easeIn", duration: 0.25 } },
+const pageInitVar = {
+    hidden: { y: 100, opacity: 0 },
+    show: { y: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.5 } },
 }
 
+const pageNormVar = {
+    hidden: { y: 0, opacity: 1 },
+    show: { y: 0, opacity: 1 },
+}
+
+
 export default function PageTemplate({ heading, children }) {
+    const { initialLoad, changeSetting } = useSettings()
+
     return (
         <motion.div 
             key={heading}
-            variants={pageTransition}
+            variants={initialLoad ? pageInitVar : pageNormVar}
             className="pageWrapper"
             initial="hidden"
             animate="show"
-            exit="exit">
+            exit="exit"
+            onAnimationComplete={() => changeSetting('initialLoad', false)}>
             <Breadcrumbs />
             <main id="main">
                 <PageHeading heading={heading} />
