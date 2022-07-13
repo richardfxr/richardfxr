@@ -9,7 +9,7 @@ import Image from "./Image"
 export default function ProjectCard({ image, path, title, colors, labels }) {
     return(
         <article className="projectCard">
-            <Image animate='layout' {...image} />
+            <Image ani='layout' {...image} />
             <Link to={path} className="projectCard__link">
                 <h3>{title}</h3>
             </Link>
