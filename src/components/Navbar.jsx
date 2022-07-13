@@ -5,7 +5,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 // Sass
 import './Navbar.scss'
 // components
-import { routes } from '../App'
+import { routes } from './AnimatedRoutes'
 // SVGs
 import {ReactComponent as Logo} from '../assets/SVGs/logo.svg'
 import {ReactComponent as HomeIcon} from '../assets/SVGs/home.svg'

@@ -5,8 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 // Sass
 import './Breadcrumbs.scss'
 // components
-import { routes } from '../App'
-import { projects } from '../App'
+import { routes, projects } from './AnimatedRoutes'
 // SVGs
 import {ReactComponent as HomeIcon} from '../assets/SVGs/home.svg'
 import {ReactComponent as ProjectsIcon} from '../assets/SVGs/projects.svg'
@@ -17,7 +16,7 @@ export default function Breadcrumbs() {
     const location = useLocation()
     const [breadcrumbs, setBreadcrumbs] = useState([])
 
-    useEffect(() => {
+    useEffect(() => {        
         // parse location string
         let breadcrumbsTemp = location.pathname.split('/')
 
