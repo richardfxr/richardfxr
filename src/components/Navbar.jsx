@@ -23,16 +23,6 @@ export const navbarVar = {
     show: { opacity: 1, x: 0, transition: { ease: "easeOut", duration: 0.5 } },
 }
 
-export const ulVar = {
-    hidden: { opacity: 1 },
-    show: { opacity: 1, transition: { staggerChildren: 0.1 } },
-}
-
-export const liVar = {
-    hidden: { x: '-50%', opacity: 0 },
-    show: { x: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.2 } }
-}
-
 
 
 export default function Navbar() {
@@ -47,8 +37,6 @@ export default function Navbar() {
     useEffect(() => {
         // find currently active <NavLink />
         let activeLink = navUl.current.getElementsByClassName('active')[0]
-
-        console.log("activeLink.offsetTop:", activeLink.offsetTop)
 
         if (activeLink) {
             // update magic line position if activeLink is not falsy
@@ -66,32 +54,13 @@ export default function Navbar() {
             <header>
                 <Logo className='logo'/>
                 <nav>
-                    <motion.ul
-                        ref={navUl}
-                        aria-label="main navigation"
-                        variants={ulVar}
-                        initial="hidden"
-                        animate="show">
+                    <ul ref={navUl} aria-label="main navigation">
                         {routes.slice(0, 4).map(({ path, title }) => (
-                            <motion.li
-                                key={path}
-                                variants={liVar}>
-                                    <NavigationLink path={path} label={title} />
-                                </motion.li>
+                            <li key={path}><NavigationLink path={path} label={title} /></li>
                         ))}
-                        <li
-                            className='magicLine'
-                            id="magicLineVrt"
-                            ref={magicLineVrt}
-                            aria-hidden="true">
-                        </li>
-                        <li
-                            className='magicLine'
-                            id="magicLineHrz"
-                            ref={magicLineHrz}
-                            aria-hidden="true">
-                        </li>
-                    </motion.ul>
+                        <li className='magicLine' id="magicLineVrt" ref={magicLineVrt} aria-hidden="true"></li>
+                        <li className='magicLine' id="magicLineHrz" ref={magicLineHrz} aria-hidden="true"></li>
+                    </ul>
                 </nav>
             </header>
         </motion.div>
