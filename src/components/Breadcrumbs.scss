@@ -11,6 +11,9 @@
         // prevent wrapping to force horzontal overflow
         flex-wrap: nowrap;
         gap: var(--padRem-md);
+
+        font-size: var(--font-xs);
+        
         padding: calc(var(--pad-xl) - var(--pad-sm)) 0;
     }
 
@@ -21,7 +24,7 @@
             gap: 0.5rem;
             position: relative;
 
-            font-size: var(--font-xs);
+            font-size: inherit;
             color: var(--clr-600);
 
             padding: max(var(--pad-sm), calc(0.35 * var(--font-xs)))
