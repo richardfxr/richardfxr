@@ -30,10 +30,13 @@ export default function Breadcrumbs() {
         breadcrumbsTemp.forEach(function(breadcrumb, index) {
             // replace breadcrumbs[index] with corresponsing object from routes array
             this[index] = allRoutes.find(route => route.path.split('/').at(-1) === breadcrumb)
+            this[index].isCurrent = false
         }, breadcrumbsTemp)
 
         // add current: true to last breadcrumb
         breadcrumbsTemp[breadcrumbsTemp.length - 1].isCurrent = true
+
+        console.log('breadcrumbs:', breadcrumbsTemp)
 
         setBreadcrumbs(breadcrumbsTemp)
     }, [location])
