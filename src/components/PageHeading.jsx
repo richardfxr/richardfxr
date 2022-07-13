@@ -22,6 +22,7 @@ export default function PageHeading({ heading }) {
     return (
         <motion.h1
             className="pageHeading"
+            id="heading"
             variants={headingVar}
             initial="hidden"
             animate="show"

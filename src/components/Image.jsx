@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 export default function Image({ ani, folder, fileName, alt}) {
     if (ani === 'layout') {
         return (
-            <motion.div 
+            <motion.div
                 layoutId={fileName}
                 transition={{ ease: [0.5, 0, 0.05, 1], duration: 0.5 }}>
                 <picture>

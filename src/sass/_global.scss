@@ -106,6 +106,20 @@ ul, ol {
    }
 }
 
+.project {
+   &__colors {
+      display: flex;
+      flex-flow: row wrap;
+
+      li, div {
+         // remove remaning height to ensure <li> is a square
+         height: 0;
+
+         border-radius: var(--bradius-round);
+     }
+   }
+}
+
 
 
 // === TYPOGRAPHY =========================
@@ -137,8 +151,7 @@ h3 {
 }
 
 p {
-   color: var(--clr-600);
-   font-size: var(--font-md);
+   font-size: inherit;
    font-weight: 500;
    line-height: 1.55em;
 
@@ -147,6 +160,7 @@ p {
    }
 
    &.lg {
+      color: var(--clr-600);
       font-size: var(--font-lg);
    }
 }

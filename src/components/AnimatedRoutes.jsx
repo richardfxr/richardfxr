@@ -34,24 +34,28 @@ export const projects = [
         element: () => <EggHolders />,
         title: 'EggHolders',
         image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
+        date: '2022-03',
         colors: [
             {hex: '#f8d363', name: 'light mustard'},
             {hex: '#f0eeef', name: 'light grey'} , 
             {hex: '#f09170', name: 'dark salmon'}
         ],
-        labels: ['product design', 'photgraphy', 'risd']
+        media: ['Product design', 'Photography'],
+        cardLabels: ['product design', 'photgraphy', 'RISD'],
+        labels: ['Rhode Island School of Design'],
     },
     {
         path: '/projects/something',
         element: () => <PFrame />,
         title: 'P-Frame',
         image: {folder: 'test', fileName: 'P-Frame', alt: 'test image'},
+        date: '2022-03',
         colors: [
             {hex: '#f8d363', name: 'light mustard'},
-            {hex: '#f0eeef', name: 'light grey'} , 
-            {hex: '#f09170', name: 'dark salmon'}
         ],
-        labels: ['product design', 'CAD', 'risd']
+        media: ['Product design'],
+        cardLabels: ['product design', 'CAD', 'RISD'],
+        labels: ['Rhode Island School of Design', 'Computer-aided design'],
     },
 ]
 

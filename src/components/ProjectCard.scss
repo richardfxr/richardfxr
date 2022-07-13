@@ -82,18 +82,15 @@
         padding: var(--padRem-xs) 0;
     }
 
-    &__colors {
-        display: flex;
-        flex-flow: row wrap;
-        gap: var(--padRem-xxxs);
+    .project {
+        &__colors {
+            gap: var(--padRem-xxxs);
 
-        li {
-            // remove remaning height to ensure <li> is a square
-            height: 0;
-
-            padding: var(--padRem-xxs);
-            border-radius: var(--bradius-round);
+            li {
+                padding: var(--padRem-xxs);
+            }
         }
+        
     }
 
     &__labels {

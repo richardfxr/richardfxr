@@ -14,8 +14,8 @@ export default function PFrame() {
 
     return (
         <PageTemplate heading={title}>
-            <ProjectInfo {...project}>
-                <p>some text</p>
+            <ProjectInfo project={project}>
+                some text
             </ProjectInfo>
         </PageTemplate>
     )
