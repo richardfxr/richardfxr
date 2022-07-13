@@ -1,8 +1,11 @@
 // === IMPORTS ============================
+// Framer Motion
+import { motion } from "framer-motion"
 // Sass
 import './Footer.scss'
 // components
-import { routes } from '../App'
+import { routes } from './AnimatedRoutes'
+import { sectionVar } from './Section'
 import Separator from './Separator'
 import UnderlinedLink from './UnderlinedLink'
 // SVGs
@@ -10,9 +13,16 @@ import {ReactComponent as GitHubQR} from '../assets/SVGs/QR-GitHubrepo-richardfx
 
 export default function Footer() {
     return (
-        <footer className="section" id='footer' aria-labelledby='footer__heading'>
+        <motion.footer
+            className="section"
+            id='footer'
+            aria-labelledby='footer__heading'
+            variants={sectionVar}
+            initial="hidden"
+            animate="show"
+            exit="exit">
             <Separator />
-            
+
             <div className='section__side' >
                 <h2 id='footer__heading'>Footer</h2>
             </div>
@@ -44,6 +54,6 @@ export default function Footer() {
                     <GitHubQR />
                 </div>
             </div>
-        </footer>
+        </motion.footer>
     )
 }
