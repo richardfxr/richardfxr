@@ -12,8 +12,8 @@ import Info from '../pages/info'
 // secondary pages
 import Archive from '../pages/Archive'
 // project pages
-import EggHolders from '../pages/EggHolders'
-import PFrame from '../pages/PFrame'
+import EggHolders from '../pages/projects/EggHolders'   
+import PFrame from '../pages/projects/PFrame'
 
 // === ROUTES =============================
 export const routes = [
@@ -32,7 +32,7 @@ export const projects = [
     {
         path: '/projects/eggholders',
         element: () => <EggHolders />,
-        title: 'Eggholders',
+        title: 'EggHolders',
         image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
         colors: [
             {hex: '#f8d363', name: 'light mustard'},
