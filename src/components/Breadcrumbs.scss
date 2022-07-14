@@ -7,7 +7,7 @@
                    0
                    0;
 
-    ol {
+    ol.row {
         // prevent wrapping to force horzontal overflow
         flex-wrap: nowrap;
         gap: var(--padRem-md);
