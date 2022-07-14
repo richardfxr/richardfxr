@@ -18,7 +18,7 @@
     dl {
         display: flex;
         flex-flow: column nowrap;
-        gap: var(--pad-xxxl);
+        gap: var(--pad-4xl);
 
         // top & bottom alignment compensation
         margin: calc(-1 * var(--padRem-xxs)) 0;
