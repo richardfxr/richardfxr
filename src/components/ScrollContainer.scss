@@ -5,8 +5,6 @@
 
     display: flex;
 
-    height: 50px;
-
     overflow: auto;
 
     &::before, &::after {
@@ -22,6 +20,8 @@
         flex-flow: column nowrap;
 
         &::before {
+            --_translateHide: translateY(calc(-1 * var(--_scrollShadow-size)));
+
             top: 0;
             right: 0;
             left: 0;
@@ -31,6 +31,8 @@
         }
 
         &::after {
+            --_translateHide: translateY(var(--_scrollShadow-size));
+
             right: 0;
             bottom: 0;
             left: 0;
@@ -44,6 +46,8 @@
         flex-flow: row nowrap;
 
         &::before {
+            --_translateHide: translateX(calc(-1 * var(--_scrollShadow-size)));
+
             top: 0;
             bottom: 0;
             left: 0;
@@ -53,6 +57,8 @@
         }
 
         &::after {
+            --_translateHide: translateX(var(--_scrollShadow-size));
+            
             top: 0;
             right: 0;
             bottom: 0;
@@ -62,29 +68,18 @@
         }
     }
 
-    &.start {
-        &::before {
-            // hide start scroll shadow
-            opacity: 0;
-        }
-    }
+    &.start::before, &.end::after {
+        // hide start scroll shadow
+        opacity: 0;
 
-    &.end {
-        &::after {
-            // hide end scroll shadow
-            opacity: 0;
-        }
+        // move out of the way when hidden
+        transform: var(--_translateHide);
+
+        transition: opacity var(--trans-standard),
+                    transform 0s var(--transTime-standard);
     }
 
     .edgeDiv {
         width: 0;
-
-        &.end {
-            // 1px padding to ensure it triggers the IntersectionObserver
-            // padding-right: 1px;
-        }
-    }
-
-    .test {
     }
 }
