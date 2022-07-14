@@ -1,0 +1,26 @@
+#archive {
+   .section {
+        &__main {
+            padding-bottom: var(--pad-7xl);
+        }
+    }
+
+    table {
+        thead {
+            th {
+                &:nth-child(2) {
+                    width: 70%;
+                }
+            }
+        }
+
+        tr {
+            td{
+                &:first-of-type {
+                    // make titles (2nd column) --clr-1000
+                    color: var(--clr-1000);
+                }
+            }
+        }
+    } 
+}
