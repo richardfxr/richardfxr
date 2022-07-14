@@ -13,7 +13,7 @@ export default function PFrame() {
     const project = projects.find(elem => elem.title === title)
 
     return (
-        <PageTemplate heading={title}>
+        <PageTemplate heading={title} id="pframe">
             <ProjectInfo project={project}>
                 some text
             </ProjectInfo>

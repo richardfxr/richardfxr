@@ -4,7 +4,7 @@ import PageTemplate from "../components/PageTemplate"
 
 export default function About() {
     return (
-        <PageTemplate heading="About">
+        <PageTemplate heading="About" id="about">
         </PageTemplate>
     )
 }

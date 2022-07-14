@@ -5,6 +5,7 @@ import PageTemplate from "../../components/PageTemplate"
 import ProjectInfo from "../../components/ProjectInfo"
 import Section from "../../components/Section"
 import Image from "../../components/Image"
+import UnderlinedLink from '../../components/UnderlinedLink'
 
 export default function EggHolders() {
     // project title
@@ -13,9 +14,9 @@ export default function EggHolders() {
     const project = projects.find(elem => elem.title === title)
 
     return (
-        <PageTemplate heading={title}>
+        <PageTemplate heading={title} id="eggholders">
             <ProjectInfo project={project}>
-                some text
+                As part of a form exploration, I created three egg holders based on various inspirations. This project was part of a RISD ID course taught by <UnderlinedLink styling="em" href="https://www.risd.edu/academics/industrial-design/faculty/joseph-napurano" target="_blank">Joseph Napurano</UnderlinedLink>.
             </ProjectInfo>
         </PageTemplate>
     )

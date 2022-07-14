@@ -22,7 +22,7 @@ const pageNormVar = {
 }
 
 
-export default function PageTemplate({ heading, children }) {
+export default function PageTemplate({ heading, id, children }) {
     const { initialLoad, changeSetting } = useSettings()
 
     return (
@@ -30,6 +30,7 @@ export default function PageTemplate({ heading, children }) {
             key={heading}
             variants={initialLoad ? pageInitVar : pageNormVar}
             className="pageWrapper"
+            id={id}
             initial="hidden"
             animate="show"
             exit="exit"

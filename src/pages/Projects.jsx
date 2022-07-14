@@ -4,7 +4,7 @@ import PageTemplate from "../components/PageTemplate"
 
 export default function Projects() {
     return (
-        <PageTemplate heading="Projects">
+        <PageTemplate heading="Projects" id="projects">
         </PageTemplate>
     )
 }
