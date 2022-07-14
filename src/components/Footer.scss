@@ -8,6 +8,8 @@ footer {
             flex-direction: column;
             gap: var(--pad-xxxl);
 
+            color: var(--clr-600);
+
             padding-bottom: var(--pad-xxl);
         }
     }
@@ -29,7 +31,7 @@ footer {
                 text-align: right;
             }
 
-            &__ver {
+            &__ver.xs {
                 color: var(--clr-1000);
 
                 padding: 0 var(--pad-xs);
