@@ -1,0 +1,90 @@
+.scrollContainer {
+    // internal variables
+    --_scrollShadow-size: 20px;
+    --_scrollShadow-gradient: var(--clr-100) 0%, var(--clr-100-trans) 100%;
+
+    display: flex;
+
+    height: 50px;
+
+    overflow: auto;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+
+        opacity: 1;
+
+        transition: opacity var(--trans-standard);
+    }
+
+    &.vrt {
+        flex-flow: column nowrap;
+
+        &::before {
+            top: 0;
+            right: 0;
+            left: 0;
+
+            background: linear-gradient(180deg, var(--_scrollShadow-gradient));
+            height: var(--_scrollShadow-size);
+        }
+
+        &::after {
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            background: linear-gradient(0deg, var(--_scrollShadow-gradient));
+            height: var(--_scrollShadow-size);
+        }
+    }
+
+    &.hrz {
+        flex-flow: row nowrap;
+
+        &::before {
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            background: linear-gradient(90deg, var(--_scrollShadow-gradient));
+            width: var(--_scrollShadow-size);
+        }
+
+        &::after {
+            top: 0;
+            right: 0;
+            bottom: 0;
+
+            background: linear-gradient(270deg, var(--_scrollShadow-gradient));
+            width: var(--_scrollShadow-size);
+        }
+    }
+
+    &.start {
+        &::before {
+            // hide start scroll shadow
+            opacity: 0;
+        }
+    }
+
+    &.end {
+        &::after {
+            // hide end scroll shadow
+            opacity: 0;
+        }
+    }
+
+    .edgeDiv {
+        width: 0;
+
+        &.end {
+            // 1px padding to ensure it triggers the IntersectionObserver
+            // padding-right: 1px;
+        }
+    }
+
+    .test {
+    }
+}

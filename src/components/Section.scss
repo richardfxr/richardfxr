@@ -1,6 +1,6 @@
 .section {
     display: grid;
-    grid-template-columns: var(--section-side-width) auto;
+    grid-template-columns: var(--section-side-width) 1fr;
     align-items: start;
     gap: var(--pad-lg);
     position: relative;
@@ -12,6 +12,7 @@
         top: var(--pad-sm);
         right: 0;
         left: 0;
+        min-width: 0px;
     }
 
     h2 {
@@ -22,6 +23,7 @@
 
      &__main {
          position: relative;
+         min-width: 0px;
      }
 
 }
