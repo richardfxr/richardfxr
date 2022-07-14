@@ -32,9 +32,22 @@
         text-decoration-color: transparent;
     }
 
+    &.internal {
+        &::after {
+            content: " →";
+            font-family: 'Inter', sans-serif;
+        }
+    }
+
+    &.external {
+        &::after {
+            content: " ↗";
+            font-family: 'Inter', sans-serif;
+        }
+    }
+
     &.block {
-        display: flex;
-        flex-flow: row wrap;
+        display: block;
 
         font-weight: 500;
 

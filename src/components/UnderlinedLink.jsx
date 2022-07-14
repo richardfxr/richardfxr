@@ -5,13 +5,17 @@ import { Link } from 'react-router-dom'
 import './UnderlinedLink.scss'
 
 export default function UnderlinedLink({ styling, href, target, to, click, children}) {
-    if (href) {
+    if (href && target === '_blank') {
         return (
-            <a href={href} target={target} className={"link " + styling}>{children}</a>
+            <a href={href} target={target} className={"link external " + styling}>{children}</a>
+        )
+    } else if (href) {
+        return (
+            <a href={href} target='_self' className={"link internal " + styling}>{children}</a>
         )
     } else if (to) {
         return (
-            <Link to={to} className={"link " + styling}>{children}</Link>
+            <Link to={to} className={"link internal " + styling}>{children}</Link>
         )
     } else if (click) {
         return (

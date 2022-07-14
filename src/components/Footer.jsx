@@ -48,7 +48,7 @@ export default function Footer() {
                 <div className='info'>
                     <div className='info__text'>
                         <p className='info__text__ver xs'>v10.0.0 pre alpha</p>
-                        <p className='xs'><UnderlinedLink href='https://github.com/richardfxr/richardfxr' target='_blank'>Open source code available on GitHub</UnderlinedLink>.</p>
+                        <p className='xs'><UnderlinedLink href='https://github.com/richardfxr/richardfxr' target='_blank'>Open source code available on GitHub</UnderlinedLink></p>
                         <p className='xs'>Designed by yours truly. Copyright © 2022 Xiangrui Fu. All rights reserved.</p>
                     </div>
                     <GitHubQR />
