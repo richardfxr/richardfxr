@@ -121,7 +121,7 @@
                 width: var(--border-width);
                 height: var(--_link-height);
 
-                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--clr-1000) 30%, var(--clr-1000) 70%, rgba(255, 255, 255, 0) 100%);
+                background: linear-gradient(180deg, var(--clr-1000-trans) 0%, var(--clr-1000) 30%, var(--clr-1000) 70%, var(--clr-1000-trans) 100%);
             
                 &::before {
                     // top margin to vertically center ::before
