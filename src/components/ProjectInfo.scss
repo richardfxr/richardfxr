@@ -20,6 +20,9 @@
         flex-flow: column nowrap;
         gap: var(--pad-xxxl);
 
+        // top & bottom alignment compensation
+        margin: calc(-1 * var(--padRem-xxs)) 0;
+
         font-size: var(--font-md);
 
         dt{
