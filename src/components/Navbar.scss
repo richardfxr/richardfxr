@@ -1,19 +1,22 @@
+@use '../sass/breakpoints' as *;
+
 // === NAVBAR =============================
 .navbar {
     // internal variables
+    --_gradient-deg: 180deg;          // degree of gradient border
     --_gradient-end: 250px;           // position of the var(--clr-300) point in the gradient border
     --_logo-width: 34px;
     --_logo-height: 35px;
     --_link-width: 100%;              // width of the <a> that contain page icons
     --_link-height: 55px;             // height of the <a> that contain page icons
-    --_icon-width: min(1.3rem, 40px); // width of <Navbar /> icons
-    --_icon-height: min(1.3rem, 40px);// height of <Navbar /> icons
+    --_icon-size: min(1.3rem, 40px); // width & height of <Navbar /> icons
     --_indicator-size: 12px;          // width and height of the small triangular indicator next to the magic line
 
     position: fixed;
     top: 0;
     bottom: 0;
     left: calc((100% - min(100%, var(--max-width))) / 2);
+    z-index: 1000;
     
     width: var(--nav-size);
 
@@ -43,7 +46,7 @@
             z-index: -1;
             margin: calc(-1 * var(--border-width));
             border-radius: inherit;
-            background: linear-gradient(180deg, var(--clr-rblue) 0px, var(--clr-300) var(--_gradient-end));
+            background: linear-gradient(var(--_gradient-deg), var(--clr-rblue) 0px, var(--clr-300) var(--_gradient-end));
         }
         
         .logo {
@@ -65,16 +68,19 @@
             
 
             ul {
+                display: flex;
+                flex-flow: column nowrap;
                 position: relative;
             }
 
             a {
-                display: block;
-                
-                // calculate appropriate padding so icons are the specified size
-                padding: calc((var(--_link-height) - var(--_icon-height)) / 2)
-                         calc((var(--_link-width) - var(--_icon-width)) / 2);
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
+                width: var(--_link-width);
+                height: var(--_link-height);
+                
                 transition: transform var(--trans-standard);
 
                 &.active, &:hover, &:focus {
@@ -91,6 +97,10 @@
 
                 &:active {
                     transform: var(--active-translateY-md);
+                }
+
+                svg {
+                    width: var(--_icon-size);
                 }
             }
 
@@ -144,4 +154,114 @@
             }
         }
     }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media (orientation: portrait) {
+    .navbar {
+        // internal variables
+        --_gradient-deg: 90deg;          // degree of gradient border
+        --_gradient-end: 150px;           // position of the var(--clr-300) point in the gradient border
+        --_logo-width: 33px;
+        --_link-width: 55px;              // width of the <a> that contain page icons
+        --_link-height: 100%;             // height of the <a> that contain page icons
+        --_indicator-size: 12px;          // width and height of the small triangular indicator next to the magic line
+
+        // new absolute insets to move <Navbar> to the bottom
+        top: unset;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        
+        width: unset;
+        max-width: var(--max-width);
+        height: calc(var(--nav-size) - var(--pad-sm));
+
+        margin-right: auto;
+        margin-left: auto;
+
+        // background color to block all elements below
+        background-color: var(--clr-100);
+        box-shadow: 0px 0px 17px 3px var(--clr-100);
+
+        // remove y auto overflow and add x overflow
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        header {
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+    
+            min-width: calc(100% - (2 * var(--pad-sm)));
+            min-height: unset;
+            width: fit-content;
+            height: calc(100% - var(--pad-sm));
+    
+            border-radius: var(--bradius-sm) var(--bradius-sm) var(--bradius-sm) var(--bradius-xxl);
+            margin: 0 var(--pad-sm) var(--pad-sm) var(--pad-sm);
+            
+            .logo {
+                flex-shrink: 0;
+                // 20px top padding and moved 1px to the left to appear more centered
+                padding: 0 0 0 var(--pad-xl);
+                // padding: 0;
+                width: calc(var(--_logo-width) + var(--pad-xl));
+                height: 100%;
+            }
+    
+            nav {
+                height: 100%;
+                // add slight padding to top and bottom of <ul>
+                padding: 0 var(--pad-md);
+                margin-top: 0;
+                margin-left: auto;
+                
+    
+                ul {
+                    flex-flow: row nowrap;
+
+                    height: 100%;
+                }
+    
+                #magicLineVrt {
+                    // hide vertical magic line
+                    display: none;
+                }
+    
+                #magicLineHrz {
+                    display: block;
+                    top: calc(-1 * var(--border-width));
+                    left: 0;
+    
+                    width: var(--_link-width);
+                    height: var(--border-width);
+    
+                    background: linear-gradient(90deg, var(--clr-1000-trans) 0%, var(--clr-1000) 30%, var(--clr-1000) 70%, var(--clr-1000-trans) 100%);
+                
+                    &::before {
+                        // slight shift down to avoid AA issues
+                        top: calc(-1 * (var(--_indicator-size) / 2) + var(--border-width)); 
+                        // left margin to horizontally center ::before
+                        left: calc((var(--_link-width) - var(--_indicator-size)) / 2);
+                        
+    
+                        border-bottom-left-radius: var(--bradius-xxs);
+    
+                        // rotate square to become a rhombus
+                        transform: rotate(-45deg);
+                        // clip rhombus to become a triangle
+                        clip-path: polygon(0 0, 0% 100%, 100% 100%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+    
 }

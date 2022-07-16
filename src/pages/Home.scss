@@ -1,4 +1,5 @@
 #intro {
+    padding-bottom: calc(var(--pad-8xl) - var(--pad-sm));
 
     .section {
         &__main {
@@ -6,12 +7,13 @@
             flex-flow: column nowrap;
             gap: var(--pad-6xl);
 
-            padding: var(--pad-8xl) 0 calc(var(--pad-8xl) - var(--pad-sm));
+            padding-top: calc(var(--pad-xl) - var(--padRem-xxs));
         }
     }
 }
 
 #works {
+    padding-bottom: var(--pad-xl);
 
     .section {
         &__main {

@@ -1,3 +1,5 @@
+@use '../sass/breakpoints' as *;
+
 .projectInfo {
     display: grid;
     // first column (image) will take up section side + 1 column (of twoCol) of space
@@ -7,11 +9,12 @@
     gap: var(--pad-lg);
 
     padding-top: var(--pad-xl);
-    padding-bottom: var(--pad-xl);
+    padding-bottom: var(--pad-6xl);
 
     & > div:first-of-type {
-        // bring <Image /> above other elements
-        position: relative;
+        // <Image /> element
+        position: sticky;
+        top: var(--pad-xl);
         z-index: 100;
     }
 
@@ -50,6 +53,20 @@
             li, div {
                 padding: var(--padRem-xs);
             }
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-tablet) {
+    .projectInfo {
+        grid-template-columns: 1fr;
+
+        & > div:first-of-type {
+            // <Image /> element
+            position: static;
         }
     }
 }

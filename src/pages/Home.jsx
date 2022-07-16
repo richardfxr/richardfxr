@@ -12,6 +12,7 @@ export default function Home() {
     return (
         <PageTemplate heading="Hello" id="home">
             <Section heading="Introduction" id="intro" first>
+                <p className="lg inter" aria-label='waving Kaomoji'>(¬_¬)ﾉ</p>
                 <p className="lg">I’m <em>Richard Fu</em>, an <em>artist</em>, <em>designer</em>, and <em>developer</em> who loves blue - <em className="rblue">#11d3e7</em> to be exact.</p>
                 <ul className='row md'>
                     <li><Button href='#works' target="_self" styling="sm rblue"><span className='inter upDw pad--right'>↓</span> Works</Button></li>

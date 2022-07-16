@@ -8,6 +8,10 @@
         }
     }
 
+    & > div {
+        width: 100%;
+    }
+
     &__link {
         display: block;
 
@@ -79,7 +83,7 @@
         align-items: center;
         gap: var(--pad-xs);
 
-        padding: var(--padRem-xs) 0;
+        padding-top: var(--padRem-xs);
     }
 
     .project {

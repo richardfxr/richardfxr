@@ -14,7 +14,7 @@ import {ReactComponent as GitHubQR} from '../assets/SVGs/QR-GitHubrepo-richardfx
 export default function Footer() {
     return (
         <motion.footer
-            className="section"
+        className="footer"
             id='footer'
             aria-labelledby='footer__heading'
             variants={sectionVar}
@@ -23,11 +23,11 @@ export default function Footer() {
             exit="exit">
             <Separator />
 
-            <div className='section__side' >
+            <div className='footer__side' >
                 <h2 id='footer__heading'>Footer</h2>
             </div>
             
-            <div className='section__main'>
+            <div className='footer__main'>
                 <div className='twoCol'>
                     <nav>
                         <ul className='list withSeparators sm' aria-label='Footer navigation'>

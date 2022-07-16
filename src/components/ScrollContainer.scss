@@ -1,6 +1,5 @@
 .scrollContainer {
     // internal variables
-    --_scrollShadow-size: 20px;
     --_scrollShadow-gradient: var(--clr-100) 0%, var(--clr-100-trans) 100%;
 
     display: flex;
@@ -20,25 +19,25 @@
         flex-flow: column nowrap;
 
         &::before {
-            --_translateHide: translateY(calc(-1 * var(--_scrollShadow-size)));
+            --_translateHide: translateY(calc(-1 * var(--pad-lg)));
 
             top: 0;
             right: 0;
             left: 0;
 
             background: linear-gradient(180deg, var(--_scrollShadow-gradient));
-            height: var(--_scrollShadow-size);
+            height: var(--pad-lg);
         }
 
         &::after {
-            --_translateHide: translateY(var(--_scrollShadow-size));
+            --_translateHide: translateY(var(--pad-lg));
 
             right: 0;
             bottom: 0;
             left: 0;
 
             background: linear-gradient(0deg, var(--_scrollShadow-gradient));
-            height: var(--_scrollShadow-size);
+            height: var(--pad-lg);
         }
     }
 
@@ -46,25 +45,25 @@
         flex-flow: row nowrap;
 
         &::before {
-            --_translateHide: translateX(calc(-1 * var(--_scrollShadow-size)));
+            --_translateHide: translateX(calc(-1 * var(--pad-lg)));
 
             top: 0;
             bottom: 0;
             left: 0;
 
             background: linear-gradient(90deg, var(--_scrollShadow-gradient));
-            width: var(--_scrollShadow-size);
+            width: var(--pad-lg);
         }
 
         &::after {
-            --_translateHide: translateX(var(--_scrollShadow-size));
+            --_translateHide: translateX(var(--pad-lg));
             
             top: 0;
             right: 0;
             bottom: 0;
 
             background: linear-gradient(270deg, var(--_scrollShadow-gradient));
-            width: var(--_scrollShadow-size);
+            width: var(--pad-lg);
         }
     }
 

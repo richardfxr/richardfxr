@@ -40,3 +40,12 @@
         }
     }
 }
+
+
+
+// === BREAKPOINTS ============================
+@media (orientation: portrait) {
+    .a11yMenu {
+        left: calc(var(--pad-sm) + var(--border-width));
+    }
+}

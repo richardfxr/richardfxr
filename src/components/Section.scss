@@ -1,11 +1,14 @@
-.section {
+@use '../sass/breakpoints' as *;
+
+.section, .footer {
     display: grid;
     grid-template-columns: var(--section-side-width) 1fr;
     align-items: start;
     gap: var(--pad-lg);
     position: relative;
 
-    padding: 0 var(--pad-xxl);
+    padding-right: var(--pad-xxl);
+    padding-left: var(--pad-xxl);
 
     &__side {
         position: sticky;
@@ -16,9 +19,8 @@
     }
 
     h2 {
-        // top & bottom padding with alignment compensation
+        // top padding with alignment compensation
         padding-top: calc(var(--pad-xl) - var(--padRem-5xs));
-        padding-bottom: var(--pad-xl);
      }
 
      &__main {
@@ -26,4 +28,29 @@
          min-width: 0px;
      }
 
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-laptop) {
+    .section, .footer {
+        gap: var(--pad-xxl);
+
+        h2 {
+            // make text vertical
+            writing-mode: vertical-rl;
+            overflow-wrap: normal;
+            white-space: nowrap;
+
+            // remove top padding as it is now on the bottom
+            padding-top: 0;
+            // bottom padding with alignment compensation
+            padding-bottom: calc(var(--pad-xl) - var(--padRem-5xs));
+
+            // rotate 180 degress
+            transform: rotate(180deg);
+            
+        }
+    }
 }

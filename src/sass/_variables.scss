@@ -1,5 +1,5 @@
 // Partial SCSS file containing variables
-
+@use 'breakpoints' as *;
 
 
 /* ============================================
@@ -9,6 +9,7 @@
    --max-width: 1400px;
    --nav-size: 100px;
    --section-side-width: 280px;
+   --twoCol-minWidth: 7rem;
 
    --padRem-6xs: 0.0625rem;
    --padRem-5xs: 0.125rem;
@@ -69,4 +70,13 @@
    --transTime-slowest: 0.30s;
    // timing functions
    --transFunc-enhancedEase: cubic-bezier(.57,-0.01,.22,1.04);
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-laptop) {
+   :root {
+      --section-side-width: var(--font-sm);
+   }
 }
