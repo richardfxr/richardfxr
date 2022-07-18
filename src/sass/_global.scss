@@ -4,6 +4,7 @@
 
 // === USE ====================================
 @use 'variables' as *;
+@use 'breakpoints' as *;
 
 
 
@@ -216,4 +217,18 @@ code {
    margin: 0;
 
 	overflow: hidden;
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-mobile) {
+   .twoCol {
+      grid-template-columns: 1fr;
+      gap: var(--pad-xl);
+   
+      &.cards {
+         padding-top: var(--pad-xl);
+      }
+   }
 }

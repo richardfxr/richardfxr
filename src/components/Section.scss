@@ -33,6 +33,14 @@
 
 
 // === BREAKPOINTS ============================
+@media (orientation: portrait) {
+    .section, .footer {
+        &__side {
+            top: 0;
+        }
+    }
+}
+
 @media only screen and (max-width: $breakpoint-laptop) {
     .section, .footer {
         gap: var(--pad-xxl);
@@ -52,5 +60,12 @@
             transform: rotate(180deg);
             
         }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    .section, .footer {
+        padding-right: var(--pad-lg);
+        padding-left: var(--pad-lg);
     }
 }

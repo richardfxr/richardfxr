@@ -80,3 +80,60 @@
       --section-side-width: var(--font-sm);
    }
 }
+
+@media only screen and (max-width: $breakpoint-mobile) {
+   :root {
+      --nav-size: 90px;
+      --section-side-width: var(--font-sm);
+
+      --padRem-6xs: 0.03125rem;
+      --padRem-5xs: 0.0625rem;
+      --padRem-4xs: 0.125rem;
+      --padRem-xxxs: 0.25rem;
+      --padRem-xxs: 0.375rem;
+      --padRem-xs: 0.5rem;
+      --padRem-sm: 0.625rem;
+      --padRem-md: 0.75rem;                        // gap between list elements
+      --padRem-lg: 1rem;
+
+      --pad-6xs: 0.5px;
+      --pad-5xs: 1px;
+      --pad-4xs: 2px;
+      --pad-xxxs: 4px;
+      --pad-xxs: 6px;
+      --pad-xs: 8px;
+      --pad-sm: 10px;
+      --pad-md: 12px;
+      --pad-lg: 16px;
+      --pad-xl: 20px;
+      --pad-xxl: 24px;
+      --pad-xxxl: 30px;
+      --pad-4xl: 40px;
+      --pad-5xl: 50px;
+      --pad-6xl: 70px;
+      --pad-7xl: 90px;
+      --pad-8xl: 110px;
+
+      // === BORDER & OUTLINE ===================
+      // border
+      --border-width: 1.4px;                     // standard border width
+      --bradius-xxs: 2px;                        // border radius of <NavBar /> page indicator
+      --bradius-xs: 3px;                         
+      --bradius-sm: 5px;                         // standard border radius for wrapper borders
+      --bradius-xxl: 30px;                       // largest border radius for special corners
+      --bradius-round: 1e5px;                    // extremely larg border radius to produce circular sides
+      // outline
+      --outline-width: 3px;
+
+      // === TYPOGRAPHY =========================
+      --font-xs: 0.85rem;
+      --font-sm: 1rem;
+      --font-md: 1.15rem;
+      --font-lg: 1.3rem;
+      --font-xxl: 4rem;
+
+      // === TRANSFORMS =========================
+      --active-translateY-sm: translateY(2px);
+      --active-translateY-md: translateY(3px);
+   }
+}

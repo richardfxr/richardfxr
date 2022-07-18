@@ -5,8 +5,7 @@
     // internal variables
     --_gradient-deg: 180deg;          // degree of gradient border
     --_gradient-end: 250px;           // position of the var(--clr-300) point in the gradient border
-    --_logo-width: 34px;
-    --_logo-height: 35px;
+    --_logo-size: 35px;
     --_link-width: 100%;              // width of the <a> that contain page icons
     --_link-height: 55px;             // height of the <a> that contain page icons
     --_icon-size: min(1.3rem, 40px); // width & height of <Navbar /> icons
@@ -52,9 +51,9 @@
         .logo {
             // 20px top padding and moved 1px to the left to appear more centered
             padding: var(--pad-xl)
-                     calc((var(--_link-width) - var(--_logo-width)) / 2 + 1px)
+                     calc((var(--_link-width) - var(--_logo-size)) / 2 + 1px)
                      calc(var(--pad-xl) / 2)
-                     calc((var(--_link-width) - var(--_logo-width)) / 2 - 1px);
+                     calc((var(--_link-width) - var(--_logo-size)) / 2 - 1px);
 
             &__path {
                 fill: var(--clr-rblue);
@@ -164,10 +163,8 @@
         // internal variables
         --_gradient-deg: 90deg;          // degree of gradient border
         --_gradient-end: 150px;           // position of the var(--clr-300) point in the gradient border
-        --_logo-width: 33px;
         --_link-width: 55px;              // width of the <a> that contain page icons
         --_link-height: 100%;             // height of the <a> that contain page icons
-        --_indicator-size: 12px;          // width and height of the small triangular indicator next to the magic line
 
         // new absolute insets to move <Navbar> to the bottom
         top: unset;
@@ -209,7 +206,7 @@
                 // 20px top padding and moved 1px to the left to appear more centered
                 padding: 0 0 0 var(--pad-xl);
                 // padding: 0;
-                width: calc(var(--_logo-width) + var(--pad-xl));
+                width: calc((0.94 * var(--_logo-size)) + var(--pad-xl));
                 height: 100%;
             }
     
@@ -235,9 +232,9 @@
                 #magicLineHrz {
                     display: block;
                     top: calc(-1 * var(--border-width));
-                    left: 0;
+                    left: calc(-1 * var(--pad-xs));
     
-                    width: var(--_link-width);
+                    width: calc(var(--_link-width) + (2 * var(--pad-xs)));
                     height: var(--border-width);
     
                     background: linear-gradient(90deg, var(--clr-1000-trans) 0%, var(--clr-1000) 30%, var(--clr-1000) 70%, var(--clr-1000-trans) 100%);
@@ -246,7 +243,7 @@
                         // slight shift down to avoid AA issues
                         top: calc(-1 * (var(--_indicator-size) / 2) + var(--border-width)); 
                         // left margin to horizontally center ::before
-                        left: calc((var(--_link-width) - var(--_indicator-size)) / 2);
+                        left: calc((var(--_link-width) + (2 * var(--pad-xs)) - var(--_indicator-size)) / 2);
                         
     
                         border-bottom-left-radius: var(--bradius-xxs);
@@ -262,6 +259,11 @@
     }
 }
 
-@media only screen and (max-width: $breakpoint-tablet) {
-    
+@media only screen and (max-width: $breakpoint-mobile) {
+    .navbar {
+        // internal variables
+        --_logo-size: 30px;
+        --_icon-size: min(1.3rem, 40px); // width & height of <Navbar /> icons
+        --_indicator-size: 12px;          // width and height of the small triangular indicator next to the magic line
+    }
 }

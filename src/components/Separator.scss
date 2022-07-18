@@ -39,3 +39,10 @@
         --gradient-end: calc(100px + var(--section-side-width));
     }
 }
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    .separator {
+        right: var(--pad-lg);
+        left: var(--pad-lg);
+    }
+}

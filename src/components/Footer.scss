@@ -1,3 +1,5 @@
+@use '../sass/breakpoints' as *;
+
 footer {
     // internal variables
     --_QRcode-size: 6.25rem;
@@ -44,5 +46,14 @@ footer {
             fill: var(--clr-1000);
             width: var(--_QRcode-size);
         }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-mobile) {
+    .footer {
+        padding-bottom: var(--pad-lg);
     }
 }
