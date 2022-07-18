@@ -16,11 +16,6 @@ table {
     thead{
         tr:last-child {
             border-bottom: solid var(--border-width) var(--clr-300);
-            
-            th, td {
-                // remove bottom padding on all elements in last <tr>
-                padding-bottom: var(--pad-sm);
-            }
         }
     }
 
@@ -30,11 +25,6 @@ table {
         &:last-child {
             // remove bottom border on last row
             border-bottom: none;
-
-            th, td {
-                // remove bottom padding on all elements in last <tr>
-                padding-bottom: 0;
-            }
         }
 
         & > *:first-child {

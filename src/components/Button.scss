@@ -1,3 +1,5 @@
+@use '../sass/breakpoints' as *;
+
 .button {
     display: block;
 
@@ -50,6 +52,17 @@
 
         &:active {
             background-color: var(--clr-rblue-active);
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-mobile) {
+    .button {
+        &.sm {
+            padding: var(--pad-xs) calc(var(--font-sm) - 0.2rem + var(--pad-xs));
         }
     }
 }

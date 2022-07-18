@@ -1,6 +1,14 @@
+@use '../sass/breakpoints' as *;
+
 #archive {
    .section {
-        padding-bottom: var(--pad-7xl);
+        padding-bottom: calc(var(--pad-7xl) - var(--pad-sm));
+
+        &__side {
+            h2 {
+                padding-bottom: calc(var(--pad-sm) + var(--padRem-4xs));
+            }
+        }
     }
 
     table {
@@ -21,4 +29,19 @@
             }
         }
     } 
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-mobile) {
+    #archive {
+        .section {
+            &__side {
+                h2 {
+                    padding-top: calc(var(--pad-sm) + var(--padRem-xxs));
+                }
+            }
+        }
+    }
 }
