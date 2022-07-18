@@ -8,7 +8,7 @@ import { AnimatePresence } from "framer-motion"
 import Home from '../pages/Home'
 import Projects from '../pages/Projects'
 import About from '../pages/About'
-import Info from '../pages/info'
+import Info from '../pages/Info'
 // secondary pages
 import Archive from '../pages/Archive'
 // project pages
