@@ -8,6 +8,8 @@ import { motion } from "framer-motion"
 import './Navbar.scss'
 // components
 import { routes } from './AnimatedRoutes'
+// hooks
+import { useIsPortrait } from '../hooks/useMediaQuery'
 // SVGs
 import {ReactComponent as Logo} from '../assets/SVGs/logo.svg'
 import {ReactComponent as HomeIcon} from '../assets/SVGs/home.svg'
@@ -18,15 +20,22 @@ import {ReactComponent as InfoIcon} from '../assets/SVGs/info.svg'
 
 
 // === FRAMER VARIANTS ====================
-export const navbarVar = {
-    hidden: { opacity: 0, x: -20 },
-    show: { opacity: 1, x: 0, transition: { ease: "easeOut", duration: 0.5 } },
+const navbarVarLandscape = {
+    hidden: { opacity: 0, x: -20, y: 0 },
+    show: { opacity: 1, x: 0, y:0, transition: { ease: "easeOut", duration: 0.5 } },
+}
+
+const navbarVarPortrait = {
+    hidden: { opacity: 1, x: 0, y: 20 },
+    show: { opacity: 1, x: 0, y: 0, transition: { ease: "easeOut", duration: 0.5 } },
 }
 
 
 
 export default function Navbar() {
     const location = useLocation()
+    const isPortrait = useIsPortrait()
+    if (isPortrait) console.log('is portrait')
 
     // refs
     const navUl = useRef(null)
@@ -48,7 +57,7 @@ export default function Navbar() {
     return (
         <motion.div 
             className='navbar'
-            variants={navbarVar}
+            variants={isPortrait ? navbarVarPortrait : navbarVarLandscape}
             initial="hidden"
             animate="show">
             <header>
