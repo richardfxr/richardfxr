@@ -259,11 +259,17 @@
     }
 }
 
+@media only screen and (max-width: $breakpoint-tablet) {
+    .navbar {
+        // internal variables
+        --_logo-size: 32px;
+        --_icon-size: min(1.3rem, 35px); // width & height of <Navbar /> icons
+    }
+}
+
 @media only screen and (max-width: $breakpoint-mobile) {
     .navbar {
         // internal variables
         --_logo-size: 30px;
-        --_icon-size: min(1.3rem, 40px); // width & height of <Navbar /> icons
-        --_indicator-size: 12px;          // width and height of the small triangular indicator next to the magic line
     }
 }

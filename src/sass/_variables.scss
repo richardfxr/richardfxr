@@ -81,6 +81,51 @@
    }
 }
 
+@media only screen and (max-width: $breakpoint-tablet) {
+   :root {
+      --nav-size: 90px;
+   
+      --padRem-6xs: 0.053125rem;
+      --padRem-5xs: 0.0625rem;
+      --padRem-4xs: 0.1875rem;
+      --padRem-xxxs: 0.3125rem;
+      --padRem-xxs: 0.4375rem;
+      --padRem-xs: 0.5625rem;
+      --padRem-sm: 0.6875rem;
+      --padRem-md: 0.875rem;                       // gap between list elements
+      --padRem-lg: 1.125rem;
+   
+      --pad-6xs: 0.85px;
+      --pad-5xs: 1px;
+      --pad-4xs: 3px;
+      --pad-xxxs: 5px;
+      --pad-xxs: 7px;
+      --pad-xs: 9px;
+      --pad-sm: 11px;
+      --pad-md: 14px;
+      --pad-lg: 18px;
+      --pad-xl: 22px;
+      --pad-xxl: 27px;
+      --pad-xxxl: 35px;
+      --pad-4xl: 45px;
+      --pad-5xl: 60px;
+      --pad-6xl: 80px;
+      --pad-7xl: 100px;
+      --pad-8xl: 125px;
+   
+      // === BORDER & OUTLINE ===================
+      // border
+      --bradius-xxl: 32px;                       // largest border radius for special corners
+   
+      // === TYPOGRAPHY =========================
+      --font-xs: 0.9rem;
+      --font-sm: 1.1rem;
+      --font-md: 1.2rem;
+      --font-lg: 1.3rem;
+      --font-xxl: 5rem;
+   }
+}
+
 @media only screen and (max-width: $breakpoint-mobile) {
    :root {
       --nav-size: 90px;
@@ -121,19 +166,12 @@
       --bradius-xs: 3px;                         
       --bradius-sm: 5px;                         // standard border radius for wrapper borders
       --bradius-xxl: 30px;                       // largest border radius for special corners
-      --bradius-round: 1e5px;                    // extremely larg border radius to produce circular sides
-      // outline
-      --outline-width: 3px;
 
       // === TYPOGRAPHY =========================
       --font-xs: 0.85rem;
       --font-sm: 1rem;
       --font-md: 1.15rem;
       --font-lg: 1.3rem;
-      --font-xxl: 4rem;
-
-      // === TRANSFORMS =========================
-      --active-translateY-sm: translateY(2px);
-      --active-translateY-md: translateY(3px);
+      --font-xxl: 3.8rem;
    }
 }

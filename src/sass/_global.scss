@@ -43,14 +43,6 @@ svg {
    }
 }
 
-#main {
-   h1 {
-      padding: var(--pad-xxxl) var(--pad-xxl) var(--pad-md) var(--pad-xxl);
-      // negative margin for better alignment
-      margin-left: calc(-0.04 * var(--font-xxl))
-   }
-}
-
 .twoCol {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(var(--twoCol-minWidth), 1fr));
