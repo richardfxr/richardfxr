@@ -42,7 +42,7 @@ export default function Navbar() {
     const magicLineVrt = useRef(null)
     const magicLineHrz = useRef(null)
     
-    // updates magic line on initial load and on location (route) change
+    // updates magic line on initial load, location (route) change, and device orientation change
     useEffect(() => {
         // find currently active <NavLink />
         let activeLink = navUl.current.getElementsByClassName('active')[0]
@@ -52,7 +52,7 @@ export default function Navbar() {
             magicLineVrt.current.style.transform = "translateY(" + activeLink.offsetTop + "px)"
             magicLineHrz.current.style.transform = "translateX(" + activeLink.offsetLeft + "px)"
         }
-    }, [location])
+    }, [location, isPortrait])
 
     return (
         <motion.div 
