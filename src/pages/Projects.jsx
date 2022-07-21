@@ -22,6 +22,7 @@ export default function Projects() {
                     name="workFilter"
                     type="sm"
                     inline
+                    ani
                     value={workFilter}
                     handler={setWorkFilter}
                     radios={[

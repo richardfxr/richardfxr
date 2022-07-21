@@ -1,3 +1,5 @@
+@use '../sass/breakpoints' as *;
+
 .radioSelectors {
     display: flex;
     flex-direction: column;
@@ -10,9 +12,7 @@
         display: flex;
         flex-flow: row nowrap;
 
-        & > div {
-            position: relative;
-        }
+        position: relative;
 
         input {
             &:focus-visible + label {
@@ -51,6 +51,10 @@
 
             border-radius: var(--bradius-round);
             background-color: var(--clr-rblue);
+
+            // transition on transform change (set through JS)
+            transition: transform var(--transTime-slowest) var(--transFunc-enhancedEase),
+                        width var(--transTime-slowest) var(--transFunc-enhancedEase);
         }
     }    
 
@@ -76,6 +80,27 @@
         &.inline {
             .label {
                 padding-right: calc(var(--font-sm) - 0.3rem);
+            }
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-mobile) {
+    .radioSelectors {
+        &.sm {
+            .label, label {
+                // enlarge font on mobile
+                font-size: var(--font-md);
+            }
+
+            .main {
+                label {
+                    padding-right: calc(var(--font-md) - 0.3rem);
+                    padding-left: calc(var(--font-md) - 0.3rem);
+                }
             }
         }
     }

@@ -1,3 +1,5 @@
+@use '../sass/breakpoints' as *;
+
 #projects {
 
     #works {
@@ -16,4 +18,17 @@
         }
     }
     
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-mobile) {
+    #projects {
+        #works {
+            #workFilter {
+                height: calc((2 * var(--pad-xxl)) + var(--font-lg));
+            }
+        }
+    }
 }
