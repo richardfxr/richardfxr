@@ -39,17 +39,19 @@ export default function ScrollContainer({ vertical, horizontal, children }) {
     
 
     return (
-        <div 
-            className={
-                "scrollContainer" + 
-                (vertical ? " vrt" : "") + 
-                (horizontal ? " hrz" : "") + 
-                (startIsIntersecting ? " start" : "") + 
-                (endIsIntersecting ? " end" : "")}
-            ref={scrollContainer}>
-            <div className="edgeDiv" ref={startDiv} aria-hidden='true'></div>
-            {children}
-            <div className="edgeDiv end" ref={endDiv} aria-hidden='true'></div>
+        <div className="scrollContainer__wrapper">
+           <div 
+                className={
+                    "scrollContainer" + 
+                    (vertical ? " vrt" : "") + 
+                    (horizontal ? " hrz" : "") + 
+                    (startIsIntersecting ? " start" : "") + 
+                    (endIsIntersecting ? " end" : "")}
+                ref={scrollContainer}>
+                <div className="edgeDiv" ref={startDiv} aria-hidden='true'></div>
+                {children}
+                <div className="edgeDiv end" ref={endDiv} aria-hidden='true'></div>
+            </div> 
         </div>
     )
 }

@@ -6,6 +6,11 @@
 
     overflow: auto;
 
+    &__wrapper {
+        position: relative;
+        width: 100%;
+    }
+
     &::before, &::after {
         content: '';
         position: absolute;
