@@ -1,0 +1,82 @@
+.radioSelectors {
+    display: flex;
+    flex-direction: column;
+
+    .label {
+        color: var(--clr-1000);
+    }
+
+    .main {
+        display: flex;
+        flex-flow: row nowrap;
+
+        & > div {
+            position: relative;
+        }
+
+        input {
+            &:focus-visible + label {
+                // show outline when keyboard focused
+                outline: solid var(--outline-width) var(--clr-focus);
+                outline-offset: calc(-1 * var(--outline-width));
+            }
+
+            &:checked + label {
+                color: var(--clr-0);
+
+                transition: color var(--trans-standard) 0.15s;
+            }
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: var(--bradius-round);
+
+            transition: color var(--trans-standard);
+
+            &:hover, &:focus {
+                color: var(--clr-1000);
+            }
+        }
+
+        .magicCircle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+
+            border-radius: var(--bradius-round);
+            background-color: var(--clr-rblue);
+        }
+    }    
+
+    &.inline {
+        display: block;
+
+        .scrollContainer {
+            align-items: center;
+        }
+    }
+
+    &.sm {
+        .label, label {
+            font-size: var(--font-sm);
+        }
+
+        .main {
+            label {
+                padding: var(--pad-6xs) calc(var(--font-sm) - 0.3rem) var(--pad-5xs) calc(var(--font-sm) - 0.3rem);
+            }
+        }
+
+        &.inline {
+            .label {
+                padding-right: calc(var(--font-sm) - 0.3rem);
+            }
+        }
+    }
+}
