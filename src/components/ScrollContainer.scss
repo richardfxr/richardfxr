@@ -26,7 +26,8 @@
         &::before {
             --_translateHide: translateY(calc(-1 * var(--pad-lg)));
 
-            top: 0;
+            // -1px instead of 0 to avoid AA issues
+            top: -1px;
             right: 0;
             left: 0;
 
@@ -37,8 +38,9 @@
         &::after {
             --_translateHide: translateY(var(--pad-lg));
 
+            // -1px instead of 0 to avoid AA issues
             right: 0;
-            bottom: 0;
+            bottom: -1px;
             left: 0;
 
             background: linear-gradient(0deg, var(--_scrollShadow-gradient));
@@ -52,9 +54,10 @@
         &::before {
             --_translateHide: translateX(calc(-1 * var(--pad-lg)));
 
+            // -1px instead of 0 to avoid AA issues
             top: 0;
             bottom: 0;
-            left: 0;
+            left: -1px;
 
             background: linear-gradient(90deg, var(--_scrollShadow-gradient));
             width: var(--pad-lg);
@@ -63,8 +66,9 @@
         &::after {
             --_translateHide: translateX(var(--pad-lg));
             
+            // -1px instead of 0 to avoid AA issues
             top: 0;
-            right: 0;
+            right: -1px;
             bottom: 0;
 
             background: linear-gradient(270deg, var(--_scrollShadow-gradient));
