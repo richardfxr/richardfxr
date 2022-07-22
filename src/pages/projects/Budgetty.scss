@@ -20,11 +20,15 @@
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
-            gap: var(--pad-md);
+            gap: var(--pad-xl);
 
-            padding: var(--pad-4xl) var(--pad-xxxl);
+            padding: 20% 0 16% 0;
 
             background-color: var(--clr-800);
+
+            & > div:first-of-type {
+                width: 70%;
+            }
 
             figcaption {
                 color: var(--clr-0);

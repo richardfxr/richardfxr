@@ -71,13 +71,6 @@ ul, ol {
    }
 }
 
-figcaption {
-   font-size: var(--font-sm);
-   font-weight: 500;
-   line-height: 1.55em;
-   color: var(--clr-700);
-}
-
 .list {
    display: flex;
    flex-flow: column nowrap;
@@ -185,6 +178,13 @@ code {
    font-family: 'Courier New', monospace;
 }
 
+figcaption {
+   font-size: var(--font-sm);
+   font-weight: 500;
+   line-height: 1.55em;
+   color: var(--clr-700);
+}
+
 .inter {
    font-family: 'Inter', sans-serif;
    font-weight: 600;
@@ -249,5 +249,9 @@ code {
       &.cards {
          padding-top: var(--pad-xl);
       }
+   }
+
+   figcaption {
+      font-size: var(--font-md);
    }
 }
