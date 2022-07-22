@@ -85,6 +85,7 @@
 @media only screen and (max-width: $breakpoint-tablet) {
    :root {
       --nav-size: 90px;
+      --twoCol-minWidth: 15rem;
    
       --padRem-6xs: 0.053125rem;
       --padRem-5xs: 0.0625rem;

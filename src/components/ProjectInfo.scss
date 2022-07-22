@@ -6,7 +6,8 @@
     grid-template-columns:
         calc(var(--section-side-width) + var(--pad-lg) + ((100% - var(--section-side-width) - (2 * var(--pad-lg))) / 2))
         1fr;
-    gap: var(--pad-lg);
+    column-gap: var(--pad-lg);
+    row-gap: var(--pad-4xl);
 
     padding-top: var(--pad-xl);
     padding-bottom: var(--pad-6xl);
@@ -68,6 +69,11 @@
         & > div:first-of-type {
             // <Image /> element
             position: static;
+        }
+
+        dl {
+            // reset margins
+            margin: 0;
         }
     }
 }

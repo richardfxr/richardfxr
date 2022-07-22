@@ -3,18 +3,25 @@
 #projects {
 
     #works {
+        padding-bottom: var(--pad-6xl);
+        
         #workFilter {
-            // set same height as <h2> and align them vertically
-            display: flex;
-            flex-direction: row;
-            align-items: center;
             width: 100%;
-            height: calc((2 * var(--pad-xl) - var(--padRem-5xs)) + var(--font-md));
+        }
+
+        .radioSelectors {
+            .label {
+                // set same height as <h2> and align them vertically
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: calc((2 * var(--pad-xl) - var(--padRem-5xs)) + var(--font-md));
+            }
         }
 
         .twoCol.cards {
             // remove top padding as #workFilter already has it
-            padding-top: var(--pad-xxxs);
+            padding-top: var(--pad-xl);
         }
     }
     
