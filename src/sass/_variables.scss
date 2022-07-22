@@ -9,7 +9,8 @@
    --max-width: 1400px;
    --nav-size: 100px;
    --section-side-width: 280px;
-   --twoCol-minWidth: 7rem;
+   --twoCol-minWidth: 20rem;
+   --threeCol-minWidth: 11rem;
 
    --padRem-6xs: 0.0625rem;
    --padRem-5xs: 0.125rem;
@@ -130,6 +131,7 @@
    :root {
       --nav-size: 90px;
       --section-side-width: var(--font-sm);
+      --threeCol-minWidth: 7rem;
 
       --padRem-6xs: 0.03125rem;
       --padRem-5xs: 0.0625rem;

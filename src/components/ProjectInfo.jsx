@@ -72,7 +72,7 @@ export default function ProjectInfo({ project, children }) {
                     )}
                     
 
-                    {project.labels.length === 1 ? (
+                    {project.labels && (project.labels.length === 1 ? (
                         <div>
                             <dt>Label</dt>
                             <dd>{project.labels[0]}</dd>
@@ -89,7 +89,25 @@ export default function ProjectInfo({ project, children }) {
                                 </ul>
                             </dd>
                         </div>
-                    )}
+                    ))}
+
+                    {project.collaborators && (project.collaborators.length === 1 ? (
+                        <div>
+                            <dt>Collaborator</dt>
+                            <dd>{project.collaborators[0]}</dd>
+                        </div>
+                    ) : (
+                        <div>
+                            <dt>Collaborators</dt>
+                            <dd>
+                                <ul className="projectInfo__list" aria-label="Collaborators">
+                                    {project.collaborators.map((collaborator, index) => (
+                                        <li key={"collaborator" + index}>{collaborator}</li>
+                                    ))}
+                                </ul>
+                            </dd>
+                        </div>
+                    ))}
 
                     <div>
                         <dt>Description</dt>

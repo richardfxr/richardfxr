@@ -4,6 +4,8 @@ import { useEffect } from "react"
 import { Route, Routes, useLocation } from 'react-router-dom'
 // Framer Motion
 import { AnimatePresence } from "framer-motion"
+// components
+import UnderlinedLink from "./UnderlinedLink"
 // primary pages
 import Home from '../pages/Home'
 import Projects from '../pages/Projects'
@@ -12,6 +14,7 @@ import Info from '../pages/Info'
 // secondary pages
 import Archive from '../pages/Archive'
 // project pages
+import Budgetty from '../pages/projects/Budgetty'
 import EggHolders from '../pages/projects/EggHolders'   
 import PFrame from '../pages/projects/PFrame'
 
@@ -29,6 +32,25 @@ export const routes = [
 
 // === PROJECTS ===========================
 export const projects = [
+    {
+        path: '/projects/budgetty',
+        element: () => <Budgetty />,
+        title: 'Budgetty',
+        image: {folder: 'Budgetty', fileName: 'Budgetty-thumbnail', alt: 'Three white pentagonal electronic devices with circular screens on the top. Each screen is displaying information related to budgeting and spending habits.'},
+        date: '2022-05',
+        colors: [
+            {hex: '#ffffff', name: 'white'},
+            {hex: '#d5d5d5', name: 'light gray'},
+        ],
+        media: ['UI/UX design', 'Product design'],
+        cardLabels: ['UI design', 'product design'],
+        collaborators: [
+            <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank">Eduardo Zanforlin Mautner</UnderlinedLink>,
+            <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank">Leo Baek</UnderlinedLink>,
+            <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank">Sanghyuk Seo</UnderlinedLink>,
+            <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank">Sean Lee</UnderlinedLink>,
+        ],
+    },
     {
         path: '/projects/eggholders',
         element: () => <EggHolders />,

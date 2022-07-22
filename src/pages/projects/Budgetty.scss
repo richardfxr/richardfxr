@@ -1,0 +1,47 @@
+@use '../../sass/breakpoints' as *;
+
+#budgetty {
+    #video {
+        padding-bottom: var(--pad-6xl);
+
+        .section__main {
+            padding-top: var(--pad-xl);
+        }
+    }
+
+    #interface {
+        padding-bottom: var(--pad-6xl);
+
+        .section__main {
+            padding-top: var(--pad-xl);
+        }
+
+        .threeCol {
+            gap: var(--pad-4xl);
+        }
+
+        figure {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: var(--pad-md);
+
+            figcaption {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-mobile) {
+    #budgetty {
+        #interface {
+            .threeCol {
+                gap: var(--pad-xxl);
+            }
+        }
+    }
+}

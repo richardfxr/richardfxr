@@ -54,6 +54,12 @@ svg {
    }
 }
 
+.threeCol {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(var(--threeCol-minWidth), 1fr));
+   gap: var(--pad-xl);
+}
+
 ul, ol {
    &.row {
       display: flex;
@@ -63,6 +69,13 @@ ul, ol {
          gap: var(--padRem-xxs);
       }
    }
+}
+
+figcaption {
+   font-size: var(--font-sm);
+   font-weight: 500;
+   line-height: 1.55em;
+   color: var(--clr-700);
 }
 
 .list {
@@ -209,6 +222,20 @@ code {
    margin: 0;
 
 	overflow: hidden;
+}
+
+.videoContainer {
+   position:relative;
+   // ensure 16:9 aspect ratio
+   padding: 56.25% 0 0 0;
+
+   iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   }
 }
 
 

@@ -30,6 +30,7 @@
 
         dt{
             color: var(--clr-600);
+            padding-bottom: var(--padRem-xxxs);
         }
 
         dd {
@@ -41,7 +42,7 @@
         display: flex;
         flex-flow: row wrap;
         column-gap: var(--padRem-lg);
-        row-gap: 0;
+        row-gap: var(--padRem-xxxs);
     }
 
     .project {
