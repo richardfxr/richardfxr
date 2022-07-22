@@ -16,17 +16,18 @@
             padding-top: var(--pad-xl);
         }
 
-        .threeCol {
-            gap: var(--pad-4xl);
-        }
-
         figure {
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
             gap: var(--pad-md);
 
+            padding: var(--pad-4xl) var(--pad-xxxl);
+
+            background-color: var(--clr-800);
+
             figcaption {
+                color: var(--clr-0);
                 text-align: center;
             }
         }
