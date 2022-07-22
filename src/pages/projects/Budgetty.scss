@@ -32,16 +32,3 @@
         }
     }
 }
-
-
-
-// === BREAKPOINTS ============================
-@media only screen and (max-width: $breakpoint-mobile) {
-    #budgetty {
-        #interface {
-            .threeCol {
-                gap: var(--pad-xxl);
-            }
-        }
-    }
-}
