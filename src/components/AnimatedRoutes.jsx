@@ -46,9 +46,9 @@ export const projects = [
         cardLabels: ['UI design', 'product design'],
         collaborators: [
             <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank">Eduardo Zanforlin Mautner</UnderlinedLink>,
-            <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank">Leo Baek</UnderlinedLink>,
-            <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank">Sanghyuk Seo</UnderlinedLink>,
-            <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank">Sean Lee</UnderlinedLink>,
+            'Leo Baek',
+            'Sanghyuk Seo',
+            'Sean Lee',
         ],
     },
     {
