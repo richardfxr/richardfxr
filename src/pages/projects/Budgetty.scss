@@ -16,6 +16,10 @@
             padding-top: var(--pad-xl);
         }
 
+        li {
+            background-color: var(--clr-800);
+        }
+
         figure {
             display: flex;
             flex-flow: column nowrap;
@@ -23,8 +27,6 @@
             gap: var(--pad-xl);
 
             padding: 20% 0 16% 0;
-
-            background-color: var(--clr-800);
 
             & > div:first-of-type {
                 width: 70%;
@@ -34,6 +36,17 @@
                 color: var(--clr-0);
                 text-align: center;
             }
+        }
+    }
+
+    #images {
+        padding-bottom: var(--pad-6xl);
+
+        .section__main {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: var(--pad-xl);
+            padding-top: var(--pad-xl);
         }
     }
 }
