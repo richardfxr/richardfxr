@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 200">
+    <defs>
+        <style>.cls-1,.cls-2,.cls-3,.cls-4{fill:#fff;}.cls-1{opacity:0.6;}.cls-2{opacity:0.8;}.cls-3{opacity:0.4;}</style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <circle class="cls-1" cx="127.5" cy="127.5" r="17.5"/>
+            <circle class="cls-2" cx="127.5" cy="182.5" r="17.5"/>
+            <circle class="cls-3" cx="127.5" cy="17.5" r="17.5"/>
+            <circle class="cls-3" cx="127.5" cy="72.5" r="17.5"/>
+            <circle class="cls-2" cx="182.5" cy="127.5" r="17.5"/>
+            <circle class="cls-4" cx="182.5" cy="182.5" r="17.5"/>
+            <circle class="cls-3" cx="182.5" cy="17.5" r="17.5"/>
+            <circle class="cls-1" cx="182.5" cy="72.5" r="17.5"/>
+            <circle class="cls-4" cx="237.5" cy="127.5" r="17.5"/>
+            <circle class="cls-4" cx="237.5" cy="182.5" r="17.5"/>
+            <circle class="cls-1" cx="237.5" cy="17.5" r="17.5"/>
+            <circle class="cls-2" cx="237.5" cy="72.5" r="17.5"/>
+            <circle class="cls-2" cx="72.5" cy="127.5" r="17.5"/>
+            <circle class="cls-4" cx="72.5" cy="182.5" r="17.5"/>
+            <circle class="cls-3" cx="72.5" cy="17.5" r="17.5"/>
+            <circle class="cls-1" cx="72.5" cy="72.5" r="17.5"/>
+            <circle class="cls-4" cx="17.5" cy="127.5" r="17.5"/>
+            <circle class="cls-4" cx="17.5" cy="182.5" r="17.5"/>
+            <circle class="cls-1" cx="17.5" cy="17.5" r="17.5"/>
+            <circle class="cls-2" cx="17.5" cy="72.5" r="17.5"/>
+        </g>
+    </g>
+</svg>

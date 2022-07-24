@@ -1,0 +1,893 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Sun Jul 24 2022 04:04:48 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5ed16339110c8b578110bf28" data-wf-site="5e7029aabf3d8e065982838f" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lumina Design</title>
+  <meta content="Lumina Design" property="og:title">
+  <meta content="Lumina Design" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="sl3B-rx9q8bVRKzyCPX_xR5WvCw_11lO6HCYZGE1gX4" name="google-site-verification">
+  <meta content="Webflow" name="generator">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/richardfxr.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Inconsolata:400,700","Manrope:200,300,regular,500,600,700,800","Roboto Mono:regular,500,600"]  }});</script>
+  <script src="https://use.typekit.net/psv5lil.js" type="text/javascript"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
+  <!-- 
+richardfxr custom head code
+Version: 9.1.2
+Updated: 2021-10-13
+ -->
+  <script>
+  // back button funtion
+  function backbutton(){
+    if(history.length===1){
+      window.location.href="http://www.richardfxr.com/";
+    }else{
+      history.back();
+    }
+  }
+  // Firefox reload for back button
+  if (typeof InstallTrigger !== 'undefined') {
+    window.addEventListener( "pageshow", function ( event ) {
+      var historyTraversal = event.persisted ||
+                             ( typeof window.performance != "undefined" &&
+                                  window.performance.navigation.type === 2 );
+      if ( historyTraversal ) {
+        // Handle page restore.
+        window.location.reload();
+      }
+    });
+  }
+</script>
+  <style>
+  /*
+  PAGE COLOR SCHEME
+  */
+  :root {
+    --primary-color: #000;
+    --secondary-color: #7f7f7f;
+    --accent-color: #11d3e7;
+    --outline-color: #e6e6e6;
+    --point-color: #b3b3b3;
+    --bg-color: #fff;
+  }
+  /* test scheme
+  :root {
+    --primary-color: #ff0000;
+    --secondary-color: #00ff00;
+    --accent-color: #000;
+    --outline-color: #0000ff;
+    --point-color: #ff0000;
+    --bg-color: #d6fbff;
+  }
+  */
+	/*
+  PAGE-WIDE STYLING
+  */
+  html {
+    /* overflow-x: hidden; */
+  }
+  html, body {
+    background-color: var(--bg-color);
+  }
+  *{
+    -webkit-tap-highlight-color: transparent; /* remove mobile tap highlight */
+  }
+  /*
+  ELEMENTS
+  */
+  .h2-xl {
+    /* color: var(--primary-color);*/
+  }
+  .p-lg {
+    color: var(--secondary-color);
+  }
+  .p-lg-a {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+  }
+  /* points */
+  .points-left, .points-right {
+  	position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+  }
+  .points-top {
+    position: absolute;
+    top: -3px;
+    width: 100%;
+  }
+  .points-left {
+  	left: -2.5px;
+  }
+  .points-right {
+  	right: 1.5px;
+  }
+  .points:before, .points:after, .points-before:before, .points-after:after {
+  	display: inline-block;
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--point-color);
+    z-index: 4;
+  }
+  .input .points:before, .input .points:after {
+    background-color: var(--accent-color);
+    z-index: 5;
+  }
+  .points-top:before {
+    top: 0.5px;
+    left: -2.5px;
+  }
+  .points-top:after {
+    top: 0.5px;
+    right: -2.5px;
+  }
+  .points-left:before, .points-right:before {
+  	top: -2.5px;
+  }
+  .points-left:after, .points-right:after {
+  	bottom: -2.5px;
+  }
+  /*
+  NAV
+  */
+  /* normal color */
+  .nav {
+    border-color: var(--outline-color);
+    background-color: var(--bg-color);
+  }
+  .color-2 {
+    color: var(--secondary-color);
+  }
+  .color-2:hover, .color-2:focus {
+    color: var(--primary-color);
+  }
+  /* active */
+  .active {
+  	color: var(--primary-color);
+  }
+  /* magic line - left */
+  #magicline-left {
+    display: block !important;
+  	position: absolute;
+		bottom: 0;
+    width: 100%;
+    border: 1px solid var(--outline-color);
+    border-right: none;
+    border-left: 0.3vw solid var(--accent-color);
+    padding: 0 !important;
+    pointer-events: none;
+    overflow: visible !important;
+    z-index: 5;
+  }
+  /* magic line - mobile */
+  #magicline-bottom {
+  	display: none !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--outline-color);
+    border-top: none;
+    border-bottom: 1.2vw solid var(--accent-color);
+    padding: 0 !important;
+    pointer-events: none;
+    overflow: visible !important;
+    z-index: 6;
+  }
+  /*
+  MAIN
+  */
+  .all-wrapper, .main-outer, .heading-wrapper, .heading-left-outer, .grid-section-wrapper {
+    border-color: var(--outline-color);
+  }
+  .main-outer > .points-top:after {
+  	right: -0.5px;
+  }
+  /* headings */
+  .heading-left {
+    color: var(--primary-color);
+  	writing-mode: vertical-rl;
+  }
+  /* grid points */
+  .grid-section-wrapper .points-right {
+    display: none;
+  }
+  /*
+  FOOTER
+  */
+  .footer-a {
+    border-color: var(--outline-color) !important;
+  }
+  .footer-a:first-child {
+  	margin-top: -0.8vw;
+  	border-top: none;
+  	padding-top: 0 !important;
+  }
+  .footer-a:last-child {
+  	margin-bottom: -0.8vw;
+  	padding-bottom: 0 !important;
+  }
+  /*
+  BREAKPOINTS
+  */
+  /* 1920 and up */
+  @media screen and (min-width: 1920px) {
+    /* nav */
+    #magicline-left {
+    	border-left: 5.76px solid var(--accent-color);
+    }
+    /* grid points */
+    .grid-section-wrapper .points-right {
+      display: block !important;
+    }
+    /* footer */
+    .footer-a:first-child {
+    	margin-top: -15.36px;
+    }
+    .footer-a:last-child {
+    	margin-bottom: -15.36px;
+    }
+  }
+  /* 1440px and up */
+  @media screen and (min-width: 1440px) {
+  }
+  /* 992px and up */
+  @media screen and (min-width: 992px) {
+    /* individual work-card styling */
+    .grid-section-wrapper:nth-child(3n+3) {
+      border-right: none;
+    }
+    .grid-section-wrapper:nth-last-child(-n+3) {
+      border-bottom: none;
+    }
+  }
+  /* tablet */
+  @media screen and (max-width: 991px) {
+    /* nav */
+    #magicline-left {
+    	border-left: 0.5vw solid var(--accent-color);
+    }
+    /* work cards */
+    .grid-section-wrapper {
+      border-right: 1px solid var(--outline-color) !important;
+      border-bottom: 1px solid var(--outline-color) !important;
+    }
+    .grid-section-wrapper:nth-child(2n+2) {
+      border-right: none !important;
+    }
+    .grid-section-wrapper:nth-last-child(-n+2) {
+      border-bottom: none !important;
+    }
+    /*
+    FOOTER
+    */
+    footer .grid-section-wrapper:nth-child(2) {
+    	border-bottom: 1px solid var(--outline-color) !important;
+    }
+    footer .grid-section-wrapper:last-child {
+    	border-right: none !important;
+    }
+  }
+  /* mobile landscpe */
+  @media screen and (max-width: 767px) {
+  }
+  /* mobile portrait */
+  @media screen and (max-width: 479px) {
+    /* loader */
+    .loader-content-mobile-wrapper {
+      height: calc(100vh - 18vw);
+    }
+  	/* nav */
+    /* magic line */
+    #magicline-left {
+      display: none !important;
+    }
+    #magicline-bottom {
+    	display: block !important;
+    }
+    /* grid points */
+    .grid-section-wrapper:nth-last-child(n+2) {
+      border-bottom: 1px solid var(--outline-color) !important;
+    }
+    .grid-section-wrapper {
+      border-right: none !important;
+    }
+  }
+</style>
+</head>
+<body class="body-2">
+  <div aria-label="Loading." style="height:100%" class="page-loader">
+    <div aria-hidden="true" class="page-loader-rlogo w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 108.39 112" aria-hidden="true">
+        <path fill="currentColor" d="M108.39,37.84A37.85,37.85,0,0,1,73,75.6l-2.45-2.54L48.11,49.82H70.55a12,12,0,1,0,0-24H25L0,0H70.55A37.84,37.84,0,0,1,108.39,37.84Z"></path>
+        <polygon fill="currentColor" points="97.04 112 63.27 112 51.87 100.2 28.19 75.68 3.22 49.82 36.99 49.82 60.72 74.38 61.96 75.68 69.34 83.32 97.04 112">
+      </polygon></svg></div>
+  </div>
+  <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="center-norm wf-section">
+    <div class="content-55 pad-md-top pad-nav-arrow">
+      <p class="p-lg">
+        <a href="javascript:backbutton();" aria-label="Back to previous page." class="nav-arrow-lg nav-arrow-lg-lumina">↖</a>
+      </p>
+    </div>
+    <div class="content-55">
+      <h1 class="h1-lg h1-lg-lumina">Lumina Design</h1>
+    </div>
+    <div class="content-55 pad-p-top">
+      <p class="p-lg p-lg-lumina">Lumina Design is a <span class="p-lg-white">design system for dark user interfaces</span>. It utilizes <span class="p-lg-white">light</span> to guide the user’s attention and to achieve elevation. Lumina Design is meant for interfaces that will be used in poor lighting conditions or for battery conservation.</p>
+    </div>
+    <div class="content-55 pad-md-top"><img src="../images/Lumina-iPhone11-3.png" width="750" alt="Two phones displaying Lumina Design interfaces. Left: settings menu. Right: word processor." sizes="(max-width: 767px) 85vw, (max-width: 991px) 80vw, (max-width: 1439px) 60vw, (max-width: 1919px) 55vw, 999.9999389648438px" srcset="../images/Lumina-iPhone11-3-p-500.png 500w, ../images/Lumina-iPhone11-3-p-800.png 800w, ../images/Lumina-iPhone11-3-p-1080.png 1080w, ../images/Lumina-iPhone11-3.png 1500w" class="content-55-img-1">
+      <div class="label-sm label-img-3 color-lumina">Ⓛ</div>
+    </div>
+    <div class="content-55 pad-md-top">
+      <p class="p-lg p-lg-lumina">The <span class="p-lg-white">light bar</span> is the most essential design element of Lumina Design. It follows the edge of the screen and highlights the most important component. It can be used to indicate <span class="p-lg-white">tab selection</span>, <span class="p-lg-white">progress</span>, or even <span class="p-lg-white">Boolean inputs</span>.</p>
+    </div>
+    <div class="content-55 mockup-div color-lumina-1 pad-md-top">
+      <div class="mockup-wrapper"><img src="../images/Lumina-iPhone11-frame-1.png" width="750" sizes="(max-width: 479px) 85vw, (max-width: 767px) 75vw, (max-width: 991px) 70vw, (max-width: 1439px) 44vw, (max-width: 1919px) 39vw, 700px" srcset="../images/Lumina-iPhone11-frame-1-p-500.png 500w, ../images/Lumina-iPhone11-frame-1-p-800.png 800w, ../images/Lumina-iPhone11-frame-1-p-1080.png 1080w, ../images/Lumina-iPhone11-frame-1.png 1500w" alt="" class="mockup-iphone11-frame"><img src="../images/Lumina-iPhone11-lightBar-1.png" width="750" data-w-id="e9515fe7-aa7a-6c0d-c9f9-389cb2473b31" sizes="(max-width: 479px) 85vw, (max-width: 767px) 75vw, (max-width: 991px) 70vw, (max-width: 1439px) 44vw, (max-width: 1919px) 39vw, 700px" srcset="../images/Lumina-iPhone11-lightBar-1-p-500.png 500w, ../images/Lumina-iPhone11-lightBar-1-p-800.png 800w, ../images/Lumina-iPhone11-lightBar-1-p-1080.png 1080w, ../images/Lumina-iPhone11-lightBar-1.png 1500w" alt="" class="mockup-iphone11-lightbar"><img src="../images/Lumina-iPhone11-screen-1.png" width="750" sizes="(max-width: 479px) 85vw, (max-width: 767px) 75vw, (max-width: 991px) 70vw, (max-width: 1439px) 44vw, (max-width: 1919px) 39vw, 700px" srcset="../images/Lumina-iPhone11-screen-1-p-500.png 500w, ../images/Lumina-iPhone11-screen-1-p-800.png 800w, ../images/Lumina-iPhone11-screen-1-p-1080.png 1080w, ../images/Lumina-iPhone11-screen-1.png 1500w" alt="" class="mockup-iphone11-screen"></div>
+      <div class="label-sm label-img-1 label-img-2 color-lumina-3">Ⓛ</div>
+    </div>
+    <div class="content-55 mockup-div mockup-div-nright color-lumina-1 pad-xs-top">
+      <div class="mockup-wrapper"><img src="../images/Lumina-MateBook-frame-1.png" width="750" sizes="(max-width: 479px) 85vw, (max-width: 767px) 80vw, (max-width: 991px) 75vw, (max-width: 1439px) 53vw, (max-width: 1919px) 48vw, 869.9999389648438px" srcset="../images/Lumina-MateBook-frame-1-p-500.png 500w, ../images/Lumina-MateBook-frame-1-p-800.png 800w, ../images/Lumina-MateBook-frame-1-p-1080.png 1080w, ../images/Lumina-MateBook-frame-1.png 1500w" alt="" class="mockup-iphone11-frame"><img src="../images/Lumina-MateBook-lightBar-1.png" width="750" data-w-id="bb9a0cab-65cc-cb01-d2a3-53f57d2ea3e9" sizes="(max-width: 479px) 85vw, (max-width: 767px) 80vw, (max-width: 991px) 75vw, (max-width: 1439px) 53vw, (max-width: 1919px) 48vw, 869.9999389648438px" srcset="../images/Lumina-MateBook-lightBar-1-p-500.png 500w, ../images/Lumina-MateBook-lightBar-1-p-800.png 800w, ../images/Lumina-MateBook-lightBar-1-p-1080.png 1080w, ../images/Lumina-MateBook-lightBar-1.png 1500w" alt="" class="mockup-iphone11-lightbar"><img src="../images/Lumina-MateBook-screen-3.png" width="750" data-w-id="415ab3a3-5c6a-b8db-9dd9-600d44e58896" sizes="(max-width: 479px) 85vw, (max-width: 767px) 80vw, (max-width: 991px) 75vw, (max-width: 1439px) 53vw, (max-width: 1919px) 48vw, 869.9999389648438px" srcset="../images/Lumina-MateBook-screen-3-p-500.png 500w, ../images/Lumina-MateBook-screen-3-p-800.png 800w, ../images/Lumina-MateBook-screen-3-p-1080.png 1080w, ../images/Lumina-MateBook-screen-3.png 1500w" alt="" class="mockup-iphone11-screen zindex-2"><img src="../images/Lumina-MateBook-screen-5.png" width="750" data-w-id="bb9a0cab-65cc-cb01-d2a3-53f57d2ea3ea" sizes="(max-width: 479px) 85vw, (max-width: 767px) 80vw, (max-width: 991px) 75vw, (max-width: 1439px) 53vw, (max-width: 1919px) 48vw, 869.9999389648438px" srcset="../images/Lumina-MateBook-screen-5-p-500.png 500w, ../images/Lumina-MateBook-screen-5-p-800.png 800w, ../images/Lumina-MateBook-screen-5-p-1080.png 1080w, ../images/Lumina-MateBook-screen-5.png 1500w" alt="" class="mockup-iphone11-screen zindex-1"><img src="../images/Lumina-MateBook-screen-4.png" width="750" sizes="(max-width: 479px) 85vw, (max-width: 767px) 80vw, (max-width: 991px) 75vw, (max-width: 1439px) 53vw, (max-width: 1919px) 48vw, 869.9999389648438px" srcset="../images/Lumina-MateBook-screen-4-p-500.png 500w, ../images/Lumina-MateBook-screen-4-p-800.png 800w, ../images/Lumina-MateBook-screen-4-p-1080.png 1080w, ../images/Lumina-MateBook-screen-4.png 1500w" alt="" class="mockup-iphone11-screen"></div>
+      <div class="label-sm label-img-1 label-img-2 color-lumina-2">Ⓛ</div>
+    </div>
+    <div class="content-55 pad-md-top">
+      <p class="p-lg p-lg-lumina">Lumina Design interfaces are <span class="p-lg-white">responsive</span>. Not only can each interface adapt to different screen sizes and aspect ratios, but their layout also changes to <span class="p-lg-white">improve usability</span>. On mobile devices, all interactive elements are kept at the bottom half of the screen.</p>
+    </div>
+    <div class="content-55 pad-md-top cotent-mobile-full"><img src="../images/Lumina-comp-4.png" width="750" alt="Two phones displaying Lumina Design interfaces. Left: settings menu. Right: word processor." sizes="(max-width: 479px) 100vw, (max-width: 767px) 85vw, (max-width: 991px) 80vw, (max-width: 1439px) 60vw, (max-width: 1919px) 55vw, 999.9999389648438px" srcset="../images/Lumina-comp-4-p-500.png 500w, ../images/Lumina-comp-4-p-800.png 800w, ../images/Lumina-comp-4-p-1080.png 1080w, ../images/Lumina-comp-4.png 1600w" class="content-55-img-1 img-lumina-2">
+      <div class="label-sm label-img-1 label-img-2 color-lumina-3">Ⓛ</div>
+    </div>
+    <div class="content-55 pad-md-top">
+      <p class="p-lg p-lg-lumina">Components can also change according to the <span class="p-lg-white">input method</span>. When a device is accepting touch input, components will increase their activation area and resize elements to make them more touch-friendly.</p>
+    </div>
+    <div class="content-55 mockup-div mockup-div-all color-lumina-1 pad-md-top">
+      <div class="mockup-wrapper pad-bottom"><img src="../images/Lumina-iPadPro-screen-1.png" width="750" data-w-id="35f3dc87-641e-281f-8dc6-8744ab95e03e" sizes="(max-width: 479px) 67vw, (max-width: 767px) 65vw, (max-width: 991px) 60vw, (max-width: 1439px) 46vw, (max-width: 1919px) 41vw, 730px" srcset="../images/Lumina-iPadPro-screen-1-p-500.png 500w, ../images/Lumina-iPadPro-screen-1-p-800.png 800w, ../images/Lumina-iPadPro-screen-1-p-1080.png 1080w, ../images/Lumina-iPadPro-screen-1.png 1500w" alt="" class="mockup-iphone11-frame"><img src="../images/Lumina-iPadPro-device-1.png" width="750" data-w-id="35f3dc87-641e-281f-8dc6-8744ab95e041" sizes="(max-width: 479px) 67vw, (max-width: 767px) 65vw, (max-width: 991px) 60vw, (max-width: 1439px) 46vw, (max-width: 1919px) 41vw, 730px" srcset="../images/Lumina-iPadPro-device-1-p-500.png 500w, ../images/Lumina-iPadPro-device-1-p-800.png 800w, ../images/Lumina-iPadPro-device-1-p-1080.png 1080w, ../images/Lumina-iPadPro-device-1.png 1500w" alt="" class="mockup-iphone11-screen zindex-1"><img src="../images/Lumina-iPadPro-keyboard-1.png" width="750" data-w-id="35f3dc87-641e-281f-8dc6-8744ab95e042" sizes="(max-width: 479px) 67vw, (max-width: 767px) 65vw, (max-width: 991px) 60vw, (max-width: 1439px) 46vw, (max-width: 1919px) 41vw, 730px" srcset="../images/Lumina-iPadPro-keyboard-1-p-500.png 500w, ../images/Lumina-iPadPro-keyboard-1-p-800.png 800w, ../images/Lumina-iPadPro-keyboard-1-p-1080.png 1080w, ../images/Lumina-iPadPro-keyboard-1.png 1500w" alt="" class="mockup-iphone11-screen"></div>
+      <div class="label-sm label-img-1 label-img-2 color-lumina-3">Ⓛ</div>
+    </div>
+    <div class="content-55 pad-md-top">
+      <p class="p-lg p-lg-lumina"><span class="p-lg-white">Hardware-triggered UI elements</span> are displayed as close to their trigger as possible. This reduces any additional confusion that may come with using devices in low light conditions.</p>
+    </div>
+    <div class="content-55-2col pad-md-top w-row">
+      <div class="project-img-col1 w-col w-col-6"><img src="../images/Lumina-Studio-2.png" width="500" sizes="(max-width: 479px) 85vw, (max-width: 767px) 84vw, (max-width: 991px) 39vw, (max-width: 1439px) 29vw, (max-width: 1919px) 27vw, 484.9999694824219px" srcset="../images/Lumina-Studio-2-p-500.png 500w, ../images/Lumina-Studio-2-p-800.png 800w, ../images/Lumina-Studio-2.png 1000w" alt="" class="img-lumina-4">
+        <div class="label-sm label-img-1 color-lumina-3">Ⓛ</div>
+      </div>
+      <div class="project-img-col2 w-col w-col-6"><img src="../images/Lumina-iPhone11-4.png" width="500" sizes="(max-width: 479px) 85vw, (max-width: 767px) 84vw, (max-width: 991px) 39vw, (max-width: 1439px) 29vw, (max-width: 1919px) 27vw, 484.9999694824219px" srcset="../images/Lumina-iPhone11-4-p-500.png 500w, ../images/Lumina-iPhone11-4.png 1000w" alt="" class="img-lumina-4">
+        <div class="label-sm label-img-1 label-img-2 color-lumina-3">Ⓛ</div>
+      </div>
+    </div>
+    <div class="content-55 pad-md-top">
+      <p class="p-lg p-lg-lumina">To keep layouts consistent across different languages, icons are used whenever possible. The <span class="p-lg-white">Lumina Design Icon Set</span> is a growing library of variable icons that will be available soon.</p>
+    </div>
+    <div class="w-layout-grid content-55 pad-md-top lumina-grid">
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="cancel icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <line class="cls-1" x1="3" y1="3" x2="47" y2="47"></line>
+          <line class="cls-1" x1="47" y1="3" x2="3" y2="47"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="accept icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="3 27.92 18.72 47 47 3"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="back icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="36 3 14 25 36 47"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="next icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="14 47 36 25 14 3"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="reload icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style>
+          </defs>
+          <path class="cls-1" d="M40.4,40.41a21.28,21.28,0,1,1,4.22-23"></path>
+          <polyline class="cls-1" points="46.29 3 46.29 18.61 31.47 18.61"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="play icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style>
+          </defs>
+          <polygon class="cls-1" points="8.76 3 8.76 47 41.24 24.94 8.76 3">
+        </polygon></svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="pause icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style>
+          </defs>
+          <line class="cls-1" x1="12.31" y1="3" x2="12.31" y2="47"></line>
+          <line class="cls-1" x1="37.69" y1="3" x2="37.69" y2="47"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="skip to previous icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="30.8 41.7 12.56 25.11 30.8 8.63"></polyline>
+          <polyline class="cls-1" points="47.17 41.7 28.93 25.11 47.17 8.63"></polyline>
+          <line class="cls-1" x1="2.83" y1="3" x2="2.83" y2="47.33"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="skip to next icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="19.24 41.41 37.35 24.94 19.24 8.59"></polyline>
+          <polyline class="cls-1" points="3 41.41 21.11 24.94 3 8.59"></polyline>
+          <line class="cls-1" x1="47" y1="3" x2="47" y2="47"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="shuffle icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="39.55 17.89 47 10.45 39.55 3"></polyline>
+          <polyline class="cls-1" points="39.55 47 47 39.55 39.55 32.1"></polyline>
+          <path class="cls-1" d="M3,10.45H9.37a9.5,9.5,0,0,1,8.47,5.18l9.6,18.74a9.5,9.5,0,0,0,8.47,5.18H47"></path>
+          <path class="cls-1" d="M3,39.55H9.37a9.5,9.5,0,0,0,8.47-5.18l9.6-18.74a9.5,9.5,0,0,1,8.47-5.18H47"></path>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="loop icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="19.41 17.89 26.86 10.45 19.41 3"></polyline>
+          <polyline class="cls-1" points="30.59 32.1 23.14 39.55 30.59 47"></polyline>
+          <path class="cls-1" d="M36.51,10.45h4.16A6.32,6.32,0,0,1,47,16.78V33.22a6.32,6.32,0,0,1-6.33,6.33H23.14"></path>
+          <path class="cls-1" d="M13.49,39.55H9.33A6.32,6.32,0,0,1,3,33.22V16.78a6.32,6.32,0,0,1,6.33-6.33H26.86"></path>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="copy icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <rect class="cls-1" x="3" y="3" width="32.5" height="32.5"></rect>
+          <polyline class="cls-1" points="47 14.5 47 47 14.5 47"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="paste icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="3 35.49 3 2.98 35.52 2.98"></polyline>
+          <rect class="cls-1" x="14.51" y="14.48" width="32.52" height="32.52"></rect>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="undo icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <path class="cls-1" d="M3,15.22H31.11A15.89,15.89,0,0,1,47,31.11h0A15.88,15.88,0,0,1,31.11,47H3"></path>
+          <polyline class="cls-1" points="15.22 27.44 3 15.22 15.22 3"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="redo icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <path class="cls-1" d="M47,15.22H18.89A15.89,15.89,0,0,0,3,31.11H3A15.88,15.88,0,0,0,18.89,47H47"></path>
+          <polyline class="cls-1" points="34.78 27.44 47 15.22 34.78 3"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="menu icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <line class="cls-1" x1="47" y1="3" x2="3" y2="3"></line>
+          <line class="cls-1" x1="47" y1="25" x2="3" y2="25"></line>
+          <line class="cls-1" x1="47" y1="47" x2="3" y2="47"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="add icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <line class="cls-1" x1="47" y1="25.73" x2="3" y2="25.73"></line>
+          <line class="cls-1" x1="25" y1="3" x2="25" y2="47"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="star icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polygon class="cls-1" points="25 36.46 11.4 45.92 16.2 30.07 3 20.06 19.56 19.72 25 4.08 30.44 19.72 47 20.06 33.8 30.07 38.6 45.92 25 36.46">
+        </polygon></svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="heart icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <path class="cls-1" d="M36,3a11,11,0,0,0-9,4.71h0l0,.06L25,10.23,23.07,7.77l0-.06h0A11,11,0,0,0,14,3C7.92,3,3,7.25,3,15.86,3,31.92,25,47,25,47S47,31.92,47,15.86C47,7.25,42.08,3,36,3Z"></path>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="thumbs up icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <path class="cls-1" d="M41,19H29.35C31,15.23,32,12.9,32,8.59a5.59,5.59,0,1,0-11.17,0c0,4.11-1.35,7-4.82,10.36s-9.13,3.58-9.13,3.58H3V42.7H9.63A6,6,0,0,1,13.3,44l2.34,1.8A6,6,0,0,0,19.31,47H36.76a6,6,0,0,0,5.81-4.48l4.23-16A6,6,0,0,0,41,19Z"></path>
+          <line class="cls-1" x1="11.47" y1="42.7" x2="11.47" y2="21.59"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="search icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <circle class="cls-1" cx="20.29" cy="20.29" r="17.29"></circle>
+          <line class="cls-1" x1="47" y1="47" x2="32.52" y2="32.52"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="save icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polygon class="cls-1" points="3 3 3 35.49 14.51 47 47 47 47 3 3 3">
+          <rect class="cls-1" x="14" y="3" width="22" height="18.23"></rect>
+        </polygon></svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="painter icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <rect class="cls-1" x="3" y="3" width="29.89" height="13"></rect>
+          <polyline class="cls-1" points="32.89 9.5 47 9.5 47 28.42 19.78 28.42 19.78 47"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="print icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="13.51 38.8 3 38.8 3 14.72 47 14.72 47 38.8 36.49 38.8"></polyline>
+          <rect class="cls-1" x="13.51" y="33.03" width="22.97" height="13.97"></rect>
+          <rect class="cls-1" x="13.51" y="3" width="22.97" height="11.72"></rect>
+          <line class="cls-1" x1="36.49" y1="23.56" x2="36.49" y2="23.56"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="document icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polygon class="cls-1" points="3 15.22 15.22 3 15.22 15.22 3 15.22">
+          <polyline class="cls-1" points="15.22 3 36.68 3 36.68 47 3 47 3 15.22"></polyline>
+          <line class="cls-1" x1="47" y1="3" x2="47" y2="47"></line>
+        </polygon></svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="finalized icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="15.22 3 36.68 3 36.68 22.18"></polyline>
+          <polyline class="cls-1" points="15.73 47 3 47 3 15.22"></polyline>
+          <polyline class="cls-1" points="20.72 37.22 30.5 47 47 25"></polyline>
+          <polygon class="cls-1" points="3 15.22 15.22 3 15.22 15.22 3 15.22">
+        </polygon></svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="draft icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="15.22 3 36.68 3 36.68 16.7"></polyline>
+          <polyline class="cls-1" points="14.46 47 3 47 3 15.22"></polyline>
+          <polygon class="cls-1" points="3 15.22 15.22 3 15.22 15.22 3 15.22">
+          <polygon class="cls-1" points="25.99 47 25.99 41.76 41.77 25.98 47 31.29 31.29 47 25.99 47">
+        </polygon></polygon></svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="import icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="36.45 3 47 3 47 47 3 47 3 3 13.55 3"></polyline>
+          <polyline class="cls-1" points="35.08 23.57 25 33.66 14.92 23.57"></polyline>
+          <line class="cls-1" x1="25" y1="3" x2="25" y2="33.66"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="share icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="32.76 3 47 3 47 17.24"></polyline>
+          <polyline class="cls-1" points="47 28.72 47 46.99 3.01 46.99 3.01 3 21.28 3"></polyline>
+          <line class="cls-1" x1="47" y1="3" x2="25.06" y2="24.94"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="send icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polygon class="cls-1" points="3.02 3.02 47 25 3.02 46.98 3.08 28.71 19.43 25 3 21.29 3.02 3.02">
+        </polygon></svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="text icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="13.89 16.17 13.89 14.31 36.11 14.31 36.11 16.17"></polyline>
+          <line class="cls-1" x1="25" y1="14.31" x2="25" y2="35.67"></line>
+          <line class="cls-1" x1="23.14" y1="35.67" x2="26.86" y2="35.67"></line>
+          <rect class="cls-1" x="3" y="3" width="44" height="44"></rect>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="shapes icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="15.36 31.18 3 31.18 3 3 31.18 3 31.18 15.36"></polyline>
+          <circle class="cls-1" cx="31.18" cy="31.18" r="15.82"></circle>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="video icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <rect class="cls-1" x="3" y="3" width="44" height="44"></rect>
+          <polygon class="cls-1" points="19.27 15.87 19.27 34.13 32.76 24.98 19.27 15.87">
+        </polygon></svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="audio icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <ellipse class="cls-1" cx="9.74" cy="41.98" rx="6.74" ry="5.02"></ellipse>
+          <ellipse class="cls-1" cx="40.26" cy="36.4" rx="6.74" ry="5.02"></ellipse>
+          <polyline class="cls-1" points="16.49 41.98 16.49 9.47 47 3.15 47 36.4"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="image icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <circle class="cls-1" cx="22.14" cy="14.79" r="1.86"></circle>
+          <polyline class="cls-1" points="3 37.35 13.05 25.44 22.89 37.14 36.14 19.73 46.67 27.94"></polyline>
+          <rect class="cls-1" x="3" y="3" width="44" height="44"></rect>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="message icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polygon class="cls-1" points="3 3.03 3 46.97 13.49 37.37 47 37.37 47 3.03 3 3.03">
+        </polygon></svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="subtitle icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <line class="cls-1" x1="47" y1="37.29" x2="23.13" y2="37.29"></line>
+          <polyline class="cls-1" points="3 18.02 3 2.98 47 2.98 47 18.02"></polyline>
+          <line class="cls-1" x1="37.36" y1="27.66" x2="47" y2="27.66"></line>
+          <line class="cls-1" x1="3" y1="27.66" x2="27.73" y2="27.66"></line>
+          <polyline class="cls-1" points="3 37.29 3 46.9 13.5 37.29"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="language icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <circle class="cls-1" cx="25" cy="24.97" r="22"></circle>
+          <ellipse class="cls-1" cx="25" cy="24.97" rx="8.41" ry="22"></ellipse>
+          <line class="cls-1" x1="4.61" y1="17.94" x2="45.39" y2="17.94"></line>
+          <line class="cls-1" x1="4.61" y1="32.01" x2="45.39" y2="32.01"></line>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="picture in picture icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <rect class="cls-1" x="3.01" y="2.97" width="44" height="44"></rect>
+          <rect class="cls-1" x="24.16" y="24.13" width="11.36" height="11.36"></rect>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="cast icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <line class="cls-1" x1="47" y1="47" x2="47" y2="47"></line>
+          <polyline class="cls-1" points="12.55 47 3 47 3 3 47 3 47 13.52"></polyline>
+          <path class="cls-1" d="M35.52,47A11.48,11.48,0,0,1,47,35.52"></path>
+          <path class="cls-1" d="M24,47A23,23,0,0,1,47,24"></path>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="full-screen icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="47 33.17 47 47 33.17 47"></polyline>
+          <polyline class="cls-1" points="33.17 3 47 3 47 16.83"></polyline>
+          <polyline class="cls-1" points="3 16.83 3 3 16.83 3"></polyline>
+          <polyline class="cls-1" points="16.83 47 3 47 3 33.17"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="exit full-screen icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="3 16.79 16.79 16.79 16.79 3"></polyline>
+          <polyline class="cls-1" points="33.21 3 33.21 16.79 47 16.79"></polyline>
+          <polyline class="cls-1" points="3 33.08 16.79 33.08 16.79 47"></polyline>
+          <polyline class="cls-1" points="33.21 46.87 33.21 33.08 47 33.08"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="volume icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polygon class="cls-1" points="12.15 14.03 3 14.03 3 35.97 12.15 35.97 24.03 47 24.03 3 12.15 14.03">
+          <line class="cls-1" x1="35.77" y1="15.96" x2="35.77" y2="33.98"></line>
+          <line class="cls-1" x1="47" y1="8.52" x2="47" y2="41.42"></line>
+        </polygon></svg></div>
+      <div class="svg-lumina-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="mute icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polygon class="cls-1" points="17.9 14.07 8.77 14.07 8.77 35.99 17.9 35.99 29.76 47 29.76 3.06 17.9 14.07">
+          <line class="cls-1" x1="41.24" y1="16" x2="41.24" y2="34"></line>
+          <line class="cls-1" x1="3" y1="3" x2="47" y2="47"></line>
+        </polygon></svg></div>
+      <div class="svg-lumina-icon hide-tablet w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="WLAN icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <line class="cls-1" x1="25" y1="43.65" x2="25" y2="43.65"></line>
+          <path class="cls-1" d="M32.28,33.68a12.37,12.37,0,0,0-14.56,0"></path>
+          <path class="cls-1" d="M39.57,23.7a24.72,24.72,0,0,0-29.14,0"></path>
+          <path class="cls-1" d="M47,13.52a37.34,37.34,0,0,0-44,0"></path>
+        </svg></div>
+      <div class="svg-lumina-icon hide-tablet hide-mobilehr w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="devices icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <line class="cls-1" x1="22.04" y1="47" x2="22.04" y2="47"></line>
+          <polyline class="cls-1" points="21.7 33.68 3 33.68 3 3 47 3 47 11.67"></polyline>
+          <rect class="cls-1" x="31.69" y="21.32" width="15.31" height="25.68"></rect>
+        </svg></div>
+      <div class="svg-lumina-icon hide-tablet hide-mobilehr w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="cursor icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <polyline class="cls-1" points="9.99 47.05 9.99 2.95 40.01 34.27 22.18 34.84 9.99 47.05"></polyline>
+        </svg></div>
+      <div class="svg-lumina-icon hide-tablet hide-mobilehr w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50" aria-label="hand icon.">
+          <defs>
+            <style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.5px;}</style>
+          </defs>
+          <path class="cls-1" d="M47,31.21a15.79,15.79,0,0,1-31.58,0V6.64"></path>
+          <line class="cls-1" x1="3" y1="28.09" x2="20.29" y2="42.61"></line>
+          <line class="cls-1" x1="47" y1="31.05" x2="47" y2="15.76"></line>
+          <line class="cls-1" x1="36.47" y1="22.12" x2="36.47" y2="6.48"></line>
+          <line class="cls-1" x1="25.94" y1="3" x2="25.94" y2="22.12"></line>
+        </svg></div>
+    </div>
+    <div class="content-55 pad-md-top">
+      <p class="p-lg">
+        <a href="javascript:backbutton();" aria-label="Back to previous page." class="p-lg-a a-internal">Back <span class="p-lg-arrow">↖</span></a><br>
+        <a href="../home-0.html" aria-label="Go to home page." class="p-lg-a"><span class="p-lg-arrow"></span></a>
+      </p>
+      <p class="p-lg pad-xs-top">
+        <a href="../home-0.html" aria-label="Go to home page." class="p-lg-a a-internal"><span class="p-lg-arrow"></span>Home <span class="p-lg-arrow">→</span></a>
+      </p>
+    </div>
+    <div class="content-55 pad-md-top pad-md-bottom">
+      <p class="p-lg">
+        <a href="../info-0.html" aria-label="Site info." class="p-lg-a a-internal footer-a">Site info <span class="p-lg-arrow">→</span></a><br>Copyright <span aria-hidden="true" class="p-ariahidden">©</span> 2020 Xiangrui Fu. All rights reserved.
+      </p>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e7029aabf3d8e065982838f" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="../js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <!-- 
+richardfxr custom footer code
+Version: 9.1.2
+Updated: 2021-10-13
+ -->
+  <!--  navigation magic line and page transitions  -->
+  <script>
+  $(document).ready(function(){
+    /* == code by Lou Verdun, inspired by Todd Miller. Slightly modified. == */
+    /* active class */
+    $("#main-nav a").on("click", function(){
+      $("#main-nav a.active").removeClass("active");
+      $(this).addClass("active");
+    });
+    /* desktop left-side magic line */
+    function magicLineLeft() {
+        var $el, topPos, newHeight,
+        $mainNav = $("#main-nav");
+      // Create a new li and append it to ul
+        $mainNav.append("<a id='magicline-left' tabindex='-1' aria-hidden='true' class='input'></a>");
+        var $magicLine = $("#magicline-left");
+        $magicLine // Defining initial height and position
+            .height($(".active").outerHeight())
+            .css("top", $(".active").position().top)
+            .data("origTop", $magicLine.position().top)
+            .data("origHeight", $magicLine.height());
+        $("#main-nav a")
+          .hover(function() { // Set new height and position
+            $el = $(this);
+            topPos = $el.position().top;
+            newHeight = $el.outerHeight();
+            $magicLine.stop().animate({
+                top: topPos,
+                height: newHeight
+            });
+          }, function() { // Animate
+            $magicLine.stop().animate({
+                top: $(".active").position().top,
+                height: $(".active").outerHeight()
+          });
+        })
+    }
+    /* == Code by Chris Coyier. Slightly modified == */
+    /* mobile bottom magic line */
+    function magicLineBottom() {
+      var $el, leftPos, newWidth;
+      /* Add Magic Line markup via JavaScript, because it ain't gonna work without */
+      $("#main-nav").append("<a id='magicline-bottom' tabindex='-1' aria-hidden='true' class='input'></a>");
+      /* Cache it */
+      var $magicLineBottom = $("#magicline-bottom");
+      $magicLineBottom
+        .width($(".active").outerWidth())
+        .css("left", $(".active").position().left)
+        .data("origLeft", $magicLineBottom.position().left)
+        .data("origWidth", $magicLineBottom.width());
+      $("#main-nav a")
+        .hover(
+          function() {
+            $el = $(this);
+            leftPos = $el.position().left;
+            newWidth = $el.outerWidth();
+            $magicLineBottom.stop().animate({
+              left: leftPos,
+              width: newWidth
+            });
+          },
+          function() {
+            $magicLineBottom.stop().animate({
+              left: $magicLineBottom.data("origLeft"),
+              width: $magicLineBottom.data("origWidth")
+            });
+          }
+        );
+    }
+    /* == changing <body> overflow setting on page transition - deprecated ==
+    function setOverflow() {
+      $(".body-3").css("overflow", "visible");
+    }
+      // run function after delay
+      setTimeout(setOverflow, 600);
+    */
+      // run magic line funtions
+      magicLineLeft();
+      magicLineBottom();
+  });
+  $(window).resize(function(){
+    /* == recalculates magic line position and length on page resize == */
+    /* desktop left-side magic line */
+    function magicLineLeft() {
+        var $el, topPos, newHeight,
+        $mainNav = $("#main-nav");
+        var $magicLine = $("#magicline-left");
+        $magicLine // Defining initial height and position
+            .height($(".active").outerHeight())
+            .css("top", $(".active").position().top)
+            .data("origTop", $magicLine.position().top)
+            .data("origHeight", $magicLine.height());
+    }
+    /* mobile bottom magic line */
+    function magicLineBottom() {
+      var $el, leftPos, newWidth;
+      /* Cache it */
+      var $magicLineBottom = $("#magicline-bottom");
+      $magicLineBottom
+        .width($(".active").outerWidth())
+        .css("left", $(".active").position().left)
+        .data("origLeft", $magicLineBottom.position().left)
+        .data("origWidth", $magicLineBottom.width());
+    }
+      // run magic line functions
+      magicLineLeft();
+      magicLineBottom();
+  });
+</script>
+  <!--  page outro delay  -->
+  <script>
+  // link click delay for outro animation
+  $('.a-internal, .nav-arrow-lg, .work-card, .nav-div-orbis').click(function (e) {
+	e.preventDefault();
+    var goTo = this.getAttribute("href");
+    // set overflow to hidden - deprecated
+    $(".body-3").css("overflow", "hidden");
+    setTimeout(function(){
+         window.location = goTo;
+    },500);
+  });
+  // reload page on back button
+  window.onpageshow = function(event) {if (event.persisted) {window.location.reload()}};
+</script>
+  <!--  clipboard.js external  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+  <script>
+	new Clipboard('.btn');
+</script>
+</body>
+</html>

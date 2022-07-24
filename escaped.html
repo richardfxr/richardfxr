@@ -1,0 +1,691 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Sun Jul 24 2022 04:04:48 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5fc2ea1e51c3f8627a754536" data-wf-site="5e7029aabf3d8e065982838f" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>⎋</title>
+  <meta content="⎋" property="og:title">
+  <meta content="⎋" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="sl3B-rx9q8bVRKzyCPX_xR5WvCw_11lO6HCYZGE1gX4" name="google-site-verification">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/richardfxr.webflow.css" rel="stylesheet" type="text/css">
+  <style>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="4f335408-e718-eef5-9cf0-c1620c843daa"] {height:100VH;display:block;}html.w-mod-js:not(.w-mod-ix) [data-w-id="711e42ac-27ef-9c22-4072-8f96f0808022"] {display:block;}html.w-mod-js:not(.w-mod-ix) [data-w-id="fb175105-2e92-3c4f-5ccd-817d59e702c4"] {width:100%;}html.w-mod-js:not(.w-mod-ix) [data-w-id="26846f73-edac-4c01-b26f-a82201667647"] {width:100%;}html.w-mod-js:not(.w-mod-ix) [data-w-id="36804936-0a65-934f-ecdc-64b1b4037827"] {display:block;}}@media (max-width:991px) and (min-width:768px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="4f335408-e718-eef5-9cf0-c1620c843daa"] {height:100VH;display:block;}html.w-mod-js:not(.w-mod-ix) [data-w-id="711e42ac-27ef-9c22-4072-8f96f0808022"] {display:block;}html.w-mod-js:not(.w-mod-ix) [data-w-id="fb175105-2e92-3c4f-5ccd-817d59e702c4"] {width:100%;}html.w-mod-js:not(.w-mod-ix) [data-w-id="26846f73-edac-4c01-b26f-a82201667647"] {width:100%;}html.w-mod-js:not(.w-mod-ix) [data-w-id="36804936-0a65-934f-ecdc-64b1b4037827"] {display:block;}}@media (max-width:767px) and (min-width:480px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="4f335408-e718-eef5-9cf0-c1620c843daa"] {height:100VH;display:block;}html.w-mod-js:not(.w-mod-ix) [data-w-id="711e42ac-27ef-9c22-4072-8f96f0808022"] {display:block;}html.w-mod-js:not(.w-mod-ix) [data-w-id="fb175105-2e92-3c4f-5ccd-817d59e702c4"] {width:100%;}html.w-mod-js:not(.w-mod-ix) [data-w-id="26846f73-edac-4c01-b26f-a82201667647"] {width:100%;}html.w-mod-js:not(.w-mod-ix) [data-w-id="36804936-0a65-934f-ecdc-64b1b4037827"] {display:block;}}@media (max-width:479px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="53292b7e-6a05-af3d-6814-3cd0b35ba6f3"] {width:100%;}html.w-mod-js:not(.w-mod-ix) [data-w-id="b40ca153-1cc9-d7af-2e17-985959eddd0a"] {height:100%;}html.w-mod-js:not(.w-mod-ix) [data-w-id="93d01232-ddca-a963-f5d7-6732a1cb0615"] {height:100%;}}</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Inconsolata:400,700","Manrope:200,300,regular,500,600,700,800","Roboto Mono:regular,500,600"]  }});</script>
+  <script src="https://use.typekit.net/psv5lil.js" type="text/javascript"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <!-- 
+richardfxr custom head code
+Version: 9.1.2
+Updated: 2021-10-13
+ -->
+  <script>
+  // back button funtion
+  function backbutton(){
+    if(history.length===1){
+      window.location.href="http://www.richardfxr.com/";
+    }else{
+      history.back();
+    }
+  }
+  // Firefox reload for back button
+  if (typeof InstallTrigger !== 'undefined') {
+    window.addEventListener( "pageshow", function ( event ) {
+      var historyTraversal = event.persisted ||
+                             ( typeof window.performance != "undefined" &&
+                                  window.performance.navigation.type === 2 );
+      if ( historyTraversal ) {
+        // Handle page restore.
+        window.location.reload();
+      }
+    });
+  }
+</script>
+  <style>
+  /*
+  PAGE COLOR SCHEME
+  */
+  :root {
+    --primary-color: #000;
+    --secondary-color: #7f7f7f;
+    --accent-color: #11d3e7;
+    --outline-color: #e6e6e6;
+    --point-color: #b3b3b3;
+    --bg-color: #fff;
+  }
+  /* test scheme
+  :root {
+    --primary-color: #ff0000;
+    --secondary-color: #00ff00;
+    --accent-color: #000;
+    --outline-color: #0000ff;
+    --point-color: #ff0000;
+    --bg-color: #d6fbff;
+  }
+  */
+	/*
+  PAGE-WIDE STYLING
+  */
+  html {
+    /* overflow-x: hidden; */
+  }
+  html, body {
+    background-color: var(--bg-color);
+  }
+  *{
+    -webkit-tap-highlight-color: transparent; /* remove mobile tap highlight */
+  }
+  /*
+  ELEMENTS
+  */
+  .h2-xl {
+    /* color: var(--primary-color);*/
+  }
+  .p-lg {
+    color: var(--secondary-color);
+  }
+  .p-lg-a {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+  }
+  /* points */
+  .points-left, .points-right {
+  	position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+  }
+  .points-top {
+    position: absolute;
+    top: -3px;
+    width: 100%;
+  }
+  .points-left {
+  	left: -2.5px;
+  }
+  .points-right {
+  	right: 1.5px;
+  }
+  .points:before, .points:after, .points-before:before, .points-after:after {
+  	display: inline-block;
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--point-color);
+    z-index: 4;
+  }
+  .input .points:before, .input .points:after {
+    background-color: var(--accent-color);
+    z-index: 5;
+  }
+  .points-top:before {
+    top: 0.5px;
+    left: -2.5px;
+  }
+  .points-top:after {
+    top: 0.5px;
+    right: -2.5px;
+  }
+  .points-left:before, .points-right:before {
+  	top: -2.5px;
+  }
+  .points-left:after, .points-right:after {
+  	bottom: -2.5px;
+  }
+  /*
+  NAV
+  */
+  /* normal color */
+  .nav {
+    border-color: var(--outline-color);
+    background-color: var(--bg-color);
+  }
+  .color-2 {
+    color: var(--secondary-color);
+  }
+  .color-2:hover, .color-2:focus {
+    color: var(--primary-color);
+  }
+  /* active */
+  .active {
+  	color: var(--primary-color);
+  }
+  /* magic line - left */
+  #magicline-left {
+    display: block !important;
+  	position: absolute;
+		bottom: 0;
+    width: 100%;
+    border: 1px solid var(--outline-color);
+    border-right: none;
+    border-left: 0.3vw solid var(--accent-color);
+    padding: 0 !important;
+    pointer-events: none;
+    overflow: visible !important;
+    z-index: 5;
+  }
+  /* magic line - mobile */
+  #magicline-bottom {
+  	display: none !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--outline-color);
+    border-top: none;
+    border-bottom: 1.2vw solid var(--accent-color);
+    padding: 0 !important;
+    pointer-events: none;
+    overflow: visible !important;
+    z-index: 6;
+  }
+  /*
+  MAIN
+  */
+  .all-wrapper, .main-outer, .heading-wrapper, .heading-left-outer, .grid-section-wrapper {
+    border-color: var(--outline-color);
+  }
+  .main-outer > .points-top:after {
+  	right: -0.5px;
+  }
+  /* headings */
+  .heading-left {
+    color: var(--primary-color);
+  	writing-mode: vertical-rl;
+  }
+  /* grid points */
+  .grid-section-wrapper .points-right {
+    display: none;
+  }
+  /*
+  FOOTER
+  */
+  .footer-a {
+    border-color: var(--outline-color) !important;
+  }
+  .footer-a:first-child {
+  	margin-top: -0.8vw;
+  	border-top: none;
+  	padding-top: 0 !important;
+  }
+  .footer-a:last-child {
+  	margin-bottom: -0.8vw;
+  	padding-bottom: 0 !important;
+  }
+  /*
+  BREAKPOINTS
+  */
+  /* 1920 and up */
+  @media screen and (min-width: 1920px) {
+    /* nav */
+    #magicline-left {
+    	border-left: 5.76px solid var(--accent-color);
+    }
+    /* grid points */
+    .grid-section-wrapper .points-right {
+      display: block !important;
+    }
+    /* footer */
+    .footer-a:first-child {
+    	margin-top: -15.36px;
+    }
+    .footer-a:last-child {
+    	margin-bottom: -15.36px;
+    }
+  }
+  /* 1440px and up */
+  @media screen and (min-width: 1440px) {
+  }
+  /* 992px and up */
+  @media screen and (min-width: 992px) {
+    /* individual work-card styling */
+    .grid-section-wrapper:nth-child(3n+3) {
+      border-right: none;
+    }
+    .grid-section-wrapper:nth-last-child(-n+3) {
+      border-bottom: none;
+    }
+  }
+  /* tablet */
+  @media screen and (max-width: 991px) {
+    /* nav */
+    #magicline-left {
+    	border-left: 0.5vw solid var(--accent-color);
+    }
+    /* work cards */
+    .grid-section-wrapper {
+      border-right: 1px solid var(--outline-color) !important;
+      border-bottom: 1px solid var(--outline-color) !important;
+    }
+    .grid-section-wrapper:nth-child(2n+2) {
+      border-right: none !important;
+    }
+    .grid-section-wrapper:nth-last-child(-n+2) {
+      border-bottom: none !important;
+    }
+    /*
+    FOOTER
+    */
+    footer .grid-section-wrapper:nth-child(2) {
+    	border-bottom: 1px solid var(--outline-color) !important;
+    }
+    footer .grid-section-wrapper:last-child {
+    	border-right: none !important;
+    }
+  }
+  /* mobile landscpe */
+  @media screen and (max-width: 767px) {
+  }
+  /* mobile portrait */
+  @media screen and (max-width: 479px) {
+    /* loader */
+    .loader-content-mobile-wrapper {
+      height: calc(100vh - 18vw);
+    }
+  	/* nav */
+    /* magic line */
+    #magicline-left {
+      display: none !important;
+    }
+    #magicline-bottom {
+    	display: block !important;
+    }
+    /* grid points */
+    .grid-section-wrapper:nth-last-child(n+2) {
+      border-bottom: 1px solid var(--outline-color) !important;
+    }
+    .grid-section-wrapper {
+      border-right: none !important;
+    }
+  }
+</style>
+  <!-- 
+richardfxr custom CSS
+esc - v1.1
+ -->
+  <style>
+/* esc grid */
+.esc-grid-1 .grid-section-wrapper {
+  border: none !important;
+}
+</style>
+</head>
+<body class="body-3">
+  <div pointer-events="none" data-w-id="4f335408-e718-eef5-9cf0-c1620c843daa" class="loader-line"></div>
+  <div pointer-events="none" data-w-id="36804936-0a65-934f-ecdc-64b1b4037827" class="loader-nav-wrapper">
+    <div data-w-id="fb175105-2e92-3c4f-5ccd-817d59e702c4" class="loader-nav"></div>
+  </div>
+  <div pointer-events="none" data-w-id="711e42ac-27ef-9c22-4072-8f96f0808022" class="loader-content-wrapper">
+    <div data-w-id="26846f73-edac-4c01-b26f-a82201667647" class="loader-content"></div>
+  </div>
+  <div data-w-id="53292b7e-6a05-af3d-6814-3cd0b35ba6f3" class="loader-line-mobile"></div>
+  <div class="loader-nav-mobile-wrapper">
+    <div data-w-id="93d01232-ddca-a963-f5d7-6732a1cb0615" class="loader-nav-mobile"></div>
+  </div>
+  <div class="loader-content-mobile-wrapper">
+    <div data-w-id="b40ca153-1cc9-d7af-2e17-985959eddd0a" class="loader-content-mobile"></div>
+  </div>
+  <nav id="main-nav" class="nav">
+    <a id="nav-first" href="javascript:backbutton();" class="color-2 nav-link a-internal w-inline-block">
+      <div class="nav-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28.5 28.5">
+          <defs>
+            <style>.svg-outline{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style>
+          </defs>
+          <polyline class="svg-outline" points="14.21 2.46 2.43 14.24 14.23 26.04"></polyline>
+          <line class="svg-outline" x1="2.43" y1="14.25" x2="26.07" y2="14.25"></line>
+        </svg></div>
+    </a>
+    <a href="index.html" class="color-2 nav-link a-internal w-inline-block">
+      <div class="nav-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28.5 28.5">
+          <defs>
+            <style>.svg-outline{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style>
+          </defs>
+          <polyline class="svg-outline" points="27.12 13.7 14.25 2.42 1.38 13.7"></polyline>
+          <polygon class="svg-outline" points="5.96 16.92 14.25 10.05 22.54 16.92 22.54 26.08 5.96 26.08 5.96 16.92">
+          <line class="svg-outline" x1="22.54" y1="9.68" x2="22.54" y2="3.71"></line>
+        </polygon></svg></div>
+    </a>
+    <a href="projects.html" class="color-2 nav-link a-internal active w-inline-block">
+      <div class="nav-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28.5 28.5">
+          <defs>
+            <style>.svg-outline{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style>
+          </defs>
+          <rect class="svg-outline" x="2.43" y="2.41" width="23.64" height="8.95"></rect>
+          <rect class="svg-outline" x="2.43" y="17.14" width="23.64" height="8.95"></rect>
+        </svg></div>
+    </a>
+    <a href="about.html" class="color-2 nav-link a-internal w-inline-block">
+      <div class="nav-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28.5 28.5">
+          <defs>
+            <style>.svg-outline{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style>
+          </defs>
+          <path class="svg-outline" d="M2.43,26.07c0-5.74,5.29-10.39,11.82-10.39s11.82,4.65,11.82,10.39Z"></path>
+          <circle class="svg-outline" cx="14.25" cy="6.47" r="4.03"></circle>
+        </svg></div>
+    </a>
+    <a id="nav-last" href="info.html" class="color-2 nav-link a-internal w-inline-block">
+      <div class="nav-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28.5 28.5">
+          <defs>
+            <style>.svg-outline{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style>
+          </defs>
+          <circle class="svg-outline" cx="14.25" cy="14.25" r="11.82"></circle>
+          <line class="svg-outline" x1="14.25" y1="12.95" x2="14.25" y2="20.47"></line>
+          <line class="svg-outline" x1="14.25" y1="8.04" x2="14.25" y2="8.04"></line>
+        </svg></div>
+    </a>
+  </nav>
+  <div id="intro" class="all-wrapper">
+    <div class="main-outer">
+      <div class="main-grid">
+        <div class="heading-wrapper">
+          <div class="heading-left-flex">
+            <div class="heading-left-outer">
+              <h1 class="heading-left space-bottom-md">Intro</h1>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper space-bottom-md">
+          <div class="home-grid-1">
+            <h2 class="h1-xl home font-inter">⎋</h2>
+            <p id="w-node-_4441a8f5-7f23-7e00-a884-0e3ebd0df022-7a754536" class="p-lg p-nospace"><span class="p-lg-black">Congratulations!</span> You have completed the puzzle. That is no small feat! I expected <span class="p-lg-black">very few</span> people to get this far.<br><br>Below is a <span class="p-lg-black">semi-autobiographical</span> short story that I have never published. This is the <span class="p-lg-black">most personal</span> piece I have ever created. While I am not a good writer, I believe a fragment of my true self lies within those words. I hope that by reading it, you would, at least partially, <span class="p-lg-black">understand me</span> as a person. <br><br>There are also some final <a href="#comments" class="p-lg-a">comments <span class="p-lg-arrow">↓</span></a> at the very end.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="iridiumflares" class="all-wrapper">
+    <div class="main-outer">
+      <div class="main-grid">
+        <div class="heading-wrapper">
+          <div class="heading-left-flex">
+            <div class="heading-left-outer">
+              <h1 class="heading-left space-bottom-md">Iridium Flares</h1>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper space-bottom-md">
+          <div class="article-title">
+            <h2 class="h2-lg h2-lg-nospace font-freighttextpro">Iridium Flares</h2>
+          </div>
+          <div class="w-layout-grid article-graid-1">
+            <div class="article-filler-1"></div>
+            <p class="p-md pad-md-bottom font-freighttextpro">To my everything, <span class="p-lg-black">YW</span>, with love.<br>To my parents, <span class="p-lg-black">CF</span> and <span class="p-lg-black">WX</span>.</p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky pad-md-bottom pad-sm-mobile">TEN</h3>
+            </div>
+            <p class="p-md pad-md-bottom font-freighttextpro p-md-black">Sam’s gaze drifted between the cracks in the asphalt, intermediately disrupted by the passing cars. The sidewalks now glowed a harsh grey ever since snow became a rare sight. Combined with the concrete beam bridge, this section of the path looked almost Brutalist.<br><br>The April cherry blossoms were a staple of Boston. They were the only reason Sam went out of his way to come to the esplanade. From an architectural standpoint, the arch bridge there was nothing special, but it complements the cherry blossoms so well that Sam couldn’t help but admire it. A few students from his school also had the idea of coming here. Their chatter was drowned out by Sam’s headphones.<br><br>Sam walked onto the bridge. The brick inlays were disappointing, but his music made it bearable. A pair of legs were getting unusually close. Sam quickened his pace to put some distance between them, but to no avail.<br><br>“Hey.” It was a girl.<br><br>With one hand, Sam reluctantly pulled down his headphones.<br><br>“You’re the new transfer, right?” She continued.<br><br>“Umm…yeah.”<br><br>“I’m Agnes. Everyone calls me Ann.”<br><br>“Oh, hi.”<br><br>“Ann, we’re taking a photo!” Another girl yelled.<br><br>“Coming!” She replied. “We’ll talk later, okay?”<br><br>“Uh-”<br><br><span class="p-italic">Wait, I haven’t told you my name</span>. Sam reached for her with his right hand, but she was already gone.</p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky pad-md-bottom pad-sm-mobile">NINE</h3>
+            </div>
+            <p class="p-md pad-md-bottom font-freighttextpro p-md-black">Up until weeks ago, Sam always walked home alone. His commute took him through a quiet section of town filled with warehouses. Other than the occasional trucks, nothing ever came between Sam and his music. Not anymore.<br><br>The girl he met on the bridge slowly but surely made her way into his routine. It annoyed Sam at first, but he had gotten used to her voice.<br><br>“It’s pretty, isn’t it?” She said, holding a cherry blossom petal against the sky.<br><br>“Yeah. The sky compliments the pink quite well.”<br><br>He’d grown a little more talkative in that time if only to stop her from complaining about how he’s always so disinterested. “You’re always so gloomy,” she’d say, “it’s kinda hard to talk to you, ya know?” <span class="p-italic">It’s not your fault, I’m just preoccupied with my –</span><br><br>“They’re having a party over at Ray’s this Saturday.”<br><br>“Oh. I didn’t know.”<br><br>“I want you to come.” She was serious.<br><br>“Umm, I…I don’t go to par -”<br><br>“I know, that&#x27;s why I want you to come.”<br><br>“But, I don’t like them.”<br><br>“Trust me, it’ll be fun! Can you please come? Just for me?”<br><br>There was no getting out of it. “Alright,” Sam said reluctantly.</p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky pad-md-bottom pad-sm-mobile">EIGHT</h3>
+            </div>
+            <p class="p-md pad-md-bottom font-freighttextpro p-md-black">Sam could only describe the music as deafening noise. Why do people enjoy this? All the detail was drowned out by the bass, the treble was distorted beyond recognition, and the mids had almost no sound stage.<br><br>She was off to the side talking with some friends. Sam was surprised they could hear each other. He did his best to stay away from the larger speakers that flanked the room. When is this going to end? She started walking towards him. <span class="p-italic">Maybe we’re leaving now?</span><br><br>“Oh come on, don’t just shove yourself in a corner all night.”<br><br>“I told you I don’t like this.”<br><br>“Yeah, not if you’re just going to sit there!” She grabbed his hand and yanked him away from his seat. “Now come and dance.”<br><br>She dragged him into the crowd and told him to follow her moves. While she danced effortlessly to the beat, Sam struggled to make his awkward flailing resemble coordinated movement.<br><br>“That’s it! Let loose!”<br><br><span class="p-italic">Let loose, yeah, sounds good. </span><br><br><br><br>“Owww,” she groaned, rubbing her feet gently with her hand.<br><br>“You can have my shoes.” Sam felt bad watching the girl walk barefoot. Her high heels now swung loosely in his hand.<br><br>“No, it&#x27;s okay. The ground isn’t that bad. And besides, your shoes are way too big.”<br><br>It was already dark. A few street lamps dotted the way on the esplanade. The silence was much welcomed after hours of deafening music. The small arch bridge where they first met caught the girl’s attention. She skipped towards it playfully.<br><br>“Come on, come on,” she yelled. “Let’s jump!”<br><br>“What? No! You’ll catch a cold.” Sam was baffled. “I’ve also got my phone, and my jacket too.”<br><br>“Oh <span class="p-italic">come on</span>. Just leave those up here.”<br><br>“No, that’s crazy. Let’s go home.” Yet, he still walked up to her.<br><br>By the time Sam took off his jacket, she already made her way on top of the railing, smiling.<br><br>“You sure about this?”<br><br>“Yeah! Get up here.”<br><br>Sam grabbed her hand, trying his best to stabilize himself. “Whoa -”<br><br>A thundering splash was followed by a cold sensation that engulfed Sam. <span class="p-italic">Shit, this is cold</span>. The tickling bubbles and adrenaline-fueled excitement were novel to him. <br><br>‍<span class="p-italic">What is this?</span><br><br><br><br>A trail of water followed the two teenagers. “That was amazing,” she claimed. Sam couldn’t disagree, although he could do without the shivering. At least they are both barefoot now.<br><br>“Look at that.” She pointed towards a bright object in the sky, water still dripping from her fingertip.<br><br>“That’s Venus, it’s very bright right now.”<br><br>“I’ve always been fascinated by astronomy,” she said, staring at Venus. “Aurorae, comets, supernovae, they all seem so impossibly beautiful.”<br><br>“Yeah, my parents used to tell me all about them. I mean, they were aerospace engineers, so I guess it was part of their job.”<br><br>Sam paused, the twitching in his right arm alarmed him. <span class="p-italic">No</span>.<br><br>“Um, I’ve gotta go,” he said abruptly. “Here, and you can keep my jacket, just give it back next Monday. Sorry, I need to run.”<br><br>Sam took off without looking back. He felt horrible leaving her behind like that – drenched and barefoot. He hated that feeling. <span class="p-italic">Don’t let her get too close. Don’t let this end like it did with mom.</span></p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky pad-md-bottom pad-sm-mobile">SEVEN</h3>
+            </div>
+            <p class="p-md pad-md-bottom font-freighttextpro p-md-black">It was one of those rainstorms that struck Boston once in a while. The rain was nearly horizontal, pounding loud against the window. Sam stared blankly at the faint hint of sunlight on his bedsheet. A crumpled letter laid next to him. “New Eden Hospital Center,” said the large title in serif. It was his doctor advising him to move forward with his treatment plan. “To ease the pain in the last few months, I recommend initiating the medically induced coma soon.”<br><br>Sam had always known it would come to this. <span class="p-italic">It’s just a little early</span>. He struggled to comprehend his condition when he first heard about it. “I’ll be okay, right mom,” he’d ask. “You’ll be fine, Sam. Everything will be fine.” He used to think he’s somehow special, that he’s the only one who’d survive such an illness. <span class="p-italic">Maybe they’ll come up with a cure by then</span>. But he wasn’t special, and there was no cure.<br><br>“Most of the neurons in this area are damaged. It’s spreading quicker than we expected. You have a few months, a few years at most. I’m terribly sorry.” He didn’t even bother to ask about experimental treatments. He had accepted it by then. <span class="p-italic">I’m going to die</span>.<br><br>He didn’t tell anyone about this. He transferred schools so that no one would notice his changes and bother him about it. <span class="p-italic">I don’t want to hurt anyone. I don’t want them to cry about me. I want my death to change nothing</span>.<br><br>Loud, repeated knocks on the door caught Sam’s attention. <span class="p-italic">Someone’s here?</span> He quickly shoved the few empty pill bottles into a bag and tossed it under his bed. The letter was hastily hidden under the bedsheet as he ran to open the door.<br><br>“Hey,” she said, half soaked through, a torn-up umbrella in her left hand. “Could I come in for a minute?”<br><br>“Oh, yeah, of course. What happened to you?”<br><br>“I lost my keys somewhere. Ugh. I already called my landlord; she’ll be here soon.”<br><br>“Here,” Sam said, plugging in a hairdryer. “You can dry yourself off with this.”<br><br>“Oh, thanks.”<br><br>Sam sat down on his bed, watching the girl by his desk. <span class="p-italic">It’s the first time someone’s been in here.</span><br><br>“What’s this?” The object in question was a weirdly shaped model. Two long panels jutted out from the top, three smaller ones were anchored to the bottom.<br><br>“That? It’s an Iridium satellite. My dad gave it to me when he left the team.”<br><br>“So this is what your dad worked on?”<br><br>“My mom too, actually. They were both engineers.”<br><br>“You like this stuff too, don’t you?”<br><br>“Yeah, I guess. They’ve always wanted me to follow in their footsteps.”<br><br>Putting the model back, she accidentally knocked over an old notebook. The pieces of loose paper once tucked inside now covered the table.<br><br>“Oh, I’m sorry,” she said, picking up the closest piece. “Whoa, are you an artist?”<br><br>“Well, I -” Sam paused, “- I used to draw.”<br><br>“These are really good.” Flipping through the pages, she stopped at a drawing of a human heart. “What do you mean ‘used to?’”<br><br><br><br>It all started when his mom sent him to an art class. The first week, he brought back a sketch of a cube – rough, crooked, and inconsistent. “That’s nice,” she said. It was one of the few times she’d ever praised him. So, Sam kept at it. Years and years of practice earned him multiple awards and a bit of a reputation. “That’s him?” people would whisper every time he showed up, “Yeah, that’s the one.” He’d draw next to much older artists, waiting for the examiner to come and rate their work. The slightly tall easel, the odd glaze from other people, little of that bothered Sam. <span class="p-italic">It will make mom happy.</span> It did, but not for long.<br><br>“This is such a waste of time! You should be <span class="p-italic">studying</span>! You’re going to be an engineer, son. An <span class="p-italic">engineer</span>!” Sam stood there silently, the drawing he was displaying proudly a second ago now hidden behind his legs. As his mother’s illness worsened, she grew increasingly discontent with Sam’s pursuit of art. An engineer, that was the Sam she wanted. Yet, he’d fallen in love with art. He couldn’t give it up. For the longest time, he tried to compromise.<br><br>But, with the passing of his mother, Sam could no longer draw. A wave of grief always consumed him when he tried. It felt like choking. <span class="p-italic">No matter what I do, I can’t make people happy. I can’t keep them around. I can’t do anything</span>. So, he stopped, tucked away all his works, and moved to a city where no one has heard of him.<br><br><br><br>Sam told her all this. The heavy rain felt oddly fitting as the two sat silently in that small room.<br><br>“You shouldn&#x27;t blame yourself.” She finally broke the silence. “Everyone dies. No one can change that.”<br><br>“I couldn’t even make her happy.”<br><br>“But you tried, didn’t you? You loved her.”<br><br>“So <span class="p-italic">what</span>? All that did was hurt her, hurt me. It’d be better if I never existed.”<br><br>“We all know it might hurt when we love someone. But we do it anyway.”<br><br>“Why? <span class="p-italic">Why?</span>”</p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky pad-md-bottom pad-sm-mobile">SIX</h3>
+            </div>
+            <p class="p-md pad-md-bottom font-freighttextpro p-md-black">“Ah! I miss the sun so much.”<br><br>“It’s only been like three days.”<br><br>“Yeah yeah, way to ruin the mood, dummy.”<br><br>She was particularly happy that day. An innocent smile along with a pink crop top made her look more energetic than ever.<br><br><span class="p-italic">I hope she gets to live a long life; long, long after I’m gone.</span><br><br>“Oh! There it is!” She found the supposedly famous cake shop she couldn’t stop talking about.<br><br>“Fancy.”<br><br>“Well, it is kinda expensive. But, but! The cakes here are <span class="p-italic">incredible</span>.”<br><br>Cakes were never something Sam liked. They were okay, the cream always had a weird texture and they were often too sweet. Yet, what the girl presented in front of him was very different from the store-bought birthday cakes Sam was imagining.<br><br>“Whoa, this is really good,” Sam said uncharacteristically.<br><br>“Yeah, I told you, they are amazing!”<br><br>“How did they make it layered like that? And the flavor is perfect too.”<br><br>“The layered texture is what they’re famous for. It’s their secret. Although I’m not a huge fan of the green tea flavor.”<br><br>“Hmmm,” Sam took a piece of the green tea flavored cake and chewed on it. “I mean, it is a little dry, but I think it’s good.”<br><br>“Well, you can have the rest of that then.”<br><br>“I see you’re just giving me the stuff you don’t like.”<br><br>“It’s not like that, dummy.” She searched around in her bag, finally emerging with her phone. “Here, let’s take a picture.”<br><br>As Sam tried to position himself inside the frame, she smeared some cream onto his face.<br><br>“Hey! What was that?”<br><br>“Hahahaha! It looks good on you!”<br><br>“You -” Sam grabbed another piece with his fork and waved it at her face, missing. “Come back here!”<br><br>“You can’t get me! Haha!”<br><br>“Hey! Stop with the pictures!”<br><br>They chased each other around the store, no doubt annoying the other customers. A few glares came their way, but Sam cared little.<br><br><span class="p-italic">I’m not sure what it is about her, but please, please let this last an eternity.</span></p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky pad-md-bottom pad-sm-mobile">FIVE</h3>
+            </div>
+            <p class="p-md pad-md-bottom font-freighttextpro p-md-black">“If this guy keeps being so careless, he’ll die before the end of the season.”<br><br>“No, that can’t happen. He’s pretty essential to the plot and he’s got a big fanbase. They can’t just kill him off like that.”<br><br>The two sat on the floor, leaning against Sam’s bed. The monitor at the edge of the desk was playing some show thanks to the pile of cables, splitters, and adapters Sam had rigged up.<br><br>“Ah!” Sam retrieved his hand from the bag of chips. “You finished them already?”<br><br>“Yup.” A mischievous smile on her face.<br><br>It was a rather hot day. The heat bled through the window no matter what setting the AC was on. Neither of them felt like going outside.<br><br>Sunlight peeked through the blinds onto her legs. They glowed. It made Sam feel a little melancholy. <span class="p-italic">I wish this could last.</span><br><br>She suddenly leaned onto Sam’s shoulder, her hand now firmly pressing against his. <span class="p-italic">Huh?</span><br><br>“I like this,” she whispered very softly. “You’ll stay next to me, right?”<br><br>She sounded very sincere, too sincere. Sam looked over at her, but her hair obscured her eyes. <span class="p-italic">I want to. I really do. But –</span>. Sam had to leave in a few days for his treatment. He would never be this close to her again.<br><br>“I -” Sam paused.<br><br>She slowly took her hand away.<br><br>“No. It’s not because of you. Please don’t get the wrong idea.”<br><br>“I know.”<br><br>“I -” Sam took a deep breath. “I have to go in a few days because of my treatment. I have a terminal neurological disease. I’m sorry, but – but I can’t stay here any longer.”<br><br>“Is -” She was clearly in shock. “Is this going to be the end?”<br><br>“It’s a very tough disease that degenerates nerves over time. They were always looking for a cure but they still need a protein that can -”<br><br>“Answer me.”<br><br>“Yes.”<br><br>“What will they do?”<br><br>“A medically induced coma. But I’ll be going in a little earlier for some tests and medication.”<br><br>“So you’re just going to leave everyone and everything behind?” She was crying.<br><br>“It’s not like I want to! I just don’t want to hurt people. I don’t want anyone to cry over my death. I want things to stay the same with or without me! Why would I stay here and cause people pain?”<br><br>“You’ve always been like this! That’s why you’re always alone, isn’t it? You stay so distant from people so you don’t have to feel responsible for their feelings. You shut yourself in here so you don’t have to worry about people hurting you. You never love because you fear the pain. You think it’s all so meaningless because death was always around the corner -”<br><br>“It’s not like I chose this! I never wanted to die! I never thought this is how my life would be. I’m not like you, I don’t have all the time in the world to spend. Every time I tried to love someone it just all goes to shit! How is that my fault?”<br><br>“Don’t go, Sam, <span class="p-italic">please</span>.”<br><br>“Just get out. It’s not as easy as you always make it sound. You’re always so happy and energetic, I’m sure life never messed with you. Get out of my room, please.”</p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky pad-md-bottom pad-sm-mobile">FOUR</h3>
+            </div>
+            <p class="p-md pad-md-bottom font-freighttextpro p-md-black">It’s been three days since they last spoke. Sam sat quietly on his bed, staring at his phone. <span class="p-italic">I’m waiting for her to text me, aren’t I?</span> How pathetic.<br><br>“I’m sorry,” Sam typed, yet he couldn’t send it. <span class="p-italic">What difference does it make now? I’m leaving today.</span><br><br>A packed suitcase took up most of the floor-space. It contained nothing more than clothes. No picture, no journal, no pencil. After all, he’d be spending the next few weeks in white sterile rooms being tested and making preparations for his coma. <span class="p-italic">What a way to go</span>. But, he wouldn’t suffer any of the excruciating pain that normally comes along with his condition.<br><br><br><br>The stairs felt different from usual. Perhaps it was because it’s the last time Sam will use them. She was watching the streets below through her window but quickly disappeared when she saw Sam. <span class="p-italic">I don’t blame her. There’s no way she would still want to talk to me after all that.</span><br><br>Alone, Sam walked past the closest warehouse. Alone, just like before.<span class="p-italic"> It’s almost as if nothing changed. Almost. I did good, right? Nothing will change when I’m gone, right?</span><br><br>“Sam!”<br><br><span class="p-italic">She came after me? After all that?</span><br><br>“Sam, just wait for a second!”<br><br>Silence.<br><br>Sam was expecting her to continue, but there was nothing. <span class="p-italic">She didn’t fall or something –</span><br><br>The girl collapsed onto the ground, clutching her chest.<br><br>“Ann! Ann!” <span class="p-italic">No. No. No.</span><br><br>“Call -” she tried her best to talk, fighting back the pain. “Amu-lance.”<br><br>Sam held her in his arms. She was weak. He dialed his phone, hands shaking.<br><br>“They’ll be here soon.” Sam did his best to reassure her, hugging her tighter than before.<br><br>“Ann!”<br><br><span class="p-italic">Please, stay with me.</span><br><br>“Ann!”<br><br><span class="p-italic">Don’t go, not like this.</span><br><br>“Ann!”<br><br><span class="p-italic">I’m sorry. I’m sorry.</span></p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky pad-md-bottom pad-sm-mobile">THREE</h3>
+            </div>
+            <p class="p-md pad-md-bottom font-freighttextpro p-md-black"><span class="p-italic">Everyone I love dies.</span> That was all Sam thought as he sat outside the operating room. Two fire-rated steel doors stood between him and Ann. “Restricted Area. OR Attire Required,” said the unnecessarily large signs. Sam&#x27;s eyes scanned those words over and over again, yet they seemed to have no meaning to him.<br><br><span class="p-italic">I hate everything. Ever since mom died, I hated the pain of losing someone. She was right, I shut people out so I wouldn’t get hurt. But even then, she managed to make her way into my heart – a cold, dead heart. What did she ever see in me? Why does it matter?</span><br><br><span class="p-italic">I hate everything.</span><br><br>Sam looked at his suitcase on the seat next to him. He should go. He <span class="p-italic">really </span>should go. There’s nothing left here but suffering and pain.<br><br>The operation ended not soon after. They moved her to a small room where she would supposedly recover. Sam tried to inquire about her condition, but some patient confidentiality thing prevented the doctors from telling him anything.<br><br>The room was white and sterile, much like the ones Sam had been in. <span class="p-italic">It’s like a tomb, and she’s lying motionless in the middle of it.</span> Sam sat next to the bed.<br><br><span class="p-italic">I thought at least you, out of all people, could run from death for a while. Long enough to let you get some meaning out of this life. I guess I was wrong. There is no meaning to any of this. No grand message. No truth. What a shitty story. I hate the author.</span><br><br><span class="p-italic">Mom, dad, and now you. Why do we even exist? Just to die, that’s why. Look at all these stupid section titles counting down to something. Probably my death, maybe yours.</span><br><br>Sam looked at his suitcase on the floor next to him. He should go. He <span class="p-italic">really </span>should go. There’s nothing left here but suffering and pain.<br><br><span class="p-italic">I should say goodbye. I just want to hear her voice one more time. Just a little longer.</span><br><br><br><br>A tickling sensation on Sam’s hand woke him up. He opened his eyes to find her smiling playfully with a marker in her hand.<br><br>“Hmm, what did you write?” Sam turned his hand slightly, “I love you, dummy,” she wrote.<br><br>“I’m so glad you stayed.” She almost jumped onto Sam, twisting her body awkwardly to hug him.<br><br>“I love you, you dummy! I thought you were just gonna leave like that.” Her tears dripped onto Sam’s shirt.<br><br><span class="p-italic">She loves me. So it wasn’t just me. I somehow made it into her heart too? She loves me. What was I thinking? How could things have possibly stayed the same when I’m gone? All that fear. I was so scared I didn’t even think about her. I’m sorry. I’m so so sorry.</span><br><br>“I -” Sam told her that he was going to leave now. <span class="p-italic">No.</span> His treatment starts today, he has to leave now, or else he would be late. <span class="p-italic">No, I don’t care about my treatment anymore.</span><br><br>Come on, Sam. It’s time to go. The treatment is going to help with the pain.<br><br><span class="p-italic">No. I’m not leaving her.</span><br><br>Sam, follow the plot. What do you think the reader will think of you if you don’t?<br><br><span class="p-italic">I don’t care about what they think. Do you think anyone would remember some character named Sam?</span><br><br>There’s no use in struggling, Sam. Sooner or later the pain will overcome you and you will seek treatment.<br><br><span class="p-italic">No. This is my choice. This is my story after all.</span><br><br>“Ann, you said you like astronomy, right?”<br><br>“Huh? That’s your response to ‘I love you?’”<br><br>“Trust me, I have something to show you. Come on!”<br><br>“What? You dummy. I can’t walk right now. My legs are too weak.”<br><br><span class="p-italic">She really was dying. But I won’t let that stop us.<br></span><br>“It’s alright. I’ll carry you. Here.”</p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky pad-md-bottom pad-sm-mobile">TWO</h3>
+            </div>
+            <p class="p-md pad-md-bottom font-freighttextpro p-md-black">“I’m sorry I didn’t tell you earlier. I didn’t expect it to come out like that.”<br><br>“No, I understand. But what do you have anyway? The doctors wouldn’t tell me.”<br><br>“It’s a heart disease I’ve had since birth. I always knew I would die from it since there is no cure. It’s very much like what you have, in that sense.”<br><br>“I see. How long do you have?”<br><br>“A few weeks, maybe a few months.”<br><br>“And they don’t have any sort of treatment for it?”<br><br>“Well, the doctor did offer me a medically induced coma. He said that was what most patients chose. The last few days would be quite painful since my heart won’t be able to circulate blood properly.”<br><br>“And you turned him down?”<br><br>“Of course, dummy! I’d never go into some coma. I wanted to see you at least one more time. There are quite a few things I’d still like to do too. But, they’ll take my heart out once I’m gone. I think I’ll give it to you.” <span class="p-italic">She laughed. It was hard to tell if she was joking or if she thought it was a good idea.</span><br><br>“I’m sorry.”<br><br>“About what?”<br><br>“What I said a few days ago. I was just scared, and I didn’t know what to do or say. I really didn’t mean to hurt you.”<br><br>“Hey, it’s okay. Remember what I said? ‘We all know it might hurt when we love someone. But we do it anyway.’”<br><br>“I was always running away from the world. I thought that if I kept everyone at a distance, I wouldn’t get hurt and death wouldn’t seem so daunting.”<br><br>“But would you really be alive then?”<br><br>“I don’t think so. I never thought of it that way until you came along.”<br><br>“Ha! Speaking of which, that’s that bridge where we first met. You know, I never thought we’d turn out like this back then.”<br><br>“What? You mean me carrying you on my back, talking about death?”<br><br>“Haha. No, dummy! I meant I never thought we’d fall in love and all that. I never thought you’d make it into my heart.”<br><br><span class="p-italic">A few drops of her tears made their way onto my neck. They felt warm. She clutched my shirt tightly with both hands as if some storm was going to blow her away.<br></span><br>“I’m scared, Sam. I don’t want to die.”<br><br>“I know,” <span class="p-italic">I nudged her left arm with my chin.</span> “But I’m here, and your friends, and everyone you love. So let’s make the most out of what little time we have left.”<br><br>“Th-thank you, for everything.” <span class="p-italic">Her clutch loosened slightly.</span><br><br><br><br>“Phew, we finally made it. Man, you are heavy.” <span class="p-italic">That was clearly not what she wanted to hear.</span> “Ow! What was that for?”<br><br>“Haven’t anyone told you never to call a girl ‘heavy?’ Hmph.” <span class="p-italic">She pretended to be mad, but I could only describe her expression as cute.</span> “And, you still haven’t told me what this place is.”<br><br>“It’s Prospect Hill Park. You can see the whole of Boston from here, but that’s not why we’re here.”<br><br>“So why are we here?”<br><br>“Remember that weird model you saw at my place a while ago? The Iridium satellite?”<br><br>“Oh yeah, the one your parents worked on.”<br><br>“Yup. They have these antenna arrays that reflect the Sun back to us on Earth. So, if we wait here for just a bit longer, we will see a very bright spot in the sky.”<br><br>“Really? That’s so cool!”<br><br>“They’re called Iridium flares. They can be brighter than Venus at times. My parents always told me stories about them.”<br><br>“You knew about this all this time and you never told me?”<br><br>“Well, I never actually thought about them until now.”<br><br><span class="p-italic">There were a few other observers with us. Some carried long-range lenses and tripods with them.</span><br><br>“People like these, don’t they?”<br><br>“Yeah, they’ve been up there since 1997. I guess people get attached.”<br><br><span class="p-italic">It was then that a spot appeared in the night sky. It seemed just like any other star at first, faint and ordinary. But it was moving. It glowed brighter by the second, outshining everything next to it.</span><br><br>“Woah.”<br><br><span class="p-italic">It was so bright that the moon almost paled in comparison. So this was what my parents loved. It’s no less beautiful than the things I love. Perhaps this was why they pushed me so hard to see things their way.</span><br><br><span class="p-italic">The Iridium flare was gone just seconds after it appeared. Fading into the background of stars as if it never existed.</span><br><br>“That was really pretty!” <span class="p-italic">I’m glad she liked it.</span> “Let’s come see it again!”<br><br>“Well, that was actually the last one we could see here in Boston.”<br><br>“What? Why?”<br><br>“All the Iridium satellites are being replaced. They’ll be deorbited and burn up in the atmosphere.”<br><br>“Right.”<br><br>“To think my parents spent all that time working on something that’ll just burn up one day.”<br><br>“Just because it’ll be gone doesn’t make it any less beautiful.” <span class="p-italic">She looked around at the other observers.</span> “It doesn’t make it any less worth pursuing.”<br><br>“Yeah, I guess you’re right.”<br><br>“It’s just like us, you know? Gone in a blink of an eye. But it’s still worth it.”<br><br>“That’s a good metaphor. I think I’ll need to put that down on paper.”<br><br>“It’s not a metaphor, dummy! But, what do these satellites actually do?”<br><br>“Oh, they’re communication satellites. They allow you to call from anywhere on Earth.”<br><br>“I thought they must have been for astronomical observations.”<br><br>“Yeah. To think that we have the power to go beyond the clouds, to discover whatever meaning there may be in the universe, just to use it so we could talk to each other.”<br><br><br><br><span class="p-italic">She twiddled with my hair as I carried her back to the hospital. It was rather serene. The streetlights shined in the distance, not nearly as pretty as the Iridium flares, but they shone, nonetheless. I decided it was time to tell her.</span><br><br>“I love you, Ann.”<br><br>“Hmph! Took you long enough! All you did was ask me if I like astronomy when I told you I loved you.”<br><br>“Haha. Yeah, sorry about that. I got a little caught up.”<br><br>“I love you too, Sam. I know we don’t have much time, but I’m glad it was you.”<br><br><span class="p-italic">I looked up at the sky again, somehow hoping that a miracle would bring the Iridium flare back. But there was nothing.</span><br><br>“Say,” <span class="p-italic">she was now playing with my ear.</span> “If you knew this was how it’ll end from the start, would you do it all again?”<br><br><span class="p-italic">That question caught me off guard. Do it all again? All the pain, all the suffering, all the tears? Yet, I’d get to spend time with her again. I’d get to talk with my parents again. Perhaps. I think it’s all worth it for these few moments of happiness.</span><br><br>“Yeah, I think I’ll do it again.”</p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky pad-md-bottom pad-sm-mobile">ONE</h3>
+            </div>
+            <p class="p-md pad-md-bottom font-freighttextpro p-md-black"><span class="p-italic">Turns out, one of the things she wanted was to see the fireworks in Chengdu. They would light them at the top of a tower some 300 meters above the ground. “It’s like a giant glowing flower!”</span><br><br><span class="p-italic">It wasn’t easy getting us last-minute plane tickets. I think I just got really lucky. The plane would leave at two in the afternoon. I decided to tell her to meet me at eleven so we couldn’t possibly miss the flight.</span><br><br>“Are you almost here?” <span class="p-italic">I texted her.</span><br><br>“Yeah, coming up on the intersection. I had to get some sunscreen from the store.”<br><br><span class="p-italic">Typical Ann, waiting till the last minute.</span> “You got your passport and everything? The tickets are with me.” <span class="p-italic">She didn’t respond immediately. She could be coming around the corner any second now.</span><br><br><span class="p-italic">The sidewalks felt different now. Their grey glare no longer bothered me. My eyes no longer dwelled on the asphalt. Instead, the last few cherry blossoms caught my attention. For a world so cruel, it was awfully beautiful. I’m glad I stayed. I’m glad it was her.</span><br><br><span class="p-italic">A few more minutes went by and she still didn’t show up. Maybe she was at a different intersection? I started walking in her direction. An ambulance sped past me, sirens blaring. Ann?</span><br><br><span class="p-italic">At the intersection was a car with a dented hood, right next to a puddle of blood. Her phone laid there on the asphalt.</span></p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky pad-md-bottom pad-sm-mobile">ZERO</h3>
+            </div>
+            <p class="p-md pad-md-bottom font-freighttextpro p-md-black"><span class="p-italic">She died in that ambulance. A car that ran a red light – that was what killed her. She bled so much nothing could have possibly saved her.</span><br><br><span class="p-italic">As part of her will, I received a package. In it was a pack of pencils, two sheets of blank photo paper, and a single photo of me chasing her in that cake shop.</span><br><br><span class="p-italic">On the back of that photo, she wrote:</span><br><br>“It’s funny how the happiest moments in life are so mundane. I love you. I love you. I love you. I wish I could have said it more when I was alive. It was so short, but I think that’s what makes it so sweet.”</p>
+            <div class="article-subtitle">
+              <h3 class="h3-md font-freighttextpro heading-sticky">NEGATIVE ONE</h3>
+            </div>
+            <p class="p-md font-freighttextpro p-md-black"><span class="p-italic">It’s been four months since she died. My room was filled with the smell of freshly sharpened pencils. Next to the pile of wood shavings was a new easel that held up a portrait of her. The Sun glimmered on the graphite.</span><br><br>“Hey, Sam! Come down soon or we’ll miss the festival!” <span class="p-italic">Ray was here already.</span><br><br><span class="p-italic">I framed that photo she left me. It now sat right next to that Iridium satellite model. The whole Iridium satellite network was gone now, deorbited. Iridium flares are only a memory of the past.</span><br><br><span class="p-italic">My illness has worsened. I can now feel constant pain in my fingertips. But I never went into a coma, that much she has taught me. Sometimes, I could almost hear her.</span><br><br><span class="p-italic">“Dummy! Stop thinking about me and go greet your friend down there! Ray won’t wait forever!”</span><br><br><span class="p-italic">I keep her memories close to my heart even though it hurts. I love her. That is why I keep on living despite the pain. In the end, she never gave me her physical heart, but she left me the whole world.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="comments" class="all-wrapper">
+    <div class="main-outer">
+      <div class="main-grid">
+        <div class="heading-wrapper">
+          <div class="heading-left-flex">
+            <div class="heading-left-outer">
+              <h1 class="heading-left space-bottom-md">Comments</h1>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper space-bottom-md">
+          <p class="p-lg p-nospace">This puzzle was inspired by the work of <a href="https://en.wikipedia.org/wiki/Cicada_3301" target="_blank" class="p-lg-a">Cicada 3301 <span class="p-lg-arrow">↗</span></a> and the <a href="https://breakthecode.tech/" target="_blank" class="p-lg-a">Break The Code challenge <span class="p-lg-arrow">↗</span></a> by .tech Domains. I’ve always struggled to express myself in my work, visual or otherwise. This project was meant as a challenge, not just to you, but also to myself. To not keep you at arm’s length, but to open up and become vulnerable. I hope you appreciated it.<br><br><span class="p-lg-black">Thank you</span>, for staying till the end. It means a lot to me.<br><br>In closing, I would like to thank those who have inspired me, influenced me, or stood by my side throughout all these years:<br><br>
+            <a href="https://www.google.com/search?q=hidiake+anno" target="_blank" class="p-lg-a">Hideaki Anno <span class="p-lg-arrow">↗</span></a>, <a href="https://www.google.com/search?q=yoru+sumino" target="_blank" class="p-lg-a">Yoru Sumino <span class="p-lg-arrow">↗</span></a>, <a href="https://www.google.com/search?q=kana+akatsuki" target="_blank" class="p-lg-a">Kana Akatsuki <span class="p-lg-arrow">↗</span></a>, <a href="https://www.google.com/search?q=nio+nakatani" target="_blank" class="p-lg-a">Nio Nakatani <span class="p-lg-arrow">↗</span></a>, <a href="https://www.google.com/search?q=yoshitoki+oima" target="_blank" class="p-lg-a">Yoshitoki Oima <span class="p-lg-arrow">↗</span></a>, <a href="https://www.google.com/search?q=albert+camus" target="_blank" class="p-lg-a">Albert Camus <span class="p-lg-arrow">↗</span></a>, and <a href="https://www.google.com/search?q=naoko+yamada" target="_blank" class="p-lg-a">Naoko Yamada <span class="p-lg-arrow">↗</span></a>;<br><br><span class="p-lg-black">James Davis</span> and <span class="p-lg-black">Alex Duchnowski</span>;<br><br><span class="p-lg-black">Chengjiang Fu</span> and <span class="p-lg-black">Weihong Xie</span>;<br><br><span class="p-lg-black">Yixing Wang</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="all-wrapper">
+    <div class="main-outer">
+      <div class="main-grid">
+        <div class="heading-wrapper">
+          <div class="heading-left-flex">
+            <div class="heading-left-outer">
+              <h1 class="heading-left">Footer</h1>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper-nospace">
+          <div class="home-grid-2 footer">
+            <div class="grid-section-wrapper">
+              <div class="footer-section-outer">
+                <p class="p-lg footer-a">
+                  <a href="javascript:backbutton();" class="p-lg-a a-internal">Back <span class="p-lg-arrow">←</span></a>
+                </p>
+                <p class="p-lg footer-a">
+                  <a href="index.html" class="p-lg-a a-internal">Home <span class="p-lg-arrow">→</span></a>
+                </p>
+                <p class="p-lg footer-a">
+                  <a href="projects.html" class="p-lg-a a-internal">Work <span class="p-lg-arrow">→</span></a>
+                </p>
+                <p class="p-lg footer-a">
+                  <a href="about.html" class="p-lg-a a-internal">About <span class="p-lg-arrow">→</span></a>
+                </p>
+                <p class="p-lg footer-a">
+                  <a href="info.html" class="p-lg-a a-internal">Site Info <span class="p-lg-arrow">→</span></a>
+                </p>
+              </div>
+            </div>
+            <div class="grid-section-wrapper">
+              <div class="footer-section-outer">
+                <p class="p-lg footer-a">
+                  <a href="http://www.instagram.com/richardfxr/" rel="noreferrer noopener" target="_blank" class="p-lg-a">Instagram <span class="p-lg-arrow">↗</span></a>
+                </p>
+                <p class="p-lg footer-a">
+                  <a href="https://github.com/richardfxr" rel="noreferrer noopener" target="_blank" class="p-lg-a">GitHub <span class="p-lg-arrow">↗</span></a>
+                </p>
+                <p class="p-lg footer-a">
+                  <a href="http://www.behance.net/richardfxr" rel="noreferrer noopener" class="p-lg-a">Behance <span class="p-lg-arrow">↗</span></a>
+                </p>
+                <p class="p-lg footer-a">
+                  <a href="mailto:richardfxr.art@gmail.com?subject=A%20Witty%20Title" class="p-lg-a">Email <span class="p-lg-arrow">↗</span></a>
+                </p>
+              </div>
+            </div>
+            <div id="w-node-d33356f8-77ef-7339-8307-e4ef3e6f9e98-3e6f9e5b" class="grid-section-wrapper footer-credits">
+              <div class="footer-section-outer">
+                <p class="p-lg footer-a">Designed by yours truly.</p>
+                <p class="p-lg footer-a">Copyright © 2022 Xiangrui Fu. All rights reserved.</p>
+              </div>
+              <div class="page-spacing-bottom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e7029aabf3d8e065982838f" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <!-- 
+richardfxr custom footer code
+Version: 9.1.2
+Updated: 2021-10-13
+ -->
+  <!--  navigation magic line and page transitions  -->
+  <script>
+  $(document).ready(function(){
+    /* == code by Lou Verdun, inspired by Todd Miller. Slightly modified. == */
+    /* active class */
+    $("#main-nav a").on("click", function(){
+      $("#main-nav a.active").removeClass("active");
+      $(this).addClass("active");
+    });
+    /* desktop left-side magic line */
+    function magicLineLeft() {
+        var $el, topPos, newHeight,
+        $mainNav = $("#main-nav");
+      // Create a new li and append it to ul
+        $mainNav.append("<a id='magicline-left' tabindex='-1' aria-hidden='true' class='input'></a>");
+        var $magicLine = $("#magicline-left");
+        $magicLine // Defining initial height and position
+            .height($(".active").outerHeight())
+            .css("top", $(".active").position().top)
+            .data("origTop", $magicLine.position().top)
+            .data("origHeight", $magicLine.height());
+        $("#main-nav a")
+          .hover(function() { // Set new height and position
+            $el = $(this);
+            topPos = $el.position().top;
+            newHeight = $el.outerHeight();
+            $magicLine.stop().animate({
+                top: topPos,
+                height: newHeight
+            });
+          }, function() { // Animate
+            $magicLine.stop().animate({
+                top: $(".active").position().top,
+                height: $(".active").outerHeight()
+          });
+        })
+    }
+    /* == Code by Chris Coyier. Slightly modified == */
+    /* mobile bottom magic line */
+    function magicLineBottom() {
+      var $el, leftPos, newWidth;
+      /* Add Magic Line markup via JavaScript, because it ain't gonna work without */
+      $("#main-nav").append("<a id='magicline-bottom' tabindex='-1' aria-hidden='true' class='input'></a>");
+      /* Cache it */
+      var $magicLineBottom = $("#magicline-bottom");
+      $magicLineBottom
+        .width($(".active").outerWidth())
+        .css("left", $(".active").position().left)
+        .data("origLeft", $magicLineBottom.position().left)
+        .data("origWidth", $magicLineBottom.width());
+      $("#main-nav a")
+        .hover(
+          function() {
+            $el = $(this);
+            leftPos = $el.position().left;
+            newWidth = $el.outerWidth();
+            $magicLineBottom.stop().animate({
+              left: leftPos,
+              width: newWidth
+            });
+          },
+          function() {
+            $magicLineBottom.stop().animate({
+              left: $magicLineBottom.data("origLeft"),
+              width: $magicLineBottom.data("origWidth")
+            });
+          }
+        );
+    }
+    /* == changing <body> overflow setting on page transition - deprecated ==
+    function setOverflow() {
+      $(".body-3").css("overflow", "visible");
+    }
+      // run function after delay
+      setTimeout(setOverflow, 600);
+    */
+      // run magic line funtions
+      magicLineLeft();
+      magicLineBottom();
+  });
+  $(window).resize(function(){
+    /* == recalculates magic line position and length on page resize == */
+    /* desktop left-side magic line */
+    function magicLineLeft() {
+        var $el, topPos, newHeight,
+        $mainNav = $("#main-nav");
+        var $magicLine = $("#magicline-left");
+        $magicLine // Defining initial height and position
+            .height($(".active").outerHeight())
+            .css("top", $(".active").position().top)
+            .data("origTop", $magicLine.position().top)
+            .data("origHeight", $magicLine.height());
+    }
+    /* mobile bottom magic line */
+    function magicLineBottom() {
+      var $el, leftPos, newWidth;
+      /* Cache it */
+      var $magicLineBottom = $("#magicline-bottom");
+      $magicLineBottom
+        .width($(".active").outerWidth())
+        .css("left", $(".active").position().left)
+        .data("origLeft", $magicLineBottom.position().left)
+        .data("origWidth", $magicLineBottom.width());
+    }
+      // run magic line functions
+      magicLineLeft();
+      magicLineBottom();
+  });
+</script>
+  <!--  page outro delay  -->
+  <script>
+  // link click delay for outro animation
+  $('.a-internal, .nav-arrow-lg, .work-card, .nav-div-orbis').click(function (e) {
+	e.preventDefault();
+    var goTo = this.getAttribute("href");
+    // set overflow to hidden - deprecated
+    $(".body-3").css("overflow", "hidden");
+    setTimeout(function(){
+         window.location = goTo;
+    },500);
+  });
+  // reload page on back button
+  window.onpageshow = function(event) {if (event.persisted) {window.location.reload()}};
+</script>
+  <!--  clipboard.js external  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+  <script>
+	new Clipboard('.btn');
+</script>
+</body>
+</html>
