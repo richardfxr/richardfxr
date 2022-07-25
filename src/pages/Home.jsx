@@ -18,7 +18,7 @@ export default function Home() {
         <PageTemplate heading="Hello" id="home">
             <Section heading="Introduction" id="intro" first>
                 <ScrollContainer horizontal>
-                    <ul className='row'>
+                    <ul className='row illus__list'>
                         <li className='illus__container'>
                             <IllusArt />
                         </li>

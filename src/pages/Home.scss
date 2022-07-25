@@ -10,19 +10,26 @@
         &__main {
             display: flex;
             flex-flow: column nowrap;
-            gap: var(--pad-6xl);
+            gap: var(--pad-5xl);
 
             padding-top: var(--pad-xl);
-        }
-    }
 
-    ul.row {
-        flex-wrap: nowrap;
-        gap: var(--padRem-sm);
+            & > p {
+                padding-bottom: var(--pad-lg);
+            }
+        }
     }
 
     .illus {
         margin-top: calc(-1 * var(--padRem-lg));
+
+        &__list {
+            flex-wrap: nowrap;
+            gap: var(--padRem-sm);
+
+            // add spacing below so scrollbar isn't touching it
+            padding-bottom: var(--pad-lg);
+        }
 
         &__container {
             min-width: var(--_illus-width);
