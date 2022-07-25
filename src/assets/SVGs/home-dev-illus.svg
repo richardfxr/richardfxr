@@ -1,0 +1,23 @@
+<svg
+    class="illus"
+    id="illus__dev"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 262.5 416">
+    <circle class="stroke nofill stroke-clr-200" cx="68.88" cy="65.42" r="14.59"/>
+    <circle class="stroke nofill stroke-clr-200" cx="68.88" cy="382.07" r="14.59"/>
+    <circle class="stroke nofill stroke-clr-200" cx="154.07" cy="271.3" r="14.59"/>
+    <line class="stroke nofill stroke-clr-200" x1="154.07" y1="416" x2="154.07" y2="2.46"/>
+    <line class="stroke nofill stroke-clr-200" x1="159.07" y1="416" x2="159.07" y2="2.46"/>
+    <line class="stroke nofill stroke-clr-200" x1="149.07" y1="416" x2="149.07" y2="2.46"/>
+    <line class="stroke nofill stroke-clr-200" x1="73.88" y1="416" x2="73.88" y2="2.46"/>
+    <line class="stroke nofill stroke-clr-200" x1="63.88" y1="416" x2="63.88" y2="2.46"/>
+    <line class="stroke nofill stroke-clr-1000" x1="68.88" y1="2.46" x2="68.88" y2="416"/>
+    <path class="stroke nofill stroke-clr-1000" d="M68.88,65.42c0,55.35,85.19,55.35,85.19,110.69v95.27c0,55.35-85.19,55.35-85.19,110.69"/>
+    <circle class="stroke stroke-clr-1000 fill-clr-100" cx="68.88" cy="65.42" r="8.71"/>
+    <circle class="stroke stroke-clr-1000 fill-clr-100" cx="154.07" cy="175.05" r="8.71"/>
+    <circle class="stroke nofill thick stroke-clr-rblue" cx="154.07" cy="175.05" r="12.15"/>
+    <circle class="stroke stroke-clr-1000 fill-clr-100" cx="154.07" cy="271.29" r="8.71"/>
+    <circle class="stroke stroke-clr-1000 fill-clr-100" cx="68.88" cy="382.07" r="8.71"/>
+    <polyline class="stroke nofill thick stroke-clr-rblue" points="179.96 163.21 190.4 173.66 179.96 184.1"/>
+    <line class="stroke nofill thick stroke-clr-rblue" id="blinker" x1="199.87" y1="192.19" x2="220.05" y2="192.19"/>
+</svg>

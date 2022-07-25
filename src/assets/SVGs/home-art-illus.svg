@@ -1,0 +1,36 @@
+<svg
+    class="illus"
+    id="illus__art"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 262.5 416">
+    <g>
+        <g id="pencil">
+            <ellipse class="stroke nofill stroke-clr-200" cx="135.5" cy="238" rx="20" ry="7.69"/>
+            <line class="stroke nofill stroke-clr-200" x1="172.5" y1="106" x2="172.5" y2="99"/>
+            <line class="stroke nofill stroke-clr-200" x1="98.5" y1="99" x2="98.5" y2="106"/>
+            <ellipse class="stroke nofill stroke-clr-200" cx="135.5" cy="214" rx="27" ry="10.38"/>
+            <ellipse class="stroke nofill stroke-clr-200" cx="135.5" cy="106" rx="37" ry="14.23"/>
+            <ellipse class="stroke nofill stroke-clr-200" cx="135.5" cy="99" rx="37" ry="14.23"/>
+            <ellipse class="stroke nofill stroke-clr-200" cx="135.5" cy="30" rx="43" ry="16.54"/>
+            <polyline class="stroke nofill stroke-clr-1000" points="141.5 276 144.5 251 155.5 238 160.5 230 162.5 214 168.5 202 169.5 143"/>
+            <line class="stroke nofill stroke-clr-1000" x1="173.5" y1="143" x2="175.5" y2="106"/>
+            <path class="stroke nofill stroke-clr-1000" d="M177.5,99l1-20c0-6-4-8-4-21s4-15,4-19V19"/>
+            <path class="stroke nofill stroke-clr-1000" d="M93.5,99l-1-20c0-6,4-8,4-21,0-13-4-15-4-19V19"/>
+            <line class="stroke nofill stroke-clr-1000" x1="95.5" y1="106" x2="97.5" y2="143"/>
+            <polyline class="stroke nofill stroke-clr-1000" points="101.5 143 102.5 202 108.5 214 110.5 230 115.5 238 126.5 251 129.5 276"/>
+            <ellipse class="stroke nofill stroke-clr-1000" cx="135.5" cy="230" rx="25" ry="9.62"/>
+            <ellipse class="stroke nofill stroke-clr-1000" cx="135.5" cy="251" rx="9" ry="3.46"/>
+            <ellipse class="stroke nofill stroke-clr-1000" cx="135.5" cy="276" rx="6" ry="2.31"/>
+            <ellipse class="stroke nofill stroke-clr-1000" cx="135.5" cy="202" rx="33" ry="12.69"/>
+            <ellipse class="stroke nofill stroke-clr-1000" cx="135.5" cy="143" rx="38" ry="14.62"/>
+            <ellipse class="stroke nofill stroke-clr-1000" cx="135.5" cy="106" rx="40" ry="15.38"/>
+            <ellipse class="stroke nofill stroke-clr-1000" cx="135.5" cy="99" rx="42" ry="16.15"/>
+            <ellipse class="stroke nofill stroke-clr-1000" cx="135.5" cy="79" rx="43" ry="16.54"/>
+            <ellipse class="stroke nofill stroke-clr-1000" cx="135.5" cy="39" rx="43" ry="16.54"/>
+            <ellipse class="stroke nofill stroke-clr-1000" cx="135.5" cy="19" rx="43" ry="16.54"/>
+            <ellipse class="stroke nofill stroke-clr-1000" cx="135.5" cy="143" rx="34" ry="13.08"/>
+        </g>
+        <path class="stroke nofill stroke-clr-200" d="M135.5,307.64c-22,2.36-83,12.36-83,24.36s160,20,160,40c0,21-181.03,10-181.03,44"/>
+        <line class="stroke nofill stroke-clr-rblue thick" x1="135.5" y1="307.5" x2="135.5" y2="2.46"/>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg
+    class="illus"
+    id="illus__design"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 262.5 416">
+    <line class="stroke nofill stroke-clr-200" y1="180" x2="262.5" y2="180"/>
+    <line class="stroke nofill stroke-clr-200" y1="280" x2="262.5" y2="280"/>
+    <line class="stroke nofill stroke-clr-200" y1="380" x2="262.5" y2="380"/>
+    <line class="stroke nofill stroke-clr-200" y1="80" x2="262.5" y2="80"/>
+    <line class="stroke nofill stroke-clr-200" x1="181.25" y1="416" x2="181.25" y2="2.46"/>
+    <line class="stroke nofill stroke-clr-200" x1="81.25" y1="416" x2="81.25" y2="2.46"/>
+    <polyline class="stroke nofill stroke-clr-1000" points="0 230 131.25 230 131.25 2.46"/>
+    <g id="circles">
+        <circle class="stroke nofill stroke-clr-1000" cx="101.25" cy="200" r="8.71"/>
+        <circle class="fill-clr-1000" cx="101.25" cy="200" r="2.63"/>
+    </g>
+    <rect class="stroke stroke-clr-1000 fill-clr-100" x="124.45" y="223.2" width="13.61" height="13.61"/>
+    <rect class="stroke stroke-clr-1000 fill-clr-100" x="124.45" y="39.74" width="13.61" height="13.61"/>
+    <line class="stroke nofill stroke-clr-200" x1="181.25" y1="416" x2="181.25" y2="2.46"/>
+    <polygon class="stroke thick stroke-clr-rblue fill-clr-100" id="cursor" points="142.9 254.46 142.9 288.14 153.35 279.23 167.16 278.2 142.9 254.46"/>
+    <rect class="stroke nofill thick stroke-clr-rblue" id="square" x="121.16" y="219.91" width="20.17" height="20.17"/>
+</svg>
