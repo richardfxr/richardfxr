@@ -2,7 +2,12 @@
     class="illus"
     id="illus__design"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 262.5 416">
+    viewBox="0 0 262.5 416"
+    role="img"
+    aria-describedby="illus__design--title illus__design--desc">
+    <title id="illus__design--title">Design</title>
+    <desc id="illus__design--desc">A cursor hovering next to a corner of a rectangle. Guides and points are shown like in most design software.</desc>
+
     <line class="stroke nofill stroke-clr-200" y1="180" x2="262.5" y2="180"/>
     <line class="stroke nofill stroke-clr-200" y1="280" x2="262.5" y2="280"/>
     <line class="stroke nofill stroke-clr-200" y1="380" x2="262.5" y2="380"/>

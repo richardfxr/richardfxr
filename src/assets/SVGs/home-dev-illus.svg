@@ -2,7 +2,12 @@
     class="illus"
     id="illus__dev"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 262.5 416">
+    viewBox="0 0 262.5 416"
+    role="img"
+    aria-describedby="illus__dev--title illus__dev--desc">
+    <title id="illus__design--title">Development</title>
+    <desc id="illus__design--desc">A new branch of code is created, next to which a command prompt is shown with a blinking cursor.</desc>
+
     <circle class="stroke nofill stroke-clr-200" cx="68.88" cy="65.42" r="14.59"/>
     <circle class="stroke nofill stroke-clr-200" cx="68.88" cy="382.07" r="14.59"/>
     <circle class="stroke nofill stroke-clr-200" cx="154.07" cy="271.3" r="14.59"/>
