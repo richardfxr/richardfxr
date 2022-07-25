@@ -13,12 +13,39 @@ import UnderlinedLink from '../components/UnderlinedLink'
 // === ARCHIVE DATA =======================
 const archive2022 = [
     ['#', 'title', 'type'],
-    [<UnderlinedLink href="https://www.richardfxr.com/" target="_blank">115° French Press</UnderlinedLink>, 'product design'],
-    ['Exploded 1200D', 'product design'],
-    ['115° French Press', 'product design'],
-    ['Exploded 1200D', 'product design'],
-    ['115° French Press', 'product design'],
-    ['Exploded 1200D', 'product design'],
+    [<UnderlinedLink href="https://vimeo.com/685289621" target="_blank">The Creature</UnderlinedLink>, 'product design, videography'],
+    [<UnderlinedLink href="/projects/eggholders">EggHolders</UnderlinedLink>, 'product design'],
+    ['History of ID sketches', 'graphite'],
+    [<UnderlinedLink href="/projects/budgetty">Budgetty</UnderlinedLink>, 'UI, product design'],
+    ['richardfxr v10', 'web design, dev'],
+    [<UnderlinedLink href="https://sity.earth/" target="_blank">sity.earth v2</UnderlinedLink>, 'web design, dev, illustration'],
+]
+
+const archive2021 = [
+    ['#', 'title', 'type'],
+    [<UnderlinedLink href="https://www.instagram.com/p/CKmZIYLjrIJ/" target="_blank">Pacific Call Box 3404 mod</UnderlinedLink>, 'product design'],
+    [<UnderlinedLink href="https://v9.richardfxr.com/projects/nudge" target="_blank">nudge</UnderlinedLink>, 'product design, dev'],
+    [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#2021-02-31-1" target="_blank">2021-02-31-1</UnderlinedLink>, 'graphite'],
+    [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#surfaces" target="_blank">Surfaces</UnderlinedLink>, 'charcoal'],
+    [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#d2021-03-08-3" target="_blank">2021-03-08-3</UnderlinedLink>, 'charcoal'],
+    [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#2021-03-12-1" target="_blank">2021-03-12-1</UnderlinedLink>, 'graphite'],
+    [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#objects" target="_blank">Objects</UnderlinedLink>, 'graphite'],
+    [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#VKD-45" target="_blank">VKD 45</UnderlinedLink>, 'charcoal'],
+    [<UnderlinedLink href="https://vimeo.com/536179326" target="_blank">1:52</UnderlinedLink>, 'videography'],
+    [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#flight-1416" target="_blank">Flight 1416 Accident Report</UnderlinedLink>, 'print design'],
+    [<UnderlinedLink href="https://v9.richardfxr.com/1416-str" target="_blank">Flight 1416 Interface</UnderlinedLink>, 'UI design'],
+    [<UnderlinedLink href="/files/Richard Fu-Design2-portfolio.pdf" target="_blank">Design 2 Portfolio</UnderlinedLink>, 'print design'],
+    [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#tensegrital-camp" target="_blank">Tensegrital Camp</UnderlinedLink>, 'structure'],
+    ['What is ID? poster', 'graphic design'],
+    [<UnderlinedLink href="/projects/risd-2nd#cubes">Cubes</UnderlinedLink>, 'graphite'],
+    ['orthographic drawings', 'graphite'],
+    [<UnderlinedLink href="/projects/risd-2nd#french-press">115° French Press</UnderlinedLink>, 'product design'],
+    ['walnut disc', 'woodworking'],
+    [<UnderlinedLink href="/projects/1200d">Exploded 1200D</UnderlinedLink>, 'model'],
+    [<UnderlinedLink href="/projects/p-frame">P-Frame</UnderlinedLink>, 'product design'],
+    ['Hexagon Loft', 'woodworking'],
+    ['untitled', 'woodworking'],
+    [<UnderlinedLink href="http://v1.sity.earth/" target="_blank">sity.earth v1</UnderlinedLink>, 'web design, dev, illustration'],
 ]
 
 const archive2020 = [
@@ -28,7 +55,9 @@ const archive2020 = [
     [<UnderlinedLink href="https://www.instagram.com/p/B_ne9W6Dhxz/" target="_blank">Lumina Design paper</UnderlinedLink>, 'print design'],
     ['RISD AS-1', 'digital illustration'],
     ['RISD AS-2', 'graphic design'],
+    [<UnderlinedLink href="https://v9.richardfxr.com" target="_blank">richardfxr v9</UnderlinedLink>, 'web design'],
     [<UnderlinedLink href="https://v9.richardfxr.com/projects/bitwit-old" target="_blank">Bitwit branding</UnderlinedLink>, 'branding, graphic design'],
+    [<UnderlinedLink href="https://bitwit.tech/" target="_blank">bitwit.tech</UnderlinedLink>, 'web design, dev'],
     [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#grapevine-beetle" target="_blank">Grapevine Beetle</UnderlinedLink>, 'sculpture'],
     [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#curves" target="_blank">Curves</UnderlinedLink>, 'sculpture'],
     [<UnderlinedLink href="https://www.instagram.com/p/CGOHGGPjHXE/" target="_blank">untitled</UnderlinedLink>, 'sculpture'],
@@ -125,6 +154,12 @@ export default function Archive() {
             <Section heading="2022" id="2022" first>
                 <ScrollContainer horizontal>
                     <Table tableData={archive2022} caption="2022 Archive" indexed />
+                </ScrollContainer>
+            </Section>
+
+            <Section heading="2021" id="2021">
+                <ScrollContainer horizontal>
+                    <Table tableData={archive2021} caption="2021 Archive" indexed />
                 </ScrollContainer>
             </Section>
 
