@@ -57,12 +57,11 @@ export default function Navbar() {
     }, [location, isPortrait, isMobile, isTablet, isLaptop])
 
     return (
-        <motion.div 
-            className='navbar'
-            variants={isPortrait ? navbarVarPortrait : navbarVarLandscape}
-            initial="hidden"
-            animate="show">
-            <header>
+        <div className='navbar'>
+            <motion.header
+                variants={isPortrait ? navbarVarPortrait : navbarVarLandscape}
+                initial="hidden"
+                animate="show">
                 <Logo className='logo'/>
                 <nav>
                     <ul ref={navUl} aria-label="main navigation">
@@ -73,8 +72,8 @@ export default function Navbar() {
                         <li className='magicLine' id="magicLineHrz" ref={magicLineHrz} aria-hidden="true"></li>
                     </ul>
                 </nav>
-            </header>
-        </motion.div>
+            </motion.header>
+        </div>
     )
 }
 

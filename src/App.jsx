@@ -14,7 +14,7 @@ function App() {
             <BrowserRouter>
                 <A11yMenu />
                 <Navbar />
-                <hr className="navbar__separator" />
+                
                 <AnimatedRoutes />
             </BrowserRouter>
         </div>

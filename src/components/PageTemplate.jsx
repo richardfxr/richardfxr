@@ -8,39 +8,68 @@ import Breadcrumbs from './Breadcrumbs'
 import PageHeading from "./PageHeading"
 import Footer from '../components/Footer'
 // hooks
+import { useIsPortrait } from "../hooks/useMediaQuery"
 import { useSettings } from '../hooks/useSettings'
 
 // === FRAMER VARIANTS ====================
-const pageInitVar = {
-    hidden: { y: 100, opacity: 0 },
+const separatorVarPortrait = {
+    hidden: { x: 0 },
+    show: { x: '100%', transition: { ease: "easeIn", duration: 0.25, delay: 0.3 } },
+    exit: { x: 0, transition: { ease: "easeOut", duration: 0.25, delay: 0 } },
+}
+
+const separatorVarLandscape = {
+    hidden: { y: 0 },
+    show: { y: '100%', transition: { ease: "easeIn", duration: 0.25, delay: 0.3 } },
+    exit: { y: 0, transition: { ease: "easeOut", duration: 0.25, delay: 0 } },
+}
+
+const pageInitVarPortrait = {
+    hidden: { y: -100, opacity: 0 },
     show: { y: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.5 } },
 }
 
+const pageInitVarLandscape = {
+    hidden: { x: 100, opacity: 0 },
+    show: { x: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.5 } },
+}
+
 const pageNormVar = {
-    hidden: { y: 0, opacity: 1 },
-    show: { y: 0, opacity: 1 },
+    hidden: { x: 0, y: 0, opacity: 1 },
+    show: { x: 0, y: 0, opacity: 1 },
 }
 
 
 export default function PageTemplate({ heading, id, children }) {
+    const isPortrait = useIsPortrait()
     const { initialLoad, changeSetting } = useSettings()
 
     return (
-        <motion.div 
-            key={heading}
-            variants={initialLoad ? pageInitVar : pageNormVar}
-            className="pageWrapper"
-            id={id}
-            initial="hidden"
-            animate="show"
-            exit="exit"
-            onAnimationComplete={() => changeSetting('initialLoad', false)}>
-            <Breadcrumbs />
-            <main id="main">
-                <PageHeading heading={heading} />
-                {children}
-            </main>
-            <Footer />
-        </motion.div>
+        <>
+            <div className="navbar__separator">
+                <motion.hr 
+                    variants={isPortrait ? separatorVarPortrait : separatorVarLandscape}
+                    initial="hidden"
+                    animate="show"
+                    exit="exit"/>
+            </div>
+            
+            <motion.div 
+                key={heading}
+                variants={initialLoad ? (isPortrait ? pageInitVarPortrait : pageInitVarLandscape) : pageNormVar}
+                className="pageWrapper"
+                id={id}
+                initial="hidden"
+                animate="show"
+                onAnimationComplete={() => changeSetting('initialLoad', false)}>
+                <Breadcrumbs />
+                <main id="main">
+                    <PageHeading heading={heading} />
+                    {children}
+                </main>
+                <Footer />
+            </motion.div>
+        </>
+        
     )
 }
