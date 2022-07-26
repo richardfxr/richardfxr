@@ -165,11 +165,9 @@
     
             min-width: calc(100% - (2 * var(--pad-sm)));
             min-height: unset;
-            width: fit-content;
             height: calc(100% - var(--indicator-gap) - var(--pad-xxs));
     
-            margin-top: var(--indicator-gap);
-            margin-bottom: var(--pad-xxs);
+            margin: var(--indicator-gap) 0 var(--pad-xxs) 0;
             
             .logo {
                 flex-shrink: 0;
