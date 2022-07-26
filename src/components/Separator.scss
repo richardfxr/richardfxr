@@ -1,33 +1,27 @@
 @use '../sass/breakpoints' as *;
 
 .separator {
-    // internal variables
-    --gradient-end: calc(1.5 * var(--section-side-width));
+    position: relative;
 
-    position: absolute;
-    top: 0;
-    right: var(--pad-xxl);
-    left: var(--pad-xxl);
+    height: var(--border-width);
 
     border: none;
     margin: 0;
 
-    background-color: var(--clr-100);
+    background-color: var(--clr-200);
 
     overflow: visible;
 
-    &::before {
-        // background gradient clipped to create gradient border
-        content: '';
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        height: var(--border-width);
-
-        background: linear-gradient(90deg, var(--clr-1000) calc(var(--section-side-width) / 2), var(--clr-300) var(--gradient-end));
-    }
+    // &::before {
+    //     // background gradient clipped to create gradient border
+    //     content: '';
+    //     position: absolute;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    
+    //     background: linear-gradient(90deg, var(--clr-1000) calc(var(--section-side-width) / 2), var(--clr-300) var(--gradient-end));
+    // }
 }
 
 

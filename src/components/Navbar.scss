@@ -26,9 +26,6 @@
         position: relative;
 
         min-height: 100%;
-
-        margin-right: var(--indicator-gap);
-        margin-left: var(--pad-xxs);
         
         .logo {
             // 20px top padding and moved 1px to the left to appear more centered
@@ -43,8 +40,7 @@
         }
 
         nav {
-            // add slight padding to top and bottom of <ul>
-            padding: var(--pad-xxl) 0;
+            padding: var(--pad-xxl) var(--indicator-gap) var(--pad-xxl) var(--pad-xxs);
             margin-top: auto;
             
 
@@ -151,7 +147,7 @@
 
         // background color to block all elements below
         background-color: var(--clr-100);
-        // box-shadow: 0px 0px 17px 3px var(--clr-100);
+        box-shadow: 0px 0px 17px 3px var(--clr-100);
 
         // remove y auto overflow and add x overflow
         overflow-x: auto;
@@ -165,21 +161,19 @@
     
             min-width: calc(100% - (2 * var(--pad-sm)));
             min-height: unset;
-            height: calc(100% - var(--indicator-gap) - var(--pad-xxs));
-    
-            margin: var(--indicator-gap) 0 var(--pad-xxs) 0;
+            height: 100%;
             
             .logo {
                 flex-shrink: 0;
                 // 20px top padding and moved 1px to the left to appear more centered
-                padding: 0 0 0 var(--pad-md);
-                width: calc((0.94 * var(--_logo-size)) + var(--pad-md));
+                padding: 0 0 0 var(--section-pad);
+                width: calc((0.94 * var(--_logo-size)) + var(--section-pad));
                 height: 100%;
             }
     
             nav {
                 height: 100%;
-                padding: 0 var(--pad-md);
+                padding: var(--indicator-gap) var(--section-pad) var(--pad-xxs) var(--section-pad);
                 margin-top: 0;
                 margin-left: auto;
                 

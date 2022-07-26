@@ -3,14 +3,29 @@
 /* ============================================
    APP
    ============================================ */
-   .App {
+.App {
     position: relative;
     
     max-width: var(--max-width);
 
-    padding: var(--pad-sm) var(--pad-sm) var(--pad-sm) var(--nav-size);
+    padding-left: var(--nav-size);
     margin-left: auto;
     margin-right: auto;
+
+    .navbar__separator {
+        position: fixed;
+        top: var(--pad-xxl);
+        bottom: var(--pad-xxl);
+        left: calc((100% - min(100%, var(--max-width))) / 2 + var(--nav-size));
+        z-index: 1001;
+    
+        width: var(--border-width);
+    
+        border: none;
+        margin: 0;
+    
+        background-color: var(--clr-200);
+    }
 }
 
 
@@ -18,7 +33,18 @@
 // === BREAKPOINTS ============================
 @media (orientation: portrait) {
     .App {
-        padding: var(--pad-sm) var(--pad-sm) var(--nav-size);
+        padding-bottom: var(--nav-size);
+        padding-left: 0;
+
+        .navbar__separator {
+            top: unset;
+            right: var(--section-pad);
+            bottom: var(--nav-size);
+            left: var(--section-pad);
+        
+            width: unset;
+            height: var(--border-width);
+        }
     }
 }
 

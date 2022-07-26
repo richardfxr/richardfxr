@@ -1,7 +1,7 @@
 @use '../sass/breakpoints' as *;
 
 .pageHeading {
-    padding: var(--pad-xxxl) var(--pad-xxl) var(--pad-md) var(--pad-xxl);
+    padding: var(--pad-xxxl) var(--section-pad) var(--pad-md) var(--section-pad);
     // negative margin for better alignment
     margin-left: calc(-0.04 * var(--font-xxl));
 
@@ -16,8 +16,4 @@
 
 // === BREAKPOINTS ============================
 @media only screen and (max-width: $breakpoint-mobile) {
-    .pageHeading {
-        padding-right: var(--pad-lg);
-        padding-left: var(--pad-lg);
-    }
 }

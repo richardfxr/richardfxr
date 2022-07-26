@@ -9,6 +9,7 @@
    --max-width: 1400px;
    --nav-size: 85px;
 
+   --section-pad: var(--pad-xxxl);
    --section-side-width: 280px;
    --twoCol-minWidth: 20rem;
    --threeCol-minWidth: 14rem;
@@ -91,6 +92,7 @@
 @media only screen and (max-width: $breakpoint-tablet) {
    :root {
       --nav-size: 83px;
+      
       --twoCol-minWidth: 15rem;
    
       --padRem-6xs: 0.053125rem;
@@ -137,6 +139,8 @@
 @media only screen and (max-width: $breakpoint-mobile) {
    :root {
       --nav-size: 80px;
+
+      --section-pad: var(--pad-xl);
       --section-side-width: var(--font-sm);
       --threeCol-minWidth: 10rem;
 

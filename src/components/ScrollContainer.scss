@@ -24,7 +24,7 @@
         flex-flow: column nowrap;
 
         &::before {
-            --_translateHide: translateY(calc(-1 * var(--pad-lg)));
+            --_translateHide: translateY(calc(-1 * (var(--pad-lg) - var(--border-width))));
 
             // -1px instead of 0 to avoid AA issues
             top: -1px;
@@ -36,7 +36,7 @@
         }
 
         &::after {
-            --_translateHide: translateY(var(--pad-lg));
+            --_translateHide: translateY(var(--pad-lg) - var(--border-width));
 
             // -1px instead of 0 to avoid AA issues
             right: 0;
@@ -52,7 +52,7 @@
         flex-flow: row nowrap;
 
         &::before {
-            --_translateHide: translateX(calc(-1 * var(--pad-lg)));
+            --_translateHide: translateX(calc(-1 * (var(--pad-lg) - var(--border-width))));
 
             // -1px instead of 0 to avoid AA issues
             top: 0;
@@ -64,7 +64,7 @@
         }
 
         &::after {
-            --_translateHide: translateX(var(--pad-lg));
+            --_translateHide: translateX(var(--pad-lg) - var(--border-width));
             
             // -1px instead of 0 to avoid AA issues
             top: 0;
