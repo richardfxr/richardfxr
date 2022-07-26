@@ -7,10 +7,15 @@
    ============================================ */
 :root {
    --max-width: 1400px;
-   --nav-size: 100px;
+   --nav-size: 85px;
+
    --section-side-width: 280px;
    --twoCol-minWidth: 20rem;
    --threeCol-minWidth: 14rem;
+
+   --indicator-thickness: 4px;
+   --indicator-length: 18px;
+   --indicator-gap: 14px;
 
    --padRem-6xs: 0.0625rem;
    --padRem-5xs: 0.125rem;
@@ -85,7 +90,7 @@
 
 @media only screen and (max-width: $breakpoint-tablet) {
    :root {
-      --nav-size: 90px;
+      --nav-size: 83px;
       --twoCol-minWidth: 15rem;
    
       --padRem-6xs: 0.053125rem;
@@ -131,7 +136,7 @@
 
 @media only screen and (max-width: $breakpoint-mobile) {
    :root {
-      --nav-size: 90px;
+      --nav-size: 80px;
       --section-side-width: var(--font-sm);
       --threeCol-minWidth: 10rem;
 
