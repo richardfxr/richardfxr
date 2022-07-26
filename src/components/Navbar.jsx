@@ -9,7 +9,7 @@ import './Navbar.scss'
 // components
 import { routes } from './AnimatedRoutes'
 // hooks
-import { useIsPortrait } from '../hooks/useMediaQuery'
+import { useIsPortrait, useIsMobile, useIsTablet, useIslaptop } from '../hooks/useMediaQuery'
 // SVGs
 import {ReactComponent as Logo} from '../assets/SVGs/logo.svg'
 import {ReactComponent as HomeIcon} from '../assets/SVGs/home.svg'
@@ -35,7 +35,9 @@ const navbarVarPortrait = {
 export default function Navbar() {
     const location = useLocation()
     const isPortrait = useIsPortrait()
-    if (isPortrait) console.log('is portrait')
+    const isMobile = useIsMobile()
+    const isTablet = useIsTablet()
+    const isLaptop = useIslaptop()
 
     // refs
     const navUl = useRef(null)
@@ -52,7 +54,7 @@ export default function Navbar() {
             magicLineVrt.current.style.transform = "translateY(" + activeLink.offsetTop + "px)"
             magicLineHrz.current.style.transform = "translateX(" + activeLink.offsetLeft + "px)"
         }
-    }, [location, isPortrait])
+    }, [location, isPortrait, isMobile, isTablet, isLaptop])
 
     return (
         <motion.div 
