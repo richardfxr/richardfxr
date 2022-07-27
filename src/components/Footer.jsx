@@ -46,12 +46,20 @@ export default function Footer() {
                 </div>
 
                 <div className='info'>
-                    <div className='info__text'>
-                        <p className='info__text__ver xs'>v10.0.0 pre alpha</p>
+                    <div className="squares">
+                        <div className="version">
+                            <div className="number__container">
+                                <span className="number">v10.1.0</span>
+                            </div>
+                            <span className="state">alpha</span>
+                        </div>
+                       <GitHubQR /> 
+                    </div>
+                    
+                    <div className='text'>
                         <p className='xs'><UnderlinedLink href='https://github.com/richardfxr/richardfxr' target='_blank'>Open source code available on GitHub</UnderlinedLink></p>
                         <p className='xs'>Designed by yours truly. Copyright © 2022 Xiangrui Fu. All rights reserved.</p>
                     </div>
-                    <GitHubQR />
                 </div>
             </div>
         </motion.footer>

@@ -2,11 +2,11 @@
 
 footer {
     // internal variables
-    --_QRcode-size: 6.25rem;
+    --_square-size: 6.25rem;
 
     padding-bottom: var(--pad-xxl);
 
-    .section {
+    .footer {
         &__main {
             display: flex;
             flex-direction: column;
@@ -18,12 +18,84 @@ footer {
 
     .info {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column nowrap;
         justify-content: flex-end;
         align-items: flex-end;
-        gap: var(--pad-xl);
+        gap: var(--pad-md);
 
-        &__text {
+        .squares {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+            gap: var(--pad-lg);
+
+            .version {
+                display: grid;
+                grid-template-rows: 0.65fr 0.35fr;
+                
+                width: var(--_square-size);
+                height: var(--_square-size);
+
+                border: solid var(--border-width) var(--clr-200);
+
+                overflow: hidden;
+
+                .number__container {
+                    position: relative;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &.number {
+                        position: absolute;
+                        top: calc(-1 * var(--border-width));
+                        right: 0;
+                        bottom: calc(-1 * var(--border-width));
+                        left: 0;
+
+                        font-size: 1.2rem;
+                        font-weight: 500;
+
+                        border: solid var(--border-width) var(--clr-200);
+                        border-radius: 50%;
+
+                        &::before, &::after {
+                            content: '';
+                            position: absolute;
+                            top: calc(-1 * var(--border-width));
+                            bottom: calc(-1 * var(--border-width));
+
+                            border: solid var(--border-width) var(--clr-200);
+                            border-radius: inherit;
+                        }
+
+                        &::before {
+                            right: -10%;
+                            left: -10%;
+                        }
+
+                        &::after {
+                            right: -35%;
+                            left: -35%;
+                        }
+                    }
+
+                    &.state {
+                        text-transform: uppercase;
+                        font-size: 1.2rem;
+                        font-weight: 900;
+                        border-top: solid var(--border-width) var(--clr-200);
+                    }
+                }
+            }
+
+            
+        }
+
+        .text {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -32,19 +104,12 @@ footer {
             p {
                 text-align: right;
             }
-
-            &__ver.xs {
-                color: var(--clr-1000);
-
-                padding: 0 var(--pad-xs);
-                border: solid var(--border-width) var(--clr-rblue);
-            }
         }        
 
         svg {
             // <GitHubQR /> SVG
             fill: var(--clr-1000);
-            width: var(--_QRcode-size);
+            width: var(--_square-size);
         }
     }
 }
