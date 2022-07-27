@@ -32,7 +32,11 @@
         }
 
         &__container {
+            // prevent growth
+            flex-grow: 1;
+
             min-width: var(--_illus-width);
+            width: var(--_illus-width);
             border: solid var(--border-width) var(--clr-200);
         }
 
