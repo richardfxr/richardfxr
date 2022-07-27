@@ -1,0 +1,74 @@
+.versionBadge {
+    display: grid;
+    grid-template-rows: 0.65fr 0.35fr;
+    
+    width: var(--_square-size);
+    height: var(--_square-size);
+ 
+    border: solid var(--border-width) var(--clr-200);
+ 
+    overflow: hidden;
+ 
+    .number__container {
+       position: relative;
+    }
+
+    .ovals {
+        // main oval around version number
+        position: absolute;
+        top: calc(-1 * var(--border-width));
+        right: 0;
+        bottom: calc(-1 * var(--border-width));
+        left: 0;
+
+        border: solid var(--border-width) var(--clr-200);
+        border-radius: 50%;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: calc(-1 * var(--border-width));
+            bottom: calc(-1 * var(--border-width));
+
+            border: solid var(--border-width) var(--clr-200);
+            border-radius: inherit;
+        }
+
+        &::before {
+            // middle oval
+            right: -10%;
+            left: -10%;
+        }
+
+        &::after {
+            // largest oval
+            right: -35%;
+            left: -35%;
+        }
+    }
+ 
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: inherit;
+
+        height: 100%;
+
+        &.number {
+            // bring version number on top ovals so it is highlightable
+            position: relative;
+            z-index: 2;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        &.state {
+            text-transform: uppercase;
+            font-size: 1.2em;
+            font-weight: 900;
+            border-top: solid var(--border-width) var(--clr-200);
+        }
+    }
+ }

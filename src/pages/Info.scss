@@ -1,0 +1,22 @@
+#info {
+    // internal variables
+    --_badge-size: 12rem;
+
+    #version10 {
+        padding-bottom: var(--pad-6xl);
+
+        .section {
+            &__main {
+                padding-top: var(--pad-xl);
+            }
+        }
+        .versionBadge {
+            flex-shrink: 0;
+            color: var(--clr-1000);
+            font-size: 1.9rem;
+            
+            width: var(--_badge-size);
+            height: var(--_badge-size);
+        }
+    }
+}

@@ -8,6 +8,7 @@ import { routes } from './AnimatedRoutes'
 import { sectionVar } from './Section'
 import Separator from './Separator'
 import UnderlinedLink from './UnderlinedLink'
+import VersionBadge from "./VersionBadge"
 // SVGs
 import {ReactComponent as GitHubQR} from '../assets/SVGs/QR-GitHubrepo-richardfxr.svg'
 
@@ -47,12 +48,7 @@ export default function Footer() {
 
                 <div className='info'>
                     <div className="squares">
-                        <div className="version">
-                            <div className="number__container">
-                                <span className="number">v10.1.0</span>
-                            </div>
-                            <span className="state">alpha</span>
-                        </div>
+                        <VersionBadge />
                        <GitHubQR /> 
                     </div>
                     
