@@ -26,15 +26,20 @@
 
         // top padding with alignment compensation
         padding-top: calc(var(--pad-xxl) - var(--padRem-5xs));
+        // avoid overlapping separator
+        margin-top: var(--border-width);
     }
 
     h2 {
      }
 
-     &__main {
-         position: relative;
-         min-width: 0px;
-     }
+    &__main {
+        position: relative;
+        min-width: 0px;
+
+        // avoid overlapping separator
+        margin-top: var(--border-width);
+    }
 
 }
 
