@@ -9,6 +9,10 @@ export default function UnderlinedLink({ styling, href, target, to, click, child
         return (
             <a href={href} target={target} className={"link external " + styling}>{children}</a>
         )
+    } else if (href && href.charAt(0) === '#') {
+        return (
+            <a href={href} className={"link page " + styling}>{children}</a>
+        )
     } else if (href) {
         return (
             <a href={href} target='_self' className={"link internal " + styling}>{children}</a>

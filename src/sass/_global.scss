@@ -166,6 +166,10 @@ p {
    &.lg {
       color: var(--clr-700);
       font-size: var(--font-lg);
+
+      // alignment compensation
+      margin-top: calc(-1 * var(--padRem-sm));
+      margin-bottom: calc(-1 * var(--padRem-sm));
    }
 }
 
