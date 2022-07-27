@@ -25,6 +25,18 @@ body {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    color: var(--clr-800);
+
+   // custom scrollbar (Firefox)
+   scrollbar-color: var(--clr-300) var(--clr-100);
+}
+
+// custom scrollbar (webkit)
+::-webkit-scrollbar-thumb {
+   background-color: var(--clr-300);
+}
+
+::-webkit-scrollbar {
+   background-color: var(--clr-100);
 }
 
 svg {
