@@ -6,6 +6,26 @@
 // COLORS
 // ============================================
 
+$light: (    
+    // main colors
+    1000: #000000,             // active font color
+    1000-trans: rgba(0, 0, 0, 0),
+    800: #454545,              // brighter font color
+    700: #616161,              // non-active font color
+    600: #6E6E6E,              // lowest font color for WCAG level AAA contrast
+    300: #A6A6A6,              // brighter border gray
+    200: #CCCCCC,              // main border gray
+    100: #F2F2F2,              // main background color
+    100-trans: rgba(242, 242, 242, 0),
+    0: #FFFFFF,
+
+    // accents
+    rblue: #0292A2,            // Richard blue, the one and only
+    rblue-hover: #1ceaff,      // Richard blue on hover
+    rblue-active: #6ef0ff,     // Richard blue when active
+    focus: #ff9800,            // focus outline color
+);
+
 $dark: (    
     // main colors
     1000: #FFFFFF,             // active font color
