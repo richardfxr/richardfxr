@@ -11,32 +11,13 @@
     background-color: var(--clr-200);
 
     overflow: visible;
-
-    // &::before {
-    //     // background gradient clipped to create gradient border
-    //     content: '';
-    //     position: absolute;
-    //     right: 0;
-    //     bottom: 0;
-    //     left: 0;
-    
-    //     background: linear-gradient(90deg, var(--clr-1000) calc(var(--section-side-width) / 2), var(--clr-300) var(--gradient-end));
-    // }
 }
 
 
 
 // === BREAKPOINTS ============================
 @media only screen and (max-width: $breakpoint-laptop) {
-    .separator {
-        // internal variables
-        --gradient-end: calc(100px + var(--section-side-width));
-    }
 }
 
 @media only screen and (max-width: $breakpoint-mobile) {
-    .separator {
-        right: var(--pad-lg);
-        left: var(--pad-lg);
-    }
 }
