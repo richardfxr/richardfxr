@@ -10,12 +10,12 @@
     --_icon-size: min(1.1rem, 33px);  // width & height of <Navbar /> icons
 
     position: fixed;
+    top: 0;
     bottom: 0;
     left: calc((100% - min(100%, var(--max-width))) / 2);
     z-index: 1000;
     
     width: var(--nav-size);
-    height: 100vh;
 
     overflow-y: auto;
 
@@ -45,7 +45,8 @@
                      calc(var(--section-pad-vrt) + env(safe-area-inset-bottom))
                      var(--pad-xxs);
             margin-top: auto;
-            
+
+            transition: padding var(--transTime-slowest) ease;
 
             ul {
                 display: flex;
