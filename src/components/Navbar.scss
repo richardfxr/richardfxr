@@ -46,7 +46,7 @@
                      var(--pad-xxs);
             margin-top: auto;
 
-            transition: padding var(--transTime-slowest) ease;
+            transition: padding 0.7s ease;
 
             ul {
                 display: flex;
