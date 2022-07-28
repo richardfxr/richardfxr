@@ -8,6 +8,7 @@
     
     max-width: var(--max-width);
 
+    padding-bottom: env(safe-area-inset-bottom);
     padding-left: var(--nav-size);
     margin-left: auto;
     margin-right: auto;

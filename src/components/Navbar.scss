@@ -10,7 +10,6 @@
     --_icon-size: min(1.1rem, 33px);  // width & height of <Navbar /> icons
 
     position: fixed;
-    top: 0;
     bottom: 0;
     left: calc((100% - min(100%, var(--max-width))) / 2);
     z-index: 1000;
@@ -42,7 +41,7 @@
         nav {
             padding: var(--section-pad-vrt)
                      var(--indicator-gap)
-                     var(--section-pad-vrt)
+                     calc(var(--section-pad-vrt) + env(safe-area-inset-bottom))
                      var(--pad-xxs);
             margin-top: auto;
             

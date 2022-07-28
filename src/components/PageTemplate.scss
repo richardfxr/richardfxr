@@ -3,7 +3,7 @@
 .navbar__separator {
     position: fixed;
     top: var(--pad-xxl);
-    bottom: var(--pad-xxl);
+    bottom: calc(var(--pad-xxl) + env(safe-area-inset-bottom));
     left: calc((100% - min(100%, var(--max-width))) / 2 + var(--nav-size));
     z-index: 1001;
 
