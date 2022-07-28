@@ -7,7 +7,6 @@
         &__main {
             // table alignment compensation
             padding-top: calc(var(--section-pad-vrt) - var(--padRem-xs));
-            margin-bottom: calc(-1 * var(--padRem-xxxs));
         }
     }
 

@@ -37,11 +37,6 @@ table {
             &:last-child {
                 // remove bottom border on last row
                 border-bottom: none;
-    
-                & > th, & > td {
-                    // remove bottom padding on last row
-                    padding-bottom: 0;
-                }
             }
         }
     }
