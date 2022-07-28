@@ -21,7 +21,7 @@ table {
     }
 
     tr {
-        border-bottom: solid var(--border-width) var(--clr-300);
+        border-bottom: solid var(--border-width) var(--clr-200);
 
         & > *:first-child {
             // remove left padding on elements in first column

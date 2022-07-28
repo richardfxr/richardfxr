@@ -80,7 +80,7 @@ ul, ol {
 
    &.withSeparators {
       li {
-         border-bottom: solid var(--border-width) var(--clr-300);
+         border-bottom: solid var(--border-width) var(--clr-200);
 
          &:last-child {
             // remove border-bottom of last <li>
