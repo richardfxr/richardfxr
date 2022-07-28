@@ -10,8 +10,6 @@
                 display: flex;
                 flex-flow: column nowrap;
                 gap: var(--pad-xxxl);
-                
-                padding-top: var(--pad-xl);
             }
         }
         .versionBadge {
@@ -32,8 +30,6 @@
                 display: flex;
                 flex-flow: column nowrap;
                 gap: var(--pad-xl);
-                
-                padding-top: var(--pad-xl);
             }
         }
     }

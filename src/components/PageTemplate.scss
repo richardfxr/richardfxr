@@ -33,9 +33,9 @@
 @media (orientation: portrait) {
     .navbar__separator {
         top: unset;
-        right: var(--section-pad);
+        right: var(--section-pad-hrz);
         bottom: var(--nav-size);
-        left: var(--section-pad);
+        left: var(--section-pad-hrz);
     
         width: unset;
         height: var(--border-width);

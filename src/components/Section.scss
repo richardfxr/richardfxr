@@ -7,14 +7,14 @@
     gap: var(--pad-lg);
     position: relative;
 
-    padding-right: var(--section-pad);
-    padding-left: var(--section-pad);
+    padding-right: var(--section-pad-hrz);
+    padding-left: var(--section-pad-hrz);
 
     .separator {
         position: absolute;
         top: 0;
-        right: var(--section-pad);
-        left: var(--section-pad);
+        right: var(--section-pad-hrz);
+        left: var(--section-pad-hrz);
     }
 
     &__side {
@@ -25,7 +25,7 @@
         min-width: 0px;
 
         // top padding with alignment compensation
-        padding-top: calc(var(--pad-xxl) - var(--padRem-5xs));
+        padding-top: calc(var(--section-pad-vrt) - var(--padRem-5xs));
         // avoid overlapping separator
         margin-top: var(--border-width);
     }
@@ -37,6 +37,7 @@
         position: relative;
         min-width: 0px;
 
+        padding-top: var(--section-pad-vrt);
         // avoid overlapping separator
         margin-top: var(--border-width);
     }
@@ -46,22 +47,9 @@
 
 
 // === BREAKPOINTS ============================
-@media (orientation: portrait) {
-    .section, .footer {
-        &__side {
-            top: 0;
-        }
-    }
-}
-
 @media only screen and (max-width: $breakpoint-laptop) {
     .section, .footer {
         gap: var(--pad-xxl);
-
-        &__side {
-            // top padding with alignment compensation
-            padding-top: calc(var(--pad-xl) - var(--padRem-5xs));
-        }
 
         h2 {
             // make text vertical
@@ -74,7 +62,4 @@
             
         }
     }
-}
-
-@media only screen and (max-width: $breakpoint-mobile) {
 }

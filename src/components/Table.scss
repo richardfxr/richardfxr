@@ -4,8 +4,6 @@ table {
     min-width: 100%;
 
     border-collapse: collapse;
-    // alignment compensation
-    // margin-bottom: calc(-1 * var(--padRem-xxxs)); 
 
     &.indexed {
         thead th:nth-child(1) {
@@ -14,18 +12,16 @@ table {
     }
 
     thead{
-        tr:last-child {
-            border-bottom: solid var(--border-width) var(--clr-300);
+        tr {
+            & > th, & > td {
+                // remove top padding on head
+                padding-top: 0;
+            } 
         }
     }
 
     tr {
         border-bottom: solid var(--border-width) var(--clr-300);
-
-        &:last-child {
-            // remove bottom border on last row
-            border-bottom: none;
-        }
 
         & > *:first-child {
             // remove left padding on elements in first column
@@ -35,6 +31,18 @@ table {
         & > *:last-child {
             // remove right padding on elements in last column
             padding-right: 0;
+        }
+
+        &:not(.thead__tr) {
+            &:last-child {
+                // remove bottom border on last row
+                border-bottom: none;
+    
+                & > th, & > td {
+                    // remove bottom padding on last row
+                    padding-bottom: 0;
+                }
+            }
         }
     }
 

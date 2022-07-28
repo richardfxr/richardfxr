@@ -4,10 +4,10 @@
    .section {
         padding-bottom: calc(var(--pad-7xl) - var(--pad-sm));
 
-        &__side {
-            h2 {
-                padding-bottom: calc(var(--pad-sm) + var(--padRem-4xs));
-            }
+        &__main {
+            // table alignment compensation
+            padding-top: calc(var(--section-pad-vrt) - var(--padRem-xs));
+            margin-bottom: calc(-1 * var(--padRem-xxxs));
         }
     }
 

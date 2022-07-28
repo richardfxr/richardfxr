@@ -9,7 +9,8 @@
    --max-width: 1400px;
    --nav-size: 85px;
 
-   --section-pad: var(--pad-xxxl);
+   --section-pad-hrz: var(--pad-xxxl);
+   --section-pad-vrt: var(--pad-xxl);
    --section-side-width: 280px;
    --twoCol-minWidth: 20rem;
    --threeCol-minWidth: 14rem;
@@ -140,7 +141,7 @@
    :root {
       --nav-size: 80px;
 
-      --section-pad: var(--pad-xl);
+      --section-pad-hrz: var(--pad-xl);
       --section-side-width: var(--font-sm);
       --threeCol-minWidth: 10rem;
 

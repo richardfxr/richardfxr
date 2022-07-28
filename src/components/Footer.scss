@@ -13,6 +13,8 @@ footer {
             gap: var(--pad-xxxl);
 
             color: var(--clr-600);
+
+            padding-top: calc(var(--section-pad-vrt) - var(--pad-sm) - var(--padRem-xs));
         }
     }
 

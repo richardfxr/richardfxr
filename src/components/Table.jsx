@@ -7,7 +7,7 @@ export default function Table({ tableData, caption, indexed }) {
         <table className={indexed ? 'indexed' : ''}>
             <caption className="visuallyHidden">{caption}</caption>
             <thead>
-                <tr>
+                <tr className='thead__tr'>
                     {tableData[0].map((tableElem) => (
                         <th key={tableElem} scope="col">{tableElem}</th>
                     ))}

@@ -10,7 +10,7 @@
 
         font-size: var(--font-xs);
         
-        padding: calc(var(--pad-xxl) - var(--pad-sm)) 0;
+        padding: calc(var(--section-pad-vrt) - var(--pad-sm)) 0;
     }
 
     li {
@@ -67,7 +67,7 @@
         &:first-child {
             a {
                 // prevent first left padding from expanding with rem
-                padding-left: var(--section-pad);
+                padding-left: var(--section-pad-hrz);
             }
         }
 
@@ -76,7 +76,7 @@
                 color: var(--clr-800);
 
                 // prevent last right padding from expanding with rem
-                padding-right: var(--section-pad);
+                padding-right: var(--section-pad-hrz);
     
                 .stroke--md {
                     stroke: var(--clr-800);
