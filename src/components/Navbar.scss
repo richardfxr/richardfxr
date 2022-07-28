@@ -42,7 +42,7 @@
         nav {
             padding: var(--section-pad-vrt)
                      var(--indicator-gap)
-                     calc(var(--section-pad-vrt) + env(safe-area-inset-bottom))
+                     var(--section-pad-vrt)
                      var(--pad-xxs);
             margin-top: auto;
             
