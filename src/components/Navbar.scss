@@ -40,7 +40,10 @@
         }
 
         nav {
-            padding: var(--section-pad-vrt) var(--indicator-gap) var(--section-pad-vrt) var(--pad-xxs);
+            padding: var(--section-pad-vrt)
+                     var(--indicator-gap)
+                     calc(var(--section-pad-vrt) + env(safe-area-inset-bottom))
+                     var(--pad-xxs);
             margin-top: auto;
             
 
@@ -139,7 +142,7 @@
         
         width: unset;
         max-width: var(--max-width);
-        height: var(--nav-size);
+        height: calc(var(--nav-size) + env(safe-area-inset-bottom));
 
         // center navbar on larger displays
         margin-right: auto;
@@ -162,6 +165,8 @@
             min-width: calc(100% - (2 * var(--pad-sm)));
             min-height: unset;
             height: 100%;
+
+            padding-bottom: env(safe-area-inset-bottom);
             
             .logo {
                 flex-shrink: 0;

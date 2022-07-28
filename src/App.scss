@@ -8,6 +8,7 @@
     
     max-width: var(--max-width);
 
+    padding-bottom: env(safe-area-inset-bottom);
     padding-left: var(--nav-size);
     margin-left: auto;
     margin-right: auto;
@@ -18,11 +19,7 @@
 // === BREAKPOINTS ============================
 @media (orientation: portrait) {
     .App {
-        padding-bottom: var(--nav-size);
+        padding-bottom: calc(var(--nav-size) + env(safe-area-inset-bottom));
         padding-left: 0;
     }
-}
-
-@media only screen and (max-width: $breakpoint-tablet) {
-    
 }
