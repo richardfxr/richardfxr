@@ -55,7 +55,7 @@ export const projects = [
         path: '/projects/eggholders',
         element: () => <EggHolders />,
         title: 'EggHolders',
-        image: {folder: 'test', fileName: 'EggHolder', alt: 'test image'},
+        image: {folder: 'EggHolders', fileName: 'EggHolders-thumbnail', alt: 'A white cylindrical fin loft model holding up an egg against a bright yellow background.'},
         date: '2022-03',
         colors: [
             {hex: '#f8d363', name: 'light mustard'},

@@ -10,7 +10,7 @@
     padding-right: var(--section-pad-hrz);
     padding-left: var(--section-pad-hrz);
 
-    .separator {
+    & > .separator {
         position: absolute;
         top: 0;
         right: var(--section-pad-hrz);
