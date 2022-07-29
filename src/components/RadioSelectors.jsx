@@ -13,18 +13,19 @@ import { useIsMobile } from '../hooks/useMediaQuery'
 
 export default function RadioSelectors({ label, name, type, inline, ani, value, handler, radios }) {
     const isMobile = useIsMobile()
+    const indicatorLength = 18
 
     // refs
     const selectorGroup = useRef(null)
-    const magicCircle = useRef(null)
+    const magicLine = useRef(null)
 
     useEffect(() => {
         // find currently checked radio
         const checkedRadio = selectorGroup.current.querySelector('input:checked + label')
         
         if (checkedRadio) {
-            magicCircle.current.style.transform = "translateX(" + checkedRadio.offsetLeft + "px)"
-            magicCircle.current.style.width = checkedRadio.offsetWidth + "px"
+            let transX = checkedRadio.offsetLeft + (checkedRadio.offsetWidth - indicatorLength) / 2
+            magicLine.current.style.transform = "translateX(" + transX + "px)"
         }
     }, [value, isMobile])
     
@@ -56,7 +57,7 @@ export default function RadioSelectors({ label, name, type, inline, ani, value, 
                             <label htmlFor={name + index}>{radio.label}</label>
                         </div>
                     ))}
-                    <div className='magicCircle' ref={magicCircle}></div>
+                    <div className='magicLine' ref={magicLine}></div>
                 </div>
             </ScrollContainer>
         </motion.form>

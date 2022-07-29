@@ -11,6 +11,10 @@
     .main {
         display: flex;
         flex-flow: row nowrap;
+        gap: var(--pad-xxxs);
+
+        // botto padding for magic line
+        padding-bottom: var(--indicator-gap);
 
         position: relative;
 
@@ -22,7 +26,8 @@
             }
 
             &:checked + label {
-                color: var(--clr-0);
+                color: var(--clr-1000);
+                border-color: var(--clr-1000);
 
                 transition: color var(--trans-standard) 0.15s;
             }
@@ -32,29 +37,33 @@
             display: block;
             font-weight: 500;
             cursor: pointer;
-            border-radius: var(--bradius-round);
 
-            transition: color var(--trans-standard);
+            border: solid var(--border-width) var(--clr-200);
+            border-radius: var(--bradius-xs);
+
+            transition: color var(--trans-standard),
+                        border-color var(--trans-standard);
 
             &:hover, &:focus {
                 color: var(--clr-1000);
+                border-color: var(--clr-600);
             }
         }
 
-        .magicCircle {
+        .magicLine {
             position: absolute;
-            top: 0;
             right: 0;
-            bottom: 0;
+            bottom: calc((var(--indicator-gap) - var(--indicator-thickness)) / 2);
             left: 0;
-            z-index: -1;
+
+            width: var(--indicator-length);
+            height: var(--indicator-thickness);
 
             border-radius: var(--bradius-round);
             background-color: var(--clr-rblue);
 
             // transition on transform change (set through JS)
-            transition: transform var(--transTime-slowest) var(--transFunc-enhancedEase),
-                        width var(--transTime-slowest) var(--transFunc-enhancedEase);
+            transition: transform var(--transTime-slowest) var(--transFunc-enhancedEase);
         }
     }    
 
@@ -63,6 +72,11 @@
 
         .scrollContainer {
             align-items: center;
+        }
+
+        .label {
+            // bottom padding to center .label horizontally with radio inputs
+            padding-bottom: var(--indicator-gap);
         }
     }
 
@@ -73,13 +87,13 @@
 
         .main {
             label {
-                padding: var(--pad-6xs) calc(var(--font-sm) - 0.3rem) var(--pad-5xs) calc(var(--font-sm) - 0.3rem);
+                padding: var(--pad-5xs) var(--font-sm) var(--pad-5xs) var(--font-sm);
             }
         }
 
         &.inline {
             .label {
-                padding-right: calc(var(--font-sm) - 0.3rem);
+                padding-right: var(--font-sm);  
             }
         }
     }
