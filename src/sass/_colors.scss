@@ -16,7 +16,27 @@ $light: (
     300: #A8A8A8,              // brighter border gray
     200: #C9C9C9,              // main border gray
     100: #EDEDED,              // main background color
-    100-trans: rgba(242, 242, 242, 0),
+    100-trans: rgba(237, 237, 237, 0),
+    0: #FFFFFF,
+
+    // accents
+    rblue: #0093A3,            // Richard blue, the one and only
+    rblue-hover: #007f8d,      // Richard blue on hover
+    rblue-active: #00717e,     // Richard blue when active
+    focus: #ff9800,            // focus outline color
+);
+
+$light-highContrast: (    
+    // main colors
+    1000: #000000,             // active font color
+    1000-trans: rgba(0, 0, 0, 0),
+    800: #292929,              // brighter font color
+    700: #424242,              // non-active font color
+    600: #595959,              // lowest font color for WCAG level AAA contrast
+    300: #595959,              // brighter border gray
+    200: #595959,              // main border gray
+    100: #FFFFFF,              // main background color
+    100-trans: rgba(256, 256, 256, 0),
     0: #FFFFFF,
 
     // accents
@@ -46,9 +66,36 @@ $dark: (
     focus: #ff9800,            // focus outline color
 );
 
-:root, [data-colorScheme="auto"], [data-colorScheme="light"] {
-    // parse $dark into CSS variables
+$dark-highContrast: (    
+    // main colors
+    1000: #FFFFFF,             // active font color
+    1000-trans: rgba(255, 255, 255, 0),
+    800: #CCCCCC,              // brighter font color
+    700: #B8B8B8,              // non-active font color
+    600: #969696,              // lowest font color for WCAG level AAA contrast
+    300: #969696,              // brighter border gray
+    200: #969696,              // main border gray
+    100: #000000,              // main background color
+    100-trans: rgba(0, 0, 0, 0),
+    0: #000000,
+
+    // accents
+    rblue: #11d3e7,            // Richard blue, the one and only
+    rblue-hover: #1ceaff,      // Richard blue on hover
+    rblue-active: #6ef0ff,     // Richard blue when active
+    focus: #ff9800,            // focus outline color
+);
+
+:root {
+    // parse $light into CSS variables
     @each $name, $value in $light {
+        --clr-#{$name}: #{$value};
+    }
+}
+
+[data-contrast="high"] {
+    // parse $ligh-highContrast into CSS variables
+    @each $name, $value in $light-highContrast {
         --clr-#{$name}: #{$value};
     }
 }
@@ -60,14 +107,51 @@ $dark: (
     }
 }
 
+[data-colorScheme="dark"][data-contrast="high"] {
+    // parse $dark-highContrast into CSS variables
+    @each $name, $value in $dark-highContrast {
+        --clr-#{$name}: #{$value};
+    }
+}
 
 
 // === A11Y ===================================
 @media (prefers-color-scheme: dark) {
-    [data-colorScheme="auto"],
-    [data-colorScheme="dark"] {
+    [data-colorScheme="auto"] {
         // parse $dark into CSS variables
         @each $name, $value in $dark {
+            --clr-#{$name}: #{$value};
+        }
+    }
+
+    [data-colorScheme="auto"][data-contrast="high"] {
+        // parse $dark-highContrast into CSS variables
+        @each $name, $value in $dark-highContrast {
+            --clr-#{$name}: #{$value};
+        }
+    }
+}
+
+@media (prefers-contrast: more) {
+    [data-contrast="auto"] {
+        // parse $ligh-highContrast into CSS variables
+        @each $name, $value in $light-highContrast {
+            --clr-#{$name}: #{$value};
+        }
+    }
+
+    [data-colorScheme="dark"][data-contrast="auto"] {
+        // parse $dark-highContrast into CSS variables
+        @each $name, $value in $dark-highContrast {
+            --clr-#{$name}: #{$value};
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+    [data-colorScheme="auto"][data-contrast="auto"] {
+        // parse $dark-highContrast into CSS variables
+        @each $name, $value in $dark-highContrast {
             --clr-#{$name}: #{$value};
         }
     }

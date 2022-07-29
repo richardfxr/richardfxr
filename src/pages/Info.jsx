@@ -12,7 +12,7 @@ import RadioSelectors from '../components/RadioSelectors'
 import { useSettings } from '../hooks/useSettings'
 
 export default function Info() {
-    const { colorScheme, changeSetting } = useSettings()
+    const { colorScheme, contrast, changeSetting } = useSettings()
     
     return (
         <PageTemplate heading="Info" id="info">
@@ -41,6 +41,20 @@ export default function Info() {
                             { value: "auto", label: "auto" },
                             { value: "light", label: "light" },
                             { value: "dark", label: "dark" },
+                        ]} />
+
+                <RadioSelectors
+                        label="Contrast:"
+                        name="contrast"
+                        type="lg"
+                        desc="Determines the contrast between foreground and background colors. ‘Default’ satisfies WCAG level AA and ‘high’ satisfies level AAA. ‘Auto’ will respect the system contrast."
+                        value={contrast}
+                        handler={changeSetting}
+                        setting='contrast'
+                        radios={[
+                            { value: "auto", label: "auto" },
+                            { value: "default", label: "default" },
+                            { value: "high", label: "high" },
                         ]} />
             </Section>
         </PageTemplate>
