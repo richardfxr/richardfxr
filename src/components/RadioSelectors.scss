@@ -95,6 +95,32 @@
             }
         }
     }
+
+    &.lg {
+        gap: var(--pad-lg);
+
+        .label {
+            font-size: var(--font-lg);
+            // alignment compensation
+            margin-top: calc(-1 * var(--padRem-sm));
+        }
+
+        label {
+            font-size: var(--font-sm);
+        }
+
+        .main {
+            label {
+                padding: var(--pad-5xs) var(--font-sm) calc(var(--pad-5xs) + 0.1rem) var(--font-sm);
+            }
+        }
+
+        &.inline {
+            .label {
+                padding-right: var(--font-sm);  
+            }
+        }
+    }
 }
 
 
@@ -104,6 +130,20 @@
     .radioSelectors {
         &.sm {
             .label, label {
+                // enlarge font on mobile
+                font-size: var(--font-md);
+            }
+
+            .main {
+                label {
+                    padding-right: calc(var(--font-md) - 0.3rem);
+                    padding-left: calc(var(--font-md) - 0.3rem);
+                }
+            }
+        }
+
+        &.lg {
+            label {
                 // enlarge font on mobile
                 font-size: var(--font-md);
             }
