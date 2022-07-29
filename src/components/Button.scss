@@ -44,6 +44,7 @@
 
         &:hover, &:active, &:focus-visible {
             background-color: var(--clr-rblue-hover);
+            border-color: var(--clr-rblue-hover);
         }
 
         &:focus-visible {
@@ -52,6 +53,7 @@
 
         &:active {
             background-color: var(--clr-rblue-active);
+            border-color: var(--clr-rblue-active);
         }
     }
 }
