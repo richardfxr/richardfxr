@@ -28,8 +28,6 @@
             &:checked + label {
                 color: var(--clr-1000);
                 border-color: var(--clr-1000);
-
-                transition: color var(--trans-standard) 0.15s;
             }
         }
 
