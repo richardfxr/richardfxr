@@ -1,6 +1,9 @@
 @use '../../sass/breakpoints' as *;
 
 #budgetty {
+    // internal variables
+    --_clr-gray: #CCCCCC; // background gray, does not change depending on color scheme
+
     #video {
         padding-bottom: var(--pad-6xl);
     }
@@ -13,7 +16,7 @@
         }
 
         li {
-            background-color: var(--clr-800);
+            background-color: var(--_clr-gray);
         }
 
         figure {
@@ -31,6 +34,8 @@
             figcaption {
                 color: var(--clr-0);
                 text-align: center;
+
+                padding: 0 var(--pad-lg);
             }
         }
     }
@@ -42,6 +47,26 @@
             display: flex;
             flex-flow: column nowrap;
             gap: var(--pad-xl);
+        }
+    }
+}
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    #budgetty {
+        #interface {
+            li {
+                forced-color-adjust: none;
+            }
+
+            figure {
+                figcaption {
+                    color: CanvasText;
+                    background-color: Canvas;
+                }
+            }
         }
     }
 }

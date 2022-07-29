@@ -256,3 +256,16 @@ figcaption {
       font-size: var(--font-md);
    }
 }
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+   svg {
+       .stroke {
+          &--md {
+             stroke: CanvasText;
+          }
+       }
+   }
+}

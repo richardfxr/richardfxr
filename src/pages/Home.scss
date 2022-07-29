@@ -155,3 +155,36 @@
         --_illus-width: 8rem;
     }
 }
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    #intro {
+        .illus {
+            .stroke {    
+                &-clr-1000 {
+                    stroke: CanvasText;
+                }
+    
+                &-clr-200 {
+                    stroke: GrayText;
+                }
+    
+                &-clr-rblue {
+                    stroke: CanvasText;
+                }
+            }
+
+            .fill {
+                &-clr-1000 {
+                    fill: CanvasText;
+                }
+    
+                &-clr-100 {
+                    fill: Canvas;
+                }
+            }
+        }
+    }
+}

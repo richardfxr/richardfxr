@@ -86,16 +86,13 @@
         padding-top: var(--padRem-xs);
     }
 
-    .project {
-        &__colors {
-            gap: var(--padRem-xxxs);
+    .project__colors {
+        gap: var(--padRem-xxxs);
 
-            li {
-                padding: var(--padRem-xxs);
-                margin: var(--padRem-xxs) 0;
-            }
+        li {
+            padding: var(--padRem-xxs);
+            margin: var(--padRem-xxs) 0;
         }
-        
     }
 
     &__labels {
@@ -107,5 +104,31 @@
         color: var(--clr-600);
 
         transition: color var(--trans-standard);
+    }
+}
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .projectCard {
+        &__link {
+            h3 {
+                &::after {
+                    forced-color-adjust: none;
+                    background: linear-gradient(
+                                90deg,
+                                ActiveText 50%,
+                                CanvasText 50%
+                            );
+                }
+            }
+        }
+
+        .project__colors {
+            li {
+                forced-color-adjust: none;
+            }
+        }
     }
 }

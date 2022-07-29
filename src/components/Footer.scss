@@ -65,3 +65,16 @@ footer {
         padding-bottom: var(--pad-lg);
     }
 }
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    footer {
+        .info {
+            svg {
+                fill: CanvasText;
+            }
+        }
+    }
+}

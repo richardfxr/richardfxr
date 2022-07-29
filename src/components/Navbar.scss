@@ -46,8 +46,6 @@
                      var(--pad-xxs);
             margin-top: auto;
 
-            transition: padding 0.7s ease;
-
             ul {
                 display: flex;
                 flex-flow: column nowrap;
@@ -102,6 +100,8 @@
 
                 border-radius: var(--bradius-round);
 
+                background: var(--clr-rblue);
+
                 // transition on transform change (set through JS)
                 transition: transform var(--transTime-slowest) var(--transFunc-enhancedEase);
             }
@@ -114,8 +114,6 @@
                 height: var(--indicator-length);
 
                 margin-top: calc((var(--_link-height) - var(--indicator-length)) / 2);
-
-                background: var(--clr-rblue);
             }
 
             #magicLineHrz {
@@ -204,8 +202,6 @@
                     height: var(--indicator-thickness);
 
                     margin-left: calc((var(--_link-width) - var(--indicator-length)) / 2);
-    
-                    background-color: var(--clr-rblue);
                 }
             }
         }
@@ -226,5 +222,35 @@
         // internal variables
         --_logo-size: 27px;
         --_link-pad: 23px;                // link padding
+    }
+}
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .navbar {
+        header {
+            .logo {
+                &__path {
+                    fill: CanvasText;
+                }
+            }
+
+            nav {
+                a {
+                    &.active, &:hover, &:focus {
+                        .stroke--md {
+                            stroke: ActiveText;
+                        }
+                    }
+                }
+
+                .magicLine {
+                    background-color: CanvasText;
+                }
+            }
+            
+        }
     }
 }

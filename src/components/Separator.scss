@@ -15,9 +15,9 @@
 
 
 
-// === BREAKPOINTS ============================
-@media only screen and (max-width: $breakpoint-laptop) {
-}
-
-@media only screen and (max-width: $breakpoint-mobile) {
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .separator {
+        background-color: CanvasText;
+    }
 }

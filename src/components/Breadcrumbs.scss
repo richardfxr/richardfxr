@@ -97,8 +97,31 @@
             }
         }
     }
+}
 
-    
 
 
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .breadcrumbs {
+        li {
+            a {
+                &, &:hover, &:focus, &:active {
+                    .stroke--md {
+                        stroke: LinkText; 
+                    }
+                }
+            }
+            
+            &:last-child {
+                a {
+                    &, &:hover, &:focus, &:active {
+                        .stroke--md {
+                            stroke: LinkText;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

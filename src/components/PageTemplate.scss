@@ -41,3 +41,16 @@
         height: var(--border-width);
     }
 }
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .navbar__separator {
+        background-color: ButtonBorder;
+
+        hr {
+            background-color: ActiveText;
+        }
+    }
+}
