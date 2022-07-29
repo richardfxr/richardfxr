@@ -46,9 +46,16 @@ $dark: (
     focus: #ff9800,            // focus outline color
 );
 
-:root {
+:root, [data-colorScheme="auto"], [data-colorScheme="light"] {
     // parse $dark into CSS variables
     @each $name, $value in $light {
+        --clr-#{$name}: #{$value};
+    }
+}
+
+[data-colorScheme="dark"] {
+    // parse $dark into CSS variables
+    @each $name, $value in $dark {
         --clr-#{$name}: #{$value};
     }
 }
@@ -57,7 +64,8 @@ $dark: (
 
 // === A11Y ===================================
 @media (prefers-color-scheme: dark) {
-    :root {
+    [data-colorScheme="auto"],
+    [data-colorScheme="dark"] {
         // parse $dark into CSS variables
         @each $name, $value in $dark {
             --clr-#{$name}: #{$value};

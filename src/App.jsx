@@ -1,5 +1,6 @@
 // === IMPORTS ============================
 // React
+import { useEffect } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 // Sass
 import './App.scss'
@@ -7,8 +8,17 @@ import './App.scss'
 import Navbar from './components/Navbar'
 import A11yMenu from './components/A11yMenu'
 import AnimatedRoutes from './components/AnimatedRoutes'
+// hooks
+import { useSettings } from './hooks/useSettings'
 
 function App() {
+    const { changeSetting } = useSettings()
+
+    useEffect(() => {
+        // initialize user settings
+        localStorage.getItem('colorScheme') ? changeSetting('colorScheme', localStorage.getItem('colorScheme')) : changeSetting('colorScheme', 'auto')
+    }, [])
+
     return (
         <div className="App">
             <BrowserRouter>
