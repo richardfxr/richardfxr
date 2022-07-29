@@ -237,6 +237,10 @@ figcaption {
 	overflow: hidden;
 }
 
+.forcedClr {
+   display: none;
+}
+
 .videoContainer {
    position:relative;
    // ensure 16:9 aspect ratio
@@ -275,5 +279,9 @@ figcaption {
              stroke: CanvasText;
           }
        }
+   }
+
+   .forcedClr {
+      display: block;
    }
 }

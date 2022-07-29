@@ -12,7 +12,7 @@ import ScrollContainer from "./ScrollContainer";
 import { useIsMobile } from '../hooks/useMediaQuery'
 import { useSettings } from '../hooks/useSettings'
 
-export default function RadioSelectors({ label, name, type, desc, inline, ani, value, handler, setting, radios }) {
+export default function RadioSelectors({ label, name, type, desc, forcedClr, inline, ani, value, handler, setting, radios }) {
     const isMobile = useIsMobile()
     const { initialLoad } = useSettings()
     const indicatorLength = 18
@@ -41,8 +41,8 @@ export default function RadioSelectors({ label, name, type, desc, inline, ani, v
             exit="exit">
 
             {!inline && <p className='label'>{label}</p>}
-
             {desc && <p className='sm'>{desc}</p>}
+            {forcedClr && <p className='sm forcedClr'>{forcedClr}</p>}
 
             <ScrollContainer horizontal>
                 {inline && <p className='label'>{label}</p>}

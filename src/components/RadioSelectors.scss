@@ -8,6 +8,11 @@
         color: var(--clr-1000);
     }
 
+    .forcedClr {
+        border: solid var(--border-width) var(--clr-200);
+        padding: var(--pad-sm);
+    }
+
     .main {
         display: flex;
         flex-flow: row nowrap;
@@ -157,3 +162,16 @@
         }
     }
 }
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .radioSelectors {
+        .main {
+            .magicLine {
+                background-color: CanvasText;
+            }
+        }
+    }
+ }

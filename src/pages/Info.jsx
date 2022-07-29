@@ -34,6 +34,7 @@ export default function Info() {
                         name="colorScheme"
                         type="lg"
                         desc="Determines all foreground, background, and text colors. ‘Auto’ will respect the system color scheme."
+                        forcedClr="This setting is currently overridden as forced colors are active."
                         value={colorScheme}
                         handler={changeSetting}
                         setting='colorScheme'
@@ -48,6 +49,7 @@ export default function Info() {
                         name="contrast"
                         type="lg"
                         desc="Determines the contrast between foreground and background colors. ‘Default’ satisfies WCAG level AA and ‘high’ satisfies level AAA. ‘Auto’ will respect the system contrast."
+                        forcedClr="This setting is currently overridden as forced colors are active."
                         value={contrast}
                         handler={changeSetting}
                         setting='contrast'
