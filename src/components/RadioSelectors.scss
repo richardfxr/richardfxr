@@ -87,7 +87,7 @@
 
         .main {
             label {
-                padding: var(--pad-5xs) var(--font-sm) var(--pad-5xs) var(--font-sm);
+                padding: var(--pad-5xs) var(--font-sm) calc(var(--pad-5xs) + 0.1rem) var(--font-sm);
             }
         }
 
