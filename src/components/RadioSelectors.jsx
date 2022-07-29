@@ -1,6 +1,6 @@
 // === IMPORTS ============================
 // React
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 // Sass
 import './RadioSelectors.scss'
 // Framer Motion
@@ -15,7 +15,10 @@ import { useSettings } from '../hooks/useSettings'
 export default function RadioSelectors({ label, name, type, desc, forcedClr, inline, ani, value, handler, setting, radios }) {
     const isMobile = useIsMobile()
     const { initialLoad } = useSettings()
-    const indicatorLength = 18
+
+    // states
+    const [width, setWidth] = useState()
+    const [height, setHeight] = useState()
 
     // refs
     const selectorGroup = useRef(null)
@@ -26,10 +29,28 @@ export default function RadioSelectors({ label, name, type, desc, forcedClr, inl
         const checkedRadio = selectorGroup.current.querySelector('input:checked + label')
         
         if (checkedRadio) {
-            let transX = checkedRadio.offsetLeft + (checkedRadio.offsetWidth - indicatorLength) / 2
-            magicLine.current.style.transform = "translateX(" + transX + "px)"
+            let transX = "calc(" + checkedRadio.offsetLeft + "px + (" + checkedRadio.offsetWidth + "px - 1.125rem) / 2)"
+            magicLine.current.style.transform = "translateX(" + transX + ")"
         }
-    }, [value, isMobile, initialLoad])
+    }, [value, isMobile, initialLoad, width, height])
+
+    useEffect(() => {
+        // instantiating ResizeObserver
+        const fontSizeObserver = new ResizeObserver(entries => {
+            entries.forEach(entry => {
+                setWidth(entry.contentRect.width);
+                setHeight(entry.contentRect.height);
+            });
+        });
+
+        // observe selectorGroup
+        fontSizeObserver.observe(selectorGroup.current)
+
+        return function cleanup() {
+            // disconnet resize observer
+            fontSizeObserver.disconnect()
+        }
+    }, [])
     
     return (
         <motion.form 

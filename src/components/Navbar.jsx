@@ -1,6 +1,6 @@
 // === IMPORTS ============================
 // React
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 // Framer Motion
 import { motion } from "framer-motion"
@@ -39,6 +39,10 @@ export default function Navbar() {
     const isTablet = useIsTablet()
     const isLaptop = useIslaptop()
 
+    // states
+    const [width, setWidth] = useState()
+    const [height, setHeight] = useState()
+
     // refs
     const navUl = useRef(null)
     const magicLineVrt = useRef(null)
@@ -54,7 +58,25 @@ export default function Navbar() {
             magicLineVrt.current.style.transform = "translateY(" + activeLink.offsetTop + "px)"
             magicLineHrz.current.style.transform = "translateX(" + activeLink.offsetLeft + "px)"
         }
-    }, [location, isPortrait, isMobile, isTablet, isLaptop])
+    }, [location, isPortrait, isMobile, isTablet, isLaptop, width, height])
+
+    useEffect(() => {
+        // instantiating ResizeObserver
+        const fontSizeObserver = new ResizeObserver(entries => {
+            entries.forEach(entry => {
+                setWidth(entry.contentRect.width);
+                setHeight(entry.contentRect.height);
+            });
+        });
+
+        // observe selectorGroup
+        fontSizeObserver.observe(navUl.current)
+
+        return function cleanup() {
+            // disconnet resize observer
+            fontSizeObserver.disconnect()
+        }
+    }, [])
 
     return (
         <div className='navbar'>

@@ -8,6 +8,7 @@
     --_link-width: 100%;              // width of the <a> that contain page icons
     --_link-height: calc(var(--_icon-size) + var(--_link-pad)); // height of the <a> that contain page icons
     --_icon-size: min(1.1rem, 33px);  // width & height of <Navbar /> icons
+    --_indicator-length: min(calc(10px + 0.5rem), 25px);
 
     position: fixed;
     top: 0;
@@ -111,9 +112,9 @@
                 right: calc(-1 * ((var(--indicator-gap) - var(--indicator-thickness)) / 2 + var(--indicator-thickness)));
 
                 width: var(--indicator-thickness);
-                height: var(--indicator-length);
+                height: var(--_indicator-length);
 
-                margin-top: calc((var(--_link-height) - var(--indicator-length)) / 2);
+                margin-top: calc((var(--_link-height) - var(--_indicator-length)) / 2);
             }
 
             #magicLineHrz {
@@ -198,10 +199,10 @@
                     top: calc(-1 * ((var(--indicator-gap) - var(--indicator-thickness)) / 2 + var(--indicator-thickness)));
                     left: 0;
     
-                    width: var(--indicator-length);
+                    width: var(--_indicator-length);
                     height: var(--indicator-thickness);
 
-                    margin-left: calc((var(--_link-width) - var(--indicator-length)) / 2);
+                    margin-left: calc((var(--_link-width) - var(--_indicator-length)) / 2);
                 }
             }
         }
