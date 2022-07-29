@@ -10,9 +10,11 @@ import { sectionVar } from "./Section"
 import ScrollContainer from "./ScrollContainer";
 // hooks
 import { useIsMobile } from '../hooks/useMediaQuery'
+import { useSettings } from '../hooks/useSettings'
 
-export default function RadioSelectors({ label, name, type, inline, ani, value, handler, radios }) {
+export default function RadioSelectors({ label, name, type, inline, ani, value, handler, setting, radios }) {
     const isMobile = useIsMobile()
+    const { initialLoad } = useSettings()
     const indicatorLength = 18
 
     // refs
@@ -27,7 +29,7 @@ export default function RadioSelectors({ label, name, type, inline, ani, value, 
             let transX = checkedRadio.offsetLeft + (checkedRadio.offsetWidth - indicatorLength) / 2
             magicLine.current.style.transform = "translateX(" + transX + "px)"
         }
-    }, [value, isMobile])
+    }, [value, isMobile, initialLoad])
     
     return (
         <motion.form 
@@ -53,7 +55,7 @@ export default function RadioSelectors({ label, name, type, inline, ani, value, 
                                 name={name}
                                 value={radio.value}
                                 checked={radio.value === value}
-                                onChange={(e) => handler(e.target.value)} />
+                                onChange={(e) => {setting ? handler(setting, e.target.value) : handler(e.target.value)}} />
                             <label htmlFor={name + index}>{radio.label}</label>
                         </div>
                     ))}
