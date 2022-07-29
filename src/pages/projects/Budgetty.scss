@@ -2,7 +2,8 @@
 
 #budgetty {
     // internal variables
-    --_clr-gray: #CCCCCC; // background gray, does not change depending on color scheme
+    --_clr-black: #000000; // text color on --_clr-gray background
+    --_clr-gray: #CCCCCC;  // background gray, does not change depending on color scheme
 
     #video {
         padding-bottom: var(--pad-6xl);
@@ -32,7 +33,7 @@
             }
 
             figcaption {
-                color: var(--clr-0);
+                color: var(--_clr-black);
                 text-align: center;
 
                 padding: 0 var(--pad-lg);
