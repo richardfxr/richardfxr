@@ -17,7 +17,7 @@ function App() {
     useEffect(() => {
         // initialize user settings
         localStorage.getItem('colorScheme') ? changeSetting('colorScheme', localStorage.getItem('colorScheme')) : changeSetting('colorScheme', 'auto')
-        localStorage.getItem('contrast') ? changeSetting('contrast', localStorage.getItem('colorScheme')) : changeSetting('contrast', 'auto')
+        localStorage.getItem('contrast') ? changeSetting('contrast', localStorage.getItem('contrast')) : changeSetting('contrast', 'auto')
     }, [])
 
     return (
