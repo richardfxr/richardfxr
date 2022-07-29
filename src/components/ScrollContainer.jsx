@@ -35,6 +35,12 @@ export default function ScrollContainer({ vertical, horizontal, children }) {
         // observe edgeDivs
         startObserver.observe(startDiv.current)
         endObserver.observe(endDiv.current)
+
+        return function cleanup() {
+            // disconnet intersection oberservers
+            startObserver.disconnect()
+            endObserver.disconnect()
+        }
     }, [])
     
 
