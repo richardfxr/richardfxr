@@ -84,6 +84,20 @@
     }
 }
 
+[data-motionPref="low"] {
+    .link {
+        text-underline-offset: var(--_outlineOffsetMax);
+    }
+ }
+ 
+ @media (prefers-reduced-motion) {
+    [data-motionPref="auto"] {
+        .link {
+            text-underline-offset: var(--_outlineOffsetMax);
+        }
+    }
+ }
+
 
 
 // === SUPPORTS ===========================

@@ -9,7 +9,7 @@ import './Navbar.scss'
 // components
 import { routes } from './AnimatedRoutes'
 // hooks
-import { useIsPortrait } from '../hooks/useMediaQuery'
+import { useIsMotionOK, useIsPortrait } from '../hooks/useMediaQuery'
 // SVGs
 import {ReactComponent as Logo} from '../assets/SVGs/logo.svg'
 import {ReactComponent as HomeIcon} from '../assets/SVGs/home.svg'
@@ -30,11 +30,17 @@ const navbarVarPortrait = {
     show: { opacity: 1, x: 0, y: 0, transition: { ease: "easeOut", duration: 0.5 } },
 }
 
+const navbarVarLowMo = {
+    hidden: { opacity: 1, x: 0, y: 0 },
+    show: { opacity: 1, x: 0, y: 0, transition: { ease: "easeOut", duration: 0.5 } },
+}
+
 
 
 export default function Navbar() {
     const location = useLocation()
     const isPortrait = useIsPortrait()
+    const isMotionOK = useIsMotionOK()
 
     // states
     const [width, setWidth] = useState()
@@ -78,7 +84,7 @@ export default function Navbar() {
     return (
         <div className='navbar'>
             <motion.header
-                variants={isPortrait ? navbarVarPortrait : navbarVarLandscape}
+                variants={isMotionOK ? (isPortrait ? navbarVarPortrait : navbarVarLandscape) : navbarVarLowMo}
                 initial="hidden"
                 animate="show">
                 <Logo className='logo'/>

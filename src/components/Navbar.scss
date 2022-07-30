@@ -104,7 +104,7 @@
                 background: var(--clr-rblue);
 
                 // transition on transform change (set through JS)
-                transition: transform var(--transTime-slowest) var(--transFunc-enhancedEase);
+                transition: transform var(--transTime-slowest-lowMo) var(--transFunc-enhancedEase);
             }
 
             #magicLineVrt {

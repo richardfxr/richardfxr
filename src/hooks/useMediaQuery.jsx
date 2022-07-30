@@ -1,6 +1,7 @@
 // === IMPORTS ============================
 // React
-import { useEffect, useState } from "react"
+import { useState } from "react"
+import { useSettings } from './useSettings'
 
 export function useMediaQuery(query) {
     const [matches, setMatches] = useState(false);
@@ -47,3 +48,11 @@ export const useIslaptop = () => useMediaQuery('(max-width: 1200px)')
 export const useIsTablet = () => useMediaQuery('(max-width: 950px)')
 export const useIsMobile = () => useMediaQuery('(max-width: 750px)')
 export const useIsPortrait = () => useMediaQuery('(orientation: portrait)')
+
+// setting related hooks
+export const useIsMotionOK = () => {
+    const { motionPref } = useSettings()
+    const isReducedMotion = useMediaQuery('(prefers-reduced-motion)')
+    const isMotionOK = motionPref === 'full' || (motionPref !== 'low' && !isReducedMotion)
+    return isMotionOK
+}

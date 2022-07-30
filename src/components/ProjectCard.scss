@@ -132,3 +132,55 @@
         }
     }
 }
+
+[data-motionPref="low"] {
+    .projectCard {
+        &__link {
+            &:hover, &:focus, &:active, &:focus-visible {
+                h3 {
+                    &::after {
+                        transform: none;
+                        background: var(--clr-1000);
+                    }
+                }
+            }
+
+            h3 {                    
+                &::after {
+                    width: 100%;
+                    
+                    background: var(--clr-200);
+                    transform: none;
+                    transition: background-color var(--trans-standard);
+                }
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    [data-motionPref="auto"] {
+        .projectCard {
+            &__link {
+                &:hover, &:focus, &:active, &:focus-visible {
+                    h3 {
+                        &::after {
+                            transform: none;
+                            background: var(--clr-1000);
+                        }
+                    }
+                }
+    
+                h3 {                    
+                    &::after {
+                        width: 100%;
+
+                        background: var(--clr-200);
+                        transform: none;
+                        transition: background-color var(--trans-standard);
+                    }
+                }
+            }
+        }
+    }
+}

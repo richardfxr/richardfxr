@@ -77,6 +77,8 @@
    --transTime-standard: 0.15s;
    --transTime-slow: 0.2s;
    --transTime-slowest: 0.30s;
+
+   --transTime-slowest-lowMo: 0.30s;
    // timing functions
    --transFunc-enhancedEase: cubic-bezier(.57,-0.01,.22,1.04);
 }
@@ -187,5 +189,18 @@
       --font-md: 1.15rem;
       --font-lg: 1.3rem;
       --font-xxl: 3.8rem;
+   }
+}
+
+
+
+// === A11Y ===================================
+[data-motionPref="low"] {
+   --transTime-slowest-lowMo: 0s;
+}
+
+@media (prefers-reduced-motion) {
+   [data-motionPref="auto"] {
+      --transTime-slowest-lowMo: 0s;
    }
 }

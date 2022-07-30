@@ -285,3 +285,16 @@ figcaption {
       display: block;
    }
 }
+
+
+
+// === A11Y ===================================
+[data-motionPref="low"] {
+   scroll-behavior: auto;
+}
+
+@media (prefers-reduced-motion) {
+   [data-motionPref="auto"] {
+      scroll-behavior: auto;
+   }
+}

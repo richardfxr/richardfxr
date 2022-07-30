@@ -9,11 +9,9 @@ import { sectionVar } from "./Section"
 // components
 import ScrollContainer from "./ScrollContainer";
 // hooks
-import { useIsMobile } from '../hooks/useMediaQuery'
 import { useSettings } from '../hooks/useSettings'
 
 export default function RadioSelectors({ label, name, type, desc, forcedClr, inline, ani, value, handler, setting, radios }) {
-    const isMobile = useIsMobile()
     const { initialLoad } = useSettings()
 
     // states
@@ -32,7 +30,7 @@ export default function RadioSelectors({ label, name, type, desc, forcedClr, inl
             let transX = "calc(" + checkedRadio.offsetLeft + "px + (" + checkedRadio.offsetWidth + "px - 1.125rem) / 2)"
             magicLine.current.style.transform = "translateX(" + transX + ")"
         }
-    }, [value, isMobile, initialLoad, width, height])
+    }, [value, initialLoad, width, height])
 
     useEffect(() => {
         // instantiating ResizeObserver

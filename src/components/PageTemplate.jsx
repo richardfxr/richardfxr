@@ -8,8 +8,8 @@ import Breadcrumbs from './Breadcrumbs'
 import PageHeading from "./PageHeading"
 import Footer from '../components/Footer'
 // hooks
-import { useIsPortrait } from "../hooks/useMediaQuery"
-import { useSettings } from '../hooks/useSettings'
+import { useIsPortrait, useIsMotionOK } from "../hooks/useMediaQuery"
+import { useSettings } from "../hooks/useSettings"
 
 // === FRAMER VARIANTS ====================
 const separatorVarPortrait = {
@@ -24,6 +24,12 @@ const separatorVarLandscape = {
     exit: { y: 0, transition: { ease: "easeOut", duration: 0.25, delay: 0 } },
 }
 
+const separatorVarLowMo = {
+    hidden: { opacity: 1 },
+    show: { opacity: 0, transition: { duration: 0.25, delay: 0.3 } },
+    exit: {opacity: 1, transition: { duration: 0.25, delay: 0 } },
+}
+
 const pageInitVarPortrait = {
     hidden: { y: -100, opacity: 0 },
     show: { y: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.5 } },
@@ -34,6 +40,11 @@ const pageInitVarLandscape = {
     show: { x: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.5 } },
 }
 
+const pageInitVarLowMo = {
+    hidden: { x: 0, y: 0, opacity: 0 },
+    show: { x: 0, y: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.5 } },
+}
+
 const pageNormVar = {
     hidden: { x: 0, y: 0, opacity: 1 },
     show: { x: 0, y: 0, opacity: 1 },
@@ -42,13 +53,14 @@ const pageNormVar = {
 
 export default function PageTemplate({ heading, id, children }) {
     const isPortrait = useIsPortrait()
+    const isMotionOK = useIsMotionOK()
     const { initialLoad, changeSetting } = useSettings()
 
     return (
         <>
             <div className="navbar__separator">
                 <motion.hr 
-                    variants={isPortrait ? separatorVarPortrait : separatorVarLandscape}
+                    variants={isMotionOK ? (isPortrait ? separatorVarPortrait : separatorVarLandscape) : separatorVarLowMo}
                     initial="hidden"
                     animate="show"
                     exit="exit"/>
@@ -56,7 +68,7 @@ export default function PageTemplate({ heading, id, children }) {
             
             <motion.div 
                 key={heading}
-                variants={initialLoad ? (isPortrait ? pageInitVarPortrait : pageInitVarLandscape) : pageNormVar}
+                variants={initialLoad ? (isMotionOK ? (isPortrait ? pageInitVarPortrait : pageInitVarLandscape) : pageInitVarLowMo) : pageNormVar}
                 className="pageWrapper"
                 id={id}
                 initial="hidden"

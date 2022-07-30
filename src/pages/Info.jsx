@@ -12,7 +12,7 @@ import RadioSelectors from '../components/RadioSelectors'
 import { useSettings } from '../hooks/useSettings'
 
 export default function Info() {
-    const { colorScheme, contrast, changeSetting } = useSettings()
+    const { colorScheme, contrast, motionPref, changeSetting } = useSettings()
     
     return (
         <PageTemplate heading="Info" id="info">
@@ -57,6 +57,21 @@ export default function Info() {
                             { value: "auto", label: "auto" },
                             { value: "default", label: "default" },
                             { value: "high", label: "high" },
+                        ]} />
+
+                <RadioSelectors
+                        label="Motion:"
+                        name="motionPref"
+                        type="lg"
+                        desc="Determines the number of animations on the website. ‘Low’ will limit animations to just fade effects. ‘Auto’ will respect the system motion preference."
+                        forcedClr="This setting is currently overridden as forced colors are active."
+                        value={motionPref}
+                        handler={changeSetting}
+                        setting='motionPref'
+                        radios={[
+                            { value: "auto", label: "auto" },
+                            { value: "full", label: "full" },
+                            { value: "low", label: "low" },
                         ]} />
             </Section>
         </PageTemplate>
