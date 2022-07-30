@@ -1,6 +1,6 @@
 // === IMPORTS ============================
 // React
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 // Sass
 import './Breadcrumbs.scss'
