@@ -10,7 +10,7 @@ export const SettingsContext = createContext()
 export const userSettings = [
     {name: 'colorScheme', default: 'auto'},
     {name: 'contrast', default: 'auto'},
-    {name: 'motion', default: 'auto'},
+    {name: 'motionPref', default: 'auto'},
 ]
 
 // initial settings object fed into useReducer() below
@@ -43,13 +43,13 @@ const settingsReducer = (state, action) => {
             document.documentElement.setAttribute('data-contrast', action.payload)
             return { ...state, contrast: action.payload }
 
-        case 'motion':
-            console.log('change motion to:', action.payload)
+        case 'motionPref':
+            console.log('change motionPref to:', action.payload)
             // store in local storage
-            localStorage.setItem('motion', action.payload)
+            localStorage.setItem('motionPref', action.payload)
             // set data-colorScheme attribute
-            document.documentElement.setAttribute('data-motion', action.payload)
-            return { ...state, motion: action.payload }
+            document.documentElement.setAttribute('data-motionPref', action.payload)
+            return { ...state, motionPref: action.payload }
 
         default: 
             return state
