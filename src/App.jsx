@@ -10,14 +10,16 @@ import A11yMenu from './components/A11yMenu'
 import AnimatedRoutes from './components/AnimatedRoutes'
 // hooks
 import { useSettings } from './hooks/useSettings'
+import { userSettings } from './context/Settings'
 
 function App() {
     const { changeSetting } = useSettings()
 
     useEffect(() => {
         // initialize user settings
-        localStorage.getItem('colorScheme') ? changeSetting('colorScheme', localStorage.getItem('colorScheme')) : changeSetting('colorScheme', 'auto')
-        localStorage.getItem('contrast') ? changeSetting('contrast', localStorage.getItem('contrast')) : changeSetting('contrast', 'auto')
+        userSettings.forEach((setting) => {
+            localStorage.getItem(setting.name) ? changeSetting(setting.name, localStorage.getItem(setting.name)) : changeSetting(setting.name, setting.default)
+        })
     }, [])
 
     return (
