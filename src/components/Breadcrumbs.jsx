@@ -14,9 +14,15 @@ import {ReactComponent as InfoIcon} from '../assets/SVGs/info.svg'
 
 export default function Breadcrumbs() {
     const location = useLocation()
+    const [curPathname, setCurPathname] = useState('')
     const [breadcrumbs, setBreadcrumbs] = useState([])
 
-    useEffect(() => {        
+    if (curPathname !== location.pathname) {
+        // get breadcrumbs for current pathname, does not live inside a useEffect hook becuase it causes animation stutters
+
+        // set curPathname
+        setCurPathname(location.pathname)
+
         // parse location string
         let breadcrumbsTemp = location.pathname.split('/')
 
@@ -36,10 +42,9 @@ export default function Breadcrumbs() {
         // add current: true to last breadcrumb
         breadcrumbsTemp[breadcrumbsTemp.length - 1].isCurrent = true
 
-        console.log('breadcrumbs:', breadcrumbsTemp)
-
         setBreadcrumbs(breadcrumbsTemp)
-    }, [location])
+    }
+    
 
     return (
         <nav className='breadcrumbs' aria-label="breadcrumbs">
