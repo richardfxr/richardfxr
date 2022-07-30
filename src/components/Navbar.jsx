@@ -9,7 +9,7 @@ import './Navbar.scss'
 // components
 import { routes } from './AnimatedRoutes'
 // hooks
-import { useIsPortrait, useIsMobile, useIsTablet, useIslaptop } from '../hooks/useMediaQuery'
+import { useIsPortrait } from '../hooks/useMediaQuery'
 // SVGs
 import {ReactComponent as Logo} from '../assets/SVGs/logo.svg'
 import {ReactComponent as HomeIcon} from '../assets/SVGs/home.svg'
@@ -35,9 +35,6 @@ const navbarVarPortrait = {
 export default function Navbar() {
     const location = useLocation()
     const isPortrait = useIsPortrait()
-    const isMobile = useIsMobile()
-    const isTablet = useIsTablet()
-    const isLaptop = useIslaptop()
 
     // states
     const [width, setWidth] = useState()
@@ -48,7 +45,7 @@ export default function Navbar() {
     const magicLineVrt = useRef(null)
     const magicLineHrz = useRef(null)
     
-    // updates magic line on initial load, location (route) change, and device orientation change
+    // updates magic line on initial load, location (route) change, and navUl size change
     useEffect(() => {
         // find currently active <NavLink />
         let activeLink = navUl.current.getElementsByClassName('active')[0]
@@ -58,7 +55,7 @@ export default function Navbar() {
             magicLineVrt.current.style.transform = "translateY(" + activeLink.offsetTop + "px)"
             magicLineHrz.current.style.transform = "translateX(" + activeLink.offsetLeft + "px)"
         }
-    }, [location, isPortrait, isMobile, isTablet, isLaptop, width, height])
+    }, [location, width, height])
 
     useEffect(() => {
         // instantiating ResizeObserver
