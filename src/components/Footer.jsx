@@ -35,13 +35,17 @@ export default function Footer() {
                             {routes.slice(0, 4).map(({ path, title }) => (
                                 <li key={path} className='list__item'><UnderlinedLink to={path} styling='md block'>{title}</UnderlinedLink></li>
                             ))}
+                            <li key='/projects/archive' className='list__item'><UnderlinedLink to='/projects/archive' styling='md block'>Archive</UnderlinedLink></li>
+                            <li key='/info#settings' className='list__item'><UnderlinedLink to='/info#settings' styling='md block'>Settings</UnderlinedLink></li>
                         </ul>
                     </nav>
 
                     <ul className='list withSeparators sm' aria-label='external links'>
+                    <li className='list__item'><UnderlinedLink href='https://v9.richardfxr.com/' target='_blank' styling='md block'>Version 9</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='https://www.instagram.com/richardfxr/' target='_blank' styling='md block'>Instagram</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='https://github.com/richardfxr' target='_blank' styling='md block'>GitHub</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='https://www.behance.net/richardfxr' target='_blank' styling='md block'>Behance</UnderlinedLink></li>
+                        <li className='list__item'><UnderlinedLink href='https://vimeo.com/user134146921' target='_blank' styling='md block'>Vimeo</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='mailto:richardfxr.art@gmail.com?subject=A%20Witty%20Title' target='_blank' styling='md block'>Email</UnderlinedLink></li>
                     </ul>
                 </div>
