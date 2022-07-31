@@ -1,0 +1,23 @@
+#settings {
+    #visual {
+        padding-bottom: var(--pad-6xl);
+        
+        .section {
+            &__main {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: var(--pad-xxxl);
+            }
+        }
+
+        .radioSelectors {
+            padding-bottom: var(--pad-lg);
+            border-bottom: solid var(--border-width) var(--clr-200);
+
+            &:last-child {
+                padding-bottom: 0;
+                border: none;
+            }
+        }
+    }
+}

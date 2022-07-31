@@ -11,6 +11,7 @@ import {ReactComponent as HomeIcon} from '../assets/SVGs/home.svg'
 import {ReactComponent as ProjectsIcon} from '../assets/SVGs/projects.svg'
 import {ReactComponent as AboutIcon} from '../assets/SVGs/about.svg'
 import {ReactComponent as InfoIcon} from '../assets/SVGs/info.svg'
+import {ReactComponent as SettingsIcon} from '../assets/SVGs/settings.svg'
 
 export default function Breadcrumbs() {
     const location = useLocation()
@@ -68,6 +69,7 @@ function BreadcrumbLink({ path, label, isCurrent }) {
             {path === "/projects" && <ProjectsIcon />}
             {path === "/about" && <AboutIcon />}
             {path === "/info" && <InfoIcon />}
+            {path === "/info" && <SettingsIcon />}
 
             {label}
         </Link>

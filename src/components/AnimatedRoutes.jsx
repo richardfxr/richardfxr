@@ -11,6 +11,7 @@ import Home from '../pages/Home'
 import Projects from '../pages/Projects'
 import About from '../pages/About'
 import Info from '../pages/Info'
+import Settings from "../pages/Settings"
 // secondary pages
 import Archive from '../pages/Archive'
 // project pages
@@ -25,6 +26,7 @@ export const routes = [
     {path: '/projects', element: () => <Projects />, title: 'Projects'},
     {path: '/about', element: () => <About />, title: 'About'},
     {path: '/info', element: () => <Info />, title: 'Info'},
+    {path: '/settings', element: () => <Settings />, title: 'Settings'},
 
     // secondary pages
     {path: '/projects/archive', element: () => <Archive />, title: 'Archive'},

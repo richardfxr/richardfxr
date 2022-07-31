@@ -16,6 +16,7 @@ import {ReactComponent as HomeIcon} from '../assets/SVGs/home.svg'
 import {ReactComponent as ProjectsIcon} from '../assets/SVGs/projects.svg'
 import {ReactComponent as AboutIcon} from '../assets/SVGs/about.svg'
 import {ReactComponent as InfoIcon} from '../assets/SVGs/info.svg'
+import {ReactComponent as SettingsIcon} from '../assets/SVGs/settings.svg'
 
 
 
@@ -90,7 +91,7 @@ export default function Navbar() {
                 <Logo className='logo'/>
                 <nav>
                     <ul ref={navUl} aria-label="main navigation">
-                        {routes.slice(0, 4).map(({ path, title }) => (
+                        {routes.slice(0, 5).map(({ path, title }) => (
                             <li key={path}><NavigationLink path={path} label={title} /></li>
                         ))}
                         <li className='magicLine' id="magicLineVrt" ref={magicLineVrt} aria-hidden="true"></li>
@@ -113,6 +114,7 @@ function NavigationLink({ path, label }) {
             {path === "/projects" && <ProjectsIcon />}
             {path === "/about" && <AboutIcon />}
             {path === "/info" && <InfoIcon />}
+            {path === "/settings" && <SettingsIcon />}
         </NavLink>
     )
 }
