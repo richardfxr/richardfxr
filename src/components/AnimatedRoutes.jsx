@@ -67,13 +67,15 @@ export const projects = [
         labels: ['Rhode Island School of Design'],
     },
     {
-        path: '/projects/something',
+        path: '/projects/pframe',
         element: () => <PFrame />,
         title: 'P-Frame',
-        image: {folder: 'test', fileName: 'P-Frame', alt: 'test image'},
+        image: {folder: 'PFrame', fileName: 'PFrame-thumbnail', alt: 'White headphones with dark gold accents.'},
         date: '2022-03',
         colors: [
-            {hex: '#f8d363', name: 'light mustard'},
+            {hex: '#ffffff', name: 'white'},
+            {hex: '#D3D2D0', name: 'silver'},
+            {hex: '#998460', name: 'dark gold'},
         ],
         media: ['Product design'],
         cardLabels: ['product design', 'CAD', 'RISD'],
