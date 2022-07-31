@@ -83,10 +83,14 @@ export const projects = [
 
 export default function AnimatedRoutes() {
     const location = useLocation()
-    
+
     useEffect(() => {
-        // scroll page to top on route change
-        window.scrollTo(0, 0);
+        const hash = location.hash
+
+        if (!hash) {
+            // scroll page to top on route change (if URL doesn't contain anchor)
+            window.scrollTo(0, 0);
+        }
     }, [location])
 
     return (

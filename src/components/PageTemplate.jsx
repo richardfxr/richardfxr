@@ -1,4 +1,7 @@
 // === IMPORTS ============================
+// React
+import { useEffect, useRef } from "react"
+import { useLocation } from 'react-router-dom'
 // Framer Motion
 import { motion } from "framer-motion"
 // Sass
@@ -56,6 +59,16 @@ export default function PageTemplate({ heading, id, children }) {
     const isMotionOK = useIsMotionOK()
     const { initialLoad, changeSetting } = useSettings()
 
+    const location = useLocation()
+    const page = useRef()
+    
+    useEffect(() => {
+        const hash = location.hash
+
+        // scroll to anchor if it exists in URL
+        if (hash && page.current.querySelector(hash)) page.current.querySelector(hash).scrollIntoView()
+    }, [location])
+
     return (
         <>
             <div className="navbar__separator">
@@ -67,6 +80,7 @@ export default function PageTemplate({ heading, id, children }) {
             </div>
             
             <motion.div 
+                ref={page}
                 key={heading}
                 variants={initialLoad ? (isMotionOK ? (isPortrait ? pageInitVarPortrait : pageInitVarLandscape) : pageInitVarLowMo) : pageNormVar}
                 className="pageWrapper"
