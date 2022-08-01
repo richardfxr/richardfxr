@@ -18,6 +18,8 @@ import Archive from '../pages/Archive'
 import Budgetty from '../pages/projects/Budgetty'
 import EggHolders from '../pages/projects/EggHolders'   
 import PFrame from '../pages/projects/PFrame'
+import Exploded1200D from "../pages/projects/Exploded1200D"
+import RISDSophomore from "../pages/projects/RISDSophomore"
 
 // === ROUTES =============================
 export const routes = [
@@ -82,6 +84,21 @@ export const projects = [
         media: ['Product design'],
         cardLabels: ['product design', 'CAD', 'RISD'],
         labels: ['Rhode Island School of Design', 'Computer-aided design'],
+    },
+    {
+        path: '/projects/exploded1200d',
+        element: () => <Exploded1200D />,
+        title: 'Exploded 1200D',
+        image: {folder: 'Exploded1200D', fileName: 'Exploded1200D-thumbnail', alt: 'White headphones with dark gold accents.'},
+        date: '2021-10',
+        colors: [
+            {hex: '#3B7F69', name: 'faded jade'},
+            {hex: '#B76F31', name: 'orange'},
+            {hex: '#28282A', name: 'black'},
+        ],
+        media: ['Model making'],
+        cardLabels: ['model', 'RISD'],
+        labels: ['Rhode Island School of Design'],
     },
 ]
 
