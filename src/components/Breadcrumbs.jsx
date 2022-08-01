@@ -69,7 +69,7 @@ function BreadcrumbLink({ path, label, isCurrent }) {
             {path === "/projects" && <ProjectsIcon />}
             {path === "/about" && <AboutIcon />}
             {path === "/info" && <InfoIcon />}
-            {path === "/info" && <SettingsIcon />}
+            {path === "/settings" && <SettingsIcon />}
 
             {label}
         </Link>
