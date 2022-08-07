@@ -24,7 +24,7 @@ export default function Budgetty() {
             <Section heading="Video" id="video">
                 <div className='videoContainer'>
                     <iframe src="https://player.vimeo.com/video/732265756?h=64c9c31e4e?dnt=1" frameBorder="0" allow="fullscreen; picture-in-picture" allowFullScreen></iframe>
-                </div><script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
             </Section>
 
             <Section heading="Interface" id="interface">

@@ -24,7 +24,7 @@ export default function Exploded1200D() {
             <Section heading="Video" id="video">
                 <div className='videoContainer'>
                     <iframe src="https://player.vimeo.com/video/640798865?h=85e6a6a4eb?dnt=1" frameBorder="0" allow="fullscreen; picture-in-picture" allowFullScreen></iframe>
-                </div><script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
             </Section>
 
             <Section heading="Parts Index" id="partsindex">
