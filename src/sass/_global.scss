@@ -172,12 +172,17 @@ p {
       margin-top: calc(-1 * var(--padRem-xs));
    }
 
+   &.md {
+      color: var(--clr-700);
+      font-size: var(--font-md);
+   }
+
    &.lg {
       color: var(--clr-700);
       font-size: var(--font-lg);
 
       // alignment compensation
-      margin-top: calc(-1 * var(--padRem-sm));
+      margin-top: calc(-1 * var(--padRem-xs));
    }
 
    &.bottom- {

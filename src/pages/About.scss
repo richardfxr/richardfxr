@@ -1,0 +1,262 @@
+@use '../sass/breakpoints' as *;
+
+#about {
+    // internal variables
+    --_clr-profileCard-1000: #000000;
+    --_clr-profileCard-800: #636363;
+    --_clr-profileCard-600: #999999;
+    --_clr-profileCard-100: #DFDFDF;
+    --_clr-profileCard-0: #FFFFFF;
+
+    --_profileCard-height: 20rem;
+    --_profileCard-code-height: 2.5rem;
+    --_profileCard-img-width: min(70%, 16rem);
+
+    --_profileCardButton-size: 3rem;
+
+    .profile {
+        position: relative;
+
+        padding-top: var(--section-pad-vrt);
+        padding-right: var(--section-pad-hrz);
+        padding-bottom: var(--pad-6xl);
+        padding-left: calc(var(--section-pad-hrz) + var(--section-side-width) + var(--pad-lg));
+
+        & > .separator {
+            position: absolute;
+            top: 0;
+            right: var(--section-pad-hrz);
+            left: var(--section-pad-hrz);
+        }
+        
+        .card {
+            grid-template-columns: repeat(auto-fit, minmax(calc(var(--twoCol-minWidth) - var(--pad-xxl)), 1fr));
+            align-items: stretch;
+            row-gap: calc(2 * var(--pad-xxl));
+            column-gap: var(--pad-xl);
+
+            min-height: var(--_profileCard-height);
+
+            padding: var(--pad-4xl) var(--pad-xxxl);
+            background-color: var(--_clr-profileCard-100);
+
+            .main {
+                display: grid;
+                grid-template-columns: 1fr var(--_profileCard-img-width);
+                align-items: center;
+
+                // negative margin to overwrite .card padding
+                margin: calc(-1 * var(--pad-xxxl))
+                        0
+                        calc(-1 * var(--pad-xxxl))
+                        calc(-1 * var(--pad-xxxl));
+
+                .code {
+                    display: grid;
+                    grid-template-columns: var(--_profileCard-code-height) 1fr;
+                    align-items: center;
+                    justify-items: start;
+
+                    height: calc(100% - 2 * var(--pad-xl));
+
+                    margin: var(--pad-xl) 0;
+
+                    background-color: var(--_clr-profileCard-0);
+
+                    .PDF417 {
+                        height: var(--_profileCard-code-height);
+
+                        transform: rotate(270deg) translateY(-175%);
+                    }
+
+                    p {
+                        font-weight: 600;
+                        color: var(--_clr-profileCard-1000);
+                        white-space: nowrap;
+                        transform: rotate(270deg) translateY(0.5rem);
+                    }
+                }
+            }
+
+            .text {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: var(--padRem-md);
+
+                p {
+                    color: var(--_clr-profileCard-1000);
+                    line-height: 1.25em;
+
+                    &.name {
+                        font-weight: 600;
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    flex-direction: row;
+                    gap: var(--padRem-xxxs);
+
+                    margin-top: auto;
+
+                    .profileCardButton {
+                        display: grid;
+                        align-items: center;
+                        justify-items: center;
+
+                        width: var(--_profileCardButton-size);
+                        height: var(--_profileCardButton-size);
+
+                        border: solid var(--border-width) var(--_clr-profileCard-600);
+                        border-radius: var(--bradius-round);
+
+                        transition: border-color var(--trans-standard);
+
+                        &:hover, &:focus, &:active {
+                            border-color: var(--_clr-profileCard-800);
+
+                            .profileCardLogo {
+                                fill: var(--_clr-profileCard-1000);
+                            }
+                        }
+                    }
+
+                    .profileCardLogo {
+                        display: block;
+                        fill: var(--_clr-profileCard-800);
+
+                        transition: fill var(--trans-standard);
+                    }
+
+                    #instagram {
+                        width: 50%;
+                    }
+
+                    #github {
+                        width: 55%;
+                    }
+
+                    #vimeo {
+                        width: 58%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-laptop) {
+    #about {
+        .profile {
+            padding-left: calc(var(--section-pad-hrz) + var(--section-side-width) + var(--pad-xxl));
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    #about {
+        .profile {
+            padding-left: var(--section-pad-hrz);
+
+            .card {
+                grid-template-columns: 1fr;
+                gap: var(--pad-xxl);
+                min-height: unset;
+
+                padding: 0 var(--pad-xl);
+
+                .main {
+                    grid-template-columns: 1fr;
+                    gap: var(--pad-lg);
+
+                    margin: 0;
+
+                    .code {
+                        grid-template-columns: 1fr;
+                        gap: var(--pad-sm);
+                        justify-items: center;
+
+                        height: unset;
+
+                        padding-bottom: var(--pad-4xl);
+                        margin: 0;
+
+                        .PDF417 {
+                            height: unset;
+                            width: min(80%, 15rem);
+                            transform: none;
+                        }
+
+                        p {
+                            font-size: var(--font-lg);
+                            transform: none;
+                        }
+                    }
+
+                    img {
+                        width: min(100%, 29rem);
+
+                        margin: 0 auto;
+                    }
+                }
+
+                .text {
+                    gap: var(--padRem-xl);
+                    padding-bottom: var(--pad-6xl);
+                    
+                    p {
+                        font-size: var(--font-lg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    #about {
+        .profile {
+            .card {
+                border: solid var(--border-width) CanvasText;
+
+                .main {
+                    .code {
+                        .PDF417 {
+                            fill: CanvasText;
+                        }
+                    }
+                }
+
+                .text {
+                    .buttons {
+                        .profileCardButton {
+                            &:hover .profileCardLogo, &:focus .profileCardLogo {
+                                fill: LinkText;
+                            }
+
+                            &:visited .profileCardLogo {
+                                fill: VisitedText;
+                            }
+
+                            &:active .profileCardLogo {
+                                fill: ActiveText;
+                            }
+                        }
+
+                        .profileCardLogo {
+                            fill: LinkText;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
