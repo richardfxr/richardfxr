@@ -1,6 +1,6 @@
 // === IMPORTS ============================
 // React
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useLocation } from 'react-router-dom'
 // Framer Motion
 import { motion } from "framer-motion"
@@ -61,13 +61,17 @@ export default function PageTemplate({ heading, id, children }) {
 
     const location = useLocation()
     const page = useRef()
+    const [loaded, setLoaded] = useState(false)
     
     useEffect(() => {
         const hash = location.hash
 
-        // scroll to anchor if it exists in URL
-        if (hash && page.current.querySelector(hash)) page.current.querySelector(hash).scrollIntoView()
-    }, [location])
+        // scroll to anchor if it exists in URL and if page is fully loaded with animations completed
+        if (hash && page.current.querySelector(hash) && loaded) {
+            page.current.querySelector(hash).scrollIntoView()
+            console.log("scrolled " + hash + " into view")
+        } 
+    }, [location, loaded])
 
     return (
         <>
@@ -87,7 +91,10 @@ export default function PageTemplate({ heading, id, children }) {
                 id={id}
                 initial="hidden"
                 animate="show"
-                onAnimationComplete={() => changeSetting('initialLoad', false)}>
+                onAnimationComplete={() => {
+                    changeSetting('initialLoad', false)
+                    setLoaded(true)
+                }}>
                 <Breadcrumbs />
                 <main id="main">
                     <PageHeading heading={heading} />
