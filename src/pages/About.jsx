@@ -1,10 +1,13 @@
 // === IMPORTS ============================
+// Framer Motion
+import { motion } from "framer-motion"
 // Sass
 import './About.scss'
 // components
 import PageTemplate from "../components/PageTemplate"
 import Separator from '../components/Separator'
 import Image from '../components/Image'
+import { sectionVar } from '../components/Section'
 // SVGs
 import {ReactComponent as RichardfxrPDF417} from '../assets/SVGs/PDF417-richardfxr.svg'
 import {ReactComponent as Instagram} from '../assets/SVGs/instagram.svg'
@@ -14,7 +17,14 @@ import {ReactComponent as Vimeo} from '../assets/SVGs/vimeo.svg'
 export default function About() {
     return (
         <PageTemplate heading="About" id="about">
-            <section className="profile" id='profile' aria-labelledby="heading">
+            <motion.section
+                className="profile"
+                id='profile'
+                aria-labelledby="heading"
+                variants={sectionVar}
+                initial="hidden"
+                animate="show"
+                exit="exit">
                 <Separator />
 
                 <article className='card twoCol'>
@@ -35,7 +45,7 @@ export default function About() {
                         <p className='md'>Maker of art – creator of designs – coder of websites – builder of computers – lover of keyboards – student of RISD.</p>
                     </div>
                 </article>
-            </section>
+            </motion.section>
         </PageTemplate>
     )
 }
