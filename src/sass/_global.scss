@@ -146,9 +146,12 @@ h2 {
 
 h3 {
    color: var(--clr-1000);
-   font-size: var(--font-md);
-   font-weight: 400;
+   font-size: var(--font-lg);
+   font-weight: 500;
    line-height: 1em;
+
+   // alignment compensation
+   margin-top: calc(-1 * var(--padRem-5xs));
 }
 
 p {
@@ -175,6 +178,16 @@ p {
 
       // alignment compensation
       margin-top: calc(-1 * var(--padRem-sm));
+   }
+
+   &.bottom- {
+      &xxxl {
+         padding-bottom: var(--pad-xxxl);
+      }
+
+      &4xl {
+         padding-bottom: var(--pad-4xl);
+      }
    }
 }
 

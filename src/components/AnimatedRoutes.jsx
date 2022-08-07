@@ -100,6 +100,20 @@ export const projects = [
         cardLabels: ['model', 'RISD'],
         labels: ['Rhode Island School of Design'],
     },
+    {
+        path: '/projects/RISDsophomore',
+        element: () => <RISDSophomore />,
+        title: 'RISD Sophomore',
+        image: {folder: 'RISDSophomore', fileName: 'RISDSophomore-thumbnail', alt: 'White headphones with dark gold accents.'},
+        date: '2021-09 to 2022-05',
+        colors: [
+            {hex: '#ffffff', name: 'white'},
+            {hex: '#9C7441', name: 'pale brown'},
+        ],
+        media: ['Graphite', 'Product design', 'Woodwork', 'Metalwork'],
+        cardLabels: ['product design', 'wood', 'metal', 'RISD'],
+        labels: ['Rhode Island School of Design'],
+    },
 ]
 
 export default function AnimatedRoutes() {
