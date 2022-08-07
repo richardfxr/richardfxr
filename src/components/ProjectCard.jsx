@@ -35,7 +35,7 @@ export default function ProjectCard({ image, path, title, colors, cardLabels }) 
                     </ul>
 
                     <ul className="projectCard__labels" aria-label="Labels">
-                        {cardLabels.slice(0, 3).map((label) => (
+                        {cardLabels.map((label) => (
                             <li key={label}><span className="sm">{label}</span></li>
                         ))}
                     </ul>
