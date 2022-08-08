@@ -188,7 +188,7 @@
     // SocialLink internal component
     .socialLink {
         // internal variables
-        --_logo-pad: 30%;
+        --_logo-inset: 30%;
         --_line1-main-bradius: 0;
         --_line1-before-bradius: 0;
         --_line1-after-bradius: 0;
@@ -217,8 +217,9 @@
                 height: 100%;
 
                 .SVGlogo {
+                    position: absolute;
+                    inset: var(--_logo-inset);
                     fill: var(--clr-800);
-                    padding: var(--_logo-pad);
 
                     transition: fill var(--trans-standard);
                 }
@@ -335,7 +336,7 @@
         }
 
         &#instagramSocialLink {
-            --_logo-pad: 30%;
+            --_logo-inset: 30%;
             --_line1-main-bradius: 2%;
             --_line1-before-bradius: 4%;
             --_line1-after-bradius: 10%;
@@ -344,7 +345,7 @@
         }
 
         &#githubSocialLink {
-            --_logo-pad: 29%;
+            --_logo-inset: 29%;
             --_line1-main-bradius: 6%;
             --_line1-before-bradius: 12%;
             --_line1-after-bradius: 20%;
@@ -353,11 +354,11 @@
         }
 
         &#behanceSocialLink {
-            --_logo-pad: 31%;
+            --_logo-inset: 31%;
         }
 
         &#vimeoSocialLink {
-            --_logo-pad: 31%;
+            --_logo-inset: 31%;
             --_line1-main-bradius: 6%;
             --_line1-before-bradius: 12%;
             --_line1-after-bradius: 20%;
