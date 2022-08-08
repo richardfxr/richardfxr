@@ -43,8 +43,8 @@ export default function Footer() {
                     <li className='list__item'><UnderlinedLink href='https://v9.richardfxr.com/' target='_blank' styling='md block'>Version 9</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='https://www.instagram.com/richardfxr/' target='_blank' styling='md block'>Instagram</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='https://github.com/richardfxr' target='_blank' styling='md block'>GitHub</UnderlinedLink></li>
-                        <li className='list__item'><UnderlinedLink href='https://www.behance.net/richardfxr' target='_blank' styling='md block'>Behance</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='https://vimeo.com/user134146921' target='_blank' styling='md block'>Vimeo</UnderlinedLink></li>
+                        <li className='list__item'><UnderlinedLink href='https://www.behance.net/richardfxr' target='_blank' styling='md block'>Behance</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='mailto:richardfxr.art@gmail.com?subject=A%20Witty%20Title' target='_blank' styling='md block'>Email</UnderlinedLink></li>
                     </ul>
                 </div>
@@ -57,7 +57,7 @@ export default function Footer() {
                     
                     <div className='text'>
                         <p className='xs'><UnderlinedLink href='https://github.com/richardfxr/richardfxr' target='_blank'>Open source code available on GitHub</UnderlinedLink></p>
-                        <p className='xs'>Designed by yours truly. Copyright © 2022 Xiangrui Fu. All rights reserved.</p>
+                        <p className='xs'>Designed and developed by yours truly. Copyright © 2022 Xiangrui Fu. All rights reserved.</p>
                     </div>
                 </div>
             </div>
