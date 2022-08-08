@@ -219,6 +219,7 @@
                 .SVGlogo {
                     position: absolute;
                     inset: var(--_logo-inset);
+                    width: calc(100% - 2 * var(--_logo-inset));
                     fill: var(--clr-800);
 
                     transition: fill var(--trans-standard);
