@@ -7,6 +7,7 @@ import Section from "../components/Section"
 import VersionBadge from '../components/VersionBadge'
 import ScrollContainer from '../components/ScrollContainer'
 import UnderlinedLink from '../components/UnderlinedLink'
+import Button from '../components/Button'
 
 
 export default function Info() {
@@ -23,6 +24,9 @@ export default function Info() {
 
             <Section heading="Accessibility" id="a11y">
                 <p className='lg first'>The primary goal of version 10 is to be <em>accessible</em>. From the titled SVG illustrations to the <UnderlinedLink to="/settings" styling="em">accessibility settings</UnderlinedLink>, this website was designed to fit the needs of as many people as possible. The site respects user settings such as font size and motion preference while allowing them to be overwritten if needed.</p>
+                <ul className='row md'>
+                    <li><Button href='https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility' target="_blank" styling="sm">What is accessibility?</Button></li>
+                </ul>
             </Section>
         </PageTemplate>
     )
