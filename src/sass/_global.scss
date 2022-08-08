@@ -107,6 +107,34 @@ ul, ol {
    }
 }
 
+.dlList {
+   row-gap: var(--pad-xxl);
+   & > div {
+      padding-bottom: var(--pad-xxl);
+      border-bottom: solid var(--border-width) var(--clr-200);
+   }
+
+   dt, dd {
+      font-size: var(--font-md);
+   }
+
+   dt {
+      color: var(--clr-700);
+      font-weight: 400;
+
+      // alignment compensation
+      margin-top: calc(-1 * var(--padRem-xxs));
+   }
+
+   dd {
+      color: var(--clr-1000);
+      font-weight: 500;
+
+      // alignment compensation
+      margin-bottom: calc(-1 * var(--padRem-xxs));
+   }
+}
+
 .project {
    &__colors {
       display: flex;

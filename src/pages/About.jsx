@@ -7,12 +7,15 @@ import './About.scss'
 import PageTemplate from "../components/PageTemplate"
 import Separator from '../components/Separator'
 import Image from '../components/Image'
+import Section from "../components/Section"
 import { sectionVar } from '../components/Section'
 // SVGs
 import {ReactComponent as RichardfxrPDF417} from '../assets/SVGs/PDF417-richardfxr.svg'
 import {ReactComponent as Instagram} from '../assets/SVGs/instagram.svg'
 import {ReactComponent as GitHub} from '../assets/SVGs/github.svg'
 import {ReactComponent as Vimeo} from '../assets/SVGs/vimeo.svg'
+import {ReactComponent as Behance} from '../assets/SVGs/behance.svg'
+import UnderlinedLink from "../components/UnderlinedLink"
 
 export default function About() {
     return (
@@ -46,6 +49,80 @@ export default function About() {
                     </div>
                 </article>
             </motion.section>
+
+            <Section heading="Principles" id="principles">
+                <p className="lg">
+                    I create things that are <em>functional, but never boring</em>. I believe design exists to communicate, to empower, and that is why my work focuses on <em>accessibility</em>. I do not sacrifice function in the name of style, but I do not see ornamentation as a crime. I love the balance of a well-kerned font, but more so, I love the look of an optically imperfect lens.
+                </p>
+            </Section>
+
+            <Section heading="Favorites" id="favorites">
+                <dl class="twoCol dlList">
+                    <div>
+                        <dt>Favorite color</dt>
+                        <dd id="favColor">#11D3E7</dd>
+                    </div>
+                    <div>
+                        <dt>Favorite decorative typeface</dt>
+                        <dd><UnderlinedLink href="https://www.behance.net/gallery/128589635/Sisteron-Typeface" target="_blank">Sisteron</UnderlinedLink></dd>
+                    </div>
+                    <div>
+                        <dt>Favorite website</dt>
+                        <dd><UnderlinedLink href="https://filippobello.com/" target="_blank">Filippo Bello</UnderlinedLink></dd>
+                    </div>
+                    <div>
+                        <dt>Favorite aircraft</dt>
+                        <dd><UnderlinedLink href="https://en.wikipedia.org/wiki/Concorde" target="_blank">Concorde</UnderlinedLink></dd>
+                    </div>
+                    <div>
+                        <dt>Favorite key switch</dt>
+                        <dd><UnderlinedLink href="https://www.google.com/search?q=boba+u4t" target="_blank">Gazzew Boba U4T</UnderlinedLink></dd>
+                    </div>
+                    <div>
+                        <dt>Favorite vintage lens</dt>
+                        <dd><UnderlinedLink href="https://alikgriffin.com/helios-44-2-review-king-character/" target="_blank">Helios 44-2 58mm f/2</UnderlinedLink></dd>
+                    </div>
+                    <div>
+                        <dt>Favorite cinematographer</dt>
+                        <dd><UnderlinedLink href="https://www.imdb.com/name/nm0292132/" target="_blank">Greig Fraser</UnderlinedLink></dd>
+                    </div>
+                    <div>
+                        <dt>Favorite film</dt>
+                        <dd><UnderlinedLink href="https://myanimelist.net/anime/35677/Liz_to_Aoi_Tori" target="_blank">Liz and the Blue Bird</UnderlinedLink></dd>
+                    </div>
+                </dl>
+            </Section>
+
+            <Section heading="Socials" id="socials">
+                <div className="twoCol" >
+                    <div className="fourCol">
+                        <SocialLink href="https://www.instagram.com/richardfxr/" name="Instagram" id="instagram" logo={<Instagram />} />
+                        <SocialLink href="https://github.com/richardfxr" name="GitHub" id="github" logo={<GitHub />} />
+                    </div>
+                    <div className="fourCol">
+                        <SocialLink href="https://vimeo.com/user134146921" name="Vimeo" id="vimeo" logo={<Vimeo />} />
+                        <SocialLink href="https://www.behance.net/richardfxr" name="Behance" id="behance" logo={<Behance />} />
+                    </div>
+                </div>
+            </Section>
         </PageTemplate>
+    )
+}
+
+
+
+// === INTERNAL COMPONENTS ================
+function SocialLink({ href, name, id, logo }) {
+    return (
+        <a href={href} id={id + 'SocialLink'} className="socialLink" target="_blank">
+            <div className="square">
+                <div className="logo">
+                    {logo}
+                    <div className="lines1" aria-hidden="true"></div>
+                    <div className="lines2" aria-hidden="true"></div>
+                </div>
+            </div>
+            <p>{name}</p>
+        </a>
     )
 }

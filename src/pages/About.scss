@@ -115,13 +115,13 @@
                         &:hover, &:focus, &:active {
                             border-color: var(--_clr-profileCard-800);
 
-                            .profileCardLogo {
+                            .SVGlogo {
                                 fill: var(--_clr-profileCard-1000);
                             }
                         }
                     }
 
-                    .profileCardLogo {
+                    .SVGlogo {
                         display: block;
                         fill: var(--_clr-profileCard-800);
 
@@ -141,6 +141,228 @@
                     }
                 }
             }
+        }
+    }
+
+    #principles, #favorites, #socials {
+        padding-bottom: var(--pad-6xl);
+    }
+
+    #favorites {
+        dt {
+            &::after {
+                content: ":";
+            }
+        }
+
+        #favColor {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            gap: var(--padRem-sm);
+            
+            &::before {
+                content: "";
+                display: block;
+                width: var(--font-md);
+                height: var(--font-md);
+
+                border: solid var(--border-width) var(--clr-1000);
+                border-radius: var(--bradius-round);
+
+                background-color: #11d3e7;
+            }
+        }
+    }
+
+    #socials {
+        .twoCol {
+            .fourCol {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+                gap: var(--pad-xl);
+            }
+        }
+    }
+
+    // SocialLink internal component
+    .socialLink {
+        // internal variables
+        --_logo-pad: 30%;
+        --_line1-main-bradius: 0;
+        --_line1-before-bradius: 0;
+        --_line1-after-bradius: 0;
+        --_line2-main-bradius: 0;
+        --_line2-before-bradius: 0;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        border: solid var(--border-width) var(--clr-200);
+
+        transition: border-color var(--trans-standard);
+
+        .square {
+            width: 100%;
+            position: relative;
+            // ensure it is a square
+            padding: 100% 0 0 0;
+
+            .logo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                .SVGlogo {
+                    fill: var(--clr-800);
+                    padding: var(--_logo-pad);
+
+                    transition: fill var(--trans-standard);
+                }
+
+                .lines1 {
+                    position: absolute;
+                    inset: 1.5%;
+                    border: solid var(--border-width) var(--clr-200);
+                    border-radius: var(--_line1-main-bradius);
+                    opacity: 1;
+
+                    transition: border-color var(--trans-standard),
+                                opacity var(--trans-standard);
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 2%;
+                        border: solid var(--border-width) var(--clr-200);
+                        border-radius: var(--_line1-before-bradius);
+
+                        transition: border-color var(--trans-standard),
+                                    opacity var(--trans-standard);
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        inset: 6%;
+                        border: solid var(--border-width) var(--clr-200);
+                        border-radius: var(--_line1-after-bradius);
+
+                        transition: border-color var(--trans-standard),
+                                    opacity var(--trans-standard);
+                    }
+                }
+
+                .lines2 {
+                    position: absolute;
+                    inset: 13%;
+                    border: solid var(--border-width) var(--clr-200);
+                    border-radius: var(--_line2-main-bradius);
+                    opacity: 1;
+
+                    transition: border-color var(--trans-standard),
+                                opacity var(--trans-standard);
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 8%;
+                        border: solid var(--border-width) var(--clr-200);
+                        border-radius: var(--_line2-before-bradius);
+
+                        transition: border-color var(--trans-standard),
+                                    opacity var(--trans-standard);
+                    }
+                }
+            }
+        }
+
+        p {
+            width: 100%;
+            font-weight: 700;
+            font-size: var(--font-md);
+            text-align: center;
+            text-transform: uppercase;
+
+            padding: var(--padRem-xs) var(--padRem-xxs);
+            border-top: solid var(--border-width) var(--clr-200);
+
+            transition: color var(--trans-standard),
+                        border-color var(--trans-standard);
+        }
+
+        &:hover, &:focus, &:focus-visible {
+            border-color: var(--clr-800);
+
+            .square .logo {
+                .SVGlogo {
+                    fill: var(--clr-1000);
+                }
+                
+                .lines1{
+                    border-color: var(--clr-800);
+                    opacity: 0.8;
+
+                    &::before {
+                        border-color: var(--clr-800);
+                        opacity: 0.8;
+                    }
+
+                    &::after {
+                        border-color: var(--clr-800);
+                        opacity: 0.6;
+                    }
+                }
+
+                .lines2{
+                    border-color: var(--clr-800);
+                    opacity: 0.4;
+
+                    &::before {
+                        border-color: var(--clr-800);
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            p {
+                color: var(--clr-1000);
+                border-color: var(--clr-800);
+            }
+        }
+
+        &#instagramSocialLink {
+            --_logo-pad: 30%;
+            --_line1-main-bradius: 2%;
+            --_line1-before-bradius: 4%;
+            --_line1-after-bradius: 10%;
+            --_line2-main-bradius: 18%;
+            --_line2-before-bradius: 25%;
+        }
+
+        &#githubSocialLink {
+            --_logo-pad: 29%;
+            --_line1-main-bradius: 6%;
+            --_line1-before-bradius: 12%;
+            --_line1-after-bradius: 20%;
+            --_line2-main-bradius: 32%;
+            --_line2-before-bradius: 50%;
+        }
+
+        &#behanceSocialLink {
+            --_logo-pad: 31%;
+        }
+
+        &#vimeoSocialLink {
+            --_logo-pad: 31%;
+            --_line1-main-bradius: 6%;
+            --_line1-before-bradius: 12%;
+            --_line1-after-bradius: 20%;
+            --_line2-main-bradius: 32%;
+            --_line2-before-bradius: 50%;
         }
     }
 }
@@ -219,6 +441,44 @@
 
 
 // === A11Y ===================================
+[data-contrast="high"] {
+    #about {
+        // internal variables
+        --_clr-profileCard-800: #292929;
+        --_clr-profileCard-600: #454545;
+        --_clr-profileCard-100: #DFDFDF;
+        --_clr-profileCard-0: #FFFFFF;
+
+        .socialLink .square .logo {
+            .lines1, .lines2 {
+                &, &::before, &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (prefers-contrast: more) {
+    [data-contrast="auto"] {
+        #about {
+            // internal variables
+            --_clr-profileCard-800: #292929;
+            --_clr-profileCard-600: #454545;
+            --_clr-profileCard-100: #DFDFDF;
+            --_clr-profileCard-0: #FFFFFF;
+            
+            .socialLink .square .logo {
+                .lines1, .lines2 {
+                    &, &::before, &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (forced-colors: active) {
     #about {
         .profile {
@@ -233,30 +493,60 @@
                     }
                 }
 
-                .text {
-                    .buttons {
-                        .profileCardButton {
-                            &:hover .profileCardLogo, &:focus .profileCardLogo {
-                                fill: LinkText;
-                            }
-
-                            &:visited .profileCardLogo {
-                                fill: VisitedText;
-                            }
-
-                            &:active .profileCardLogo {
-                                fill: ActiveText;
-                            }
-                        }
-
-                        .profileCardLogo {
+                .text .buttons {
+                    .profileCardButton {
+                        &:hover .SVGlogo, &:focus .SVGlogo {
                             fill: LinkText;
                         }
+
+                        &:visited .SVGlogo {
+                            fill: VisitedText;
+                        }
+
+                        &:active .SVGlogo {
+                            fill: ActiveText;
+                        }
+                    }
+
+                    .SVGlogo {
+                        fill: LinkText;
                     }
                 }
             }
 
             
+        }
+
+        #favorites {
+            #favColor {
+                &::before {
+                    border-color: CanvasText;
+                    forced-color-adjust: none;
+                }
+            }
+        }
+
+        .socialLink {
+            &, &:hover, &:focus, &:focus-visible {
+                .square .logo {
+                    .SVGlogo {
+                        fill: LinkText;
+                    }
+
+                    .lines1, .lines2 {
+                        // remove lines for less visual clutter
+                        display: none;
+                    }
+                }
+            }
+
+            &:visited .square .logo .SVGlogo {
+                fill: VisitedText;
+            }
+
+            &:active .square .logo .SVGlogo {
+                fill: ActiveText;
+            }
         }
     }
 }
