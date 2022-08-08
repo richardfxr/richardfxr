@@ -29,7 +29,8 @@
             &__main {
                 display: flex;
                 flex-flow: column nowrap;
-                gap: var(--pad-xl);
+                align-items: flex-start;
+                gap: var(--pad-xxl);
             }
         }
     }
