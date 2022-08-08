@@ -45,7 +45,7 @@ export default function Footer() {
                         <li className='list__item'><UnderlinedLink href='https://github.com/richardfxr' target='_blank' styling='md block'>GitHub</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='https://vimeo.com/user134146921' target='_blank' styling='md block'>Vimeo</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='https://www.behance.net/richardfxr' target='_blank' styling='md block'>Behance</UnderlinedLink></li>
-                        <li className='list__item'><UnderlinedLink href='mailto:richardfxr.art@gmail.com?subject=A%20Witty%20Title' target='_blank' styling='md block'>Email</UnderlinedLink></li>
+                        <li className='list__item'><UnderlinedLink href='mailto:theguy@richardfxr.com?subject=A%20Witty%20Title' target='_blank' styling='md block'>Email</UnderlinedLink></li>
                     </ul>
                 </div>
 

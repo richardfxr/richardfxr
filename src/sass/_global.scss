@@ -203,6 +203,9 @@ p {
    &.md {
       color: var(--clr-700);
       font-size: var(--font-md);
+
+      // alignment compensation
+      margin-top: calc(-1 * var(--padRem-xxs));
    }
 
    &.lg {

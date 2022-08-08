@@ -9,13 +9,15 @@ import Separator from '../components/Separator'
 import Image from '../components/Image'
 import Section from "../components/Section"
 import { sectionVar } from '../components/Section'
+import UnderlinedLink from "../components/UnderlinedLink"
+import Button from "../components/Button"
 // SVGs
 import {ReactComponent as RichardfxrPDF417} from '../assets/SVGs/PDF417-richardfxr.svg'
 import {ReactComponent as Instagram} from '../assets/SVGs/instagram.svg'
 import {ReactComponent as GitHub} from '../assets/SVGs/github.svg'
 import {ReactComponent as Vimeo} from '../assets/SVGs/vimeo.svg'
 import {ReactComponent as Behance} from '../assets/SVGs/behance.svg'
-import UnderlinedLink from "../components/UnderlinedLink"
+
 
 export default function About() {
     return (
@@ -104,6 +106,12 @@ export default function About() {
                         <SocialLink href="https://www.behance.net/richardfxr" name="Behance" id="behance" logo={<Behance />} />
                     </div>
                 </div>
+            </Section>
+
+            <Section heading="Contact" id="contact">
+                <p className="md">Have ideas for a project or just want to say hi? Message me on one of the <UnderlinedLink href="#socials" styling="em upArrow">above social platforms</UnderlinedLink> or email me.</p>
+                <p className="md status"><span className="red">Status</span> Not available for projects in the near future.</p>
+                <Button href='mailto:theguy@richardfxr.com?subject=A%20Witty%20Title' target="_blank" styling="sm">theguy@richardfxr.com</Button>
             </Section>
         </PageTemplate>
     )

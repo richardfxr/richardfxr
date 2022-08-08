@@ -144,7 +144,7 @@
         }
     }
 
-    #principles, #favorites, #socials {
+    #principles, #favorites, #socials, #contact {
         padding-bottom: var(--pad-6xl);
     }
 
@@ -181,6 +181,56 @@
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
                 gap: var(--pad-xl);
+            }
+        }
+    }
+
+    #contact {
+        .section {
+            &__main {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: flex-start;
+                gap: var(--pad-xxl);
+            }
+        }
+
+        .status {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            gap: var(--padRem-xxs);
+
+            // remove alignment compensation
+            margin-top: 0;
+
+            span {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                gap: var(--padRem-xxs);
+
+                color: var(--clr-0);
+                font-weight: 800;
+                font-size: var(--font-sm);
+                text-transform: uppercase;
+
+                padding: 0 var(--padRem-xs);
+                background-color: var(--clr-800);
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: var(--font-sm);
+                    height: var(--font-sm);
+
+                    border: solid var(--border-width) var(--clr-0);
+                    border-radius: var(--bradius-round);
+                }
+
+                &.red::after {
+                    background-color: red;
+                }
             }
         }
     }
@@ -548,6 +598,17 @@
 
             &:active .square .logo .SVGlogo {
                 fill: ActiveText;
+            }
+        }
+
+        #contact {
+            .status span {
+                border: solid var(--border-width) var(--clr-800);
+
+                &::after {
+                    border-color: CanvasText;
+                    forced-color-adjust: none;
+                }
             }
         }
     }

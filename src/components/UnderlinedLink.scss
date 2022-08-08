@@ -36,6 +36,10 @@
             content: " ↓";
             font-family: 'Inter', sans-serif;
         }
+
+        &.upArrow::after {
+            content: " ↑";
+        }
     }
 
     &.internal {
