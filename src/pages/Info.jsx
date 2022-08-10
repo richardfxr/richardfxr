@@ -26,6 +26,19 @@ export default function Info() {
                 <p className='lg first'>The primary goal of version 10 is to be <em>accessible</em>. From the titled SVG illustrations to the <UnderlinedLink to="/settings" styling="em">accessibility settings</UnderlinedLink>, this website was designed to fit the needs of as many people as possible. The site respects user settings such as font size and motion preference while allowing them to be overwritten if needed.</p>
                     <Button href='https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility' target="_blank" styling="sm">What is accessibility?</Button>
             </Section>
+
+            <Section heading="Typefaces" id="typefaces">
+                <div className='twoCol'>
+                    <article id='manrope'>
+                        <p className='md'><UnderlinedLink href="https://www.manropefont.com/" target="_blank" styling="em">Manrope</UnderlinedLink></p>
+                        <p className='xl'>{'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~'}</p>
+                    </article>
+                    <article id='inter'>
+                        <p className='md'><UnderlinedLink href="https://rsms.me/inter/" target="_blank" styling="em">Inter</UnderlinedLink></p>
+                        <p className='xl'>{'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~'}</p>
+                    </article>
+                </div>
+            </Section>
         </PageTemplate>
     )
 }

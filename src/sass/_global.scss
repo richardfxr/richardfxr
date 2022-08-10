@@ -216,6 +216,17 @@ p {
       margin-top: calc(-1 * var(--padRem-xs));
    }
 
+   &.xl {
+      color: var(--clr-700);
+      font-size: var(--font-xl);
+      line-height: 1.3em;
+   }
+
+   &.xxl {
+      color: var(--clr-700);
+      font-size: var(--font-xxl);
+   }
+
    &.bottom- {
       &xxxl {
          padding-bottom: var(--pad-xxxl);
