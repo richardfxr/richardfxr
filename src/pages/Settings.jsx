@@ -8,12 +8,19 @@ import RadioSelectors from '../components/RadioSelectors'
 // hooks
 import { useSettings } from '../hooks/useSettings'
 
+
+
+// === SECTIONS ===========================
+const sections = [
+    {heading: "Visual", id: "visual"},
+]
+
 export default function Settings() {
     const { colorScheme, contrast, motionPref, changeSetting } = useSettings()
 
     return (
         <PageTemplate heading="Settings" id="settings">
-            <Section heading="Visual" id="visual">
+            <Section sections={sections} index={0}>
                 <RadioSelectors
                         label="Color scheme:"
                         name="colorScheme"

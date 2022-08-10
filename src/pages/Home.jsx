@@ -13,10 +13,18 @@ import {ReactComponent as IllusArt} from '../assets/SVGs/home-art-illus.svg'
 import {ReactComponent as IllusDesign} from '../assets/SVGs/home-design-illus.svg'
 import {ReactComponent as IllusDev} from '../assets/SVGs/home-dev-illus.svg'
 
+
+
+// === SECTIONS ===========================
+const sections = [
+    {heading: "Introduction", id: "intro"},
+    {heading: "Selected Works", id: "works"}
+]
+
 export default function Home() {
     return (
         <PageTemplate heading="Hello" id="home">
-            <Section heading="Introduction" id="intro" first>
+            <Section sections={sections} index={0} first>
                 <ScrollContainer horizontal>
                     <ul className='row illus__list'>
                         <li className='illus__container'>
@@ -38,7 +46,7 @@ export default function Home() {
                 </ul>
             </Section>
 
-            <Section heading="Selected Works" id="works" noAni>
+            <Section sections={sections} index={1} noAni>
                 <ul className='twoCol cards'>
                     {projects.map((project) => (
                         <li key={project.path}><ProjectCard {...project} /></li>

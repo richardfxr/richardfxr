@@ -15,12 +15,12 @@ export const sectionVar = {
     exit: { opacity: 0, transition: { duration: 0.2 } },
 }
 
-export default function Section({ heading, id, noAni, first, children }) {
+export default function Section({ sections, index, noAni, first, children }) {
     return (
         <motion.section
             className="section"
-            id={id}
-            aria-labelledby={id + "__heading"}
+            id={sections[index].id}
+            aria-labelledby={sections[index].id + "__heading"}
             variants={noAni || first ? null : sectionVar}
             initial="hidden"
             animate="show"
@@ -33,7 +33,30 @@ export default function Section({ heading, id, noAni, first, children }) {
                 initial="hidden"
                 animate="show"
                 exit="exit">
-                <h2 id={id + "__heading"}>{heading}</h2>
+                <h2 id={sections[index].id + "__heading"}>{sections[index].heading}</h2>
+                <div className="skipLinks">
+                    {index !== 0 &&
+                        <a
+                            href={'#' + sections[index - 1].id}
+                            aria-label={'skip to previous section: ' + sections[index - 1].heading + "."}>
+                            ↑
+                        </a>
+                    }
+                    {index !== sections.length - 1 &&
+                        <a
+                            href={'#' + sections[index + 1].id}
+                            aria-label={'skip to next section: ' + sections[index + 1].heading + "."}>
+                            ↓
+                        </a>
+                    }
+                    {index === sections.length - 1 &&
+                        <a
+                            href='#footer'
+                            aria-label='skip to footer'>
+                            ↓
+                        </a>
+                    }
+                </div>
             </motion.div>
             
             <motion.div

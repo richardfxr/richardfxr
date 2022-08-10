@@ -11,6 +11,17 @@ import UnderlinedLink from '../../components/UnderlinedLink'
 import Separator from '../../components/Separator'
 import ProjectCard from '../../components/ProjectCard'
 
+
+
+// === SECTIONS ===========================
+const sections = [
+    {heading: "Design Principles 1", id: "dp1"},
+    {heading: "Wood 1", id: "wood1"},
+    {heading: "Design Principles 2", id: "dp2"},
+    {heading: "Metal 1", id: "metal1"},
+    {heading: "Related Works", id: "related"},
+]
+
 export default function RISDSophomore() {
     // project title
     const title = 'RISD Sophomore'
@@ -29,7 +40,7 @@ export default function RISDSophomore() {
                 A collection of projects I created during my sophomore year at RISD as an industrial design major. Most of these remain mere explorations, with more elaborate projects linked in the <UnderlinedLink href="#related">related works</UnderlinedLink> section below.
             </ProjectInfo>
 
-            <Section heading="Design Principles 1" id="dp1">
+            <Section sections={sections} index={0}>
                 <h3 id="freehandcubes">Freehand Cubes</h3>
                 <p className='lg bottom-xxxl'>A collection of cubes drawn in two-point perspectives without a ruler. Construction lines were drawn in blue while obscured edges are dotted. </p>
                 <Image folder="RISDSophomore" fileName="FreehandCubes-1" alt="Sketch of cubes in two-point perspective messily colliding into each other." />
@@ -54,7 +65,7 @@ export default function RISDSophomore() {
                 </div>
             </Section>
 
-            <Section heading="Wood 1" id="wood1">
+            <Section sections={sections} index={1}>
                 <h3 id="walnutdisc">Walnut Disc</h3>
                 <Image folder="RISDSophomore" fileName="WalnutDisc-1" alt="A thin, walnut saucer with both the top and bottom bulging outward. Its surface is smooth, showing faint reflections of the studio lights around it." />
                 <div className='twoCol'>
@@ -79,7 +90,7 @@ export default function RISDSophomore() {
                 </div>
             </Section>
 
-            <Section heading="Design Principles 2" id="dp2">
+            <Section sections={sections} index={2}>
                 <h3 id="thecreature">The Creature</h3>
                 <p className='lg bottom-xxxl'>A mechanic crab that crawls using <UnderlinedLink href="https://en.wikipedia.org/wiki/Klann_linkage" target="_blank" styling="em">Klann linkages</UnderlinedLink> connected to a turbine. This project was created in collaboration with <UnderlinedLink href="https://www.linkedin.com/in/josephine-hostin-500b441aa" target="_blank" styling="em">Josephine Hostin</UnderlinedLink> and <UnderlinedLink href="https://sahilbalani.myportfolio.com/" target="_blank" styling="em">Sahil Balani</UnderlinedLink>.</p>
                 <div className='videoContainer'>
@@ -87,7 +98,7 @@ export default function RISDSophomore() {
                 </div>
             </Section>
 
-            <Section heading="Metal 1" id="metal1">
+            <Section sections={sections} index={3}>
                 <h3 id="thecreature">Serpents</h3>
                 <p className='lg bottom-xxxl'>A pair of modular metal sculptures that can twist and bend like snakes. The first uses hinges to introduce movement while the second utilizes the play between the folded sheets of aluminum.</p>
                 <Image folder="RISDSophomore" fileName="Serpents-1" alt="A long sequence of modular triangular prisms made from tin sheets attached using hinges. These hinges allow for fluid movement in an otherwise solid object." />
@@ -103,7 +114,7 @@ export default function RISDSophomore() {
                 </div>
             </Section>
 
-            <Section heading="Related Works" id="related">
+            <Section sections={sections} index={4}>
             <p className='lg bottom-xxxl'>These are larger projects that were also created during my sophomore year at RISD.</p>
                 <ul className='twoCol cards'>
                     {relatedProjects.map((project) => (

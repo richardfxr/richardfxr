@@ -26,6 +26,9 @@ export default function Footer() {
 
             <div className='footer__side' >
                 <h2 id='footer__heading'>Footer</h2>
+                <div className="skipLinks">
+                    <a href='#main' aria-label='back to top'>⏏</a>
+                </div>
             </div>
             
             <div className='footer__main'>

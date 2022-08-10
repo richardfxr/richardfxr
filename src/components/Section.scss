@@ -1,6 +1,10 @@
 @use '../sass/breakpoints' as *;
 
 .section, .footer {
+    // internal variables
+    --_skipLink-width: calc(1.7 * var(--font-md));
+    --_skipLink-height: calc(1.7 * var(--font-md));
+
     display: grid;
     grid-template-columns: var(--section-side-width) 1fr;
     align-items: start;
@@ -24,14 +28,51 @@
         left: 0;
         min-width: 0px;
 
+        display: flex;
+        flex-direction: column;
+        gap: var(--padRem-sm);
+
         // top padding with alignment compensation
         padding-top: calc(var(--section-pad-vrt) - var(--padRem-5xs));
         // avoid overlapping separator
         margin-top: var(--border-width);
-    }
 
-    h2 {
-     }
+        .skipLinks {
+            display: flex;
+            flex-direction: row;
+            gap: var(--padRem-xxxs);
+
+            a {
+                display: grid;
+                align-items: center;
+                width: var(--_skipLink-width);
+                height: var(--_skipLink-height);    
+
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                font-size: var(--font-md);
+                text-align: center;
+
+                // alignment compensation
+                padding-top: var(--pad-6xs);
+                border: solid var(--border-width) var(--clr-200);
+                border-radius: var(--bradius-round);
+
+                transition: color var(--trans-standard),
+                            border-color var(--trans-standard);
+
+                &:hover, &:focus, &:active, &:focus-visible {
+                    color: var(--clr-1000);
+                    border-color: var(--clr-600);
+                }
+
+                &:focus-visible {
+                    outline: solid var(--outline-width) var(--clr-focus);
+                    outline-offset: calc(-1 * var(--border-width));
+                }
+            }
+        }
+    }
 
     &__main {
         position: relative;
@@ -51,15 +92,22 @@
     .section, .footer {
         gap: var(--pad-xxl);
 
-        h2 {
-            // make text vertical
-            writing-mode: vertical-rl;
-            overflow-wrap: normal;
-            white-space: nowrap;
+        &__side {
+            align-items: center;
 
-            // rotate 180 degress
-            transform: rotate(180deg);
-            
-        }
+            h2 {
+                // make text vertical
+                writing-mode: vertical-rl;
+                overflow-wrap: normal;
+                white-space: nowrap;
+
+                // rotate 180 degress
+                transform: rotate(180deg);
+            }
+
+            .skipLinks {
+                flex-direction: column;
+            }
+        }        
     }
 }

@@ -10,6 +10,16 @@ import UnderlinedLink from '../components/UnderlinedLink'
 
 
 
+// === SECTIONS ===========================
+const sections = [
+    {heading: "2022", id: "twentytwo"},
+    {heading: "2021", id: "twentyone"},
+    {heading: "2020", id: "twenty"},
+    {heading: "2019", id: "nineteen"},
+    {heading: "2018", id: "eighteen"},
+    {heading: "2017", id: "seventeen"},
+]
+
 // === ARCHIVE DATA =======================
 const archive2022 = [
     ['#', 'title', 'type'],
@@ -151,37 +161,37 @@ const archive2017 = [
 export default function Archive() {
     return (
         <PageTemplate heading="Archive" id="archive">
-            <Section heading="2022" id="2022" first>
+            <Section sections={sections} index={0} first>
                 <ScrollContainer horizontal>
                     <Table tableData={archive2022} caption="2022 Archive" indexed />
                 </ScrollContainer>
             </Section>
 
-            <Section heading="2021" id="2021">
+            <Section sections={sections} index={1}>
                 <ScrollContainer horizontal>
                     <Table tableData={archive2021} caption="2021 Archive" indexed />
                 </ScrollContainer>
             </Section>
 
-            <Section heading="2020" id="2020">
+            <Section sections={sections} index={2}>
                 <ScrollContainer horizontal>
                     <Table tableData={archive2020} caption="2020 Archive" indexed />
                 </ScrollContainer>
             </Section>
 
-            <Section heading="2019" id="2019">
+            <Section sections={sections} index={3}>
                 <ScrollContainer horizontal>
                     <Table tableData={archive2019} caption="2019 Archive" indexed />
                 </ScrollContainer>
             </Section>
 
-            <Section heading="2018" id="2018">
+            <Section sections={sections} index={4}>
                 <ScrollContainer horizontal>
                     <Table tableData={archive2018} caption="2018 Archive" indexed />
                 </ScrollContainer>
             </Section>
 
-            <Section heading="2017" id="2017">
+            <Section sections={sections} index={5}>
                 <ScrollContainer horizontal>
                     <Table tableData={archive2017} caption="2017 Archive" indexed />
                 </ScrollContainer>

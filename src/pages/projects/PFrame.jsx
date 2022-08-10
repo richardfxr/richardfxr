@@ -9,6 +9,14 @@ import Section from "../../components/Section"
 import Image from "../../components/Image"
 import UnderlinedLink from '../../components/UnderlinedLink'
 
+
+
+// === SECTIONS ===========================
+const sections = [
+    {heading: "Sketches", id: "sketches"},
+    {heading: "Renders", id: "renders"},
+]
+
 export default function PFrame() {
     // project title
     const title = 'P-Frame'
@@ -21,7 +29,7 @@ export default function PFrame() {
                 Creating complex, curved objects in a solid modeling software like <UnderlinedLink href="https://www.solidworks.com/" target="_blank">SolidWorks</UnderlinedLink> isn’t easy, but that didn’t stop me from modeling P-Frame – a pair of planar magnetic open-back headphones. This project was part of a RISD ID course taught by <UnderlinedLink href="https://www.risd.edu/academics/industrial-design/faculty/diau-hall" target="_blank">Diau Hall</UnderlinedLink>.
             </ProjectInfo>
 
-            <Section heading="Sketches" id="sketches">
+            <Section sections={sections} index={0}>
                 <Image folder="PFrame" fileName="PFrame-sketch-1" alt="Rough sketches of headphones defined by large, sweeping curves." />
                 <Image folder="PFrame" fileName="PFrame-sketch-2" alt="Rough sketches of more angular headphones with sharper edges." />
                 <div className='twoCol'>
@@ -30,7 +38,7 @@ export default function PFrame() {
                 </div>
             </Section>
 
-            <Section heading="Renders" id="renders">
+            <Section sections={sections} index={1}>
                 <Image folder="PFrame" fileName="PFrame-render-1" alt="Front view of the P-Frame. The thin profile of the frame contrasts with the thick earpads." />
                 <Image folder="PFrame" fileName="PFrame-render-2" alt="Bottom view of the P-Frame. The angled arms and tilted drivers make this view particularly interesting." />
                 <div className='twoCol'>

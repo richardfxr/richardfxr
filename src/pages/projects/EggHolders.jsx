@@ -10,6 +10,16 @@ import Image from "../../components/Image"
 import UnderlinedLink from '../../components/UnderlinedLink'
 import Separator from '../../components/Separator'
 
+
+
+// === SECTIONS ===========================
+const sections = [
+    {heading: "Sketches", id: "sketches"},
+    {heading: "EggHolder 1", id: "one"},
+    {heading: "EggHolder 5", id: "five"},
+    {heading: "EggHolder 9", id: "nine"},
+]
+
 export default function EggHolders() {
     // project title
     const title = 'EggHolders'
@@ -22,7 +32,7 @@ export default function EggHolders() {
                 As part of a form exploration, I created three egg holders based on various inspirations. This project was part of a RISD ID course taught by <UnderlinedLink styling="em" href="https://www.risd.edu/academics/industrial-design/faculty/joseph-napurano" target="_blank">Joseph Napurano</UnderlinedLink>.
             </ProjectInfo>
 
-            <Section heading="Sketches" id="sketches">
+            <Section sections={sections} index={0}>
                 <Image folder="EggHolders" fileName="EggHolders-sketch-1" alt="Line drawing of a wall of the John D. Rockefeller Jr. Library as seen from street level." />
                 <Image folder="EggHolders" fileName="EggHolders-sketch-2" alt="Line drawings of a corner of the John D. Rockefeller Jr. Library and its cantilevered second floor." />
                 <Image folder="EggHolders" fileName="EggHolders-sketch-3" alt="Line drawings of sections of a spine." />
@@ -31,7 +41,7 @@ export default function EggHolders() {
                 <Image folder="EggHolders" fileName="EggHolders-sketch-6" alt="Concept sketches of EggHolders 5 through 8. Five is a stack of bone-like shapes; six is a clip that holds onto the egg and prevents it from moving around; seven is a stack of cardboard with a cutout for the egg in the middle; eight is just a flat card that slots onto an egg." />
             </Section>
 
-            <Section heading="EggHolder 1" id="one">
+            <Section sections={sections} index={1}>
                 <p className='lg top'>
                     Inspiration:
                     <br /><UnderlinedLink href="https://en.wikipedia.org/wiki/John_D._Rockefeller_Jr._Library" target="_blank" styling="em">John D. Rockefeller Jr. Library</UnderlinedLink>, by <UnderlinedLink href="https://en.wikipedia.org/wiki/Danforth_Toan" target="_blank" styling="em">Danforth Toan</UnderlinedLink>.
@@ -50,7 +60,7 @@ export default function EggHolders() {
                 <Image folder="EggHolders" fileName="EggHolders-one-4" alt="Close-up of the top of EggHolder 1 as the fins branch out to form a space for the egg." />
             </Section>
 
-            <Section heading="EggHolder 5" id="five">
+            <Section sections={sections} index={2}>
                 <p className='lg top'>
                     Inspiration:
                     <br />Skeleton from the <UnderlinedLink href="https://naturelab.risd.edu/" target="_blank" styling="em">RISD Nature Lab</UnderlinedLink>.
@@ -66,7 +76,7 @@ export default function EggHolders() {
                 </div>
             </Section>
 
-            <Section heading="EggHolder 9" id="nine">
+            <Section sections={sections} index={3}>
                 <p className='lg top'>
                     Inspiration:
                     <br /><UnderlinedLink href="https://risdmuseum.org/art-design/collection/untitled-1986234" target="_blank" styling="em">Untitled</UnderlinedLink> by <UnderlinedLink href="https://en.wikipedia.org/wiki/Steven_Weinberg" target="_blank" styling="em">Steven Weinberg</UnderlinedLink>.

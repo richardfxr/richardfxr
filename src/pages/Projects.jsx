@@ -10,13 +10,20 @@ import Section from "../components/Section"
 import RadioSelectors from "../components/RadioSelectors"
 import ProjectCard from '../components/ProjectCard'
 
+
+
+// === SECTIONS ===========================
+const sections = [
+    {heading: "Works", id: "works"},
+]
+
 export default function Projects() {
     // states
     const [workFilter, setWorkFilter] = useState('all')
 
     return (
         <PageTemplate heading="Projects" id="projects">
-            <Section heading="Works" id="works" noAni>
+            <Section sections={sections} index={0} noAni>
                 <RadioSelectors
                     label="Filter:"
                     name="workFilter"

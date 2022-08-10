@@ -7,7 +7,15 @@ import PageTemplate from "../../components/PageTemplate"
 import ProjectInfo from "../../components/ProjectInfo"
 import Section from "../../components/Section"
 import Image from "../../components/Image"
-import UnderlinedLink from '../../components/UnderlinedLink'
+
+
+
+// === SECTIONS ===========================
+const sections = [
+    {heading: "Video", id: "video"},
+    {heading: "Interface", id: "interface"},
+    {heading: "Images", id: "images"},
+]
 
 export default function Budgetty() {
     // project title
@@ -21,13 +29,13 @@ export default function Budgetty() {
                 Budgetty is a standalone digital wallet that encourages more mindful spending habits in a world of abstract payment methods. I designed and animated the UI for the circular screen which users interact with through the surrounding dial.
             </ProjectInfo>
 
-            <Section heading="Video" id="video">
+            <Section sections={sections} index={0}>
                 <div className='videoContainer'>
                     <iframe src="https://player.vimeo.com/video/732265756?h=64c9c31e4e?dnt=1" frameBorder="0" allow="fullscreen; picture-in-picture" allowFullScreen></iframe>
                 </div>
             </Section>
 
-            <Section heading="Interface" id="interface">
+            <Section sections={sections} index={1}>
                 <ul className='threeCol'>
                     <li>
                         <figure>
@@ -98,7 +106,7 @@ export default function Budgetty() {
                 </ul>
             </Section>
 
-            <Section heading="Images" id="images">
+            <Section sections={sections} index={2}>
                 <div className='twoCol'>
                     <Image folder="Budgetty" fileName="Budgetty-exploded" alt='Exploded view of Budgetty. From top to bottom: input dial, circular screen, motherboard, motherboard screws, top cover, cover screws, bottom cover, and the wireless charger.' />
                     <Image folder="Budgetty" fileName="Budgetty-threeFloating" alt='Three Budgetty devices floating in mid-air, each displaying a different interface.' />
