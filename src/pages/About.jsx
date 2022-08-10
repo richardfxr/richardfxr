@@ -75,31 +75,31 @@ export default function About() {
                     </div>
                     <div>
                         <dt>Favorite decorative typeface</dt>
-                        <dd><UnderlinedLink href="https://www.behance.net/gallery/128589635/Sisteron-Typeface" target="_blank">Sisteron</UnderlinedLink></dd>
+                        <dd><UnderlinedLink href="https://www.behance.net/gallery/128589635/Sisteron-Typeface" target="_blank" styling="block">Sisteron</UnderlinedLink></dd>
                     </div>
                     <div>
                         <dt>Favorite website</dt>
-                        <dd><UnderlinedLink href="https://filippobello.com/" target="_blank">Filippo Bello</UnderlinedLink></dd>
+                        <dd><UnderlinedLink href="https://filippobello.com/" target="_blank" styling="block">Filippo Bello</UnderlinedLink></dd>
                     </div>
                     <div>
                         <dt>Favorite aircraft</dt>
-                        <dd><UnderlinedLink href="https://en.wikipedia.org/wiki/Concorde" target="_blank">Concorde</UnderlinedLink></dd>
+                        <dd><UnderlinedLink href="https://en.wikipedia.org/wiki/Concorde" target="_blank" styling="block">Concorde</UnderlinedLink></dd>
                     </div>
                     <div>
                         <dt>Favorite key switch</dt>
-                        <dd><UnderlinedLink href="https://www.google.com/search?q=boba+u4t" target="_blank">Gazzew Boba U4T</UnderlinedLink></dd>
+                        <dd><UnderlinedLink href="https://www.google.com/search?q=boba+u4t" target="_blank" styling="block">Gazzew Boba U4T</UnderlinedLink></dd>
                     </div>
                     <div>
                         <dt>Favorite vintage lens</dt>
-                        <dd><UnderlinedLink href="https://alikgriffin.com/helios-44-2-review-king-character/" target="_blank">Helios 44-2 58mm f/2</UnderlinedLink></dd>
+                        <dd><UnderlinedLink href="https://alikgriffin.com/helios-44-2-review-king-character/" target="_blank" styling="block">Helios 44-2 58mm f/2</UnderlinedLink></dd>
                     </div>
                     <div>
                         <dt>Favorite cinematographer</dt>
-                        <dd><UnderlinedLink href="https://www.imdb.com/name/nm0292132/" target="_blank">Greig Fraser</UnderlinedLink></dd>
+                        <dd><UnderlinedLink href="https://www.imdb.com/name/nm0292132/" target="_blank" styling="block">Greig Fraser</UnderlinedLink></dd>
                     </div>
                     <div>
                         <dt>Favorite film</dt>
-                        <dd><UnderlinedLink href="https://myanimelist.net/anime/35677/Liz_to_Aoi_Tori" target="_blank">Liz and the Blue Bird</UnderlinedLink></dd>
+                        <dd><UnderlinedLink href="https://myanimelist.net/anime/35677/Liz_to_Aoi_Tori" target="_blank" styling="block">Liz and the Blue Bird</UnderlinedLink></dd>
                     </div>
                 </dl>
             </Section>

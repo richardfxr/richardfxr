@@ -160,6 +160,9 @@
             flex-flow: row wrap;
             align-items: center;
             gap: var(--padRem-sm);
+
+            // add padding to behave like .link.block
+            padding: calc(3rem * (var(--targetSize-multiplier) - 1)) 0;
             
             &::before {
                 content: "";

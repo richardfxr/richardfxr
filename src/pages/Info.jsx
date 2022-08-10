@@ -38,11 +38,11 @@ export default function Info() {
             <Section sections={sections} index={2}>
                 <div className='twoCol'>
                     <article id='manrope'>
-                        <p className='md'><UnderlinedLink href="https://www.manropefont.com/" target="_blank" styling="em">Manrope</UnderlinedLink></p>
+                        <p className='md'><UnderlinedLink href="https://www.manropefont.com/" target="_blank" styling="em block">Manrope</UnderlinedLink></p>
                         <p className='xl'>{'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~'}</p>
                     </article>
                     <article id='inter'>
-                        <p className='md'><UnderlinedLink href="https://rsms.me/inter/" target="_blank" styling="em">Inter</UnderlinedLink></p>
+                        <p className='md'><UnderlinedLink href="https://rsms.me/inter/" target="_blank" styling="em block">Inter</UnderlinedLink></p>
                         <p className='xl'>{'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~'}</p>
                     </article>
                 </div>

@@ -93,7 +93,10 @@ ul, ol {
             .link {
                &.block {
                   // give block <UnderlinedLink /> extra vertical padding
-                  padding: var(--pad-sm) var(--pad-sm) var(--pad-sm) 0;
+                  padding: calc(var(--pad-sm) + var(--targetSize-pad-1rem))
+                           calc(var(--pad-sm) + var(--targetSize-pad-1rem))
+                           calc(var(--pad-sm) + var(--targetSize-pad-1rem))
+                           0;
                }
             }
          }

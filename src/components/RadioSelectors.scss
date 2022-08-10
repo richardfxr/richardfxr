@@ -90,7 +90,10 @@
 
         .main {
             label {
-                padding: var(--pad-5xs) var(--font-sm) calc(var(--pad-5xs) + 0.1rem) var(--font-sm);
+                padding: calc(var(--pad-5xs) + var(--targetSize-pad-1rem))
+                         calc(var(--font-sm) + var(--targetSize-pad-1rem))
+                         calc(var(--pad-5xs) + 0.1rem + var(--targetSize-pad-1rem))
+                         calc(var(--font-sm) + var(--targetSize-pad-1rem));
             }
         }
 
@@ -116,7 +119,10 @@
 
         .main {
             label {
-                padding: var(--pad-5xs) var(--font-sm) calc(var(--pad-5xs) + 0.1rem) var(--font-sm);
+                padding: calc(var(--pad-5xs) + var(--targetSize-pad-1rem))
+                         calc(var(--font-sm) + var(--targetSize-pad-1rem))
+                         calc(var(--pad-5xs) + 0.1rem + var(--targetSize-pad-1rem))
+                         calc(var(--font-sm) + var(--targetSize-pad-1rem));
             }
         }
 

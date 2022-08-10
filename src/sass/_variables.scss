@@ -49,6 +49,13 @@
    --pad-7xl: 110px;
    --pad-8xl: 140px;
 
+   --targetSize-multiplier: 1;
+   --targetSize-pad-1rem: calc(1rem * (var(--targetSize-multiplier) - 1));
+   --targetSize-pad-2rem: calc(2rem * (var(--targetSize-multiplier) - 1));
+   --targetSize-pad-3rem: calc(3rem * (var(--targetSize-multiplier) - 1));
+   --targetSize-pad-4rem: calc(4rem * (var(--targetSize-multiplier) - 1));
+   --targetSize-pad-5rem: calc(5rem * (var(--targetSize-multiplier) - 1));
+
    // === BORDER & OUTLINE ===================
    // border
    --border-width: 1.4px;                     // standard border width
@@ -212,4 +219,12 @@
    [data-motionPref="auto"] {
       --transTime-slowest-lowMo: 0s;
    }
+}
+
+[data-targetSize="medium"] {
+   --targetSize-multiplier: 1.15;
+}
+
+[data-targetSize="large"] {
+   --targetSize-multiplier: 1.35;
 }

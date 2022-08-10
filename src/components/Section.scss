@@ -3,7 +3,7 @@
 .section, .footer {
     // internal variables
     --_skipLink-width: calc(1.7 * var(--font-md));
-    --_skipLink-height: calc(1.7 * var(--font-md));
+    --_skipLink-height: calc(1.7 * var(--font-md) + var(--targetSize-pad-5rem));
 
     display: grid;
     grid-template-columns: var(--section-side-width) 1fr;

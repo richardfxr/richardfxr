@@ -61,6 +61,8 @@
 
         font-weight: 500;
 
+        padding: var(--targetSize-pad-3rem) 0;
+
         &:active {
             transform: var(--active-translateY-sm);
         }

@@ -42,13 +42,21 @@
             row-gap: var(--padRem-xxxl);
         }
 
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--padRem-sm);
+        }
+
         p {
-            &.md {
-                padding-bottom: var(--padRem-sm);
-            }
-            
             &.xl {
                 word-break: break-all;
+            }
+
+            .link {
+                // alignment compensation for when .link.block padding enlarges
+                margin-top: calc(-3rem * (var(--targetSize-multiplier) - 1));
             }
         }
 

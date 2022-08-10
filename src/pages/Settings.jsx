@@ -13,10 +13,11 @@ import { useSettings } from '../hooks/useSettings'
 // === SECTIONS ===========================
 const sections = [
     {heading: "Visual", id: "visual"},
+    {heading: "Interaction", id: "interaction"},
 ]
 
 export default function Settings() {
-    const { colorScheme, contrast, motionPref, changeSetting } = useSettings()
+    const { colorScheme, contrast, motionPref, targetSize, changeSetting } = useSettings()
 
     return (
         <PageTemplate heading="Settings" id="settings">
@@ -50,21 +51,36 @@ export default function Settings() {
                             { value: "default", label: "default" },
                             { value: "high", label: "high" },
                         ]} />
+            </Section>
+
+            <Section sections={sections} index={1}>
+                <RadioSelectors
+                    label="Motion:"
+                    name="motionPref"
+                    type="lg"
+                    desc="Determines the number of animations on the website. ‘Low’ will limit animations to just fade effects. ‘Auto’ will respect the system motion preference."
+                    value={motionPref}
+                    handler={changeSetting}
+                    setting='motionPref'
+                    radios={[
+                        { value: "auto", label: "auto" },
+                        { value: "full", label: "full" },
+                        { value: "low", label: "low" },
+                    ]} />
 
                 <RadioSelectors
-                        label="Motion:"
-                        name="motionPref"
-                        type="lg"
-                        desc="Determines the number of animations on the website. ‘Low’ will limit animations to just fade effects. ‘Auto’ will respect the system motion preference."
-                        forcedClr="This setting is currently overridden as forced colors are active."
-                        value={motionPref}
-                        handler={changeSetting}
-                        setting='motionPref'
-                        radios={[
-                            { value: "auto", label: "auto" },
-                            { value: "full", label: "full" },
-                            { value: "low", label: "low" },
-                        ]} />
+                    label="Button size:"
+                    name="targetSize"
+                    type="lg"
+                    desc="Determines the size of interactive elements like buttons, links, and radio selectors."
+                    value={targetSize}
+                    handler={changeSetting}
+                    setting='targetSize'
+                    radios={[
+                        { value: "small", label: "small" },
+                        { value: "medium", label: "medium" },
+                        { value: "large", label: "large" },
+                    ]} />
             </Section>
         </PageTemplate>
     )

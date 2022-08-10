@@ -24,7 +24,8 @@
     &.sm {
         font-size: var(--font-sm);
 
-        padding: var(--pad-xxs) calc(var(--font-sm) - 0.3rem + var(--pad-xxs));
+        padding: calc(var(--pad-xxs) + var(--targetSize-pad-1rem))
+                 calc((var(--font-sm) - 0.3rem + var(--pad-xxs)) + var(--targetSize-pad-2rem));
 
         &:active {
             transform: var(--active-translateY-sm);

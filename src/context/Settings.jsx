@@ -11,6 +11,7 @@ export const userSettings = [
     {name: 'colorScheme', default: 'auto'},
     {name: 'contrast', default: 'auto'},
     {name: 'motionPref', default: 'auto'},
+    {name: 'targetSize', default: 'small'},
 ]
 
 // initial settings object fed into useReducer() below
@@ -50,6 +51,14 @@ const settingsReducer = (state, action) => {
             // set data-colorScheme attribute
             document.documentElement.setAttribute('data-motionPref', action.payload)
             return { ...state, motionPref: action.payload }
+
+        case 'targetSize':
+            console.log('change motionPref to:', action.payload)
+            // store in local storage
+            localStorage.setItem('targetSize', action.payload)
+            // set data-targetSize attribute
+            document.documentElement.setAttribute('data-targetSize', action.payload)
+            return { ...state, targetSize: action.payload }
 
         default: 
             return state
