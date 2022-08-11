@@ -96,6 +96,7 @@ export default function Projects() {
                     <AnimatePresence initial={false}>
                         {shownProjects.map((project) => (
                             <Reorder.Item
+                                drag={false}
                                 key={project.path}
                                 value={project}
                                 variants={projectCardVar}
