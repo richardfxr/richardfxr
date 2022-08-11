@@ -10,6 +10,8 @@ import Section from "../components/Section"
 import RadioSelectors from "../components/RadioSelectors"
 import ProjectCard from '../components/ProjectCard'
 import { AnimatePresence, Reorder } from "framer-motion"
+// hooks
+import { useIsMotionOK } from "../hooks/useMediaQuery"
 
 
 
@@ -30,9 +32,13 @@ const sections = [
 export default function Projects() {
     // refs
     const workUl = useRef(null)
+
     // states
     const [workFilter, setWorkFilter] = useState('all')
     const [shownProjects, setShownProjects] = useState(projects)
+
+    // hooks
+    const isMotionOK = useIsMotionOK()
 
     useEffect(() => {
         // filter projects and update shownPorjects
@@ -95,7 +101,8 @@ export default function Projects() {
                                 variants={projectCardVar}
                                 initial="hidden"
                                 animate="show"
-                                exit="exit"><ProjectCard {...project} /></Reorder.Item>
+                                exit="exit"
+                                transition={isMotionOK ? null : { duration: 0 }}><ProjectCard {...project} /></Reorder.Item>
                         ))}
                     </AnimatePresence>
                 </Reorder.Group>
