@@ -62,7 +62,7 @@ export default function About() {
             </motion.section>
 
             <Section sections={sections} index={0}>
-                <p className="lg">
+                <p className="md">
                     I create things that are <em>functional, but never boring</em>. I believe design exists to communicate, to empower, and that is why my work focuses on <em>accessibility</em>. I do not sacrifice function in the name of style, but I do not see ornamentation as a crime. I love the balance of a well-kerned font, but more so, I love the look of an optically imperfect lens.
                 </p>
             </Section>

@@ -42,16 +42,14 @@ export default function EggHolders() {
             </Section>
 
             <Section sections={sections} index={1}>
-                <p className='lg top'>
-                    Inspiration:
-                    <br /><UnderlinedLink href="https://en.wikipedia.org/wiki/John_D._Rockefeller_Jr._Library" target="_blank" styling="em">John D. Rockefeller Jr. Library</UnderlinedLink>, by <UnderlinedLink href="https://en.wikipedia.org/wiki/Danforth_Toan" target="_blank" styling="em">Danforth Toan</UnderlinedLink>.
-                </p>
+                <p className='lg em'>Inspiration:</p>
+                <p className='md bottom-xxxl'><UnderlinedLink href="https://en.wikipedia.org/wiki/John_D._Rockefeller_Jr._Library" target="_blank" styling="em">John D. Rockefeller Jr. Library</UnderlinedLink>, by <UnderlinedLink href="https://en.wikipedia.org/wiki/Danforth_Toan" target="_blank" styling="em">Danforth Toan</UnderlinedLink>.</p>
                 <div className='twoCol'>
                     <Image folder="EggHolders" fileName="EggHolders-Rock-1" alt="A corner of the John D. Rockefeller Jr. Library. Large structural beams run vertically along its side while the cantilevered second floor juts out on both sides." />
                     <Image folder="EggHolders" fileName="EggHolders-Rock-2" alt="A wall of the John D. Rockefeller Jr. Library. The repeated vertical beams create a rather satisfying pattern that emphasizes the height of the library." />
                 </div>
                 <Separator />
-                <p className='lg middle'>Final model:</p>
+                <p className='lg em middle'>Final model:</p>
                 <Image folder="EggHolders" fileName="EggHolders-one-1" alt="EggHolder 1, a white cylindrical fin loft model, holding up an egg against a bright yellow background." />
                 <div className='twoCol'>
                     <Image folder="EggHolders" fileName="EggHolders-one-2" alt="Close-up front view of EggHolder 1." />
@@ -61,14 +59,12 @@ export default function EggHolders() {
             </Section>
 
             <Section sections={sections} index={2}>
-                <p className='lg top'>
-                    Inspiration:
-                    <br />Skeleton from the <UnderlinedLink href="https://naturelab.risd.edu/" target="_blank" styling="em">RISD Nature Lab</UnderlinedLink>.
-                </p>
+                <p className='lg em'>Inspiration:</p>
+                <p className='md bottom-xxxl'>Skeleton from the <UnderlinedLink href="https://naturelab.risd.edu/" target="_blank" styling="em">RISD Nature Lab</UnderlinedLink>.</p>
                 <Image folder="EggHolders" fileName="EggHolders-natureLab-1" alt="Side view of a segment of a skeleton hung from the ceiling of the RISD Nature Lab." />
                 <Image folder="EggHolders" fileName="EggHolders-natureLab-2" alt="Bottom view of a segment of a skeleton hung from the ceiling of the RISD Nature Lab." />
                 <Separator />
-                <p className='lg middle'>Final model:</p>
+                <p className='lg em middle'>Final model:</p>
                 <Image folder="EggHolders" fileName="EggHolders-five-1" alt="EggHolder 5, a matte silver plate-like model made of bone-like pieces, with an egg resting on it against a white background." />
                 <div className='twoCol'>
                     <Image folder="EggHolders" fileName="EggHolders-five-2" alt="Close-up of EggHolder 5’s back ridge formed by the bone-like pieces." />
@@ -77,13 +73,11 @@ export default function EggHolders() {
             </Section>
 
             <Section sections={sections} index={3}>
-                <p className='lg top'>
-                    Inspiration:
-                    <br /><UnderlinedLink href="https://risdmuseum.org/art-design/collection/untitled-1986234" target="_blank" styling="em">Untitled</UnderlinedLink> by <UnderlinedLink href="https://en.wikipedia.org/wiki/Steven_Weinberg" target="_blank" styling="em">Steven Weinberg</UnderlinedLink>.
-                </p>
+                <p className='lg em'>Inspiration:</p>
+                <p className='md bottom-xxxl'><UnderlinedLink href="https://risdmuseum.org/art-design/collection/untitled-1986234" target="_blank" styling="em">Untitled</UnderlinedLink> by <UnderlinedLink href="https://en.wikipedia.org/wiki/Steven_Weinberg" target="_blank" styling="em">Steven Weinberg</UnderlinedLink>.</p>
                 <Image folder="EggHolders" fileName="EggHolders-untitled-1" alt="Steven Weinberg’s untitled glass sculpture on display at the RISD Museum." />
                 <Separator />
-                <p className='lg middle'>Final model:</p>
+                <p className='lg em middle'>Final model:</p>
                 <Image folder="EggHolders" fileName="EggHolders-nine-1" alt="EggHolder 9, an incomplete cube made of stacked acrylic pieces, holding an egg against a salmon-colored background." />
                 <div className='twoCol'>
                     <Image folder="EggHolders" fileName="EggHolders-nine-2" alt="Front view of EggHolder 9 showing the engraved lines on each piece forming a wave that moves through the whole model." />

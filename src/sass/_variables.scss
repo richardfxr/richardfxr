@@ -211,6 +211,58 @@
 
 
 // === A11Y ===================================
+[data-fontSize="medium"] {
+   --font-xs: 1.15rem;
+   --font-sm: 1.3rem;
+   --font-md: 1.45rem;
+   --font-lg: 1.65rem;
+   --font-xl: 2.15rem;
+}
+
+[data-fontSize="large"] {
+   --font-xs: 1.3rem;
+   --font-sm: 1.45rem;
+   --font-md: 1.6rem;
+   --font-lg: 1.8rem;
+   --font-xl: 2.3rem;
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+   [data-fontSize="medium"] {
+      --font-xs: 1.05rem;
+      --font-sm: 1.25rem;
+      --font-md: 1.35rem;
+      --font-lg: 1.45rem;
+      --font-xl: 1.95rem;
+   }
+
+   [data-fontSize="large"] {
+      --font-xs: 1.2rem;
+      --font-sm: 1.4rem;
+      --font-md: 1.5rem;
+      --font-lg: 1.6rem;
+      --font-xl: 2.1rem;
+   }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+   [data-fontSize="medium"] {
+      --font-xs: 1rem;
+      --font-sm: 1.15rem;
+      --font-md: 1.3rem;
+      --font-lg: 1.45rem;
+      --font-xl: 1.9rem;
+   }
+
+   [data-fontSize="large"] {
+      --font-xs: 1.15rem;
+      --font-sm: 1.3rem;
+      --font-md: 1.45rem;
+      --font-lg: 1.6rem;
+      --font-xl: 2.05rem;
+   }
+}
+
 [data-motionPref="low"] {
    --transTime-slowest-lowMo: 0s;
 }

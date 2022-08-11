@@ -3,6 +3,7 @@
 .button {
     display: block;
 
+    word-break: break-word;
     color: var(--clr-800);
     border: solid var(--border-width) var(--clr-300);
     border-radius: var(--bradius-round);

@@ -10,6 +10,7 @@ export const SettingsContext = createContext()
 export const userSettings = [
     {name: 'colorScheme', default: 'auto'},
     {name: 'contrast', default: 'auto'},
+    {name: 'fontSize', default: 'small'},
     {name: 'motionPref', default: 'auto'},
     {name: 'targetSize', default: 'small'},
 ]
@@ -43,6 +44,14 @@ const settingsReducer = (state, action) => {
             // set data-colorScheme attribute
             document.documentElement.setAttribute('data-contrast', action.payload)
             return { ...state, contrast: action.payload }
+
+        case 'fontSize':
+            console.log('change fontSize to:', action.payload)
+            // store in local storage
+            localStorage.setItem('fontSize', action.payload)
+            // set data-colorScheme attribute
+            document.documentElement.setAttribute('data-fontSize', action.payload)
+            return { ...state, fontSize: action.payload }
 
         case 'motionPref':
             console.log('change motionPref to:', action.payload)

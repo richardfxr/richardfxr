@@ -38,7 +38,7 @@ export default function Exploded1200D() {
             </Section>
 
             <Section sections={sections} index={1}>
-                <p className='lg'>As part of the disassembly process, the <UnderlinedLink href="https://v9.richardfxr.com/1200d" target="_blank" styling="em">Canon EOS 1200D Parts Index</UnderlinedLink> was created to help me keep track of all the different components. Each component has a short description with links to relevant parts.</p>
+                <p className='md bottom-xxxl'>As part of the disassembly process, the <UnderlinedLink href="https://v9.richardfxr.com/1200d" target="_blank" styling="em">Canon EOS 1200D Parts Index</UnderlinedLink> was created to help me keep track of all the different components. Each component has a short description with links to relevant parts.</p>
                 <Image folder="Exploded1200D" fileName="Exploded1200D-partsIndex" alt="An iPad Pro displaying a list of parts from the camera." />
             </Section>
 

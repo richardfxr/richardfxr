@@ -42,7 +42,7 @@ export default function RISDSophomore() {
 
             <Section sections={sections} index={0}>
                 <h3 id="freehandcubes">Freehand Cubes</h3>
-                <p className='lg bottom-xxxl'>A collection of cubes drawn in two-point perspectives without a ruler. Construction lines were drawn in blue while obscured edges are dotted. </p>
+                <p className='md bottom-xxxl'>A collection of cubes drawn in two-point perspectives without a ruler. Construction lines were drawn in blue while obscured edges are dotted. </p>
                 <Image folder="RISDSophomore" fileName="FreehandCubes-1" alt="Sketch of cubes in two-point perspective messily colliding into each other." />
                 <Image folder="RISDSophomore" fileName="FreehandCubes-2" alt="Sketch of cubes in two-point perspective on four different horizon lines, forming a circular pattern that’s busiest in the center." />
                 <Image folder="RISDSophomore" fileName="FreehandCubes-3" alt="Sketch of cubes in two-point perspective on two different horizon lines, glitching into each other and becoming a complete mess." />
@@ -50,7 +50,7 @@ export default function RISDSophomore() {
                 <Separator />
 
                 <h3 id="115frenchpress">115° French Press</h3>
-                <p className='lg bottom-xxxl'>A redesign of the common french press with a twist – or should I say lean? The project also includes an operational sequence manual that is also cut at a 115° angle.</p>
+                <p className='md bottom-xxxl'>A redesign of the common french press with a twist – or should I say lean? The project also includes an operational sequence manual that is also cut at a 115° angle.</p>
                 <Image folder="RISDSophomore" fileName="115FrechPress-sketch-1" alt="40 thumbnail sketches of possible french press forms. These range from rather minimal cylinders to eccentric sculptural forms." />
                 <Image folder="RISDSophomore" fileName="115FrechPress-sketch-2" alt="Orthographic drawing of the chosen french press design. The press is slanted at a 115-degree angle, giving it a sense of movement without compromising balance." />
                 <Image folder="RISDSophomore" fileName="115FrechPress-1" alt="Back three-quarters view of the final French press model. The main container is made from layered Bristol paper and the handle is made of sheets of chipboard. " />
@@ -76,7 +76,7 @@ export default function RISDSophomore() {
                 <Separator />
 
                 <h3 id="twistedlofts">Twisted Lofts</h3>
-                <p className='lg bottom-xxxl'>A pair of wood projects inspired by the twisted lofts that CAD software like to create.</p>
+                <p className='md bottom-xxxl'>A pair of wood projects inspired by the twisted lofts that CAD software like to create.</p>
                 <Image folder="RISDSophomore" fileName="TwistedLofts-1" alt="A twisted hexagonal prism made of pine wood with a deep cavity at the top." />
                 <div className='twoCol'>
                     <Image folder="RISDSophomore" fileName="TwistedLofts-2" alt="Close-up of the sides of the pine piece. The carving marks on the surface add texture to the wood." />
@@ -92,7 +92,7 @@ export default function RISDSophomore() {
 
             <Section sections={sections} index={2}>
                 <h3 id="thecreature">The Creature</h3>
-                <p className='lg bottom-xxxl'>A mechanic crab that crawls using <UnderlinedLink href="https://en.wikipedia.org/wiki/Klann_linkage" target="_blank" styling="em">Klann linkages</UnderlinedLink> connected to a turbine. This project was created in collaboration with <UnderlinedLink href="https://www.linkedin.com/in/josephine-hostin-500b441aa" target="_blank" styling="em">Josephine Hostin</UnderlinedLink> and <UnderlinedLink href="https://sahilbalani.myportfolio.com/" target="_blank" styling="em">Sahil Balani</UnderlinedLink>.</p>
+                <p className='md bottom-xxxl'>A mechanic crab that crawls using <UnderlinedLink href="https://en.wikipedia.org/wiki/Klann_linkage" target="_blank" styling="em">Klann linkages</UnderlinedLink> connected to a turbine. This project was created in collaboration with <UnderlinedLink href="https://www.linkedin.com/in/josephine-hostin-500b441aa" target="_blank" styling="em">Josephine Hostin</UnderlinedLink> and <UnderlinedLink href="https://sahilbalani.myportfolio.com/" target="_blank" styling="em">Sahil Balani</UnderlinedLink>.</p>
                 <div className='videoContainer'>
                     <iframe src="https://player.vimeo.com/video/685289621?dnt=1" frameBorder="0" allow="fullscreen; picture-in-picture" allowFullScreen></iframe>
                 </div>
@@ -100,7 +100,7 @@ export default function RISDSophomore() {
 
             <Section sections={sections} index={3}>
                 <h3 id="thecreature">Serpents</h3>
-                <p className='lg bottom-xxxl'>A pair of modular metal sculptures that can twist and bend like snakes. The first uses hinges to introduce movement while the second utilizes the play between the folded sheets of aluminum.</p>
+                <p className='md bottom-xxxl'>A pair of modular metal sculptures that can twist and bend like snakes. The first uses hinges to introduce movement while the second utilizes the play between the folded sheets of aluminum.</p>
                 <Image folder="RISDSophomore" fileName="Serpents-1" alt="A long sequence of modular triangular prisms made from tin sheets attached using hinges. These hinges allow for fluid movement in an otherwise solid object." />
                 <div className='twoCol'>
                     <Image folder="RISDSophomore" fileName="Serpents-2" alt="Close-up of the triangular prisms. The folds and layers that result from their construction are visible." />
@@ -115,7 +115,7 @@ export default function RISDSophomore() {
             </Section>
 
             <Section sections={sections} index={4}>
-            <p className='lg bottom-xxxl'>These are larger projects that were also created during my sophomore year at RISD.</p>
+            <p className='md bottom-xxxl'>These are larger projects that were also created during my sophomore year at RISD.</p>
                 <ul className='twoCol cards'>
                     {relatedProjects.map((project) => (
                         <li key={project.path}><ProjectCard {...project} /></li>
