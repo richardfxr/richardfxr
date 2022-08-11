@@ -48,7 +48,7 @@ svg {
 
 .twoCol {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(var(--twoCol-minWidth), 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(var(--twoCol-minWidth), 1fr));
    align-items: start;
    gap: var(--pad-xl);
 
