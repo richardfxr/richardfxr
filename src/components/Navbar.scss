@@ -7,7 +7,7 @@
     --_link-pad: 26px;                // link padding
     --_link-width: 100%;              // width of the <a> that contain page icons
     --_link-height: calc((var(--_icon-size) + var(--_link-pad)) * var(--targetSize-multiplier)); // height of the <a> that contain page icons
-    --_icon-size: min(1.1rem, 33px);  // width & height of <Navbar /> icons
+    --_icon-size: min(calc(1.1rem + var(--fontSize-increase)), 33px);  // width & height of <Navbar /> icons
     --_indicator-length: min(calc(10px + 0.5rem), 25px);
 
     position: fixed;
@@ -214,7 +214,6 @@
         // internal variables
         --_logo-size: 29px;
         --_link-pad: 25px;                // link padding
-        --_icon-size: min(1.1rem, 33px); // width & height of <Navbar /> icons
     }
 }
 

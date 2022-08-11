@@ -56,6 +56,8 @@
    --targetSize-pad-4rem: calc(4rem * (var(--targetSize-multiplier) - 1));
    --targetSize-pad-5rem: calc(5rem * (var(--targetSize-multiplier) - 1));
 
+   --fontSize-increase: 0rem;
+
    // === BORDER & OUTLINE ===================
    // border
    --border-width: 1.4px;                     // standard border width
@@ -69,11 +71,11 @@
    --outline-width: 3px;
 
    // === TYPOGRAPHY =========================
-   --font-xs: 1rem;
-   --font-sm: 1.15rem;
-   --font-md: 1.3rem;
-   --font-lg: 1.5rem;
-   --font-xl: 2rem;
+   --font-xs: calc(1rem + var(--fontSize-increase));
+   --font-sm: calc(1.15rem + var(--fontSize-increase));
+   --font-md: calc(1.3rem + var(--fontSize-increase));
+   --font-lg: calc(1.5rem + var(--fontSize-increase));
+   --font-xl: calc(2rem + var(--fontSize-increase));
    --font-xxl: 7rem;
 
    // === TRANSFORMS =========================
@@ -143,11 +145,11 @@
       --bradius-xxl: 32px;                       // largest border radius for special corners
    
       // === TYPOGRAPHY =========================
-      --font-xs: 0.9rem;
-      --font-sm: 1.1rem;
-      --font-md: 1.2rem;
-      --font-lg: 1.3rem;
-      --font-xl: 1.8rem;
+      --font-xs: calc(0.9rem + var(--fontSize-increase));
+      --font-sm: calc(1.1rem + var(--fontSize-increase));
+      --font-md: calc(1.2rem + var(--fontSize-increase));
+      --font-lg: calc(1.3rem + var(--fontSize-increase));
+      --font-xl: calc(1.8rem + var(--fontSize-increase));
       --font-xxl: 5rem;
    }
 }
@@ -199,11 +201,11 @@
       --bradius-xxl: 30px;                       // largest border radius for special corners
 
       // === TYPOGRAPHY =========================
-      --font-xs: 0.85rem;
-      --font-sm: 1rem;
-      --font-md: 1.15rem;
-      --font-lg: 1.3rem;
-      --font-xl: 1.75rem;
+      --font-xs: calc(0.85rem + var(--fontSize-increase));
+      --font-sm: calc(1rem + var(--fontSize-increase));
+      --font-md: calc(1.15rem + var(--fontSize-increase));
+      --font-lg: calc(1.3rem + var(--fontSize-increase));
+      --font-xl: calc(1.75rem + var(--fontSize-increase));
       --font-xxl: 3.8rem;
    }
 }
@@ -212,55 +214,11 @@
 
 // === A11Y ===================================
 [data-fontSize="medium"] {
-   --font-xs: 1.15rem;
-   --font-sm: 1.3rem;
-   --font-md: 1.45rem;
-   --font-lg: 1.65rem;
-   --font-xl: 2.15rem;
+   --fontSize-increase: 0.15rem;
 }
 
 [data-fontSize="large"] {
-   --font-xs: 1.3rem;
-   --font-sm: 1.45rem;
-   --font-md: 1.6rem;
-   --font-lg: 1.8rem;
-   --font-xl: 2.3rem;
-}
-
-@media only screen and (max-width: $breakpoint-tablet) {
-   [data-fontSize="medium"] {
-      --font-xs: 1.05rem;
-      --font-sm: 1.25rem;
-      --font-md: 1.35rem;
-      --font-lg: 1.45rem;
-      --font-xl: 1.95rem;
-   }
-
-   [data-fontSize="large"] {
-      --font-xs: 1.2rem;
-      --font-sm: 1.4rem;
-      --font-md: 1.5rem;
-      --font-lg: 1.6rem;
-      --font-xl: 2.1rem;
-   }
-}
-
-@media only screen and (max-width: $breakpoint-mobile) {
-   [data-fontSize="medium"] {
-      --font-xs: 1rem;
-      --font-sm: 1.15rem;
-      --font-md: 1.3rem;
-      --font-lg: 1.45rem;
-      --font-xl: 1.9rem;
-   }
-
-   [data-fontSize="large"] {
-      --font-xs: 1.15rem;
-      --font-sm: 1.3rem;
-      --font-md: 1.45rem;
-      --font-lg: 1.6rem;
-      --font-xl: 2.05rem;
-   }
+   --fontSize-increase: 0.3rem;
 }
 
 [data-motionPref="low"] {

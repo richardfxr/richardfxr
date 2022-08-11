@@ -12,7 +12,8 @@
     --_profileCard-code-height: 2.5rem;
     --_profileCard-img-width: min(70%, 16rem);
 
-    --_profileCardButton-size: 3rem;
+    --_progileCardButton-iconSize: calc(1.5rem + var(--fontSize-increase));
+    --_profileCardButton-size: calc((var(--_progileCardButton-iconSize) + 1.5rem) * var(--targetSize-multiplier));
 
     .profile {
         position: relative;
@@ -129,15 +130,15 @@
                     }
 
                     #instagram {
-                        width: 50%;
+                        width: var(--_progileCardButton-iconSize);
                     }
 
                     #github {
-                        width: 55%;
+                        width: calc(1.1 * var(--_progileCardButton-iconSize));
                     }
 
                     #vimeo {
-                        width: 58%;
+                        width: calc(1.16 * var(--_progileCardButton-iconSize));
                     }
                 }
             }
