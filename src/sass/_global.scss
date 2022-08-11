@@ -112,7 +112,12 @@ ul, ol {
 
 .dlList {
    row-gap: var(--pad-xxl);
+
    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      
       padding-bottom: var(--pad-xxl);
       border-bottom: solid var(--border-width) var(--clr-200);
    }

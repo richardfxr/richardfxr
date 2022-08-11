@@ -147,8 +147,8 @@
 
             .main {
                 label {
-                    padding-right: calc(var(--font-md) - 0.3rem);
-                    padding-left: calc(var(--font-md) - 0.3rem);
+                    padding-right: calc(var(--font-md) - 0.3rem + var(--targetSize-pad-1rem));
+                    padding-left: calc(var(--font-md) - 0.3rem + var(--targetSize-pad-1rem));
                 }
             }
         }
@@ -161,8 +161,8 @@
 
             .main {
                 label {
-                    padding-right: calc(var(--font-md) - 0.3rem);
-                    padding-left: calc(var(--font-md) - 0.3rem);
+                    padding-right: calc(var(--font-md) - 0.3rem + var(--targetSize-pad-1rem));
+                    padding-left: calc(var(--font-md) - 0.3rem + var(--targetSize-pad-1rem));
                 }
             }
         }

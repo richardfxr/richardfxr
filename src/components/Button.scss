@@ -65,7 +65,8 @@
 @media only screen and (max-width: $breakpoint-mobile) {
     .button {
         &.sm {
-            padding: var(--pad-xs) calc(var(--font-sm) - 0.2rem + var(--pad-xs));
+            padding: calc(var(--pad-xs) + var(--targetSize-pad-1rem))
+                     calc(var(--font-sm) - 0.2rem + var(--pad-xs) + var(--targetSize-pad-2rem));
         }
     }
 }
