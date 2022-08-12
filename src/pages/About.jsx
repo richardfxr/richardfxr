@@ -47,7 +47,7 @@ export default function About() {
                             <RichardfxrPDF417 />
                             <p>(¬_¬)ﾉ</p>
                         </div>
-                        <Image folder="About" fileName="SelfPortrait" alt="Line drawing of a wall of the John D. Rockefeller Jr. Library as seen from street level." />
+                        <Image folder="About" fileName="SelfPortrait" alt="Graphite self-portrait. I’m an Asian male with short black hair wearing a pair of aviator-style glasses." />
                     </div>
                     <div className='text'>
                         <p className='md name'>Richard Fu</p>
