@@ -131,6 +131,20 @@ export default function AnimatedRoutes() {
             // scroll page to top on route change (if URL doesn't contain anchor)
             window.scrollTo(0, 0);
         }
+
+        // update <title>
+        if (location.pathname === '/') {
+            // special <title> for home page
+            document.title = "Richard Fu - Artist, Designer, & Developer"
+        } else if (routes.find(route => location.pathname === route.path)) {
+            const title = routes.find(route => location.pathname === route.path).title
+            document.title = title + " | Richard Fu"
+        } else if (projects.find(project => location.pathname === project.path)) {
+            const title = projects.find(project => location.pathname === project.path).title
+            document.title = title + " | Richard Fu"
+        } else  {
+            document.title = "Richard Fu"
+        }
     }, [location])
 
     return (
