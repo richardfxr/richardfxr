@@ -20,6 +20,9 @@ import EggHolders from '../pages/projects/EggHolders'
 import PFrame from '../pages/projects/PFrame'
 import Exploded1200D from "../pages/projects/Exploded1200D"
 import RISDSophomore from "../pages/projects/RISDSophomore"
+// hooks
+import { useSettings } from '../hooks/useSettings'
+import { useMediaQuery } from '../hooks/useMediaQuery'
 
 // === ROUTES =============================
 export const routes = [
@@ -123,6 +126,9 @@ export const projects = [
 
 export default function AnimatedRoutes() {
     const location = useLocation()
+    const { colorScheme, contrast } = useSettings()
+    const prefersDarkScheme = useMediaQuery('(prefers-color-scheme: dark)')
+    const prefersHighContrast = useMediaQuery('(prefers-contrast: more)')
 
     useEffect(() => {
         const hash = location.hash
@@ -146,6 +152,37 @@ export default function AnimatedRoutes() {
             document.title = "Richard Fu"
         }
     }, [location])
+
+    useEffect(() => {
+        // updated <meta color-theme> to the appropriate color
+        let contentColor = '#EDEDED'
+        let trueColorScheme = 'light'
+        let trueContrast = 'default'
+
+        // determine current color scheme
+        if (colorScheme === 'auto') {
+            prefersDarkScheme ? trueColorScheme = 'dark' : trueColorScheme = 'light'
+        } else {
+            trueColorScheme = colorScheme
+        }
+
+        // determine current contrast
+        if (contrast === 'auto') {
+            prefersHighContrast ? trueContrast = 'high' : trueContrast = 'default'
+        } else {
+            trueContrast = contrast
+        }
+
+        // determine content color
+        if (trueColorScheme === 'light') {
+            trueContrast === 'default' ? contentColor = '#EDEDED' : contentColor = '#FFFFFF'
+        } else {
+            trueContrast === 'default' ? contentColor = '#1A1A1A' : contentColor = '#000000'
+        }
+
+        // update <meta> with new content color
+        document.querySelector('meta[name="theme-color"]').setAttribute('content',  contentColor);
+    }, [colorScheme, contrast, prefersDarkScheme, prefersHighContrast])
 
     return (
         <AnimatePresence exitBeforeEnter>
