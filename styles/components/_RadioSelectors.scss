@@ -1,0 +1,183 @@
+@use '../breakpoints' as *;
+
+.radioSelectors {
+    display: flex;
+    flex-direction: column;
+
+    .label {
+        color: var(--clr-1000);
+    }
+
+    .forcedClr {
+        border: solid var(--border-width) var(--clr-200);
+        padding: var(--pad-sm);
+    }
+
+    .main {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: var(--pad-xxxs);
+
+        // botto padding for magic line
+        padding-bottom: var(--indicator-gap);
+
+        position: relative;
+
+        input {
+            &:focus-visible + label {
+                // show outline when keyboard focused
+                outline: solid var(--outline-width) var(--clr-focus);
+                outline-offset: calc(-1 * var(--outline-width));
+            }
+
+            &:checked + label {
+                color: var(--clr-1000);
+                border-color: var(--clr-1000);
+            }
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            cursor: pointer;
+
+            border: solid var(--border-width) var(--clr-200);
+            border-radius: var(--bradius-xs);
+
+            transition: color var(--trans-standard),
+                        border-color var(--trans-standard);
+
+            &:hover, &:focus {
+                color: var(--clr-1000);
+                border-color: var(--clr-600);
+            }
+        }
+
+        .magicLine {
+            position: absolute;
+            right: 0;
+            bottom: calc((var(--indicator-gap) - var(--indicator-thickness)) / 2);
+            left: 0;
+
+            width: var(--indicator-length);
+            height: var(--indicator-thickness);
+
+            border-radius: var(--bradius-round);
+            background-color: var(--clr-rblue);
+
+            // transition on transform change (set through JS)
+            transition: transform var(--transTime-slowest-lowMo) var(--transFunc-enhancedEase);
+        }
+    }    
+
+    &.inline {
+        display: block;
+
+        .scrollContainer {
+            align-items: center;
+        }
+
+        .label {
+            // bottom padding to center .label horizontally with radio inputs
+            padding-bottom: var(--indicator-gap);
+        }
+    }
+
+    &.sm {
+        .label, label {
+            font-size: var(--font-sm);
+        }
+
+        .main {
+            label {
+                padding: calc(var(--pad-5xs) + var(--targetSize-pad-1rem))
+                         calc(var(--font-sm) + var(--targetSize-pad-1rem))
+                         calc(var(--pad-5xs) + 0.1rem + var(--targetSize-pad-1rem))
+                         calc(var(--font-sm) + var(--targetSize-pad-1rem));
+            }
+        }
+
+        &.inline {
+            .label {
+                padding-right: var(--font-sm);  
+            }
+        }
+    }
+
+    &.lg {
+        gap: var(--pad-lg);
+
+        .label {
+            font-size: var(--font-lg);
+            // alignment compensation
+            margin-top: calc(-1 * var(--padRem-sm));
+        }
+
+        label {
+            font-size: var(--font-sm);
+        }
+
+        .main {
+            label {
+                padding: calc(var(--pad-5xs) + var(--targetSize-pad-1rem))
+                         calc(var(--font-sm) + var(--targetSize-pad-1rem))
+                         calc(var(--pad-5xs) + 0.1rem + var(--targetSize-pad-1rem))
+                         calc(var(--font-sm) + var(--targetSize-pad-1rem));
+            }
+        }
+
+        &.inline {
+            .label {
+                padding-right: var(--font-sm);  
+            }
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-mobile) {
+    .radioSelectors {
+        &.sm {
+            .label, label {
+                // enlarge font on mobile
+                font-size: var(--font-md);
+            }
+
+            .main {
+                label {
+                    padding-right: calc(var(--font-md) - 0.3rem + var(--targetSize-pad-1rem));
+                    padding-left: calc(var(--font-md) - 0.3rem + var(--targetSize-pad-1rem));
+                }
+            }
+        }
+
+        &.lg {
+            label {
+                // enlarge font on mobile
+                font-size: var(--font-md);
+            }
+
+            .main {
+                label {
+                    padding-right: calc(var(--font-md) - 0.3rem + var(--targetSize-pad-1rem));
+                    padding-left: calc(var(--font-md) - 0.3rem + var(--targetSize-pad-1rem));
+                }
+            }
+        }
+    }
+}
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .radioSelectors {
+        .main {
+            .magicLine {
+                background-color: CanvasText;
+            }
+        }
+    }
+ }
