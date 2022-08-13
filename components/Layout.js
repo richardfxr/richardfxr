@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 import { motion } from "framer-motion"
 // components
 import Breadcrumbs from './Breadcrumbs'
-// import PageHeading from "./PageHeading"
+import PageHeading from "./PageHeading"
 // import Footer from '../components/Footer'
 // hooks
 import { useIsPortrait, useIsMotionOK } from "../hooks/useMediaQuery"
@@ -96,7 +96,7 @@ export default function Layout({ heading, id, children }) {
                 }}>
                 <Breadcrumbs />
                 <main id="main">
-                    {/* <PageHeading heading={heading} /> */}
+                    <PageHeading heading={heading} />
                     {children}
                 </main>
                 {/* <Footer /> */}

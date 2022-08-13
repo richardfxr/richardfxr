@@ -1,0 +1,17 @@
+.pageHeading {
+    padding: var(--pad-xxxl)
+             var(--section-pad-hrz)
+             // alignment compensation
+             calc(var(--section-pad-vrt) - var(--padRem-md))
+             var(--section-pad-hrz);
+             
+    // negative margin for better alignment
+    margin-left: calc(-0.04 * var(--font-xxl));
+
+    overflow: hidden;
+
+    &__letter {
+        display: inline-block;
+        white-space: pre;
+    }
+}
