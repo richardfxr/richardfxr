@@ -1,0 +1,94 @@
+.scrollContainer {
+    // internal variables
+    --_scrollShadow-gradient: var(--clr-100) 0%, var(--clr-100-trans) 100%;
+
+    display: flex;
+
+    overflow: auto;
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+
+        opacity: 1;
+
+        transition: opacity var(--trans-standard);
+    }
+
+    &.vrt {
+        flex-flow: column nowrap;
+
+        &::before {
+            --_translateHide: translateY(calc(-1 * (var(--pad-lg) - var(--border-width))));
+
+            // -1px instead of 0 to avoid AA issues
+            top: -1px;
+            right: 0;
+            left: 0;
+
+            background: linear-gradient(180deg, var(--_scrollShadow-gradient));
+            height: var(--pad-lg);
+        }
+
+        &::after {
+            --_translateHide: translateY(var(--pad-lg) - var(--border-width));
+
+            // -1px instead of 0 to avoid AA issues
+            right: 0;
+            bottom: -1px;
+            left: 0;
+
+            background: linear-gradient(0deg, var(--_scrollShadow-gradient));
+            height: var(--pad-lg);
+        }
+    }
+
+    &.hrz {
+        flex-flow: row nowrap;
+
+        &::before {
+            --_translateHide: translateX(calc(-1 * (var(--pad-lg) - var(--border-width))));
+
+            // -1px instead of 0 to avoid AA issues
+            top: 0;
+            bottom: 0;
+            left: -1px;
+
+            background: linear-gradient(90deg, var(--_scrollShadow-gradient));
+            width: var(--pad-lg);
+        }
+
+        &::after {
+            --_translateHide: translateX(var(--pad-lg) - var(--border-width));
+            
+            // -1px instead of 0 to avoid AA issues
+            top: 0;
+            right: -1px;
+            bottom: 0;
+
+            background: linear-gradient(270deg, var(--_scrollShadow-gradient));
+            width: var(--pad-lg);
+        }
+    }
+
+    &.start::before, &.end::after {
+        // hide start scroll shadow
+        opacity: 0;
+
+        // move out of the way when hidden
+        transform: var(--_translateHide);
+
+        transition: opacity var(--trans-standard),
+                    transform 0s var(--transTime-standard);
+    }
+
+    .edgeDiv {
+        width: 0;
+    }
+}
