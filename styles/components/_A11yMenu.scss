@@ -1,0 +1,51 @@
+.a11yMenu {
+    // internal variables
+    --_button-padHrz: min(calc(var(--font-sm) - 0.3rem + var(--pad-xxs)), 35px); // horizontal padding for .button.sm
+
+    position: absolute;
+    top: calc(var(--pad-sm) + var(--border-width));
+    right: calc(var(--pad-sm) + var(--border-width));
+    left: calc(var(--nav-size) + var(--border-width));
+    z-index: 1000;
+
+    background-color: var(--clr-100);
+
+    padding: var(--pad-xs);
+    border-radius: calc(var(--bradius-xxl) - var(--border-width))
+                   calc(var(--bradius-sm) - var(--border-width))
+                   calc(var(--bradius-sm) - var(--border-width))
+                   calc(var(--bradius-sm) - var(--border-width));
+
+    transform: translateY(calc(-1 * (100% + var(--pad-sm))));
+    opacity: 0;
+
+    // delay transform transition to allow opacity fade to show on focus out
+    transition: opacity var(--trans-standard),
+                transform 0s var(--transTime-standard);
+
+    &:focus-within {
+        transform: translateY(0);
+        opacity: 1;
+
+        // no delay on transform transition on focus
+        transition: opacity var(--trans-standard);
+    }
+
+    .button {
+        &.sm {
+            padding-right: var(--_button-padHrz);
+            padding-left: var(--_button-padHrz);
+            // limit border radius to fit perfectly with --bradius-xxl regardless of size
+            border-radius: calc(var(--bradius-xxl) - var(--border-width) - var(--pad-xs));
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media (orientation: portrait) {
+    .a11yMenu {
+        left: calc(var(--pad-sm) + var(--border-width));
+    }
+}
