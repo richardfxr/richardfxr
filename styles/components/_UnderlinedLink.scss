@@ -1,0 +1,124 @@
+// === PROPERTIES =========================
+@property --underlineOffset {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 0;
+}
+
+.link {
+    // internal variables
+    --_outlineOffsetMin: 0.2em;
+    --_outlineOffsetMax: 0.4em;
+
+    text-decoration: underline transparent;
+    text-decoration-thickness: var(--border-width);
+    text-underline-offset: var(--underlineOffset, var(--_outlineOffsetMin));;
+
+    transition: color var(--trans-standard),
+                text-decoration-color var(--trans-standard),
+                --underlineOffset var(--trans-standard),
+                transform var(--trans-standard);
+
+    &:hover, &:focus {
+        --underlineOffset: var(--_outlineOffsetMax);
+        color: var(--clr-1000);
+        text-decoration-color: var(--clr-1000);
+    }
+
+    &:focus-visible {
+        color: var(--clr-1000);
+        outline: solid var(--outline-width) var(--clr-focus);
+        text-decoration-color: transparent;
+    }
+
+    &.page {
+        &::after {
+            content: " ↓";
+            font-family: 'Inter', sans-serif;
+        }
+
+        &.upArrow::after {
+            content: " ↑";
+        }
+    }
+
+    &.internal {
+        &::after {
+            content: " →";
+            font-family: 'Inter', sans-serif;
+        }
+    }
+
+    &.external {
+        &::after {
+            content: " ↗";
+            font-family: 'Inter', sans-serif;
+        }
+    }
+
+    &.block {
+        display: block;
+
+        font-weight: 500;
+
+        padding: var(--targetSize-pad-3rem) 0;
+
+        &:active {
+            transform: var(--active-translateY-sm);
+        }
+    }
+
+    &.em {
+        color: var(--clr-1000);
+    }
+
+    &.sm {
+        font-size: var(--font-sm);
+    }
+
+    &.md {
+        font-size: var(--font-md);
+    }
+}
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .link {
+        text-underline-offset: var(--_outlineOffsetMax);
+    }
+}
+
+[data-motionPref="low"] {
+    .link {
+        text-underline-offset: var(--_outlineOffsetMax);
+    }
+ }
+ 
+ @media (prefers-reduced-motion) {
+    [data-motionPref="auto"] {
+        .link {
+            text-underline-offset: var(--_outlineOffsetMax);
+        }
+    }
+ }
+
+
+
+// === SUPPORTS ===========================
+@supports not (background: paint(something)) {
+    .link {
+        // transition text-underline-offset instead of --underlineOffset in browsers that do not support the Paint API
+        text-underline-offset: var(--_outlineOffsetMin);
+
+        transition: color var(--trans-standard),
+                    text-decoration-color var(--trans-standard),
+                    text-underline-offset var(--trans-standard),
+                    transform var(--trans-standard);
+
+        &:hover, &:focus {
+            text-underline-offset: var(--_outlineOffsetMax);
+        }
+    }
+}

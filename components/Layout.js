@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 // Framer Motion
 import { motion } from "framer-motion"
 // components
-// import Breadcrumbs from './Breadcrumbs'
+import Breadcrumbs from './Breadcrumbs'
 // import PageHeading from "./PageHeading"
 // import Footer from '../components/Footer'
 // hooks
@@ -94,7 +94,7 @@ export default function Layout({ heading, id, children }) {
                     changeSetting('initialLoad', false)
                     setLoaded(true)
                 }}>
-                {/* <Breadcrumbs /> */}
+                <Breadcrumbs />
                 <main id="main">
                     {/* <PageHeading heading={heading} /> */}
                     {children}
