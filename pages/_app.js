@@ -1,4 +1,6 @@
 // === IMPORTS ============================
+// React
+import { useEffect } from 'react'
 // Next
 import { useRouter } from 'next/router'
 // Framer Motion
@@ -14,6 +16,11 @@ import { SettingsProvider } from '../context/Settings'
 
 function MyApp({ Component, pageProps }) {
     const router = useRouter()
+
+    useEffect(() => {
+        // scrolls page to top on page load (without hash)
+        if (!router.asPath.match(/#([a-z0-9]+)/gi )) window.scrollTo(0, 0)
+    }, [router.asPath])
 
     return (
         <SettingsProvider>

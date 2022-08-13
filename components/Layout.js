@@ -1,6 +1,6 @@
 // === IMPORTS ============================
 // React
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 // Next
 import { useRouter } from 'next/router'
 // Framer Motion
@@ -60,17 +60,14 @@ export default function Layout({ heading, id, children }) {
 
     const router = useRouter()
     const page = useRef()
-    const [loaded, setLoaded] = useState(false)
-    
-    // useEffect(() => {
-    //     const hash = location.hash
 
-    //     // scroll to anchor if it exists in URL and if page is fully loaded with animations completed
-    //     if (hash && page.current.querySelector(hash) && loaded) {
-    //         page.current.querySelector(hash).scrollIntoView()
-    //         console.log("scrolled " + hash + " into view")
-    //     } 
-    // }, [router, loaded])
+    useEffect(() => {
+        // scroll to anchor link if new route has a hash
+        let hash = router.asPath.match(/#([a-z0-9]+)/gi )
+        if (hash && page.current.querySelector(hash[0])) {
+            page.current.querySelector(hash[0]).scrollIntoView()
+        }
+    }, [router.asPath])
 
     return (
         <>
@@ -90,10 +87,7 @@ export default function Layout({ heading, id, children }) {
                 id={id}
                 initial="hidden"
                 animate="show"
-                onAnimationComplete={() => {
-                    changeSetting('initialLoad', false)
-                    setLoaded(true)
-                }}>
+                onAnimationComplete={() => changeSetting('initialLoad', false)}>
                 <Breadcrumbs />
                 <main id="main">
                     <PageHeading heading={heading} />
