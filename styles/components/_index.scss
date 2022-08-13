@@ -3,17 +3,20 @@
 
 
 // === FORWARD ================================
+@forward 'Layout';
+@forward 'Separator';
+@forward 'UnderlinedLink';
+@forward 'Button';
+@forward 'Section';
+@forward 'Footer';
+
 @forward 'A11yMenu';
 @forward 'Breadcrumbs';
-@forward 'Button';
-@forward 'Footer';
-@forward 'Layout';
+@forward 'Img';
 @forward 'Navbar';
 @forward 'PageHeading';
 @forward 'ProjectCard';
+@forward 'ProjectInfo';
 @forward 'RadioSelectors';
 @forward 'ScrollContainer';
-@forward 'Section';
-@forward 'Separator';
-@forward 'UnderlinedLink';
 @forward 'VersionBadge';
