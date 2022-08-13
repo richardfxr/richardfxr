@@ -1,13 +1,17 @@
 // === IMPORTS ============================
 // React
 import { useEffect } from 'react'
-// Framer Motion
-import { AnimatePresence } from "framer-motion"
 // components
 import UnderlinedLink from './UnderlinedLink'
 // hooks
 import { useSettings } from '../hooks/useSettings'
 import { userSettings } from '../context/Settings'
+// images
+import BudgettyThumb from '../public/images/Budgetty/Budgetty-thumbnail.jpg'
+import EggHolderThumb from '../public/images/EggHolders/EggHolders-thumbnail.jpg'
+import PFrameThumb from '../public/images/PFrame/PFrame-thumbnail.jpg'
+import Exploded1200DThumb from '../public/images/Exploded1200D/Exploded1200D-thumbnail.jpg'
+import RISDSophomoreThumb from '../public/images/RISDSophomore/RISDSophomore-thumbnail.jpg'
 
 
 
@@ -29,7 +33,11 @@ export const projects = [
     {
         path: '/projects/budgetty',
         title: 'Budgetty',
-        image: {folder: 'Budgetty', fileName: 'Budgetty-thumbnail', alt: 'Three white pentagonal electronic devices with circular screens on the top. Each screen is displaying information related to budgeting and spending habits.'},
+        image: {
+            img: BudgettyThumb,
+            layoutId: 'Budgetty-thumbnail',
+            alt: 'Three white pentagonal electronic devices with circular screens on the top. Each screen is displaying information related to budgeting and spending habits.'
+        },
         date: '2022-05',
         colors: [
             {hex: '#ffffff', name: 'white'},
@@ -48,7 +56,11 @@ export const projects = [
     {
         path: '/projects/eggholders',
         title: 'EggHolders',
-        image: {folder: 'EggHolders', fileName: 'EggHolders-thumbnail', alt: 'A white cylindrical fin loft model holding up an egg against a bright yellow background.'},
+        image: {
+            img: EggHolderThumb,
+            layoutId: 'EggHolders-thumbnail',
+            alt: 'A white cylindrical fin loft model holding up an egg against a bright yellow background.'
+        },
         date: '2022-03',
         colors: [
             {hex: '#f8d363', name: 'light mustard'},
@@ -63,7 +75,11 @@ export const projects = [
     {
         path: '/projects/pframe',
         title: 'P-Frame',
-        image: {folder: 'PFrame', fileName: 'PFrame-thumbnail', alt: 'White headphones with dark gold accents.'},
+        image: {
+            img: PFrameThumb,
+            layoutId: 'PFrame-thumbnail',
+            alt: 'White headphones with dark gold accents.'
+        },
         date: '2022-03',
         colors: [
             {hex: '#ffffff', name: 'white'},
@@ -78,7 +94,11 @@ export const projects = [
     {
         path: '/projects/exploded1200d',
         title: 'Exploded 1200D',
-        image: {folder: 'Exploded1200D', fileName: 'Exploded1200D-thumbnail', alt: 'Exploded model of a DSLR camera.'},
+        image: {
+            img: Exploded1200DThumb,
+            layoutId: 'Exploded1200D-thumbnail',
+            alt: 'Exploded model of a DSLR camera.'
+        },
         date: '2021-10',
         colors: [
             {hex: '#3B7F69', name: 'faded jade'},
@@ -93,7 +113,11 @@ export const projects = [
     {
         path: '/projects/RISDsophomore',
         title: 'RISD Sophomore',
-        image: {folder: 'RISDSophomore', fileName: 'RISDSophomore-thumbnail', alt: 'A french press model slanted at a 115-degree angle.'},
+        image: {
+            img: RISDSophomoreThumb,
+            layoutId: 'RISDSophomore-thumbnail',
+            alt: 'A french press model slanted at a 115-degree angle.'
+        },
         date: '2021-09 to 2022-05',
         colors: [
             {hex: '#ffffff', name: 'white'},
@@ -118,6 +142,6 @@ export default function AppWrapper({ children }) {
         })
     }, [])
 
-    return <AnimatePresence exitBeforeEnter>{children}</AnimatePresence>
+    return <>{children}</>
 
 }
