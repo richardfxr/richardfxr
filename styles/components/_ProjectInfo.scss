@@ -1,0 +1,79 @@
+@use '../breakpoints' as *;
+
+.projectInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pad-4xl);
+
+    padding-top: var(--pad-xl);
+    padding-bottom: var(--pad-6xl);
+    padding-left: calc(var(--section-side-width) + var(--pad-lg) + var(--section-pad-hrz));
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: var(--pad-xxl);
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        column-gap: var(--padRem-lg);
+        row-gap: var(--padRem-xxxs);
+    }
+
+    .project {
+        &__colors {
+            gap: var(--padRem-xxs);
+
+            padding-top: var(--pad-xxxs);
+
+            li, div {
+                padding: var(--padRem-xs);
+            }
+        }
+    }
+
+    .desc {
+        display: flex;
+        flex-direction: column;
+        gap: var(--padRem-xxxs);
+
+        // alignment compensation
+        margin-top: calc(-1 * var(--padRem-xxs));
+
+        #projectDescTitle, #projectDescText {
+            // remove alignment compensation
+            margin-top: 0;
+        }
+
+        #projectDescText {
+            color: var(--clr-1000);
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-tablet) {
+    .projectInfo {
+        grid-template-columns: 1fr;
+
+        & > div:first-of-type {
+            // <Image /> element
+            position: static;
+        }
+
+        dl {
+            // reset margins
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    .projectInfo {
+        padding-left: var(--section-pad-hrz);
+    }
+}
