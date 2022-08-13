@@ -11,10 +11,13 @@ module.exports = {
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
-      use: ['@svgr/webpack'],
-      options: {
-        svgo: false
-      }
+      use: {
+        loader: '@svgr/webpack',
+        options: {
+          svgo: false
+        },
+      },
+      
     })
 
     return config
