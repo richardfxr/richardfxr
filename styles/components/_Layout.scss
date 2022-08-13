@@ -1,0 +1,56 @@
+@use '../breakpoints' as *;
+
+.navbar__separator {
+    position: fixed;
+    top: var(--pad-xxl);
+    bottom: calc(var(--pad-xxl) + env(safe-area-inset-bottom));
+    left: calc((100% - min(100%, var(--max-width))) / 2 + var(--nav-size));
+    z-index: 1001;
+
+    width: var(--border-width);
+
+    background-color: var(--clr-200);
+
+    overflow: hidden;
+
+    hr {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        border: none;
+        margin: 0;
+
+        background-color: var(--clr-rblue);
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media (orientation: portrait) {
+    .navbar__separator {
+        top: unset;
+        right: var(--section-pad-hrz);
+        bottom: calc(var(--nav-size) + env(safe-area-inset-bottom));
+        left: var(--section-pad-hrz);
+    
+        width: unset;
+        height: var(--border-width);
+    }
+}
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .navbar__separator {
+        background-color: CanvasText;
+
+        hr {
+            background-color: ActiveText;
+        }
+    }
+}
