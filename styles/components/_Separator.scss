@@ -1,0 +1,23 @@
+@use '../breakpoints' as *;
+
+.separator {
+    position: relative;
+
+    height: var(--border-width);
+
+    border: none;
+    margin: 0;
+
+    background-color: var(--clr-200);
+
+    overflow: visible;
+}
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .separator {
+        background-color: CanvasText;
+    }
+}

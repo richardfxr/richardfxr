@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 // components
 import Breadcrumbs from './Breadcrumbs'
 import PageHeading from "./PageHeading"
-// import Footer from '../components/Footer'
+import Footer from '../components/Footer'
 // hooks
 import { useIsPortrait, useIsMotionOK } from "../hooks/useMediaQuery"
 import { useSettings } from "../hooks/useSettings"
@@ -99,7 +99,7 @@ export default function Layout({ heading, id, children }) {
                     <PageHeading heading={heading} />
                     {children}
                 </main>
-                {/* <Footer /> */}
+                <Footer />
             </motion.div>
         </>
         
