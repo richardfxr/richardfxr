@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 // Framer Motion
 import { motion } from "framer-motion"
 // components
-// import { routes } from './AnimatedRoutes'
+import { routes } from './AppWrapper'
 // hooks
 import { useIsMotionOK, useIsPortrait } from '../hooks/useMediaQuery'
 // SVGs
@@ -19,19 +19,6 @@ import InfoIcon from '../public/SVGs/info.svg'
 import SettingsIcon from '../public/SVGs/settings.svg'
 
 
-
-// === ROUTES =============================
-export const routes = [
-    // main pages (<Navbar /> only show first 4 objects)
-    {path: '/', element: () => <Home />, title: 'Home'},
-    {path: '/projects', element: () => <Projects />, title: 'Projects'},
-    {path: '/about', element: () => <About />, title: 'About'},
-    {path: '/info', element: () => <Info />, title: 'Info'},
-    {path: '/settings', element: () => <Settings />, title: 'Settings'},
-
-    // secondary pages
-    {path: '/projects/archive', element: () => <Archive />, title: 'Archive'},
-]
 
 
 
