@@ -120,7 +120,7 @@ function NavigationLink({ href, label }) {
     if (href === "/") isActive = router.pathname === "/"
 
     return (
-        <Link href={href}>
+        <Link href={href} scroll={false}>
             <a
                 id={href}
                 className={isActive ? 'active' : ''}

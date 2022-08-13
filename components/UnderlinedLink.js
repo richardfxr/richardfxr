@@ -1,6 +1,6 @@
 // === IMPORTS ============================
-// Next
-import Link from 'next/link'
+// components
+import NavLink from "./NavLink"
 
 export default function UnderlinedLink({ styling, href, target, to, click, children}) {
     if (href && target === '_blank') {
@@ -17,7 +17,7 @@ export default function UnderlinedLink({ styling, href, target, to, click, child
         )
     } else if (to) {
         return (
-            <Link href={to}><a className={"link internal " + styling}>{children}</a></Link>
+            <NavLink to={to} className={"link internal " + styling}>{children}</NavLink>
         )
     } else if (click) {
         return (
