@@ -1,0 +1,6 @@
+.img {
+    & > span {
+        // override Next.js inline styling
+        display: block !important;
+    }
+}

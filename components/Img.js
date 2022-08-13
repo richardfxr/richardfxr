@@ -20,6 +20,7 @@ export default function Img({ img, layoutId, alt, ani }) {
 
     return (
         <motion.div
+            className='img'
             layoutId={ani === 'layout' ? (isMotionOK ? layoutId : null) : null}
             transition={{ ease: [0.5, 0, 0.05, 1], duration: 0.5 }}
             variants={isMotionOK ? null : imageVarLowMo}
