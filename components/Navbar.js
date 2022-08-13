@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 // components
 // import { routes } from './AnimatedRoutes'
 // hooks
-// import { useIsMotionOK, useIsPortrait } from '../hooks/useMediaQuery'
+import { useIsMotionOK, useIsPortrait } from '../hooks/useMediaQuery'
 // SVGs
 import Logo from '../public/SVGs/logo.svg'
 import HomeIcon from '../public/SVGs/home.svg'
@@ -55,8 +55,8 @@ const navbarVarLowMo = {
 
 export default function Navbar() {
     const router = useRouter()
-    // const isPortrait = useIsPortrait()
-    // const isMotionOK = useIsMotionOK()
+    const isPortrait = useIsPortrait()
+    const isMotionOK = useIsMotionOK()
 
     // states
     const [width, setWidth] = useState()
@@ -81,28 +81,28 @@ export default function Navbar() {
         }
     }, [router.pathname, width, height])
 
-    // useEffect(() => {
-    //     // instantiating ResizeObserver
-    //     const fontSizeObserver = new ResizeObserver(entries => {
-    //         entries.forEach(entry => {
-    //             setWidth(entry.contentRect.width);
-    //             setHeight(entry.contentRect.height);
-    //         });
-    //     });
+    useEffect(() => {
+        // instantiating ResizeObserver
+        const fontSizeObserver = new ResizeObserver(entries => {
+            entries.forEach(entry => {
+                setWidth(entry.contentRect.width);
+                setHeight(entry.contentRect.height);
+            });
+        });
 
-    //     // observe selectorGroup
-    //     fontSizeObserver.observe(navUl.current)
+        // observe selectorGroup
+        fontSizeObserver.observe(navUl.current)
 
-    //     return function cleanup() {
-    //         // disconnet resize observer
-    //         fontSizeObserver.disconnect()
-    //     }
-    // }, [])
+        return function cleanup() {
+            // disconnet resize observer
+            fontSizeObserver.disconnect()
+        }
+    }, [])
 
     return (
         <div className="navbar">
             <motion.header
-                variants={navbarVarPortrait}
+                variants={isMotionOK ? (isPortrait ? navbarVarPortrait : navbarVarLandscape) : navbarVarLowMo}
                 initial="hidden"
                 animate="show">
                 <Logo className="logo"/>
