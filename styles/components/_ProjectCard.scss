@@ -1,0 +1,187 @@
+.projectCard {
+    position: relative;
+    z-index: 0;
+
+    &:hover, &:focus-within {
+        .projectCard__labels {
+            color: var(--clr-800);
+        }
+    }
+
+    & > div {
+        width: 100%;
+    }
+
+    &__link {
+        display: block;
+
+        &::after {
+            // allow <Link /> to cover all of card
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        &:hover, &:focus, &:active, &:focus-visible {
+            h3 {
+                &::after {
+                    transform: translateX(50%);
+                }
+            }
+        }
+
+        &:focus-visible {
+            &::after {
+                outline: solid var(--outline-width) var(--clr-focus);
+                outline-offset: var(--pad-4xs);
+            }
+        }
+
+        h3 {
+            position: relative;
+
+            font-size: var(--font-lg);
+            font-weight: 500;
+
+            padding: var(--pad-md) 0 calc(var(--pad-md) + var(--border-width)) 0;
+
+            // allows ::after line to move horizontally without exceeding bounds of card
+            overflow: hidden;
+            // force wrapping when <h3> overflows instead of incresing width of grid
+            overflow-wrap: anywhere;
+
+            &::after {
+                // gradient line below h3
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                
+                width: 200%;
+                height: var(--border-width);
+
+                background: linear-gradient(
+                                90deg,
+                                var(--clr-1000) 50%,
+                                var(--clr-200) 50%
+                            );
+                
+                transform: translateX(0%);
+
+                transition: transform var(--transTime-slow) ease;
+            }
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        column-gap: var(--pad-xs);
+
+        padding-top: var(--padRem-xs);
+    }
+
+    .project__colors {
+        gap: var(--padRem-xxxs);
+
+        li {
+            padding: var(--padRem-xxs);
+            margin: var(--padRem-xxs) 0;
+        }
+    }
+
+    &__labels {
+        display: flex;
+        flex-flow: row wrap;
+        column-gap: var(--padRem-xs);
+        row-gap: var(--padRem-xxxs);
+
+        font-size: var(--font-sm);
+        color: var(--clr-600);
+
+        transition: color var(--trans-standard);
+    }
+}
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .projectCard {
+        &__link {
+            h3 {
+                &::after {
+                    forced-color-adjust: none;
+                    background: linear-gradient(
+                                90deg,
+                                ActiveText 50%,
+                                CanvasText 50%
+                            );
+                }
+            }
+        }
+
+        .project__colors {
+            li {
+                forced-color-adjust: none;
+            }
+        }
+    }
+}
+
+[data-motionPref="low"] {
+    .projectCard {
+        &__link {
+            &:hover, &:focus, &:active, &:focus-visible {
+                h3 {
+                    &::after {
+                        transform: none;
+                        background: var(--clr-1000);
+                    }
+                }
+            }
+
+            h3 {                    
+                &::after {
+                    width: 100%;
+                    
+                    background: var(--clr-200);
+                    transform: none;
+                    transition: background-color var(--trans-standard);
+                }
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    [data-motionPref="auto"] {
+        .projectCard {
+            &__link {
+                &:hover, &:focus, &:active, &:focus-visible {
+                    h3 {
+                        &::after {
+                            transform: none;
+                            background: var(--clr-1000);
+                        }
+                    }
+                }
+    
+                h3 {                    
+                    &::after {
+                        width: 100%;
+
+                        background: var(--clr-200);
+                        transform: none;
+                        transition: background-color var(--trans-standard);
+                    }
+                }
+            }
+        }
+    }
+}
