@@ -1,4 +1,8 @@
 // === IMPORTS ============================
+// Next
+import { useRouter } from 'next/router'
+// Framer Motion
+import { AnimatePresence } from "framer-motion"
 // Sass
 import '../styles/_index.scss'
 // components
@@ -9,12 +13,16 @@ import Navbar from '../components/Navbar'
 import { SettingsProvider } from '../context/Settings'
 
 function MyApp({ Component, pageProps }) {
+    const router = useRouter()
+
     return (
         <SettingsProvider>
             <AppWrapper>
                 <A11yMenu />
                 <Navbar />
-                <Component {...pageProps} />
+                <AnimatePresence exitBeforeEnter>
+                   <Component {...pageProps} key={router.pathname} /> 
+                </AnimatePresence>
             </AppWrapper>
         </SettingsProvider>
     )
