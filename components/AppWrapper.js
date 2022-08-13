@@ -1,6 +1,8 @@
 // === IMPORTS ============================
 // React
 import { useEffect } from 'react'
+// Framer Motion
+import { AnimatePresence } from "framer-motion"
 // hooks
 import { useSettings } from '../hooks/useSettings'
 import { userSettings } from '../context/Settings'
@@ -32,6 +34,6 @@ export default function AppWrapper({ children }) {
         })
     }, [])
 
-    return <>{children}</>
+    return <AnimatePresence exitBeforeEnter>{children}</AnimatePresence>
 
 }
