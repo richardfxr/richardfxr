@@ -47,7 +47,7 @@ export const projects = [
         media: ['UI/UX design', 'Product design'],
         cardLabels: ['UI design', 'product design'],
         collaborators: [
-            <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank">Eduardo Zanforlin Mautner</UnderlinedLink>,
+            <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank" key="eduardo">Eduardo Zanforlin Mautner</UnderlinedLink>,
             'Leo Baek',
             'Sanghyuk Seo',
             'Sean Lee',

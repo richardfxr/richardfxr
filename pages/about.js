@@ -131,7 +131,7 @@ export default function About() {
 // === INTERNAL COMPONENTS ================
 function SocialLink({ href, name, id, logo }) {
     return (
-        <a href={href} id={id + 'SocialLink'} className="socialLink" target="_blank">
+        <a href={href} id={id + 'SocialLink'} className="socialLink" target="_blank" rel="noreferrer">
             <div className="square">
                 <div className="logo">
                     {logo}
