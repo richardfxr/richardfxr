@@ -2,6 +2,7 @@
 // React
 import { useEffect } from 'react'
 // Next
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 // Framer Motion
 import { AnimatePresence } from "framer-motion"
@@ -23,15 +24,31 @@ function MyApp({ Component, pageProps }) {
     }, [router.asPath])
 
     return (
-        <SettingsProvider>
-            <AppWrapper>
-                <A11yMenu />
-                <Navbar />
-                <AnimatePresence exitBeforeEnter>
-                   <Component {...pageProps} key={router.pathname} /> 
-                </AnimatePresence>
-            </AppWrapper>
-        </SettingsProvider>
+        <>
+            <Head>
+                <meta name="apple-mobile-web-app-title" content="richardfxr" />
+                <meta name="application-name" content="richardfxr" />
+                <meta name="msapplication-TileColor" content="#11d3e7" />
+                
+                <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png?v=10.1.0" />
+                <link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-chrome-192x192.png?v=10.1.0" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png?v=10.1.0" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png?v=10.1.0" />
+                <link rel="manifest" href="/favicons/site.webmanifest?v=10.1.0" />
+                <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg?v=10.1.0" color="#11d3e7" />
+                <link rel="shortcut icon" href="/favicons/favicon.ico?v=10.1.0" />
+            </Head>
+
+            <SettingsProvider>
+                <AppWrapper>
+                    <A11yMenu />
+                    <Navbar />
+                    <AnimatePresence exitBeforeEnter>
+                    <Component {...pageProps} key={router.pathname} /> 
+                    </AnimatePresence>
+                </AppWrapper>
+            </SettingsProvider>
+        </>
     )
 }
 
