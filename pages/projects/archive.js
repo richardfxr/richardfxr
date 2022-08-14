@@ -57,7 +57,7 @@ const archive2021 = [
 const archive2020 = [
     ['#', 'title', 'type'],
     [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#string-bound" target="_blank" key="stringbounc">线装 (String Bound)</UnderlinedLink>, 'book binding'],
-    [<UnderlinedLink href="https://v9.richardfxr.com/esc" target="_blank"><span className='inter' key="esc">⎋</span> esc</UnderlinedLink>, 'puzzle'],
+    [<UnderlinedLink href="https://v9.richardfxr.com/esc" target="_blank" key="esc"><span className='inter'>⎋</span> esc</UnderlinedLink>, 'puzzle'],
     [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#studio-ceiling" target="_blank" key="studioceiling">Studio Ceiling</UnderlinedLink>, 'marker'],
     [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#marker-still-life-1" target="_blank" key="markerstilllife1">Marker Still Life 1</UnderlinedLink>, 'marker'],
     [<UnderlinedLink href="https://v9.richardfxr.com/projects/efs#nick-117" target="_blank" key="nick117">NICK 117</UnderlinedLink>, 'graphite'],
