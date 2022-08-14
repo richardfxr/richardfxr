@@ -104,8 +104,9 @@ export default function Projects() {
                         values={shownProjects}
                         onReorder={setShownProjects}>
                         <AnimatePresence initial={false}>
-                            {shownProjects.map((project) => (
+                            {shownProjects.map((project, index) => (
                                 <Reorder.Item
+                                    id={index === 4 ? 'more' : null}
                                     drag={false}
                                     key={project.path}
                                     value={project}

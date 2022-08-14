@@ -57,10 +57,17 @@ export default function Home() {
 
                 <Section sections={sections} index={1} noAni>
                     <ul className='twoCol cards'>
-                        {projects.map((project) => (
+                        {projects.slice(0, 4).map((project) => (
                             <li key={project.path}><ProjectCard {...project} /></li>
                         ))}
                     </ul>
+                    <div id="moreWork">
+                        <p className='md'>You can find <em>more work</em> on the projects page or view an index of all my work in the archive.</p>
+                        <ul className='row md'>
+                            <li><Button to='/projects#more' styling="sm">Projects</Button></li>
+                            <li><Button to='/projects/archive' styling="sm">Archive</Button></li>
+                        </ul>
+                    </div>
                 </Section>
             </Layout>
         </>
