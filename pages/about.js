@@ -52,9 +52,9 @@ export default function About() {
                     <div className='text'>
                         <p className='md name'>Richard Fu</p>
                         <ul className='buttons'>
-                            <li><a href="https://www.instagram.com/richardfxr/" target="_blank" className='profileCardButton' aria-label="Instagram"><Instagram /></a></li>
-                            <li><a href="https://github.com/richardfxr" target="_blank" className='profileCardButton' aria-label="GitHub"><GitHub /></a></li>
-                            <li><a href="https://vimeo.com/user134146921" target="_blank" className='profileCardButton' aria-label="Vimeo"><Vimeo /></a></li>
+                            <li><a href="https://www.instagram.com/richardfxr/" target="_blank" rel="noreferrer" className='profileCardButton' aria-label="Instagram"><Instagram /></a></li>
+                            <li><a href="https://github.com/richardfxr" target="_blank" rel="noreferrer" className='profileCardButton' aria-label="GitHub"><GitHub /></a></li>
+                            <li><a href="https://vimeo.com/user134146921" target="_blank" rel="noreferrer" className='profileCardButton' aria-label="Vimeo"><Vimeo /></a></li>
                         </ul>
                         <p className='md'>Maker of art – creator of designs – coder of websites – builder of computers – lover of keyboards – student of RISD.</p>
                     </div>
