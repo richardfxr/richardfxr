@@ -170,7 +170,7 @@ export default function Archive() {
             <Layout heading="Archive" id="archive">
                 <Section sections={sections} index={0} first>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2022} caption="2022 Archive" indexed />
+                        <Table tableData={archive2022} caption="2022 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
