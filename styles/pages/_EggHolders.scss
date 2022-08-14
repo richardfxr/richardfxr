@@ -1,0 +1,19 @@
+#eggholders {
+    .section {
+        padding-bottom: var(--pad-6xl);
+        
+        &__main {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: var(--pad-xl);
+
+            .separator {
+                margin-top: var(--pad-4xl);
+            }
+
+            .middle {
+                padding-top: calc(var(--section-pad-vrt) - var(--pad-xl));
+            }
+        }        
+    }
+}
