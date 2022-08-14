@@ -81,7 +81,7 @@ const archive2020 = [
     ['RISD AS-1', 'digital illustration'],
     [<UnderlinedLink href="https://www.instagram.com/p/B_ne9W6Dhxz/" target="_blank">Lumina Design paper</UnderlinedLink>, 'print design'],
     [<UnderlinedLink href="https://v9.richardfxr.com/projects/lumina" target="_blank">Lumina Design</UnderlinedLink>, 'UI design'],
-    [<UnderlinedLink href="https://www.instagram.com/p/B-dODDEjOZs/" target="_blank">April Fools' joke</UnderlinedLink>, 'UI design'],
+    [<UnderlinedLink href="https://www.instagram.com/p/B-dODDEjOZs/" target="_blank">April Fools&apos; joke</UnderlinedLink>, 'UI design'],
 ]
 
 const archive2019 = [
@@ -112,7 +112,7 @@ const archive2018 = [
     [<UnderlinedLink href="https://www.instagram.com/p/BiK8RRMhn4L/" target="_blank">personal rebranding</UnderlinedLink>, 'branding'],
     [<UnderlinedLink href="https://www.instagram.com/p/BhpU5S0hYk1/" target="_blank">BUA prom tuck case</UnderlinedLink>, 'graphic design'],
     [<UnderlinedLink href="https://www.instagram.com/p/BhkIi9LhtYK/" target="_blank">Rhett redesign</UnderlinedLink>, 'graphic design'],
-    [<UnderlinedLink href="https://www.instagram.com/p/BhCPP-3jdJF/" target="_blank">April Fools' joke</UnderlinedLink>, 'graphic design'],
+    [<UnderlinedLink href="https://www.instagram.com/p/BhCPP-3jdJF/" target="_blank">April Fools&apos; joke</UnderlinedLink>, 'graphic design'],
     [<UnderlinedLink href="https://www.instagram.com/p/BgSGQZRF2Hf/" target="_blank">LOX</UnderlinedLink>, 'graphoc design'],
     [<UnderlinedLink href="https://www.instagram.com/p/BgFZHg2lGmA/" target="_blank">richardfxr v6</UnderlinedLink>, 'web design'],
     [<UnderlinedLink href="https://www.behance.net/gallery/62801823/Hocklab-Brand-Identity-Design" target="_blank">Hocklab</UnderlinedLink>, 'branding'],
