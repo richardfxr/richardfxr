@@ -33,13 +33,14 @@ const sections = [
 export default function PFrame() {
     // project title
     const title = 'P-Frame'
+    const headTitle =`${title} | Richard Fu`;
     // get corresponding project object from projects array
     const project = projects.find(elem => elem.title === title)
 
     return (
         <>
             <Head>
-                <title>{title} | Richard Fu</title>
+                <title>{headTitle}</title>
                 <meta
                     name="description"
                     content="I’m Richard Fu, an artist, designer, and developer who loves blue. This is my portfolio website. It contains some of my most recent projects as well as ways to reach me."

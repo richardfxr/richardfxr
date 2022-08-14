@@ -46,13 +46,14 @@ const sections = [
 export default function EggHolders() {
     // project title
     const title = 'EggHolders'
+    const headTitle =`${title} | Richard Fu`;
     // get corresponding project object from projects array
     const project = projects.find(elem => elem.title === title)
 
     return (
         <>
             <Head>
-                <title>{title} | Richard Fu</title>
+                <title>{headTitle}</title>
                 <meta
                     name="description"
                     content="As part of a form exploration, I created three egg holders based on various inspirations. This project was part of a RISD ID course taught by Joseph Napurano."

@@ -54,6 +54,7 @@ const sections = [
 export default function RISDSophomore() {
     // project title
     const title = 'RISD Sophomore'
+    const headTitle =`${title} | Richard Fu`;
     // get corresponding project object from projects array
     const project = projects.find(elem => elem.title === title)
 
@@ -66,7 +67,7 @@ export default function RISDSophomore() {
     return (
         <>
             <Head>
-                <title>{title} | Richard Fu</title>
+                <title>{headTitle}</title>
                 <meta
                     name="description"
                     content="A collection of projects I created during my sophomore year at RISD as an industrial design major. These include the 115° French Press, Freehand Cubes, wood, and metal projects."

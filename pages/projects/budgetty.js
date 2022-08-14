@@ -36,13 +36,14 @@ const sections = [
 export default function Budgetty() {
     // project title
     const title = 'Budgetty'
+    const headTitle =`${title} | Richard Fu`;
     // get corresponding project object from projects array
     const project = projects.find(elem => elem.title === title)
 
     return (
         <>
             <Head>
-                <title>{title} | Richard Fu</title>
+                <title>{headTitle}</title>
                 <meta
                     name="description"
                     content="Budgetty is a standalone digital wallet that encourages more mindful spending habits in a world of abstract payment methods. I designed and animated the UI for the circular screen which users interact with through the surrounding dial."
