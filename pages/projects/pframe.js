@@ -1,4 +1,6 @@
 // === IMPORTS ============================
+// Next
+import Head from 'next/head'
 // components
 import { projects } from '../../components/AppWrapper'
 import Layout from "../../components/Layout"
@@ -35,32 +37,42 @@ export default function PFrame() {
     const project = projects.find(elem => elem.title === title)
 
     return (
-        <Layout heading={title} id="pframe">
-            <ProjectInfo project={project}>
-                Creating complex, curved objects in a solid modeling software like <UnderlinedLink href="https://www.solidworks.com/" target="_blank">SolidWorks</UnderlinedLink> isn’t easy, but that didn’t stop me from modeling P-Frame – a pair of planar magnetic open-back headphones. This project was part of a RISD ID course taught by <UnderlinedLink href="https://www.risd.edu/academics/industrial-design/faculty/diau-hall" target="_blank">Diau Hall</UnderlinedLink>.
-            </ProjectInfo>
+        <>
+            <Head>
+                <title>{title} | Richard Fu</title>
+                <meta
+                    name="description"
+                    content="I’m Richard Fu, an artist, designer, and developer who loves blue. This is my portfolio website. It contains some of my most recent projects as well as ways to reach me."
+                />
+            </Head>
 
-            <Section sections={sections} index={0}>
-                <Img img={PFrameSketch1} alt="Rough sketches of headphones defined by large, sweeping curves." />
-                <Img img={PFrameSketch2} alt="Rough sketches of more angular headphones with sharper edges." />
-                <div className='twoCol'>
-                    <Img img={PFrameSketch3} alt="Line sketch of the side of the chosen design. The frame of the headphones is very minimal, with only two arms holding each driver unit in place." />
-                    <Img img={PFrameSketch4} alt="Shaded render of the chosen design. The frame is a lighter color, holding up completely exposed drivers and dark leather earpads." />
-                </div>
-            </Section>
+            <Layout heading={title} id="pframe">
+                <ProjectInfo project={project}>
+                    Creating complex, curved objects in a solid modeling software like <UnderlinedLink href="https://www.solidworks.com/" target="_blank">SolidWorks</UnderlinedLink> isn’t easy, but that didn’t stop me from modeling P-Frame – a pair of planar magnetic open-back headphones. This project was part of a RISD ID course taught by <UnderlinedLink href="https://www.risd.edu/academics/industrial-design/faculty/diau-hall" target="_blank">Diau Hall</UnderlinedLink>.
+                </ProjectInfo>
 
-            <Section sections={sections} index={1}>
-                <Img img={PFrameRender1} alt="Front view of the P-Frame. The thin profile of the frame contrasts with the thick earpads." />
-                <Img img={PFrameRender2} alt="Bottom view of the P-Frame. The angled arms and tilted drivers make this view particularly interesting." />
-                <div className='twoCol'>
-                    <Img img={PFrameRender3} alt="Side view of the P-Frame. It looks quite similar to the sketch from the same viewpoint." />
-                    <Img img={PFrameRender4} alt="Top view of the P-Frame. The long flat top bar of the frame covers up most of the earpads below." />
-                </div>
-                <Img img={PFrameRender5} alt="Close-up view of the left driver unit and earpad." />
-                <Img img={PFrameRender6} alt="Close-up view of where the left arms meet the frame. This segment is filled with extreme curves and morphing edges." />
-                <Img img={PFrameRender7} alt="Close-up view of the left grill in dark gold. The magnets on the driver are visible through the gaps." />
-                <Img img={PFrameRender8} alt="Close-up view of the left grill without the earpad. Square, circle, and line markings denote the length of screw that goes into each hole. The text ‘P-Frame, 1 of 500’ is printed near the bottom of the grill." />
-            </Section>
-        </Layout>
+                <Section sections={sections} index={0}>
+                    <Img img={PFrameSketch1} alt="Rough sketches of headphones defined by large, sweeping curves." />
+                    <Img img={PFrameSketch2} alt="Rough sketches of more angular headphones with sharper edges." />
+                    <div className='twoCol'>
+                        <Img img={PFrameSketch3} alt="Line sketch of the side of the chosen design. The frame of the headphones is very minimal, with only two arms holding each driver unit in place." />
+                        <Img img={PFrameSketch4} alt="Shaded render of the chosen design. The frame is a lighter color, holding up completely exposed drivers and dark leather earpads." />
+                    </div>
+                </Section>
+
+                <Section sections={sections} index={1}>
+                    <Img img={PFrameRender1} alt="Front view of the P-Frame. The thin profile of the frame contrasts with the thick earpads." />
+                    <Img img={PFrameRender2} alt="Bottom view of the P-Frame. The angled arms and tilted drivers make this view particularly interesting." />
+                    <div className='twoCol'>
+                        <Img img={PFrameRender3} alt="Side view of the P-Frame. It looks quite similar to the sketch from the same viewpoint." />
+                        <Img img={PFrameRender4} alt="Top view of the P-Frame. The long flat top bar of the frame covers up most of the earpads below." />
+                    </div>
+                    <Img img={PFrameRender5} alt="Close-up view of the left driver unit and earpad." />
+                    <Img img={PFrameRender6} alt="Close-up view of where the left arms meet the frame. This segment is filled with extreme curves and morphing edges." />
+                    <Img img={PFrameRender7} alt="Close-up view of the left grill in dark gold. The magnets on the driver are visible through the gaps." />
+                    <Img img={PFrameRender8} alt="Close-up view of the left grill without the earpad. Square, circle, and line markings denote the length of screw that goes into each hole. The text ‘P-Frame, 1 of 500’ is printed near the bottom of the grill." />
+                </Section>
+            </Layout>
+        </>
     )
 }

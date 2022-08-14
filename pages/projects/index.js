@@ -1,6 +1,8 @@
 // === IMPORTS ============================
 // React
 import { useEffect, useRef, useState } from "react"
+// Next
+import Head from 'next/head'
 // Framer Motion
 import { AnimatePresence, Reorder } from "framer-motion"
 // components
@@ -66,47 +68,57 @@ export default function Projects() {
     }, [workFilter])
 
     return (
-        <Layout heading="Projects" id="projects">
-            <Section sections={sections} index={0} noAni>
-                <RadioSelectors
-                    label="Filter:"
-                    name="workFilter"
-                    type="sm"
-                    inline
-                    ani
-                    value={workFilter}
-                    handler={setWorkFilter}
-                    radios={[
-                        { value: "all", label: "all" },
-                        { value: "art", label: "art" },
-                        { value: "design", label: "design" },
-                        { value: "others", label: "others" },
-                    ]} />
+        <>
+            <Head>
+                <title>Projects | Richard Fu</title>
+                <meta
+                    name="description"
+                    content="A showcase of my more recent projects. Newly added projects include Budgetty, EggHolders, and P-Frame."
+                />
+            </Head>
 
-                <Reorder.Group
-                    ref={workUl}
-                    as="ul"
-                    className='twoCol cards'
-                    role="region"
-                    aria-live="polite"
-                    aria-atomic="true"
-                    values={shownProjects}
-                    onReorder={setShownProjects}>
-                    <AnimatePresence initial={false}>
-                        {shownProjects.map((project) => (
-                            <Reorder.Item
-                                drag={false}
-                                key={project.path}
-                                value={project}
-                                variants={projectCardVar}
-                                initial="hidden"
-                                animate="show"
-                                exit="exit"
-                                transition={isMotionOK ? null : { duration: 0 }}><ProjectCard {...project} /></Reorder.Item>
-                        ))}
-                    </AnimatePresence>
-                </Reorder.Group>
-            </Section>
-        </Layout>
+            <Layout heading="Projects" id="projects">
+                <Section sections={sections} index={0} noAni>
+                    <RadioSelectors
+                        label="Filter:"
+                        name="workFilter"
+                        type="sm"
+                        inline
+                        ani
+                        value={workFilter}
+                        handler={setWorkFilter}
+                        radios={[
+                            { value: "all", label: "all" },
+                            { value: "art", label: "art" },
+                            { value: "design", label: "design" },
+                            { value: "others", label: "others" },
+                        ]} />
+
+                    <Reorder.Group
+                        ref={workUl}
+                        as="ul"
+                        className='twoCol cards'
+                        role="region"
+                        aria-live="polite"
+                        aria-atomic="true"
+                        values={shownProjects}
+                        onReorder={setShownProjects}>
+                        <AnimatePresence initial={false}>
+                            {shownProjects.map((project) => (
+                                <Reorder.Item
+                                    drag={false}
+                                    key={project.path}
+                                    value={project}
+                                    variants={projectCardVar}
+                                    initial="hidden"
+                                    animate="show"
+                                    exit="exit"
+                                    transition={isMotionOK ? null : { duration: 0 }}><ProjectCard {...project} /></Reorder.Item>
+                            ))}
+                        </AnimatePresence>
+                    </Reorder.Group>
+                </Section>
+            </Layout>
+        </>
     )
 }

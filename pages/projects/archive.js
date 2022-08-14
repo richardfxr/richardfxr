@@ -1,4 +1,6 @@
 // === IMPORTS ============================
+// Next
+import Head from 'next/head'
 // components
 import Layout from "../../components/Layout"
 import ScrollContainer from "../../components/ScrollContainer"
@@ -156,42 +158,52 @@ const archive2017 = [
 
 export default function Archive() {
     return (
-        <Layout heading="Archive" id="archive">
-            <Section sections={sections} index={0} first>
-                <ScrollContainer horizontal>
-                    <Table tableData={archive2022} caption="2022 Archive" indexed />
-                </ScrollContainer>
-            </Section>
+        <>
+            <Head>
+                <title>Archive | Richard Fu</title>
+                <meta
+                    name="description"
+                    content="A mostly complete index of my past projects going back to 2017. "
+                />
+            </Head>
 
-            <Section sections={sections} index={1}>
-                <ScrollContainer horizontal>
-                    <Table tableData={archive2021} caption="2021 Archive" indexed="reverse" />
-                </ScrollContainer>
-            </Section>
+            <Layout heading="Archive" id="archive">
+                <Section sections={sections} index={0} first>
+                    <ScrollContainer horizontal>
+                        <Table tableData={archive2022} caption="2022 Archive" indexed />
+                    </ScrollContainer>
+                </Section>
 
-            <Section sections={sections} index={2}>
-                <ScrollContainer horizontal>
-                    <Table tableData={archive2020} caption="2020 Archive" indexed="reverse" />
-                </ScrollContainer>
-            </Section>
+                <Section sections={sections} index={1}>
+                    <ScrollContainer horizontal>
+                        <Table tableData={archive2021} caption="2021 Archive" indexed="reverse" />
+                    </ScrollContainer>
+                </Section>
 
-            <Section sections={sections} index={3}>
-                <ScrollContainer horizontal>
-                    <Table tableData={archive2019} caption="2019 Archive" indexed="reverse" />
-                </ScrollContainer>
-            </Section>
+                <Section sections={sections} index={2}>
+                    <ScrollContainer horizontal>
+                        <Table tableData={archive2020} caption="2020 Archive" indexed="reverse" />
+                    </ScrollContainer>
+                </Section>
 
-            <Section sections={sections} index={4}>
-                <ScrollContainer horizontal>
-                    <Table tableData={archive2018} caption="2018 Archive" indexed="reverse" />
-                </ScrollContainer>
-            </Section>
+                <Section sections={sections} index={3}>
+                    <ScrollContainer horizontal>
+                        <Table tableData={archive2019} caption="2019 Archive" indexed="reverse" />
+                    </ScrollContainer>
+                </Section>
 
-            <Section sections={sections} index={5}>
-                <ScrollContainer horizontal>
-                    <Table tableData={archive2017} caption="2017 Archive" indexed="reverse" />
-                </ScrollContainer>
-            </Section>
-        </Layout>
+                <Section sections={sections} index={4}>
+                    <ScrollContainer horizontal>
+                        <Table tableData={archive2018} caption="2018 Archive" indexed="reverse" />
+                    </ScrollContainer>
+                </Section>
+
+                <Section sections={sections} index={5}>
+                    <ScrollContainer horizontal>
+                        <Table tableData={archive2017} caption="2017 Archive" indexed="reverse" />
+                    </ScrollContainer>
+                </Section>
+            </Layout>
+        </>
     )
 }
