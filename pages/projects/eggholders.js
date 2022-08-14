@@ -57,6 +57,9 @@ export default function EggHolders() {
                     name="description"
                     content="As part of a form exploration, I created three egg holders based on various inspirations. This project was part of a RISD ID course taught by Joseph Napurano."
                 />
+                <meta property="og:image" content="https://www.richardfxr.com/images/EggHolders/EggHolders-OGimage-1.jpg" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
             </Head>
 
             <Layout heading={title} id="eggholders">

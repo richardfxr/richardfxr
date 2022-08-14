@@ -165,6 +165,9 @@ export default function Archive() {
                     name="description"
                     content="A mostly complete index of my past projects going back to 2017. "
                 />
+                <meta property="og:image" content="https://www.richardfxr.com/images/archive-OGimage-1.jpg" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
             </Head>
 
             <Layout heading="Archive" id="archive">

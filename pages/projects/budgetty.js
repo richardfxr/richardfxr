@@ -47,6 +47,9 @@ export default function Budgetty() {
                     name="description"
                     content="Budgetty is a standalone digital wallet that encourages more mindful spending habits in a world of abstract payment methods. I designed and animated the UI for the circular screen which users interact with through the surrounding dial."
                 />
+                <meta property="og:image" content="https://www.richardfxr.com/images/Budgetty/Budgetty-OGimage-1.jpg" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
             </Head>
 
             <Layout heading={title} id="budgetty">
