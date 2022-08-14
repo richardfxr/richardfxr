@@ -76,7 +76,7 @@ export default function RISDSophomore() {
 
                 <Separator />
 
-                <h3 id="115frenchpress">115° French Press</h3>
+                <h3 id="frenchpress">115° French Press</h3>
                 <p className='md bottom-xxxl'>A redesign of the common french press with a twist – or should I say lean? The project also includes an operational sequence manual that is also cut at a 115° angle.</p>
                 <Img img={FrechPressSketch1} alt="40 thumbnail sketches of possible french press forms. These range from rather minimal cylinders to eccentric sculptural forms." />
                 <Img img={FrechPressSketch2} alt="Orthographic drawing of the chosen french press design. The press is slanted at a 115-degree angle, giving it a sense of movement without compromising balance." />

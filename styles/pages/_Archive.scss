@@ -1,0 +1,46 @@
+@use '../breakpoints' as *;
+
+#archive {
+   .section {
+        padding-bottom: calc(var(--pad-7xl) - var(--pad-sm));
+
+        &__main {
+            // table alignment compensation
+            padding-top: calc(var(--section-pad-vrt) - var(--padRem-xs));
+        }
+    }
+
+    table {
+        thead {
+            th {
+                &:nth-child(2) {
+                    width: 70%;
+                }
+            }
+        }
+
+        tr {
+            td{
+                &:first-of-type {
+                    // make titles (2nd column) --clr-1000
+                    color: var(--clr-1000);
+                }
+            }
+        }
+    } 
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-mobile) {
+    #archive {
+        .section {
+            &__side {
+                h2 {
+                    padding-top: calc(var(--pad-sm) + var(--padRem-xxs));
+                }
+            }
+        }
+    }
+}
