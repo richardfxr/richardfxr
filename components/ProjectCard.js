@@ -18,7 +18,7 @@ const projectCardVar = {
 export default function ProjectCard({ image, path, title, colors, cardLabels }) {
     return(
         <article className="projectCard">
-            <Img ani='layout' {...image} />
+            <Img ani='layout' {...image} priority />
 
             <motion.div
                 variants={projectCardVar}

@@ -15,7 +15,7 @@ const imageVarLowMo = {
     exit: { opacity: 0, transition: { duration: 0.2} },
 }
 
-export default function Img({ img, layoutId, alt, ani }) {
+export default function Img({ img, layoutId, alt, ani, priority }) {
     const isMotionOK = useIsMotionOK()
 
     return (
@@ -30,6 +30,7 @@ export default function Img({ img, layoutId, alt, ani }) {
             <Image
                 src={img}
                 alt={alt}
+                priority={priority}
             />
         </motion.div>
     )

@@ -12,7 +12,7 @@ export default function ProjectInfo({ project, children }) {
         <section className="section projectInfo" id='info' aria-labelledby="heading">
             <Separator />
 
-            <Img ani='layout' {...project.image} />
+            <Img ani='layout' {...project.image} priority />
 
             <motion.div
                 className='projectInfo__text'
