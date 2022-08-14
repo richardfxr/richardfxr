@@ -36,7 +36,7 @@ export default function Info() {
                     <VersionBadge /> 
                     </ScrollContainer>
 
-                    <p className='md'>This is version 10 of my portfolio website. It is a single-page application built with <UnderlinedLink href="https://reactjs.org/" target="_blank" styling="em">React</UnderlinedLink>, bundled using <UnderlinedLink href="https://vitejs.dev/" target="_blank" styling="em">Vite</UnderlinedLink>, and animated with <UnderlinedLink href="https://www.framer.com/motion/" target="_blank" styling="em">Framer Motion</UnderlinedLink>. You can view the <UnderlinedLink href="https://github.com/richardfxr/richardfxr" target="_blank" styling="em">open source code on GitHub</UnderlinedLink>.</p>
+                    <p className='md'>This is version 10.2 of my portfolio website. It is a <UnderlinedLink href="https://reactjs.org/" target="_blank" styling="em">React</UnderlinedLink> application built on <UnderlinedLink href="https://nextjs.org/" target="_blank" styling="em">Next.js</UnderlinedLink> and animated with <UnderlinedLink href="https://www.framer.com/motion/" target="_blank" styling="em">Framer Motion</UnderlinedLink>. You can view the <UnderlinedLink href="https://github.com/richardfxr/richardfxr" target="_blank" styling="em">open source code on GitHub</UnderlinedLink>.</p>
 
                     <p className='md'>Miss the old website? You can still <UnderlinedLink href="https://v9.richardfxr.com/" target="_blank" styling="em">view version 9</UnderlinedLink> at its new subdomain.</p>
                 </Section>
