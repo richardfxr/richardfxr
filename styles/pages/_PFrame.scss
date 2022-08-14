@@ -1,0 +1,11 @@
+#pframe {
+    .section {
+        padding-bottom: var(--pad-6xl);
+        
+        &__main {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: var(--pad-xl);
+        }        
+    }
+}
