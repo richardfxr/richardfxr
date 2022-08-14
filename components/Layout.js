@@ -61,14 +61,6 @@ export default function Layout({ heading, id, children }) {
     const router = useRouter()
     const page = useRef()
 
-    useEffect(() => {
-        // scroll to anchor link if new route has a hash
-        let hash = router.asPath.match(/#([a-z0-9]+)/gi )
-        if (hash && page.current.querySelector(hash[0])) {
-            page.current.querySelector(hash[0]).scrollIntoView()
-        }
-    }, [router.asPath])
-
     return (
         <>
             <div className="navbar__separator">
@@ -87,7 +79,15 @@ export default function Layout({ heading, id, children }) {
                 id={id}
                 initial="hidden"
                 animate="show"
-                onAnimationComplete={() => changeSetting('initialLoad', false)}>
+                onAnimationComplete={() => {
+                    changeSetting('initialLoad', false)
+
+                    // scroll to anchor link if new route has a hash
+                    let hash = router.asPath.match(/#([a-z0-9]+)/gi )
+                    if (hash && page.current.querySelector(hash[0])) {
+                        page.current.querySelector(hash[0]).scrollIntoView()
+                    }
+                }}>
                 <Breadcrumbs />
                 <main id="main">
                     <PageHeading heading={heading} />
