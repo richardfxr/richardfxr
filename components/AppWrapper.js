@@ -140,7 +140,7 @@ export default function AppWrapper({ children }) {
         userSettings.forEach((setting) => {
             localStorage.getItem(setting.name) ? changeSetting(setting.name, localStorage.getItem(setting.name)) : changeSetting(setting.name, setting.default)
         })
-    }, [changeSetting])
+    }, [])
 
     return <>{children}</>
 
