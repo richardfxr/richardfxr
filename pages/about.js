@@ -58,7 +58,7 @@ export default function About() {
                                 <RichardfxrPDF417 />
                                 <p>(¬_¬)ﾉ</p>
                             </div>
-                            <Img img={SelfPortrait} layoutID="SelfPortrait" alt="Graphite self-portrait. I’m an Asian male with short black hair wearing a pair of aviator-style glasses." />
+                            <Img img={SelfPortrait} layoutID="SelfPortrait" alt="Graphite self-portrait. I’m an Asian male with short black hair wearing a pair of aviator-style glasses." priority />
                         </div>
                         <div className='text'>
                             <p className='md name'>Richard Fu</p>
