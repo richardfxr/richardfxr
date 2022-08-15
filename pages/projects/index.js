@@ -51,16 +51,18 @@ export default function Projects() {
 
         // wait 500ms for Framer Motion animations to finish
         setTimeout(() => {
-            workUl.current.ariaBusy = "false"
+            if (workUl.current) {
+                workUl.current.ariaBusy = "false"
 
-            const ghostElem = document.createElement("li")
-            ghostElem.id = 'ghostElem'
-            ghostElem.appendChild(document.createElement("article"))
+                const ghostElem = document.createElement("li")
+                ghostElem.id = 'ghostElem'
+                ghostElem.appendChild(document.createElement("article"))
 
-            workUl.current.appendChild(ghostElem)
+                workUl.current.appendChild(ghostElem)
+            }
 
             setTimeout(() => {
-                workUl.current.querySelector('#ghostElem').remove()
+                if (workUl.current) workUl.current.querySelector('#ghostElem').remove()
             }, 100)
             
         }, 300)
