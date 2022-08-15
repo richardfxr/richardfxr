@@ -19,6 +19,30 @@ function MyApp({ Component, pageProps }) {
     const router = useRouter()
 
     useEffect(() => {
+        console.log('\n')
+
+        // log ASCII logo to console
+        console.log('%c`"@@@@@@@@@@@@@p,_', "font-weight: bold")
+        console.log('%c   `"@@@@@@@@@@@@@@,', "font-weight: bold")
+        console.log('%c               }@@@@', "font-weight: bold")
+        console.log('%c`"@@@@@p_`"@@@@@@@@"', "font-weight: bold")
+        console.log('%c   `"@@@@@p_`"@P?"', "font-weight: bold")
+        console.log('%c      `"@@@@@p_', "font-weight: bold")
+        console.log('%c         `"@@@@@p_', "font-weight: bold")
+        console.log('\n')
+
+        // log version number
+        console.log("richardfxr.com version 10.2.0 silver (release candidate)")
+        console.log('\n')
+
+        // log credits and link GitHub
+        console.log("Designed and developed by Richard Fu.")
+        console.log("Code available on GitHub:")
+        console.log("https://github.com/richardfxr/richardfxr")
+        console.log('\n')
+    })
+
+    useEffect(() => {
         // scrolls page to top on page load (without hash)
         if (!router.asPath.match(/#([a-z0-9]+)/gi )) window.scrollTo(0, 0)
     }, [router.asPath])
