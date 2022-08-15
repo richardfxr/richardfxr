@@ -30,6 +30,7 @@ export default function Img({ img, layoutId, alt, ani, priority }) {
             <Image
                 src={img}
                 alt={alt}
+                placeholder="blur"
                 priority={priority}
             />
         </motion.div>
