@@ -40,7 +40,7 @@ export default function Exploded1200D() {
                 <title>{headTitle}</title>
                 <meta
                     name="description"
-                    content="Ever wondered what a DSLR looks like on the inside? I did, so I took apart a broken Canon EOS 1200D and made it into an exploded view model. This project was part of a RISD ID course taught by Max Pratt."
+                    content="An exploded view model of the Canon EOS 1200D. This project was part of a RISD ID course taught by Max Pratt."
                 />
                 <meta property="og:image" content="https://www.richardfxr.com/images/Exploded1200D/Exploded1200D-OGimage-1.jpg" />
                 <meta property="og:image:width" content="1200" />

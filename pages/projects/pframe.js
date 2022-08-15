@@ -43,7 +43,7 @@ export default function PFrame() {
                 <title>{headTitle}</title>
                 <meta
                     name="description"
-                    content="I’m Richard Fu, an artist, designer, and developer who loves blue. This is my portfolio website. It contains some of my most recent projects as well as ways to reach me."
+                    content="A pair of planar magnetic open-back headphones in white modeled in SolidWorks. This project was part of a RISD ID course taught by Diau Hall."
                 />
                 <meta property="og:image" content="https://www.richardfxr.com/images/PFrame/PFrame-OGimage-1.jpg" />
                 <meta property="og:image:width" content="1200" />

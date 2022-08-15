@@ -70,7 +70,7 @@ export default function RISDSophomore() {
                 <title>{headTitle}</title>
                 <meta
                     name="description"
-                    content="A collection of projects I created during my sophomore year at RISD as an industrial design major. These include the 115° French Press, Freehand Cubes, wood, and metal projects."
+                    content="Projects I created during my RISD sophomore year as an industrial design major. These include the 115° French Press, Freehand Cubes, wood, and metal projects."
                 />
                 <meta property="og:image" content="https://www.richardfxr.com/images/RISDSophomore/RISDSophomore-OGimage-1.jpg" />
                 <meta property="og:image:width" content="1200" />

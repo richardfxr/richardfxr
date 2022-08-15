@@ -28,7 +28,7 @@ export default function Home() {
                 <title>Richard Fu - Artist, Designer, &amp; Developer</title>
                 <meta
                     name="description"
-                    content="I’m Richard Fu, an artist, designer, and developer who loves blue. This is my portfolio website. It contains some of my most recent projects as well as ways to reach me."
+                    content="I’m Richard Fu, an artist, designer, and developer who loves blue. This is my portfolio website which contains recent projects and ways to contact me."
                 />
                 <meta property="og:image" content="https://www.richardfxr.com/images/richardfxr-OGimage-1.jpg" />
                 <meta property="og:image:width" content="1200" />

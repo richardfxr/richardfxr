@@ -56,7 +56,7 @@ export default function EggHolders() {
                 <title>{headTitle}</title>
                 <meta
                     name="description"
-                    content="As part of a form exploration, I created three egg holders based on various inspirations. This project was part of a RISD ID course taught by Joseph Napurano."
+                    content="Three egg holders I created as part of a form exploration. This project was part of a RISD ID course taught by Joseph Napurano."
                 />
                 <meta property="og:image" content="https://www.richardfxr.com/images/EggHolders/EggHolders-OGimage-1.jpg" />
                 <meta property="og:image:width" content="1200" />
