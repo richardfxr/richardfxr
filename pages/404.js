@@ -22,7 +22,7 @@ export default function Custom404() {
 
     useEffect(() => {
         if (router.isReady) setCurURL("https://www.richardfxr.com" + router.asPath)
-    }, [])
+    }, [router.isReady, router.asPath])
 
     return (
         <Layout heading="404" id="error">
