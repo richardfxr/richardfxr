@@ -5,8 +5,8 @@
     viewBox="0 0 262.5 416"
     role="img"
     aria-describedby="illus__dev--title illus__dev--desc">
-    <title id="illus__design--title">Development</title>
-    <desc id="illus__design--desc">A new branch of code is created, next to which a command prompt is shown with a blinking cursor.</desc>
+    <title id="illus__dev--title">Development</title>
+    <desc id="illus__dev--desc">A new branch of code is created, next to which a command prompt is shown with a blinking cursor.</desc>
 
     <circle class="stroke nofill stroke-clr-200" cx="68.88" cy="65.42" r="14.59"/>
     <circle class="stroke nofill stroke-clr-200" cx="68.88" cy="382.07" r="14.59"/>
