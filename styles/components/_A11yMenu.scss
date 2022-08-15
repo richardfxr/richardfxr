@@ -3,9 +3,9 @@
     --_button-padHrz: min(calc(var(--font-sm) - 0.3rem + var(--pad-xxs)), 35px); // horizontal padding for .button.sm
 
     position: absolute;
-    top: calc(var(--pad-sm) + var(--border-width));
-    right: calc(var(--pad-sm) + var(--border-width));
-    left: calc(var(--nav-size) + var(--border-width));
+    top: calc(var(--section-pad-vrt) - var(--pad-xs));
+    right: calc(var(--section-pad-hrz) - var(--pad-md));
+    left: calc(var(--nav-size) + var(--section-pad-hrz) - var(--pad-md));
     z-index: 1000;
 
     background-color: var(--clr-100);
@@ -46,6 +46,6 @@
 // === BREAKPOINTS ============================
 @media (orientation: portrait) {
     .a11yMenu {
-        left: calc(var(--pad-sm) + var(--border-width));
+        left: calc(var(--section-pad-hrz) - var(--pad-md));
     }
 }
