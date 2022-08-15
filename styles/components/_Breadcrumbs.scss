@@ -97,6 +97,33 @@
             }
         }
     }
+
+    p.error {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 0.5rem;
+        align-items: center;
+        font-size: var(--font-xs);
+
+        padding: var(--section-pad-vrt)
+                 var(--padRem-md)
+                 var(--section-pad-vrt)
+                 var(--section-pad-hrz);
+        // negative margin for better alignment
+        margin: calc(-0.35 * var(--font-xs)) 0;
+
+        &::before {
+            content: '';
+            display: block;
+
+            width: var(--font-xs);
+            height: var(--font-xs);
+
+            border: solid var(--border-width) var(--clr-800);
+            border-radius: var(--bradius-round);
+            background-color: red;
+        }
+    }
 }
 
 

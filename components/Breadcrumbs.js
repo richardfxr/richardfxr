@@ -17,6 +17,7 @@ export default function Breadcrumbs() {
     const router = useRouter()
     const [curPathname, setCurPathname] = useState('')
     const [breadcrumbs, setBreadcrumbs] = useState([])
+    const [error, setError] = useState(false)
 
     if (curPathname !== router.pathname) {
         // get breadcrumbs for current pathname, does not live inside a useEffect hook becuase it causes animation stutters
@@ -37,11 +38,16 @@ export default function Breadcrumbs() {
         breadcrumbsTemp.forEach(function(breadcrumb, index) {
             // replace breadcrumbs[index] with corresponsing object from routes array
             this[index] = allRoutes.find(route => route.path.split('/').at(-1) === breadcrumb)
-            this[index].isCurrent = false
+            if (this[index]) {
+                this[index].isCurrent = false
+            } else {
+                // set error if no matching route is found
+                setError(true)
+            }
         }, breadcrumbsTemp)
 
-        // add current: true to last breadcrumb
-        breadcrumbsTemp[breadcrumbsTemp.length - 1].isCurrent = true
+        // add current: true to last breadcrumb if it exists
+        if (breadcrumbsTemp[breadcrumbsTemp.length - 1]) breadcrumbsTemp[breadcrumbsTemp.length - 1].isCurrent = true
 
         setBreadcrumbs(breadcrumbsTemp)
     }
@@ -49,11 +55,17 @@ export default function Breadcrumbs() {
 
     return (
         <nav className='breadcrumbs' aria-label="breadcrumbs">
-            <ol className='row'>
-                {breadcrumbs.map(({ path, title, isCurrent }) => (
-                    <li key={path}><BreadcrumbLink to={path} label={title} isCurrent={isCurrent} /></li>
-                ))}
-            </ol>
+            {!error &&
+                <ol className='row'>
+                    {breadcrumbs.map(({ path, title, isCurrent }) => (
+                        <li key={path}><BreadcrumbLink to={path} label={title} isCurrent={isCurrent} /></li>
+                    ))}
+                </ol>
+            }
+
+            {error &&
+                <p className='error'>Breadcrumb error</p>
+            }
         </nav>
     )
 }
