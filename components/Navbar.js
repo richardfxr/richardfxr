@@ -59,8 +59,6 @@ export default function Navbar() {
         // find currently active <NavLink />
         let activeLink = navUl.current.getElementsByClassName('active')[0]
 
-        console.log('activeLink:', activeLink)
-
         if (activeLink) {
             // update magic line position if activeLink is not falsy
             magicLineVrt.current.style.transform = "translateY(" + activeLink.offsetTop + "px)"

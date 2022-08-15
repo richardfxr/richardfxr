@@ -16,13 +16,11 @@ export function useMediaQuery(query) {
         const media = window.matchMedia(query)
         if (media.matches !== matches) {
             setMatches(media.matches)
-            console.log(query.toString(), media.matches)
         }
 
         // event listener that fires every time match changes
         matchMedia(query).addEventListener("change", (e) => {
             setMatches(media.matches)
-            console.log(query.toString(), e.matches)
         });
     } catch(err1) {
         try {

@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
         console.log("Code available on GitHub:")
         console.log("https://github.com/richardfxr/richardfxr")
         console.log('\n')
-    })
+    }, [])
 
     useEffect(() => {
         // scrolls page to top on page load (without hash)

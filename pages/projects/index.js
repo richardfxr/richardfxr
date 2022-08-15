@@ -56,7 +56,6 @@ export default function Projects() {
             const ghostElem = document.createElement("li")
             ghostElem.id = 'ghostElem'
             ghostElem.appendChild(document.createElement("article"))
-            console.log("created ghostElem:", ghostElem)
 
             workUl.current.appendChild(ghostElem)
 

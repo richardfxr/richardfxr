@@ -30,7 +30,6 @@ const settingsReducer = (state, action) => {
             return { ...state, initialLoad: action.payload }
 
         case 'colorScheme':
-            console.log('change color scheme to:', action.payload)
             // store in local storage
             localStorage.setItem('colorScheme', action.payload)
             // set data-colorScheme attribute
@@ -38,7 +37,6 @@ const settingsReducer = (state, action) => {
             return { ...state, colorScheme: action.payload }
             
         case 'contrast':
-            console.log('change contrast to:', action.payload)
             // store in local storage
             localStorage.setItem('contrast', action.payload)
             // set data-colorScheme attribute
@@ -46,7 +44,6 @@ const settingsReducer = (state, action) => {
             return { ...state, contrast: action.payload }
 
         case 'fontSize':
-            console.log('change fontSize to:', action.payload)
             // store in local storage
             localStorage.setItem('fontSize', action.payload)
             // set data-colorScheme attribute
@@ -54,7 +51,6 @@ const settingsReducer = (state, action) => {
             return { ...state, fontSize: action.payload }
 
         case 'motionPref':
-            console.log('change motionPref to:', action.payload)
             // store in local storage
             localStorage.setItem('motionPref', action.payload)
             // set data-colorScheme attribute
@@ -62,7 +58,6 @@ const settingsReducer = (state, action) => {
             return { ...state, motionPref: action.payload }
 
         case 'targetSize':
-            console.log('change motionPref to:', action.payload)
             // store in local storage
             localStorage.setItem('targetSize', action.payload)
             // set data-targetSize attribute

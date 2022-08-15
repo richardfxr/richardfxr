@@ -22,13 +22,11 @@ export default function ScrollContainer({ vertical, horizontal, children }) {
         // create IntersectionObserver instances
         const startObserver = new IntersectionObserver((entries) => {
             const entry = entries[0]
-            console.log("start:", entry.isIntersecting)
             setStartIsIntersecting(entry.isIntersecting)
         }, observerOptions)
 
         const endObserver = new IntersectionObserver((entries) => {
             const entry = entries[0]
-            console.log("end:", entry.isIntersecting)
             setEndIsIntersecting(entry.isIntersecting)
         }, observerOptions)
 
