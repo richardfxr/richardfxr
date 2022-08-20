@@ -105,7 +105,7 @@ const archive2018 = [
     [<UnderlinedLink href="https://www.instagram.com/p/BnJYbE4huQp/" target="_blank" key="glass">Glass</UnderlinedLink>, 'photography'],
     [<UnderlinedLink href="https://www.instagram.com/p/BnG3yRGBp12/" target="_blank" key="shanghainaturalhistorymuseum">Shanghai Natural History Museum</UnderlinedLink>, 'photography'],
     [<UnderlinedLink href="https://www.instagram.com/p/Bm6ArTihKnM/" target="_blank" key="suzhoumuseum">Suzhou Museum</UnderlinedLink>, 'photography'],
-    [<UnderlinedLink href="hhttps://www.instagram.com/explore/tags/architectonicae/" target="_blank" key="architectonicae">Architectonicae</UnderlinedLink>, 'photography'],
+    [<UnderlinedLink href="https://www.instagram.com/explore/tags/architectonicae/" target="_blank" key="architectonicae">Architectonicae</UnderlinedLink>, 'photography'],
     [<UnderlinedLink href="https://www.instagram.com/p/BmLgIJvhP5D/" target="_blank" key="shanghai">Shanghai</UnderlinedLink>, 'photography'],
     [<UnderlinedLink href="https://www.instagram.com/p/Bl6oLd5B47C/" target="_blank" key="labrumcaps">Labrum Caps</UnderlinedLink>, 'type design'],
     ['Valorem branding', 'branding'],
