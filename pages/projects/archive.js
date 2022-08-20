@@ -23,6 +23,7 @@ const sections = [
 // === ARCHIVE DATA =======================
 const archive2022 = [
     ['#', 'title', 'type'],
+    [<UnderlinedLink href="https://youtu.be/HucnOIo9QKk" target="_blank" key="passersby">Passersby</UnderlinedLink>, 'graphic design, videography'],
     [<UnderlinedLink href="https://sity.earth/" target="_blank" key="sity2">sity.earth v2</UnderlinedLink>, 'web design, dev, illustration'],
     [<UnderlinedLink to="/info" key="richardfxr10">richardfxr.com v10</UnderlinedLink>, 'web design, dev'],
     [<UnderlinedLink to="/projects/budgetty" key="budgetty">Budgetty</UnderlinedLink>, 'UI, product design'],
