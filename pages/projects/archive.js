@@ -23,9 +23,10 @@ const sections = [
 // === ARCHIVE DATA =======================
 const archive2022 = [
     ['#', 'title', 'type'],
+    [<UnderlinedLink href="https://preview.sity.earth/" target="_blank" key="sity1">sity.earth v1.1</UnderlinedLink>, 'web design, dev, illustration'],
     [<UnderlinedLink href="https://youtu.be/HucnOIo9QKk" target="_blank" key="passersby">Passersby</UnderlinedLink>, 'graphic design, videography'],
-    [<UnderlinedLink href="https://sity.earth/" target="_blank" key="sity2">sity.earth v2</UnderlinedLink>, 'web design, dev, illustration'],
     [<UnderlinedLink to="/info" key="richardfxr10">richardfxr.com v10</UnderlinedLink>, 'web design, dev'],
+    [<UnderlinedLink href="https://sity.earth/" target="_blank" key="sity1">sity.earth v1</UnderlinedLink>, 'web design, dev, illustration'],
     [<UnderlinedLink to="/projects/budgetty" key="budgetty">Budgetty</UnderlinedLink>, 'UI, product design'],
     ['History of ID sketches', 'graphite'],
     [<UnderlinedLink to="/projects/eggholders" key="eggholders">EggHolders</UnderlinedLink>, 'product design'],
@@ -34,7 +35,7 @@ const archive2022 = [
 
 const archive2021 = [
     ['#', 'title', 'type'],
-    [<UnderlinedLink href="http://v1.sity.earth/" target="_blank" key="sity1">sity.earth v1</UnderlinedLink>, 'web design, dev, illustration'],
+    [<UnderlinedLink href="http://v0.sity.earth/" target="_blank" key="sity0">sity.earth v0</UnderlinedLink>, 'web design, dev, illustration'],
     [<UnderlinedLink to="/projects/RISDsophomore#twistedlofts" key="twistedlofts">Twisted Lofts</UnderlinedLink>, 'woodworking'],
     [<UnderlinedLink to="/projects/pframe" key="pframe">P-Frame</UnderlinedLink>, 'product design'],
     [<UnderlinedLink to="/projects/exploded1200d" key="exploded1200d">Exploded 1200D</UnderlinedLink>, 'model'],
