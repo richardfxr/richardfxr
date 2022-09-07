@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
         console.log('\n')
 
         // log version number
-        console.log("richardfxr.com version 10.2.0 silver (release candidate)")
+        console.log("richardfxr.com version 10.2.0 gold (general release)")
         console.log('\n')
 
         // log credits and link GitHub
