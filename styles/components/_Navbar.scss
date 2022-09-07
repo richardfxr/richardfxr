@@ -29,6 +29,7 @@
         min-height: 100%;
         
         .logo {
+            height: calc(var(--section-pad-vrt) + var(--_logo-size));
             // 20px top padding and moved 1px to the left to appear more centered
             padding: var(--section-pad-vrt)
                      calc((var(--_link-width) - var(--_logo-size)) / 2 + 1px)
