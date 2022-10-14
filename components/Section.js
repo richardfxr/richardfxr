@@ -13,7 +13,7 @@ export const sectionVar = {
     exit: { opacity: 0, transition: { duration: 0.2 } },
 }
 
-export default function Section({ sections, index, noAni, first, printHidden, children }) {
+export default function Section({ sections, index, noAni, first, printHidden, skipLinkHidden, children }) {
     return (
         <motion.section
             className={"section" + (printHidden ? " printHidden" : "")}
@@ -32,7 +32,7 @@ export default function Section({ sections, index, noAni, first, printHidden, ch
                 animate="show"
                 exit="exit">
                 <h2 id={sections[index].id + "__heading"}>{sections[index].heading}</h2>
-                <div className="skipLinks">
+                <div className={"skipLinks" + (skipLinkHidden ? " hidden" : "")}>
                     {index !== 0 &&
                         <a
                             href={'#' + sections[index - 1].id}

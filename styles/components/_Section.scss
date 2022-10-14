@@ -42,7 +42,7 @@
             flex-direction: row;
             gap: var(--padRem-xxxs);
 
-            a {
+            a, &.hidden a, &.hidden:hover a, &.hidden:focus-within a {
                 display: grid;
                 align-items: center;
                 width: var(--_skipLink-width);
@@ -69,6 +69,18 @@
                 &:focus-visible {
                     outline: solid var(--outline-width) var(--clr-focus);
                     outline-offset: calc(-1 * var(--border-width));
+                }
+            }
+
+            &.hidden {
+                &:hover a, &:focus-within a {
+                    color: var(--clr-800);
+                    border-color: var(--clr-200);
+                }
+
+                a {
+                    color: var(--clr-100);
+                    border-color: var(--clr-100);
                 }
             }
         }
@@ -107,6 +119,11 @@
 
             .skipLinks {
                 flex-direction: column;
+
+                &.hidden a {
+                    color: var(--clr-800);
+                    border-color: var(--clr-200);
+                }
             }
         }        
     }
