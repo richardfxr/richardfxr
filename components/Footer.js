@@ -36,6 +36,7 @@ export default function Footer() {
                             {routes.slice(0, 5).map(({ path, title }) => (
                                 <li key={path} className='list__item'><UnderlinedLink to={path} styling='md block'>{title}</UnderlinedLink></li>
                             ))}
+                            <li key='/about/resume' className='list__item'><UnderlinedLink to='/about/resume' styling='md block'>Résumé</UnderlinedLink></li>
                             <li key='/projects/archive' className='list__item'><UnderlinedLink to='/projects/archive' styling='md block'>Archive</UnderlinedLink></li>
                         </ul>
                     </nav>
@@ -46,6 +47,7 @@ export default function Footer() {
                         <li className='list__item'><UnderlinedLink href='https://github.com/richardfxr' target='_blank' styling='md block'>GitHub</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='https://vimeo.com/user134146921' target='_blank' styling='md block'>Vimeo</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='https://www.behance.net/richardfxr' target='_blank' styling='md block'>Behance</UnderlinedLink></li>
+                        <li className='list__item'><UnderlinedLink href='https://www.linkedin.com/in/richardfxr/' target='_blank' styling='md block'>LinkedIn</UnderlinedLink></li>
                         <li className='list__item'><UnderlinedLink href='mailto:theguy@richardfxr.com?subject=A%20Witty%20Title' target='_blank' styling='md block'>Email</UnderlinedLink></li>
                     </ul>
                 </div>
