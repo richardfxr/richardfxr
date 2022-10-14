@@ -80,7 +80,8 @@ ul, ol {
       flex-flow: row wrap;
       
       &.md {
-         gap: var(--padRem-xxs);
+         column-gap: var(--padRem-xxs);
+         row-gap: var(--padRem-xs);
       }
    }
 }

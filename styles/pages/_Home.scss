@@ -10,10 +10,10 @@
         &__main {
             display: flex;
             flex-flow: column nowrap;
-            gap: var(--pad-5xl);
+            gap: var(--pad-xxl);
 
             & > p {
-                padding-bottom: var(--pad-lg);
+                padding-top: calc(var(--pad-4xl) - var(--pad-xxl));
             }
         }
     }
@@ -99,11 +99,6 @@
 
 #works {
     padding-bottom: var(--pad-6xl);
-
-    .section {
-        &__main {
-        }
-    }
 
     #moreWork {
         display: flex;
