@@ -42,6 +42,12 @@
     }
 }
 
+@media print {
+    .navbar__separator {
+        display: none;
+    }
+}
+
 
 
 // === A11Y ===================================

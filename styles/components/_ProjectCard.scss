@@ -87,10 +87,11 @@
     }
 
     .project__colors {
-        gap: var(--padRem-xxxs);
+        gap: calc(var(--padRem-xxxs) - 2 * var(--border-width));
 
         li {
             padding: var(--padRem-xxs);
+            border: solid var(--border-width) var(--clr-200);
             margin: var(--padRem-xxs) 0;
         }
     }

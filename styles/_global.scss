@@ -361,6 +361,12 @@ figcaption {
    }
 }
 
+@media print {
+   #__next {
+      padding-left: 0;
+   }
+}
+
 
 
 // === A11Y ===================================

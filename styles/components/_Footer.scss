@@ -66,6 +66,12 @@ footer {
     }
 }
 
+@media print {
+    .footer {
+        display: none;
+    }
+}
+
 
 
 // === A11Y ===================================

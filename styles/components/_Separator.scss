@@ -15,6 +15,17 @@
 
 
 
+// === BREAKPOINTS ============================
+@media print {
+    .separator{
+        height: 0;
+        border-bottom: solid var(--border-width) var(--clr-300);
+        transform: scaleY(0.33); // scale to get thinner line when printed
+    }
+}
+
+
+
 // === A11Y ===================================
 @media (forced-colors: active) {
     .separator {

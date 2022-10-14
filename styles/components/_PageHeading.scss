@@ -15,3 +15,12 @@
         white-space: pre;
     }
 }
+
+
+
+// === BREAKPOINTS ============================
+@media print {
+    .pageHeading {
+        padding-top: 0;
+    }
+}

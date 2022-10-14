@@ -24,12 +24,13 @@
 
     .project {
         &__colors {
-            gap: var(--padRem-xxs);
+            gap: calc(var(--padRem-xxs) - 2 * var(--border-width));
 
             padding-top: var(--pad-xxxs);
 
             li, div {
                 padding: var(--padRem-xs);
+                border: solid var(--border-width) var(--clr-200);
             }
         }
     }

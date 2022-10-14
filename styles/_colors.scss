@@ -156,3 +156,12 @@ $dark-highContrast: (
         }
     }
 }
+
+@media print {
+    :root {
+        // parse $ligh-highContrast into CSS variables
+        @each $name, $value in $light-highContrast {
+            --clr-#{$name}: #{$value};
+        }
+    }
+}

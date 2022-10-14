@@ -210,6 +210,79 @@
    }
 }
 
+@media print {
+   :root {
+      --max-width: 1200px;
+      --nav-size: 85px;
+   
+      --section-pad-hrz: var(--pad-xxxl);
+      --section-pad-vrt: var(--pad-xxl);
+      --section-side-width: 140px;
+      --twoCol-minWidth: 240px;
+      --threeCol-minWidth: 168px;
+   
+      --indicator-thickness: 4px;
+      --indicator-length: 1.125rem;
+      --indicator-gap: 14px;
+   
+      --padRem-6xs: 0.5px;
+      --padRem-5xs: 1px;
+      --padRem-4xs: 2px;
+      --padRem-xxxs: 3px;
+      --padRem-xxs: 4px;
+      --padRem-xs: 5px;
+      --padRem-sm: 6px;
+      --padRem-md: 8px;                        // gap between list elements
+      --padRem-lg: 10px;
+      --padRem-xl: 12px;
+      --padRem-xxxl: 20px;
+   
+      --pad-6xs: 0.5px;
+      --pad-5xs: 1px;
+      --pad-4xs: 2px;
+      --pad-xxxs: 3px;
+      --pad-xxs: 4px;
+      --pad-xs: 5px;
+      --pad-sm: 6px;
+      --pad-md: 8px;
+      --pad-lg: 10px;
+      --pad-xl: 12px;
+      --pad-xxl: 15px;
+      --pad-xxxl: 20px;
+      --pad-4xl: 25px;
+      --pad-5xl: 35px;
+      --pad-6xl: 45px;
+      --pad-7xl: 55px;
+      --pad-8xl: 70px;
+   
+      --targetSize-pad-1rem: calc(1rem * (var(--targetSize-multiplier) - 1));
+      --targetSize-pad-2rem: calc(2rem * (var(--targetSize-multiplier) - 1));
+      --targetSize-pad-3rem: calc(3rem * (var(--targetSize-multiplier) - 1));
+      --targetSize-pad-4rem: calc(4rem * (var(--targetSize-multiplier) - 1));
+      --targetSize-pad-5rem: calc(5rem * (var(--targetSize-multiplier) - 1));
+   
+      // === BORDER & OUTLINE ===================
+      // border
+      --border-width: 1px;                      // standard border width
+      --border-width-thick: 2.5px;
+      --bradius-xxs: 2px;                        // border radius of <NavBar /> page indicator
+      --bradius-xs: 4px;                         
+      --bradius-sm: 6px;                         // standard border radius for wrapper borders
+      --bradius-xxl: 35px;                       // largest border radius for special corners
+      --bradius-round: 1e5px;                    // extremely larg border radius to produce circular sides
+      // outline
+      --outline-width: 3px;
+   
+      // === TYPOGRAPHY =========================
+      --font-xs: 8px;
+      --font-sm: 10px;
+      --font-md: 13px;
+      --font-lg: 16px;
+      --font-xl: 24px;
+      --font-xxl: 64px;
+   }
+}
+
 
 
 // === A11Y ===================================
