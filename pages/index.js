@@ -54,7 +54,7 @@ export default function Home() {
                     <ul className='row md'>
                         <li><Button href='#works' target="_self" styling="sm rblue"><span className='inter upDw pad--right'>↓</span> Works</Button></li>
                         <li><Button to='/about' styling="sm">About</Button></li>
-                        <li><Button to='/about#contact' styling="sm">Contact</Button></li>
+                        <li><Button to='/about/resume' styling="sm">Résumé</Button></li>
                     </ul>
                 </Section>
 
