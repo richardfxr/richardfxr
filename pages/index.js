@@ -36,7 +36,7 @@ export default function Home() {
             </Head>
 
             <Layout heading="Hello" id="home">
-                <Section sections={sections} index={0} first>
+                <Section sections={sections} index={0} first skipLinkHidden>
                     <ScrollContainer horizontal>
                         <ul className='row illus__list'>
                             <li className='illus__container'>

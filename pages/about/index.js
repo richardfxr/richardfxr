@@ -75,12 +75,12 @@ export default function About() {
                     </article>
                 </motion.section>
 
-                <Section sections={sections} index={0}>
+                <Section sections={sections} index={0} skipLinkHidden>
                     <p className="md first">I create things that are <em>functional, but never boring</em>. I believe design exists to communicate, to empower, and that is why my work focuses on <em>accessibility</em>. I do not sacrifice function in the name of style, but I do not see ornamentation as a crime. I love the balance of a well-kerned font, but more so, I love the look of an optically imperfect lens.</p>
                     <Button to='/about/resume' styling="sm">Résumé</Button>
                 </Section>
 
-                <Section sections={sections} index={1}>
+                <Section sections={sections} index={1} skipLinkHidden>
                     <dl className="twoCol dlList">
                         <div>
                             <dt>Favorite color</dt>
@@ -117,7 +117,7 @@ export default function About() {
                     </dl>
                 </Section>
 
-                <Section sections={sections} index={2}>
+                <Section sections={sections} index={2} skipLinkHidden>
                     <div className="twoCol" >
                         <div className="fourCol">
                             <SocialLink href="https://www.instagram.com/richardfxr/" name="Instagram" id="instagram" logo={<Instagram />} />
@@ -130,7 +130,7 @@ export default function About() {
                     </div>
                 </Section>
 
-                <Section sections={sections} index={3}>
+                <Section sections={sections} index={3} skipLinkHidden>
                     <p className="md">Have ideas for a project or just want to say hi? Message me on one of the <UnderlinedLink href="#socials" styling="em upArrow">above social platforms</UnderlinedLink> or email me.</p>
                     <p className="md status"><span className="red">Status</span> Not available for projects in the near future.</p>
                     <Button href='mailto:theguy@richardfxr.com?subject=A%20Witty%20Title' target="_blank" styling="sm">theguy@richardfxr.com</Button>

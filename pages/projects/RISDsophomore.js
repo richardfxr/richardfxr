@@ -132,7 +132,7 @@ export default function RISDSophomore() {
                     </div>
                 </Section>
 
-                <Section sections={sections} index={2}>
+                <Section sections={sections} index={2} skipLinkHidden>
                     <h3 id="thecreature">The Creature</h3>
                     <p className='md bottom-xxxl'>A mechanic crab that crawls using <UnderlinedLink href="https://en.wikipedia.org/wiki/Klann_linkage" target="_blank" styling="em">Klann linkages</UnderlinedLink> connected to a turbine. This project was created in collaboration with <UnderlinedLink href="https://www.linkedin.com/in/josephine-hostin-500b441aa" target="_blank" styling="em">Josephine Hostin</UnderlinedLink> and <UnderlinedLink href="https://sahilbalani.myportfolio.com/" target="_blank" styling="em">Sahil Balani</UnderlinedLink>.</p>
                     <div className='videoContainer'>

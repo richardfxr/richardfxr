@@ -52,18 +52,18 @@ export default function Exploded1200D() {
                     Ever wondered what a DSLR looks like on the inside? I did, so I took apart a broken <UnderlinedLink href="https://en.wikipedia.org/wiki/Canon_EOS_1200D" target="_blank">Canon EOS 1200D</UnderlinedLink> and made it into an exploded view model. This project was part of a RISD ID course taught by <UnderlinedLink href="https://www.prattframeworks.com/" target="_blank">Max Pratt</UnderlinedLink>.
                 </ProjectInfo>
 
-                <Section sections={sections} index={0}>
+                <Section sections={sections} index={0} skipLinkHidden>
                     <div className='videoContainer'>
                         <iframe src="https://player.vimeo.com/video/640798865?h=85e6a6a4eb?dnt=1" frameBorder="0" allow="fullscreen; picture-in-picture" allowFullScreen></iframe>
                     </div>
                 </Section>
 
-                <Section sections={sections} index={1}>
+                <Section sections={sections} index={1} skipLinkHidden>
                     <p className='md bottom-xxxl'>As part of the disassembly process, the <UnderlinedLink href="https://v9.richardfxr.com/1200d" target="_blank" styling="em">Canon EOS 1200D Parts Index</UnderlinedLink> was created to help me keep track of all the different components. Each component has a short description with links to relevant parts.</p>
                     <Img img={Exploded1200DPartsIndex} alt="An iPad Pro displaying a list of parts from the camera." />
                 </Section>
 
-                <Section sections={sections} index={2}>
+                <Section sections={sections} index={2} skipLinkHidden>
                     <Img img={Exploded1200DSketch} alt="A shaded graphite render of an exploded Canon camera. Everything from the PCBs to the mirror box is visible." />
                 </Section>
 

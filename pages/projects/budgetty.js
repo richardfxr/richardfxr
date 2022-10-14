@@ -58,7 +58,7 @@ export default function Budgetty() {
                     Budgetty is a standalone digital wallet that encourages more mindful spending habits in a world of abstract payment methods. I designed and animated the UI for the circular screen which users interact with through the surrounding dial.
                 </ProjectInfo>
 
-                <Section sections={sections} index={0}>
+                <Section sections={sections} index={0} skipLinkHidden>
                     <div className='videoContainer'>
                         <iframe src="https://player.vimeo.com/video/732265756?h=64c9c31e4e?dnt=1" frameBorder="0" allow="fullscreen; picture-in-picture" allowFullScreen></iframe>
                     </div>

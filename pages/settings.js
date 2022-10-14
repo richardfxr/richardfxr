@@ -33,7 +33,7 @@ export default function Settings() {
             </Head>
 
             <Layout heading="Settings" id="settings">
-                <Section sections={sections} index={0}>
+                <Section sections={sections} index={0} skipLinkHidden>
                     <RadioSelectors
                         label="Color scheme:"
                         name="colorScheme"
@@ -79,7 +79,7 @@ export default function Settings() {
                         ]} />
                 </Section>
 
-                <Section sections={sections} index={1}>
+                <Section sections={sections} index={1} skipLinkHidden>
                     <RadioSelectors
                         label="Motion:"
                         name="motionPref"

@@ -26,7 +26,7 @@ export default function Custom404() {
 
     return (
         <Layout heading="404" id="error">
-            <Section sections={sections} index={0} first>
+            <Section sections={sections} index={0} first skipLinkHidden>
                 <p className="md errorOutput">GET <span className='url'>{curURL}</span> 404 (Not Found)</p>
                 <p className='md'>This page <em>does not exist</em>. Ensure the spelling of the URL above is correct. This page may have been in the <UnderlinedLink href="https://v9.richardfxr.com/" target="_blank" styling="em">previous version of this website</UnderlinedLink>.</p>
                 <ul className='row md'>
