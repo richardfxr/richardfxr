@@ -120,6 +120,11 @@
                                 fill: var(--_clr-profileCard-1000);
                             }
                         }
+
+                        &:focus-visible {
+                            outline: solid var(--outline-width) var(--clr-focus);
+                            outline-offset: calc(-1 * var(--outline-width));
+                        }
                     }
 
                     .SVGlogo {
@@ -401,6 +406,11 @@
                 color: var(--clr-1000);
                 border-color: var(--clr-800);
             }
+        }
+
+        &:focus-visible {
+            outline: solid var(--outline-width) var(--clr-focus);
+            outline-offset: calc(-1 * var(--outline-width));
         }
 
         &#instagramSocialLink {
