@@ -410,6 +410,10 @@ figcaption {
 
    .screenHidden {
       display: block !important;
+
+      &.inline {
+         display: inline !important;
+      }
    }
 
    .printHidden {

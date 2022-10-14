@@ -2,10 +2,15 @@
 // components
 import NavLink from "./NavLink"
 
-export default function UnderlinedLink({ styling, href, target, to, click, children}) {
+export default function UnderlinedLink({ styling, href, target, to, click, print, children}) {
     if (href && target === '_blank') {
         return (
-            <a href={href} target={target} className={"link external " + styling}>{children}</a>
+            <a href={href} target={target} className={"link external " + styling}>
+                {children}
+                {print &&
+                    <span className="screenHidden inline"> ({print})</span>
+                }
+            </a>
         )
     } else if (href && href.charAt(0) === '#') {
         return (
@@ -13,11 +18,21 @@ export default function UnderlinedLink({ styling, href, target, to, click, child
         )
     } else if (href) {
         return (
-            <a href={href} target='_self' className={"link internal " + styling}>{children}</a>
+            <a href={href} target='_self' className={"link internal " + styling}>
+                {children}
+                {print &&
+                    <span className="screenHidden inline"> ({print})</span>
+                }
+            </a>
         )
     } else if (to) {
         return (
-            <NavLink to={to} className={"link internal " + styling}>{children}</NavLink>
+            <NavLink to={to} className={"link internal " + styling}>
+                {children}
+                {print &&
+                    <span className="screenHidden inline"> ({print})</span>
+                }
+            </NavLink>
         )
     } else if (click) {
         return (
