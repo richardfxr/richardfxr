@@ -145,7 +145,10 @@ export default function About() {
 
                 <Section sections={sections} index={3} skipLinkHidden>
                     <p className="md">Have ideas for a project or just want to say hi? Message me on one of the <UnderlinedLink href="#socials" styling="em upArrow">above social platforms</UnderlinedLink> or email me.</p>
-                    <p className="md status"><span className="red">Status</span> Not available for projects in the near future.</p>
+                    <p className="md status">
+                        <span className="statusLable blue">Status</span>
+                        <span>Seeking an <em>internship</em> during the summer of 2023.</span>
+                    </p>
                     <Button href='mailto:theguy@richardfxr.com?subject=A%20Witty%20Title' target="_blank" styling="sm">theguy@richardfxr.com</Button>
                 </Section>
             </Layout>
