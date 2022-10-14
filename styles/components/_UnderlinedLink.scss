@@ -83,6 +83,35 @@
 
 
 
+// === BREAKPOINTS ============================
+@media print {
+    .link {
+        &.page {
+            &::after {
+                display: none;
+            }
+    
+            &.upArrow::after {
+                display: none;
+            }
+        }
+    
+        &.internal {
+            &::after {
+                display: none;
+            }
+        }
+    
+        &.external {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
 // === A11Y ===================================
 @media (forced-colors: active) {
     .link {

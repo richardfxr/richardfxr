@@ -115,6 +115,8 @@
 @media print {
     .section, .footer {
         &__side {
+            position: relative;
+            
             .skipLinks {
                 display: none;
             }

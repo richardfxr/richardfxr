@@ -124,6 +124,7 @@ ul, ol {
 .dlList {
    row-gap: var(--pad-xxl);
    align-items: stretch;
+   width: 100%;
 
    & > div {
       display: flex;
@@ -153,6 +154,28 @@ ul, ol {
 
       // alignment compensation
       margin-bottom: calc(-1 * var(--padRem-xxxs));
+   }
+
+   &.detailed {
+      dt {
+         color: var(--clr-1000);
+         font-weight: 500;
+      }
+
+      dd {
+         color: var(--clr-700);
+      }
+   }
+
+   &.oneCol {
+      display: flex;
+      flex-direction: column;
+      gap: var(--pad-xxl);
+
+      & > div:last-child {
+         padding-bottom: 0;
+         border: none;
+      }
    }
 }
 
@@ -368,6 +391,21 @@ figcaption {
 @media print {
    #__next {
       padding-left: 0;
+   }
+
+   .twoCol {
+      row-gap: var(--pad-4xl);
+   }
+
+   .dlList {
+      & > div {
+         padding-bottom: 0;
+         border-bottom: none;
+      }
+
+      &.oneCol {
+         gap: var(--pad-4xl);
+      }
    }
 
    .screenHidden {
