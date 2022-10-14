@@ -198,6 +198,15 @@
     }
 
     #socials {
+        .section {
+            &__main {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: var(--pad-xl);
+            }
+        }
+
         .twoCol {
             .fourCol {
                 display: grid;
@@ -422,8 +431,17 @@
             --_line2-before-bradius: 25%;
         }
 
-        &#githubSocialLink {
+        &#githubSocialLink, &#discogsSocialLink {
             --_logo-inset: 29%;
+            --_line1-main-bradius: 6%;
+            --_line1-before-bradius: 12%;
+            --_line1-after-bradius: 20%;
+            --_line2-main-bradius: 32%;
+            --_line2-before-bradius: 50%;
+        }
+
+        &#vimeoSocialLink {
+            --_logo-inset: 31%;
             --_line1-main-bradius: 6%;
             --_line1-before-bradius: 12%;
             --_line1-after-bradius: 20%;
@@ -435,13 +453,13 @@
             --_logo-inset: 31%;
         }
 
-        &#vimeoSocialLink {
+        &#linkedinSocialLink {
             --_logo-inset: 31%;
-            --_line1-main-bradius: 6%;
-            --_line1-before-bradius: 12%;
-            --_line1-after-bradius: 20%;
-            --_line2-main-bradius: 32%;
-            --_line2-before-bradius: 50%;
+            --_line1-main-bradius: 2%;
+            --_line1-before-bradius: 5%;
+            --_line1-after-bradius: 8%;
+            --_line2-main-bradius: 12%;
+            --_line2-before-bradius: 14%;
         }
     }
 }

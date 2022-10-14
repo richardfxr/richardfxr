@@ -1,0 +1,11 @@
+<svg
+    id="mal"
+    class="SVGlogo"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    role="img"
+    aria-describedby="mal--title">
+    <title id="mal--title">My Anime List logo</title>
+
+    <path d="M0,0V256H256V0H0ZM99,157.5h-18.09v-42.2l-15.91,19.7-15.91-19.7v42.2H31V88h17.75l16.25,21.95,16.25-21.95h17.75v69.5Zm49.5-37v-15h21v52h-21v-24h-21.26c.57,15.66,7.57,23.61,7.57,23.61l-13.31,10.39s-12-15-12-43,26-36.5,35.45-36.5h21.86l5.69,15.5h-28c-8.58,0-13.52,10-13.96,17h17.96Zm73.47,37h-39.47V87.5h19v54.89h24.75l-4.28,15.11Z"/>
+</svg>

@@ -17,6 +17,9 @@ import Instagram from '../../public/SVGs/instagram.svg'
 import GitHub from '../../public/SVGs/github.svg'
 import Vimeo from '../../public/SVGs/vimeo.svg'
 import Behance from '../../public/SVGs/behance.svg'
+import LinkedIn from '../../public/SVGs/linkedin.svg'
+import Discogs from '../../public/SVGs/discogs.svg'
+import MAL from '../../public/SVGs/mal.svg'
 // images
 import SelfPortrait from '../../public/images/About/SelfPortrait.jpg'
 
@@ -126,6 +129,16 @@ export default function About() {
                         <div className="fourCol">
                             <SocialLink href="https://vimeo.com/user134146921" name="Vimeo" id="vimeo" logo={<Vimeo />} />
                             <SocialLink href="https://www.behance.net/richardfxr" name="Behance" id="behance" logo={<Behance />} />
+                        </div>
+                    </div>
+                    <div className="twoCol" >
+                        <div className="fourCol">
+                            <SocialLink href="https://www.linkedin.com/in/richardfxr/" name="LinkedIn" id="linkedin" logo={<LinkedIn />} />
+                            <SocialLink href="https://www.discogs.com/user/richardfxr/collection?header=1" name="Discogs" id="discogs" logo={<Discogs />} />
+                        </div>
+                        <div className="fourCol">
+                            <SocialLink href="https://myanimelist.net/profile/richardfxr" name="MyAnimeList" id="mal" logo={<MAL />} />
+                            <div aria-hidden="true"></div>
                         </div>
                     </div>
                 </Section>
