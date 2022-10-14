@@ -29,12 +29,12 @@ const letterVarLowMo = {
     show: { y: 0, opacity: 1, transition: { duration: 0.3 } }
 }
 
-export default function PageHeading({ heading }) {
+export default function PageHeading({ heading, printHidden }) {
     const isMotionOK = useIsMotionOK()
 
     return (
         <motion.h1
-            className="pageHeading"
+            className={"pageHeading" + (printHidden ? " printHidden" : "")}
             id="heading"
             variants={isMotionOK ? headingVar : headingVarLowMo}
             initial="hidden"

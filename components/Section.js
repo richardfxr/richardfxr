@@ -13,10 +13,10 @@ export const sectionVar = {
     exit: { opacity: 0, transition: { duration: 0.2 } },
 }
 
-export default function Section({ sections, index, noAni, first, children }) {
+export default function Section({ sections, index, noAni, first, printHidden, children }) {
     return (
         <motion.section
-            className="section"
+            className={"section" + (printHidden ? " printHidden" : "")}
             id={sections[index].id}
             aria-labelledby={sections[index].id + "__heading"}
             variants={noAni || first ? null : sectionVar}

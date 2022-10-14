@@ -53,7 +53,7 @@ const pageNormVar = {
 }
 
 
-export default function Layout({ heading, id, children }) {
+export default function Layout({ heading, printHidden, id, children }) {
     const isPortrait = useIsPortrait()
     const isMotionOK = useIsMotionOK()
     const { initialLoad, changeSetting } = useSettings()
@@ -90,7 +90,7 @@ export default function Layout({ heading, id, children }) {
                 }}>
                 <Breadcrumbs />
                 <main id="main">
-                    <PageHeading heading={heading} />
+                    <PageHeading heading={heading} printHidden={printHidden} />
                     {children}
                 </main>
                 <Footer />

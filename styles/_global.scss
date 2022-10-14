@@ -322,6 +322,10 @@ figcaption {
 	overflow: hidden;
 }
 
+.screenHidden {
+   display: none !important;
+}
+
 .forcedClr {
    display: none;
 }
@@ -364,6 +368,14 @@ figcaption {
 @media print {
    #__next {
       padding-left: 0;
+   }
+
+   .screenHidden {
+      display: block !important;
+   }
+
+   .printHidden {
+      display: none !important;
    }
 }
 
