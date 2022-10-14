@@ -25,7 +25,8 @@ export const routes = [
     {path: '/settings', title: 'Settings'},
 
     // secondary pages
-    {path: '/projects/archive',title: 'Archive'},
+    {path: '/projects/archive', title: 'Archive'},
+    {path: '/about/resume', title: 'Résumé'},
 ]
 
 // === PROJECTS ===========================

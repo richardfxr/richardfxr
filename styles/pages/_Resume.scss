@@ -1,0 +1,58 @@
+#resume {
+    #info, #objective, #education, #projects, #skills {
+        padding-bottom: var(--pad-6xl);
+    }
+
+    #info, #objective, #projects {
+        .section {
+            &__main {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: flex-start;
+                gap: var(--pad-xxl);
+            }
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media print {
+    #resume {
+        #printInfo {
+            .pageHeading {
+                padding-bottom: var(--pad-sm);
+            }
+    
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: var(--pad-xl);
+    
+                padding:
+                    0
+                    var(--section-pad-hrz)
+                    calc(var(--section-pad-vrt) - var(--padRem-5xs))
+                    var(--section-pad-hrz);
+    
+                li {
+                    color: var(--clr-700);
+                    font-size: var(--font-md);
+                    font-weight: 500;
+
+                    &::after {
+                        content: "•";
+                        color: var(--clr-600);
+                        padding-left: var(--pad-xl);
+                    }
+
+                    &:last-child::after {
+                        // hide dot for last <li>
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

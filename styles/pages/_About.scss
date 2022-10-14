@@ -149,6 +149,19 @@
         padding-bottom: var(--pad-6xl);
     }
 
+    #principles {
+        padding-bottom: var(--pad-6xl);
+
+        .section {
+            &__main {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: flex-start;
+                gap: var(--pad-xxl);
+            }
+        }
+    }
+
     #favorites {
         dt {
             &::after {

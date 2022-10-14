@@ -4,21 +4,21 @@ import Head from 'next/head'
 // Framer Motion
 import { motion } from "framer-motion"
 // components
-import Layout from "../components/Layout"
-import Separator from '../components/Separator'
-import Img from '../components/Img'
-import Section from "../components/Section"
-import { sectionVar } from '../components/Section'
-import UnderlinedLink from "../components/UnderlinedLink"
-import Button from "../components/Button"
+import Layout from "../../components/Layout"
+import Separator from '../../components/Separator'
+import Img from '../../components/Img'
+import Section from "../../components/Section"
+import { sectionVar } from '../../components/Section'
+import UnderlinedLink from "../../components/UnderlinedLink"
+import Button from "../../components/Button"
 // SVGs
-import RichardfxrPDF417 from '../public/SVGs/PDF417-richardfxr.svg'
-import Instagram from '../public/SVGs/instagram.svg'
-import GitHub from '../public/SVGs/github.svg'
-import Vimeo from '../public/SVGs/vimeo.svg'
-import Behance from '../public/SVGs/behance.svg'
+import RichardfxrPDF417 from '../../public/SVGs/PDF417-richardfxr.svg'
+import Instagram from '../../public/SVGs/instagram.svg'
+import GitHub from '../../public/SVGs/github.svg'
+import Vimeo from '../../public/SVGs/vimeo.svg'
+import Behance from '../../public/SVGs/behance.svg'
 // images
-import SelfPortrait from '../public/images/About/SelfPortrait.jpg'
+import SelfPortrait from '../../public/images/About/SelfPortrait.jpg'
 
 
 
@@ -76,9 +76,8 @@ export default function About() {
                 </motion.section>
 
                 <Section sections={sections} index={0}>
-                    <p className="md">
-                        I create things that are <em>functional, but never boring</em>. I believe design exists to communicate, to empower, and that is why my work focuses on <em>accessibility</em>. I do not sacrifice function in the name of style, but I do not see ornamentation as a crime. I love the balance of a well-kerned font, but more so, I love the look of an optically imperfect lens.
-                    </p>
+                    <p className="md first">I create things that are <em>functional, but never boring</em>. I believe design exists to communicate, to empower, and that is why my work focuses on <em>accessibility</em>. I do not sacrifice function in the name of style, but I do not see ornamentation as a crime. I love the balance of a well-kerned font, but more so, I love the look of an optically imperfect lens.</p>
+                    <Button to='/about/resume' styling="sm">Résumé</Button>
                 </Section>
 
                 <Section sections={sections} index={1}>
