@@ -91,6 +91,7 @@ $dark-highContrast: (
     @each $name, $value in $light {
         --clr-#{$name}: #{$value};
     }
+    color-scheme: light;
 }
 
 [data-contrast="high"] {
@@ -98,6 +99,7 @@ $dark-highContrast: (
     @each $name, $value in $light-highContrast {
         --clr-#{$name}: #{$value};
     }
+    color-scheme: light;
 }
 
 [data-colorScheme="dark"] {
@@ -105,6 +107,7 @@ $dark-highContrast: (
     @each $name, $value in $dark {
         --clr-#{$name}: #{$value};
     }
+    color-scheme: dark;
 }
 
 [data-colorScheme="dark"][data-contrast="high"] {
@@ -112,6 +115,7 @@ $dark-highContrast: (
     @each $name, $value in $dark-highContrast {
         --clr-#{$name}: #{$value};
     }
+    color-scheme: dark;
 }
 
 
@@ -122,6 +126,7 @@ $dark-highContrast: (
         @each $name, $value in $dark {
             --clr-#{$name}: #{$value};
         }
+        color-scheme: dark;
     }
 
     [data-colorScheme="auto"][data-contrast="high"] {
@@ -129,6 +134,7 @@ $dark-highContrast: (
         @each $name, $value in $dark-highContrast {
             --clr-#{$name}: #{$value};
         }
+        color-scheme: dark;
     }
 }
 
@@ -138,6 +144,7 @@ $dark-highContrast: (
         @each $name, $value in $light-highContrast {
             --clr-#{$name}: #{$value};
         }
+        color-scheme: light;
     }
 
     [data-colorScheme="dark"][data-contrast="auto"] {
@@ -145,6 +152,7 @@ $dark-highContrast: (
         @each $name, $value in $dark-highContrast {
             --clr-#{$name}: #{$value};
         }
+        color-scheme: dark;
     }
 }
 
@@ -154,6 +162,7 @@ $dark-highContrast: (
         @each $name, $value in $dark-highContrast {
             --clr-#{$name}: #{$value};
         }
+        color-scheme: dark;
     }
 }
 
