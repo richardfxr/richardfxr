@@ -80,7 +80,11 @@ export default function About() {
 
                 <Section sections={sections} index={0} skipLinkHidden>
                     <p className="md first">I create things that are <em>functional, but never boring</em>. I believe design exists to communicate, to empower, and that is why my work focuses on <em>accessibility</em>. I do not sacrifice function in the name of style, but I do not see ornamentation as a crime. I love the balance of a well-kerned font, but more so, I love the look of an optically imperfect lens.</p>
-                    <Button to='/about/resume' styling="sm">Résumé</Button>
+                    <ul className='row md printHidden'>
+                        <li><Button to='/about/resume' styling="sm">Résumé</Button></li>
+                        <li><Button href='#contact' styling="sm">Contact</Button></li>
+                    </ul>
+                    
                 </Section>
 
                 <Section sections={sections} index={1} skipLinkHidden>
