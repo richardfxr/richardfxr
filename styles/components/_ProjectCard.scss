@@ -111,6 +111,28 @@
 
 
 
+// === BREAKPOINTS ============================
+@media print {
+    .projectCard {
+        &__link h3 {
+            // remove ::after border and replace with actual border
+            border-bottom: solid var(--border-width) var(--clr-300);
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .project__colors {
+            // force background color to show
+            -webkit-print-color-adjust:exact !important;
+            print-color-adjust:exact !important;
+        }
+    }
+}
+
+
+
 // === A11Y ===================================
 @media (forced-colors: active) {
     .projectCard {

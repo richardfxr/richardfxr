@@ -54,6 +54,18 @@
 
 
 
+// === BREAKPOINTS ============================
+@media print {
+    #budgetty {
+        #interface li {
+            // add border as background color will be removed
+            border: solid var(--border-width) var(--clr-300);
+        }
+    }
+}
+
+
+
 // === A11Y ===================================
 @media (forced-colors: active) {
     #budgetty {

@@ -65,3 +65,17 @@
         }
     }
 }
+
+
+
+// === BREAKPOINTS ============================
+@media print {
+    #info {
+        // internal variables
+        --_badge-size: 130px;
+
+        #version10 .versionBadge {
+            font-size: 22px;
+        }
+    }
+}

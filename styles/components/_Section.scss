@@ -131,6 +131,11 @@
 
 @media print {
     .section, .footer {
+        &:last-of-type {
+            // remove bottom padding from last section to prevent page overflow
+            padding-bottom: 0 !important;
+        }
+
         &__side {
             position: relative;
             

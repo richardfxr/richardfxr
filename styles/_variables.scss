@@ -228,7 +228,7 @@
       --padRem-6xs: 0.5px;
       --padRem-5xs: 1px;
       --padRem-4xs: 2px;
-      --padRem-xxxs: 3px;
+      --padRem-xxxs: 4px;
       --padRem-xxs: 4px;
       --padRem-xs: 5px;
       --padRem-sm: 6px;
@@ -247,11 +247,11 @@
       --pad-md: 8px;
       --pad-lg: 10px;
       --pad-xl: 12px;
-      --pad-xxl: 15px;
+      --pad-xxl: 16px;
       --pad-xxxl: 20px;
       --pad-4xl: 25px;
       --pad-5xl: 35px;
-      --pad-6xl: 45px;
+      --pad-6xl: 43px;
       --pad-7xl: 55px;
       --pad-8xl: 70px;
    
@@ -263,7 +263,7 @@
    
       // === BORDER & OUTLINE ===================
       // border
-      --border-width: 1px;                      // standard border width
+      --border-width: 1pt;                      // standard border width
       --border-width-thick: 2.5px;
       --bradius-xxs: 2px;                        // border radius of <NavBar /> page indicator
       --bradius-xs: 4px;                         
@@ -276,7 +276,7 @@
       // === TYPOGRAPHY =========================
       --font-xs: 8px;
       --font-sm: 10px;
-      --font-md: 13px;
+      --font-md: 13.5px;
       --font-lg: 16px;
       --font-xl: 24px;
       --font-xxl: 64px;

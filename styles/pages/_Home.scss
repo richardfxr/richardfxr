@@ -161,6 +161,13 @@
     }
 }
 
+@media print {
+    #intro {
+        // internal variables
+        --_illus-width: 120px;
+    }
+}
+
 
 
 // === A11Y ===================================

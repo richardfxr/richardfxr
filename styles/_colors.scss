@@ -163,5 +163,9 @@ $dark-highContrast: (
         @each $name, $value in $light-highContrast {
             --clr-#{$name}: #{$value};
         }
+
+        // replace border color
+        --clr-200: #B8B8B8;
+        --clr-300: #B8B8B8;
     }
 }

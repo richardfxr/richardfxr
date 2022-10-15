@@ -394,21 +394,6 @@ figcaption {
       padding-left: 0;
    }
 
-   .twoCol {
-      row-gap: var(--pad-4xl);
-   }
-
-   .dlList {
-      & > div {
-         padding-bottom: 0;
-         border-bottom: none;
-      }
-
-      &.oneCol {
-         gap: var(--pad-4xl);
-      }
-   }
-
    .screenHidden {
       display: block !important;
 

@@ -235,7 +235,7 @@
             // remove alignment compensation
             margin-top: 0;
 
-            span {
+            .statusLable {
                 display: flex;
                 flex-flow: row nowrap;
                 align-items: center;
@@ -261,6 +261,10 @@
 
                 &.red::after {
                     background-color: red;
+                }
+
+                &.blue::after {
+                    background-color: var(--clr-rblue);
                 }
             }
         }
@@ -531,6 +535,48 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media print {
+    #about {
+        // internal variables
+        --_profileCard-height: 200px;
+        --_profileCard-code-height: 31px;
+        --_profileCard-img-width: 170px;
+
+        --_progileCardButton-iconSize: 16px;
+        --_profileCardButton-size: 33px;
+
+        .profile {
+            padding-left: var(--section-pad-hrz);
+
+            .card {
+                grid-template-columns: 0.75fr 1fr;
+                gap: var(--pad-4xl);
+                border: solid var(--border-width) var(--clr-300);
+
+                .main {
+                    gap: var(--pad-4xl);
+
+                    .code {
+                        border-top: solid var(--border-width) var(--clr-300);
+                        border-right: solid var(--border-width) var(--clr-300);
+                        border-bottom: solid var(--border-width) var(--clr-300);
+                    }
+
+                    .img {
+                        padding: var(--pad-xxxl) 0;
+                    }
+                }
+            }
+        }
+
+        #favorites #favColor::before, #contact .status .statusLable {
+            // force background color to show
+            -webkit-print-color-adjust:exact !important;
+            print-color-adjust:exact !important;
         }
     }
 }

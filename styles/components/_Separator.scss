@@ -20,7 +20,7 @@
     .separator{
         height: 0;
         border-bottom: solid var(--border-width) var(--clr-300);
-        transform: scaleY(0.33); // scale to get thinner line when printed
+        // transform: scaleY(0.33); // scale to get thinner line when printed
     }
 }
 

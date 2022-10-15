@@ -39,9 +39,9 @@ export default function Info() {
                     <VersionBadge /> 
                     </ScrollContainer>
 
-                    <p className='md'>This is version 10.2 of my portfolio website. It is a <UnderlinedLink href="https://reactjs.org/" target="_blank" styling="em">React</UnderlinedLink> application built on <UnderlinedLink href="https://nextjs.org/" target="_blank" styling="em">Next.js</UnderlinedLink> and animated with <UnderlinedLink href="https://www.framer.com/motion/" target="_blank" styling="em">Framer Motion</UnderlinedLink>. You can view the <UnderlinedLink href="https://github.com/richardfxr/richardfxr" target="_blank" styling="em">open source code on GitHub</UnderlinedLink>.</p>
+                    <p className='md'>This is version 10.2 of my portfolio website. It is a <UnderlinedLink href="https://reactjs.org/" target="_blank" styling="em">React</UnderlinedLink> application built on <UnderlinedLink href="https://nextjs.org/" target="_blank" styling="em">Next.js</UnderlinedLink> and animated with <UnderlinedLink href="https://www.framer.com/motion/" target="_blank" styling="em">Framer Motion</UnderlinedLink>. You can view the <UnderlinedLink href="https://github.com/richardfxr/richardfxr" target="_blank" styling="em" print="github.com/richardfxr/richardfxr">open source code on GitHub</UnderlinedLink>.</p>
 
-                    <p className='md'>Miss the old website? You can still <UnderlinedLink href="https://v9.richardfxr.com/" target="_blank" styling="em">view version 9</UnderlinedLink> at its new subdomain.</p>
+                    <p className='md'>Miss the old website? You can still <UnderlinedLink href="https://v9.richardfxr.com/" target="_blank" styling="em" print="v9.richardfxr.com">view version 9</UnderlinedLink> at its new subdomain.</p>
                 </Section>
 
                 <Section sections={sections} index={1} skipLinkHidden>
