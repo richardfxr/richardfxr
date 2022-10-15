@@ -1,12 +1,16 @@
 // === IMPORTS ============================
+// Next
+import Head from 'next/head'
 // React
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 // components
 import UnderlinedLink from './UnderlinedLink'
 // hooks
+import { useMediaQuery} from "../hooks/useMediaQuery"
 import { useSettings } from '../hooks/useSettings'
 import { userSettings } from '../context/Settings'
 // images
+import RichardfxrThumb from '../public/images/richardfxr/richardfxr-thumbnail.jpg'
 import BudgettyThumb from '../public/images/Budgetty/Budgetty-thumbnail.jpg'
 import EggHolderThumb from '../public/images/EggHolders/EggHolders-thumbnail.jpg'
 import PFrameThumb from '../public/images/PFrame/PFrame-thumbnail.jpg'
@@ -131,18 +135,64 @@ export const projects = [
     },
 ]
 
+// === FUNCTIONS ==========================
+function updateThemeColor (colorScheme, contrast, isDark, isHc) {
+    let curColorScheme = "light"
+    let curContrast = "default"
+    let curColor = "#EDEDED"
+
+    if (isDark) {
+        if (colorScheme === "auto" || colorScheme === "dark") curColorScheme = "dark"
+    } else {
+        if (colorScheme === "dark") curColorScheme = "dark"
+    }
+
+    if (isHc) {
+        if (contrast === "auto" || contrast === "high") curContrast = "high"
+    } else {
+        if (contrast === "high") curContrast = "high"
+    }
+
+    if (curColorScheme ==="light") {
+        if (curContrast === "high") curColor = "#FFFFFF"
+    } else {
+        if (curContrast === "high") curColor = "#000000"
+        else curColor = "#1A1A1A"
+    }
+
+    return curColor;
+}
+
 
 
 export default function AppWrapper({ children }) {
-    const { changeSetting } = useSettings()
+    const { colorScheme, contrast, changeSetting } = useSettings()
+
+    const isDark = useMediaQuery('(prefers-color-scheme: dark)')
+    const isHc = useMediaQuery('(prefers-contrast: more)')
+    const [curColor, setCurColor] = useState("#EDEDED")
 
     useEffect(() => {
         // initialize user settings
         userSettings.forEach((setting) => {
             localStorage.getItem(setting.name) ? changeSetting(setting.name, localStorage.getItem(setting.name)) : changeSetting(setting.name, setting.default)
         })
+
+        setCurColor(updateThemeColor(colorScheme, contrast, isDark, isHc))
     }, [])
 
-    return <>{children}</>
+    useEffect(() => {
+        setCurColor(updateThemeColor(colorScheme, contrast, isDark, isHc))
+    }, [colorScheme, contrast])
+
+    return (
+        <>
+            <Head>
+                <meta name="theme-color" content={curColor} />
+            </Head>
+
+            {children}
+        </>
+    )
 
 }
