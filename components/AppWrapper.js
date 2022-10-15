@@ -10,7 +10,6 @@ import { useMediaQuery} from "../hooks/useMediaQuery"
 import { useSettings } from '../hooks/useSettings'
 import { userSettings } from '../context/Settings'
 // images
-import RichardfxrThumb from '../public/images/richardfxr/richardfxr-thumbnail.jpg'
 import BudgettyThumb from '../public/images/Budgetty/Budgetty-thumbnail.jpg'
 import EggHolderThumb from '../public/images/EggHolders/EggHolders-thumbnail.jpg'
 import PFrameThumb from '../public/images/PFrame/PFrame-thumbnail.jpg'
