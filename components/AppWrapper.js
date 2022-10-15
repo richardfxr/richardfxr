@@ -10,7 +10,6 @@ import { useMediaQuery} from "../hooks/useMediaQuery"
 import { useSettings } from '../hooks/useSettings'
 import { userSettings } from '../context/Settings'
 // images
-import RichardfxrThumb from '../public/images/richardfxr/richardfxr-thumbnail.jpg'
 import BudgettyThumb from '../public/images/Budgetty/Budgetty-thumbnail.jpg'
 import EggHolderThumb from '../public/images/EggHolders/EggHolders-thumbnail.jpg'
 import PFrameThumb from '../public/images/PFrame/PFrame-thumbnail.jpg'
@@ -35,25 +34,6 @@ export const routes = [
 
 // === PROJECTS ===========================
 export const projects = [
-    {
-        path: '/projects/richardfxr',
-        title: 'Personal site',
-        image: {
-            img: RichardfxrThumb,
-            layoutId: 'richardfxr-thumbnail',
-            alt: 'Three white pentagonal electronic devices with circular screens on the top. Each screen is displaying information related to budgeting and spending habits.'
-        },
-        date: '2022-08',
-        colors: [
-            {hex: '#11d3e7', name: 'Richard blue'},
-            {hex: '#1a1a1a', name: 'dark gray'},
-            {hex: '#ededed', name: 'light gray'},
-        ],
-        filters: ['design'],
-        media: ['web design'],
-        cardLabels: ['web design', 'dev'],
-        code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/richardfxr" target="_blank" key="richardfxr-github">GitHub repository</UnderlinedLink>,
-    },
     {
         path: '/projects/budgetty',
         title: 'Budgetty',
