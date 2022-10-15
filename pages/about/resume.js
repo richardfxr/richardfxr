@@ -7,12 +7,9 @@ import PageHeading from '../../components/PageHeading'
 import Section from "../../components/Section"
 import UnderlinedLink from '../../components/UnderlinedLink'
 import Button from '../../components/Button'
-
-// === FUNCTIONS ==========================
-function print() {
-    console.log("printing");
-    window.print()
-}
+// SVGs
+import Logo from '../../public/SVGs/logo.svg'
+import RichardfxrQR from '../../public/SVGs/QR-richardfxr.svg'
 
 
 
@@ -42,15 +39,27 @@ export default function Resume() {
 
             <Layout heading="Résumé" printHidden id="resume">
                 <div className='screenHidden' id="printInfo">
-                    <PageHeading heading="Richard Fu" />
-                    <ul>
-                        <li>Xiangrui Fu (legal name)</li>
-                        <li>richardfxr.com</li>
-                        <li>xfu01@risd</li>
-                    </ul>
+                    <div className='basicInfo'>
+                        <div className='nameBox'>
+                            <Logo />
+                            <h1>Xiangrui (Richard) Fu</h1>
+                        </div>
+                        <p className='risdLabel'>RISD</p>
+                        <p className='email'>xfu01@risd.edu</p>
+                    </div>
+                    <div className='richardfxrCard'>
+                        <div className='text'>
+                            <p className='url'>richardfxr.com</p>
+                            <p className='details'>
+                                <span>v10.2.1</span> 
+                                <span>portfolio site</span>
+                            </p>
+                        </div>
+                        <RichardfxrQR />
+                    </div>
                 </div>
 
-                <Section sections={sections} index={0} printHidden>
+                <Section sections={sections} index={0} printHidden skipLinkHidden>
                     <dl className="twoCol dlList">
                         <div>
                             <dt>Legal name</dt>
@@ -65,21 +74,17 @@ export default function Resume() {
                             <dd><UnderlinedLink href="mailto:xfu01@risd.edu?subject=A%20Witty%20Title" target="_blank" styling="block">xfu01@risd.edu</UnderlinedLink></dd>
                         </div>
                         <div>
-                            <dt>website</dt>
+                            <dt>Website</dt>
                             <dd><UnderlinedLink to="/" styling="block">richardfxr.com</UnderlinedLink></dd>
                         </div>
                     </dl>
 
-                    <p className='md first'>This is the web version of Richard Fu’s résumé. It was last updated on <em>October 13, 2022</em>. This résumé can be printed or downloaded as a PDF.</p>
-
-                    <ul className='row md'>
-                        <li><Button click={print} styling="sm">Print</Button></li>
-                        <li><Button href="/RichardFu-resume.pdf" target="_blank" styling="sm">Download</Button></li>
-                    </ul>
+                    <p className='md first'>This is the web version of my résumé. It was last updated on <em>October 15, 2022</em>. Please use the PDF version linked below for downloading and printing.</p>
+                    <Button href="/RichardFu-resume.pdf" target="_blank" styling="sm">PDF version</Button>
                 </Section>
 
-                <Section sections={sections} index={1}>
-                    <p className='md'>Seeking an internship in <em>digital user interface design</em> where I can apply my design and software engineering skills while working with a professional team.</p>
+                <Section sections={sections} index={1} skipLinkHidden>
+                    <p className='md'>Seeking an internship in <em>digital user interface design</em> where I can apply my design and web development skills while working with a professional team.</p>
 
                     <ul className='row md printHidden'>
                         <li><Button to='/projects' styling="sm">Portfolio</Button></li>
@@ -87,19 +92,29 @@ export default function Resume() {
                     </ul>
                 </Section>
 
-                <Section sections={sections} index={2}>
+                <Section sections={sections} index={2} skipLinkHidden>
                     <dl className="oneCol dlList detailed">
                         <div>
-                            <dt>Rhode Island School of Design</dt>
-                            <dd>Bachelor of Fine Arts, Industrial Design</dd>
+                            <dt>Rhode Island School of Design (RISD)</dt>
+                            <dd>
+                                <span>2020-2024</span>
+                                <span>Bachelor of Fine Arts, Industrial Design</span>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Boston University Academy (BUA)</dt>
+                            <dd>
+                                <span>2016-2020</span>
+                                <span>Graduated summa cum laude</span>
+                            </dd>
                         </div>
                     </dl>
                 </Section>
 
-                <Section sections={sections} index={3}>
+                <Section sections={sections} index={3} skipLinkHidden>
                     <dl className="oneCol dlList detailed">
                         <div>
-                            <dt><UnderlinedLink href="https://weatherdial.richardfxr.com/" target="_blank">Weather Dial</UnderlinedLink></dt>
+                            <dt><UnderlinedLink href="https://weatherdial.richardfxr.com/" target="_blank" print="weatherdial.richardfxr.com">Weather Dial</UnderlinedLink></dt>
                             <dd>A simple weather app focused on data visualization and animation built with SvelteKit.</dd>
                         </div>
                         <div>
@@ -107,7 +122,7 @@ export default function Resume() {
                             <dd>An accessibility-focused redesign of my portfolio site built with React, Next.js, and Framer Motion.</dd>
                         </div>
                         <div>
-                            <dt><UnderlinedLink to="/projects/budgetty">Budgetty</UnderlinedLink></dt>
+                            <dt><UnderlinedLink to="/projects/budgetty" print="richardfxr.com/projects/budgetty">Budgetty</UnderlinedLink></dt>
                             <dd>A circular monochrome interface for a standalone digital wallet. Concepts created with Illustrator and After Effects.</dd>
                         </div>
                         <div>
@@ -122,7 +137,7 @@ export default function Resume() {
                     </ul>
                 </Section>
 
-                <Section sections={sections} index={4}>
+                <Section sections={sections} index={4} skipLinkHidden>
                     <dl className="oneCol dlList detailed">
                         <div>
                             <dt>Programs</dt>
@@ -130,11 +145,11 @@ export default function Resume() {
                         </div>
                         <div>
                             <dt>Software development</dt>
-                            <dd>HTML, CSS, JavaScript, git, Tailwind CSS, React, Next.js, Framer Motion, SvelteKit, Svelte, Vite, Vue.js, WebGL, Three.js, Python</dd>
+                            <dd>HTML, CSS, JavaScript, git, Tailwind CSS, Sass, Node.js, React, Next.js, Framer Motion, SvelteKit, Svelte, Vite, Vue.js, WebGL, Three.js, Python</dd>
                         </div>
                         <div>
                             <dt>Others</dt>
-                            <dd>Illustration, photography, videography, graphic design.</dd>
+                            <dd>Illustration, photography, videography, graphic design, product design, CNC, metalworking</dd>
                         </div>
                     </dl>
                 </Section>

@@ -13,6 +13,15 @@
             }
         }
     }
+
+    #education {
+        .dlList {
+            dd {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
 }
 
 
@@ -20,37 +29,90 @@
 // === BREAKPOINTS ============================
 @media print {
     #resume {
+        line-height: 1.1em;
         #printInfo {
-            .pageHeading {
-                padding-bottom: var(--pad-sm);
+            display: flex !important;
+            flex-direction: row;
+            padding: 0 var(--section-pad-hrz) var(--pad-lg);
+
+            font-size: 15px;
+
+            .basicInfo {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--pad-md);
+
+                .nameBox {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    border: solid var(--border-width) var(--clr-300);
+
+                    svg {
+                        width: 35px;
+                        padding: var(--pad-md);
+                        border-right: solid var(--border-width) var(--clr-300);
+                    }
+
+                    h1 {
+                        font-size: 18px;
+                        font-weight: 700;
+                        padding: var(--pad-md) var(--pad-lg);
+                    }
+                }
+
+                .risdLabel {
+                    color: var(--clr-100);
+                    line-height: 1em;
+
+                    padding: var(--pad-4xs) var(--pad-sm);
+                    background-color: var(--clr-1000);
+                    border: solid var(--border-width) var(--clr-300);
+
+                    // force background color to show
+                    -webkit-print-color-adjust:exact !important;
+                    print-color-adjust:exact !important;
+                }
+
+                .email {
+                    line-height: 1em;
+                }
             }
-    
-            ul {
+
+            .richardfxrCard {
                 display: flex;
                 flex-direction: row;
-                gap: var(--pad-xl);
-    
-                padding:
-                    0
-                    var(--section-pad-hrz)
-                    calc(var(--section-pad-vrt) - var(--padRem-5xs))
-                    var(--section-pad-hrz);
-    
-                li {
-                    color: var(--clr-700);
-                    font-size: var(--font-md);
-                    font-weight: 500;
+                gap: var(--pad-md);
+                margin-left: auto;
 
-                    &::after {
-                        content: "•";
-                        color: var(--clr-600);
-                        padding-left: var(--pad-xl);
+                padding: var(--pad-md) var(--pad-lg) var(--pad-md) var(--pad-xl);
+                border: solid var(--border-width) var(--clr-300);
+                border-radius: 5px;
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+
+                    .url {
+                        font-size: 15px;
+                        font-weight: 600;
                     }
 
-                    &:last-child::after {
-                        // hide dot for last <li>
-                        display: none;
+                    .details {
+                        display: flex;
+                        flex-direction: column;
+
+                        color: var(--clr-700);
+                        line-height: 1.1em;
+                        text-align: right;
+
+                        margin-top: auto;
                     }
+                }
+
+                svg {
+                    width: 75px;
                 }
             }
         }
