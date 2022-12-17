@@ -75,18 +75,16 @@ export default function Breadcrumbs() {
 // === INTERNAL COMPONENTS ================
 function BreadcrumbLink({ to, label, isCurrent }) {
     return (
-        <Link
-            href={to}
-            aria-label={label}
-            aria-current={isCurrent ? 'page' : 'false'}
-            >
-            {to === "/" && <HomeIcon />}
-            {to === "/projects" && <ProjectsIcon />}
-            {to === "/about" && <AboutIcon />}
-            {to === "/info" && <InfoIcon />}
-            {to === "/settings" && <SettingsIcon />}
+        <Link href={to}>
+            <a aria-label={label} aria-current={isCurrent ? 'page' : 'false'}>
+                {to === "/" && <HomeIcon />}
+                {to === "/projects" && <ProjectsIcon />}
+                {to === "/about" && <AboutIcon />}
+                {to === "/info" && <InfoIcon />}
+                {to === "/settings" && <SettingsIcon />}
 
-            {label}
+                {label}
+            </a>
         </Link>
     )
 }

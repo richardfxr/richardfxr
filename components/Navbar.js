@@ -118,18 +118,18 @@ function NavigationLink({ href, label }) {
     if (href === "/") isActive = router.pathname === "/"
 
     return (
-        <Link
-            href={href}
-            id={href}
-            className={isActive ? 'active' : ''}
-            aria-current={isActive ? 'true' : 'false'}
-            aria-label={label}
-            scroll={false}>
-            {href === "/" && <HomeIcon />}
-            {href === "/projects" && <ProjectsIcon />}
-            {href === "/about" && <AboutIcon />}
-            {href === "/info" && <InfoIcon />}
-            {href === "/settings" && <SettingsIcon />}
+        <Link href={href} scroll={false}>
+            <a
+                id={href}
+                className={isActive ? 'active' : ''}
+                aria-current={isActive ? 'true' : 'false'}
+                aria-label={label}>
+                {href === "/" && <HomeIcon />}
+                {href === "/projects" && <ProjectsIcon />}
+                {href === "/about" && <AboutIcon />}
+                {href === "/info" && <InfoIcon />}
+                {href === "/settings" && <SettingsIcon />}
+            </a>
         </Link>
     )
 }

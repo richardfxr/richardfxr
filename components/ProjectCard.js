@@ -25,8 +25,10 @@ export default function ProjectCard({ image, path, title, colors, cardLabels }) 
                 initial="hidden"
                 animate="show"
                 exit="exit">
-                <Link href={path} className="projectCard__link">
-                    <h3>{title}</h3>
+                <Link href={path}>
+                    <a className="projectCard__link">
+                        <h3>{title}</h3>
+                    </a>
                 </Link>
                 <div className='projectCard__details'>
                     <ul className="project__colors" aria-label="Colors">
