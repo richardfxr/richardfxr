@@ -1,6 +1,6 @@
 {
   "name": "richardfxr-next",
-  "version": "0.1.0",
+  "version": "10.2.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
