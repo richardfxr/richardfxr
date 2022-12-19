@@ -64,7 +64,7 @@ export default function Home() {
                             <li key={project.path}><ProjectCard {...project} /></li>
                         ))}
                     </ul>
-                    <div id="moreWork">
+                    <div id="moreWork" className="message">
                         <p className='md'>You can find <em>more work</em> on the projects page or view an index of all my work in the archive.</p>
                         <ul className='row md'>
                             <li><Button to='/projects#more' styling="sm">Projects</Button></li>

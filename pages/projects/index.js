@@ -11,6 +11,7 @@ import Layout from "../../components/Layout"
 import Section from "../../components/Section"
 import RadioSelectors from "../../components/RadioSelectors"
 import ProjectCard from '../../components/ProjectCard'
+import Button from '../../components/Button'
 // hooks
 import { useIsMotionOK } from "../../hooks/useMediaQuery"
 
@@ -123,6 +124,11 @@ export default function Projects() {
                             ))}
                         </AnimatePresence>
                     </Reorder.Group>
+
+                    <div id="archive" className="message">
+                        <p className='md'>You can find <em>a complete collection of all my work</em> dating back to 2017 in the archive.</p>
+                        <Button to='/projects/archive' styling="sm">Archive</Button>
+                    </div>
                 </Section>
             </Layout>
         </>

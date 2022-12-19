@@ -192,6 +192,17 @@ ul, ol {
    }
 }
 
+.message {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: var(--pad-xxl);
+
+   padding-top: var(--pad-xxxl);
+   border-top: solid var(--border-width) var(--clr-200);
+   margin-top: var(--pad-6xl);
+}
+
 
 
 // === TYPOGRAPHY =========================
