@@ -105,6 +105,13 @@ export default function ProjectInfo({ project, children }) {
                             </dd>
                         </div>
                     ))}
+
+                    {project.code &&
+                        <div>
+                            <dt>Code</dt>
+                            <dd>{project.code}</dd>
+                        </div>
+                    }
                 </dl>
 
                 <div className="desc">
