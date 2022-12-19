@@ -2,12 +2,8 @@
     .section {
         padding-bottom: var(--pad-6xl);
         
-        .section {
-            &__main {
-                display: flex;
-                flex-flow: column nowrap;
-                gap: var(--pad-xxxl);
-            }
+        .section__main {
+            gap: var(--pad-xxxl);
         }
 
         .radioSelectors {

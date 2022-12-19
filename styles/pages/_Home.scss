@@ -6,15 +6,11 @@
 
     padding-bottom: calc(var(--pad-8xl) - var(--pad-sm));
 
-    .section {
-        &__main {
-            display: flex;
-            flex-flow: column nowrap;
-            gap: var(--pad-xxl);
+    .section__main {
+        gap: var(--pad-xxl);
 
-            & > p {
-                padding-top: calc(var(--pad-4xl) - var(--pad-xxl));
-            }
+        & > p {
+            padding-top: calc(var(--pad-4xl) - var(--pad-xxl));
         }
     }
 

@@ -9,7 +9,7 @@
             width: 100%;
 
             .scrollContainer {
-                padding-bottom: calc(var(--section-pad-vrt) / 2);
+                padding-bottom: calc(var(--section-pad-vrt) / 3);
             }
         }
 
@@ -21,16 +21,5 @@
                 align-items: center;
             }
         }
-
-        .twoCol.cards {
-            padding-top: calc(var(--section-pad-vrt) / 2);
-        }
     }
-    
-}
-
-
-
-// === BREAKPOINTS ============================
-@media only screen and (max-width: $breakpoint-mobile) {
 }

@@ -12,6 +12,7 @@
     position: relative;
 
     padding-right: var(--section-pad-hrz);
+    padding-bottom: var(--pad-6xl);
     padding-left: var(--section-pad-hrz);
 
     & > .separator {
@@ -87,6 +88,9 @@
     }
 
     &__main {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: var(--pad-xl);
         position: relative;
         min-width: 0px;
 

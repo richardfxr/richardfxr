@@ -5,12 +5,8 @@
     #version10 {
         padding-bottom: var(--pad-6xl);
 
-        .section {
-            &__main {
-                display: flex;
-                flex-flow: column nowrap;
-                gap: var(--pad-xxxl);
-            }
+        .section__main {
+            gap: var(--pad-xxxl);
         }
         .versionBadge {
             flex-shrink: 0;
@@ -25,13 +21,9 @@
     #a11y {
         padding-bottom: var(--pad-6xl);
 
-        .section {
-            &__main {
-                display: flex;
-                flex-flow: column nowrap;
-                align-items: flex-start;
-                gap: var(--pad-xxl);
-            }
+        .section__main {
+            align-items: flex-start;
+            gap: var(--pad-xxl);
         }
     }
 

@@ -1,13 +1,7 @@
 #error {
-    .section{
-        padding-bottom: var(--pad-6xl);
-
-        &__main {
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: flex-start;
-            gap: var(--pad-xxl);
-        }
+    .section__main{
+        align-items: flex-start;
+        gap: var(--pad-xxl);
     }
     .errorOutput {
         position: relative;

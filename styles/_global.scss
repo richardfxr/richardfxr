@@ -72,6 +72,12 @@ svg {
    gap: var(--pad-xl);
 }
 
+.twoCol .fourCol {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+   gap: var(--pad-xl);
+}
+
 ul, ol {
    &.row {
       display: flex;
@@ -200,7 +206,7 @@ ul, ol {
 
    padding-top: var(--pad-xxxl);
    border-top: solid var(--border-width) var(--clr-200);
-   margin-top: var(--pad-6xl);
+   margin-top: var(--pad-5xl);
 }
 
 
