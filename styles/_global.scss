@@ -339,6 +339,10 @@ figcaption {
 
 
 // === UTILITY ============================
+.anchor, h3 {
+   scroll-margin-top: var(--section-pad-vrt);
+}
+
 .visuallyHidden {
 	position: absolute;
 	white-space: nowrap;

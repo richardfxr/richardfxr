@@ -111,6 +111,7 @@ export default function Projects() {
                             {shownProjects.map((project, index) => (
                                 <Reorder.Item
                                     id={index === 4 ? 'more' : null}
+                                    className={index === 4 ? 'anchor' : null}
                                     drag={false}
                                     key={project.path}
                                     value={project}
