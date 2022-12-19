@@ -1,6 +1,34 @@
 .img {
-    & > span {
+    position: relative;
+
+    & > span, & figure > span {
         // override Next.js inline styling
         display: block !important;
+    }
+
+    figure {
+        figcaption {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            right: 0;
+            bottom: calc(var(--figcaption-bottom) - 0.5em);
+            left: 0;
+
+            font-size: var(--font-sm);
+            font-weight: 600;
+
+            &.center {
+                justify-content: center;
+            }
+
+            span {
+                padding: 0.05rem 1rem;
+
+                color: var(--figcaption-clr);
+                background-color: var(--figcaption-bg);
+                border-radius: var(--bradius-round);
+            }
+        }
     }
 }
