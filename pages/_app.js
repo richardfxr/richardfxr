@@ -67,7 +67,7 @@ function MyApp({ Component, pageProps }) {
                 <AppWrapper>
                     <A11yMenu />
                     <Navbar />
-                    <AnimatePresence exitBeforeEnter>
+                    <AnimatePresence mode='wait'>
                     <Component {...pageProps} key={router.pathname} /> 
                     </AnimatePresence>
                 </AppWrapper>
