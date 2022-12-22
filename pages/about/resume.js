@@ -97,7 +97,7 @@ export default function Resume() {
                             <dt>Rhode Island School of Design (RISD)</dt>
                             <dd>
                                 <span>2020-2024</span>
-                                <span>Bachelor of Fine Arts, Industrial Design</span>
+                                <span>Bachelor of Arts, Industrial Design</span>
                             </dd>
                         </div>
                         <div>
