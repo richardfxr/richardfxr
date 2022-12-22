@@ -56,6 +56,25 @@ export const projects = [
         code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/richardfxr" target="_blank" key="richardfxr-github">GitHub repository</UnderlinedLink>,
     },
     {
+        href: 'https://weatherdial.richardfxr.com/',
+        title: 'Weather Dial',
+        image: {
+            img: WeatherDialThumb,
+            layoutId: 'WeatherDial-thumbnail',
+            alt: 'Weather Dial temperature page displayed on an iPhone 14 Pro. A list of navigation icons lines the top, while the main page is filled with an orange circular bar graph that denotes temperature changes throughout the day.'
+        },
+        date: '2022-09',
+        colors: [
+            {hex: '#e55b39', name: 'orange'},
+            {hex: '#3f4ce8', name: 'royal blue'},
+            {hex: '#e2d9d4', name: 'light gray'},
+        ],
+        filters: ['design'],
+        media: ['web design', 'development'],
+        cardLabels: ['web design', 'dev'],
+        code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/weather-dial" target="_blank" key="WeatherDial-github">GitHub repository</UnderlinedLink>,
+    },
+    {
         href: '/projects/budgetty',
         title: 'Budgetty',
         image: {
