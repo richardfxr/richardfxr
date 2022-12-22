@@ -111,8 +111,8 @@ export default function Projects() {
                         <AnimatePresence initial={false}>
                             {shownProjects.map((project, index) => (
                                 <Reorder.Item
-                                    id={index === 4 ? 'more' : null}
-                                    className={index === 4 ? 'anchor' : null}
+                                    id={index === 6 ? 'more' : null}
+                                    className={index === 6 ? 'anchor' : null}
                                     drag={false}
                                     key={project.href}
                                     value={project}

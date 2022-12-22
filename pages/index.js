@@ -60,7 +60,7 @@ export default function Home() {
 
                 <Section sections={sections} index={1} noAni>
                     <ul className='twoCol cards'>
-                        {projects.slice(0, 4).map((project) => (
+                        {projects.slice(0, 6).map((project) => (
                             <li key={project.href}><ProjectCard {...project} /></li>
                         ))}
                     </ul>
