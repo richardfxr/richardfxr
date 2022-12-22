@@ -114,7 +114,7 @@ export default function Projects() {
                                     id={index === 4 ? 'more' : null}
                                     className={index === 4 ? 'anchor' : null}
                                     drag={false}
-                                    key={project.path}
+                                    key={project.href}
                                     value={project}
                                     variants={projectCardVar}
                                     initial="hidden"

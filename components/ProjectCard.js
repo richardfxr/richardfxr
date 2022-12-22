@@ -15,7 +15,7 @@ const projectCardVar = {
     exit: { opacity: 0, transition: { duration: 0.2 } },
 }
 
-export default function ProjectCard({ image, path, title, colors, cardLabels }) {
+export default function ProjectCard({ image, href, title, colors, cardLabels }) {
     return(
         <article className="projectCard">
             <Img ani='layout' {...image} priority />
@@ -25,11 +25,17 @@ export default function ProjectCard({ image, path, title, colors, cardLabels }) 
                 initial="hidden"
                 animate="show"
                 exit="exit">
-                <Link href={path}>
-                    <a className="projectCard__link">
+                {href.charAt(0) === '/' ?
+                    <Link href={href}>
+                        <a className="projectCard__link">
+                            <h3>{title}</h3>
+                        </a>
+                    </Link>
+                    :
+                    <a href={href} className="projectCard__link" target="_blank" rel="noopener noreferrer">
                         <h3>{title}</h3>
                     </a>
-                </Link>
+                }
                 <div className='projectCard__details'>
                     <ul className="project__colors" aria-label="Colors">
                         {colors.slice(0, 3).map(({ hex, name }) => (

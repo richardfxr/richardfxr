@@ -33,8 +33,8 @@ export default function Footer() {
                 <div className='twoCol'>
                     <nav>
                         <ul className='list withSeparators sm' aria-label='Footer navigation'>
-                            {routes.slice(0, 5).map(({ path, title }) => (
-                                <li key={path} className='list__item'><UnderlinedLink to={path} styling='md block'>{title}</UnderlinedLink></li>
+                            {routes.slice(0, 5).map(({ href, title }) => (
+                                <li key={href} className='list__item'><UnderlinedLink to={href} styling='md block'>{title}</UnderlinedLink></li>
                             ))}
                             <li key='/about/resume' className='list__item'><UnderlinedLink to='/about/resume' styling='md block'>Résumé</UnderlinedLink></li>
                             <li key='/projects/archive' className='list__item'><UnderlinedLink to='/projects/archive' styling='md block'>Archive</UnderlinedLink></li>

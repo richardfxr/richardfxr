@@ -11,6 +11,7 @@ import { useSettings } from '../hooks/useSettings'
 import { userSettings } from '../context/Settings'
 // images
 import RichardfxrThumb from '../public/images/richardfxr/richardfxr-thumbnail.jpg'
+import WeatherDialThumb from '../public/images/WeatherDial/WeatherDial-thumbnail.jpg'
 import BudgettyThumb from '../public/images/Budgetty/Budgetty-thumbnail.jpg'
 import EggHolderThumb from '../public/images/EggHolders/EggHolders-thumbnail.jpg'
 import PFrameThumb from '../public/images/PFrame/PFrame-thumbnail.jpg'
@@ -22,21 +23,21 @@ import RISDSophomoreThumb from '../public/images/RISDSophomore/RISDSophomore-thu
 // === ROUTES =============================
 export const routes = [
     // main pages (<Navbar /> only show first 4 objects)
-    {path: '/', title: 'Home'},
-    {path: '/projects', title: 'Projects'},
-    {path: '/about', title: 'About'},
-    {path: '/info', title: 'Info'},
-    {path: '/settings', title: 'Settings'},
+    {href: '/', title: 'Home'},
+    {href: '/projects', title: 'Projects'},
+    {href: '/about', title: 'About'},
+    {href: '/info', title: 'Info'},
+    {href: '/settings', title: 'Settings'},
 
     // secondary pages
-    {path: '/projects/archive', title: 'Archive'},
-    {path: '/about/resume', title: 'Résumé'},
+    {href: '/projects/archive', title: 'Archive'},
+    {href: '/about/resume', title: 'Résumé'},
 ]
 
 // === PROJECTS ===========================
 export const projects = [
     {
-        path: '/projects/richardfxr',
+        href: '/projects/richardfxr',
         title: 'Personal site',
         image: {
             img: RichardfxrThumb,
@@ -55,7 +56,7 @@ export const projects = [
         code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/richardfxr" target="_blank" key="richardfxr-github">GitHub repository</UnderlinedLink>,
     },
     {
-        path: '/projects/budgetty',
+        href: '/projects/budgetty',
         title: 'Budgetty',
         image: {
             img: BudgettyThumb,
@@ -78,7 +79,7 @@ export const projects = [
         ],
     },
     {
-        path: '/projects/eggholders',
+        href: '/projects/eggholders',
         title: 'EggHolders',
         image: {
             img: EggHolderThumb,
@@ -97,7 +98,7 @@ export const projects = [
         labels: ['Rhode Island School of Design'],
     },
     {
-        path: '/projects/pframe',
+        href: '/projects/pframe',
         title: 'P-Frame',
         image: {
             img: PFrameThumb,
@@ -116,7 +117,7 @@ export const projects = [
         labels: ['Rhode Island School of Design', 'Computer-aided design'],
     },
     {
-        path: '/projects/exploded1200d',
+        href: '/projects/exploded1200d',
         title: 'Exploded 1200D',
         image: {
             img: Exploded1200DThumb,
@@ -135,7 +136,7 @@ export const projects = [
         labels: ['Rhode Island School of Design'],
     },
     {
-        path: '/projects/RISDsophomore',
+        href: '/projects/RISDsophomore',
         title: 'RISD Sophomore',
         image: {
             img: RISDSophomoreThumb,

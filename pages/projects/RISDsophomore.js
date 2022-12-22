@@ -160,7 +160,7 @@ export default function RISDSophomore() {
                 <p className='md bottom-xxxl'>These are larger projects that were also created during my sophomore year at RISD.</p>
                     <ul className='twoCol cards'>
                         {relatedProjects.map((project) => (
-                            <li key={project.path}><ProjectCard {...project} /></li>
+                            <li key={project.href}><ProjectCard {...project} /></li>
                         ))}
                     </ul>
                 </Section>

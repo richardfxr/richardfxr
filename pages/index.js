@@ -61,7 +61,7 @@ export default function Home() {
                 <Section sections={sections} index={1} noAni>
                     <ul className='twoCol cards'>
                         {projects.slice(0, 4).map((project) => (
-                            <li key={project.path}><ProjectCard {...project} /></li>
+                            <li key={project.href}><ProjectCard {...project} /></li>
                         ))}
                     </ul>
                     <div id="moreWork" className="message">

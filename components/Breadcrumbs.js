@@ -37,7 +37,7 @@ export default function Breadcrumbs() {
         // get corresponding object from allRoutes array
         breadcrumbsTemp.forEach(function(breadcrumb, index) {
             // replace breadcrumbs[index] with corresponsing object from routes array
-            this[index] = allRoutes.find(route => route.path.split('/').at(-1) === breadcrumb)
+            this[index] = allRoutes.find(route => route.href.split('/').at(-1) === breadcrumb)
             if (this[index]) {
                 this[index].isCurrent = false
             } else {
@@ -57,8 +57,8 @@ export default function Breadcrumbs() {
         <nav className='breadcrumbs' aria-label="breadcrumbs">
             {!error &&
                 <ol className='row'>
-                    {breadcrumbs.map(({ path, title, isCurrent }) => (
-                        <li key={path}><BreadcrumbLink to={path} label={title} isCurrent={isCurrent} /></li>
+                    {breadcrumbs.map(({ href, title, isCurrent }) => (
+                        <li key={href}><BreadcrumbLink to={href} label={title} isCurrent={isCurrent} /></li>
                     ))}
                 </ol>
             }

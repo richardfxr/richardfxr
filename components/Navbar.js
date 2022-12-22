@@ -93,8 +93,8 @@ export default function Navbar() {
                 <Logo className="logo"/>
                 <nav>
                     <ul ref={navUl} aria-label="main navigation">
-                        {routes.slice(0, 5).map(({ path, title }) => (
-                            <li key={path}><NavigationLink href={path} label={title} /></li>
+                        {routes.slice(0, 5).map(({ href, title }) => (
+                            <li key={href}><NavigationLink href={href} label={title} /></li>
                         ))}
                         <li className="magicLine" id="magicLineVrt" ref={magicLineVrt} aria-hidden="true"></li>
                         <li className="magicLine" id="magicLineHrz" ref={magicLineHrz} aria-hidden="true"></li>
