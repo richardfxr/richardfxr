@@ -3,7 +3,6 @@
 import Head from 'next/head'
 // components
 import Layout from "../../components/Layout"
-import PageHeading from '../../components/PageHeading'
 import Section from "../../components/Section"
 import UnderlinedLink from '../../components/UnderlinedLink'
 import Button from '../../components/Button'
@@ -79,7 +78,7 @@ export default function Resume() {
                         </div>
                     </dl>
 
-                    <p className='md first'>This is the web version of my résumé. It was last updated on <em>October 15, 2022</em>. Please use the PDF version linked below for downloading and printing.</p>
+                    <p className='md first'>This is the web version of my résumé, last updated on <em>December 22, 2022</em>. Please use the PDF version below for downloading and printing.</p>
                     <Button href="/RichardFu-resume.pdf" target="_blank" styling="sm">PDF version</Button>
                 </Section>
 
@@ -114,8 +113,12 @@ export default function Resume() {
                 <Section sections={sections} index={3} skipLinkHidden>
                     <dl className="oneCol dlList detailed">
                         <div>
+                            <dt><UnderlinedLink href="https://www.machinists-edge.com/" target="_blank" print="machinists-edge.com">Machinist&#39;s Edge</UnderlinedLink></dt>
+                            <dd>A web app with calculators and charts designed for the RISD ID Metal Shop and built with SvelteKit.</dd>
+                        </div>
+                        <div>
                             <dt><UnderlinedLink href="https://weatherdial.richardfxr.com/" target="_blank" print="weatherdial.richardfxr.com">Weather Dial</UnderlinedLink></dt>
-                            <dd>A simple weather app focused on data visualization and animation built with SvelteKit.</dd>
+                            <dd>A simple weather app focused on data visualization and animation. Built with SvelteKit.</dd>
                         </div>
                         <div>
                             <dt><UnderlinedLink to="/info">richardfxr.com</UnderlinedLink></dt>
@@ -124,10 +127,6 @@ export default function Resume() {
                         <div>
                             <dt><UnderlinedLink to="/projects/budgetty" print="richardfxr.com/projects/budgetty">Budgetty</UnderlinedLink></dt>
                             <dd>A circular monochrome interface for a standalone digital wallet. Concepts created with Illustrator and After Effects.</dd>
-                        </div>
-                        <div>
-                            <dt><UnderlinedLink href="https://sity.earth/" target="_blank">sity.earth</UnderlinedLink></dt>
-                            <dd>A web app that helps users find their city’s recycling guidelines. Built with SvelteKit and Cloud Firestore.</dd>
                         </div>
                     </dl>
 
@@ -141,15 +140,15 @@ export default function Resume() {
                     <dl className="oneCol dlList detailed">
                         <div>
                             <dt>Programs</dt>
-                            <dd>Illustrator, Photoshop, Premiere Pro, After Effects, Lightroom Classic, Audition, InDesign, DaVinci Resolve, Figma, SolidWorks, HSMWroks, Blender</dd>
+                            <dd>Illustrator, Premiere Pro, After Effects, Lightroom Classic, Photoshop, Audition, InDesign, DaVinci Resolve, Figma, SolidWorks, HSMWroks, Blender</dd>
                         </div>
                         <div>
                             <dt>Software development</dt>
-                            <dd>HTML, CSS, JavaScript, git, Tailwind CSS, Sass, Node.js, React, Next.js, Framer Motion, SvelteKit, Svelte, Vite, Vue.js, WebGL, Three.js, Python</dd>
+                            <dd>HTML, CSS, JavaScript, git, Tailwind CSS, Sass, Node.js, React, Next.js, Framer Motion, SvelteKit, Svelte, Vite, Vue.js, WebGL, Three.js, Python, Java</dd>
                         </div>
                         <div>
                             <dt>Others</dt>
-                            <dd>Illustration, photography, videography, graphic design, product design, CNC, metalworking</dd>
+                            <dd>Illustration, photography, videography, graphic design, product design, CAD, CAM, metalworking, CNC milling</dd>
                         </div>
                     </dl>
                 </Section>
