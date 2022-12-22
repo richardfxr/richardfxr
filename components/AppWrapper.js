@@ -11,6 +11,7 @@ import { useSettings } from '../hooks/useSettings'
 import { userSettings } from '../context/Settings'
 // images
 import RichardfxrThumb from '../public/images/richardfxr/richardfxr-thumbnail.jpg'
+import MachinistsEdgeThumb from '../public/images/MachinistsEdge/MachinistsEdge-thumbnail.jpg'
 import WeatherDialThumb from '../public/images/WeatherDial/WeatherDial-thumbnail.jpg'
 import BudgettyThumb from '../public/images/Budgetty/Budgetty-thumbnail.jpg'
 import EggHolderThumb from '../public/images/EggHolders/EggHolders-thumbnail.jpg'
@@ -54,6 +55,24 @@ export const projects = [
         media: ['web design', 'development'],
         cardLabels: ['web design', 'dev'],
         code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/richardfxr" target="_blank" key="richardfxr-github">GitHub repository</UnderlinedLink>,
+    },
+    {
+        href: 'https://www.machinists-edge.com/',
+        title: "Machinist's Edge",
+        image: {
+            img: MachinistsEdgeThumb,
+            layoutId: 'MachinistsEdge-thumbnail',
+            alt: 'The Feed Rate Calculator page displayed on an Asus ZenBook Duo 14. The primary screen shows an illustration of an end mill next to some form input fields; the second screen shows four saves for different end mills.'
+        },
+        date: '2022-10',
+        colors: [
+            {hex: '#fff5db', name: 'warm white'},
+            {hex: '#0d0d0d', name: 'black'},
+        ],
+        filters: ['design'],
+        media: ['web design', 'development'],
+        cardLabels: ['web design', 'dev'],
+        code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/weather-dial" target="_blank" key="WeatherDial-github">GitHub repository</UnderlinedLink>,
     },
     {
         href: 'https://weatherdial.richardfxr.com/',
