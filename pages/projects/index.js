@@ -75,9 +75,9 @@ export default function Projects() {
                 <title>Projects | Richard Fu</title>
                 <meta
                     name="description"
-                    content="A showcase of my more recent projects. Newly added projects include Budgetty, EggHolders, and P-Frame."
+                    content="A showcase of my more recent projects. Newly added projects include my portfolio site, Machinist’s Edge, and Weather Dial."
                 />
-                <meta property="og:image" content="https://www.richardfxr.com/images/projects-OGimage-1.jpg" />
+                <meta property="og:image" content="https://www.richardfxr.com/images/projects-OGimage-2.jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
             </Head>

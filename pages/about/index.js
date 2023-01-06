@@ -42,7 +42,7 @@ export default function About() {
                     name="description"
                     content="Maker of art – creator of designs – coder of websites – builder of computers – lover of keyboards – student of RISD."
                 />
-                <meta property="og:image" content="https://www.richardfxr.com/images/about-OGimage-1.jpg" />
+                <meta property="og:image" content="https://www.richardfxr.com/images/about-OGimage-2.jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
             </Head>

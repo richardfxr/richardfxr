@@ -29,9 +29,9 @@ export default function Resume() {
                 <title>Résumé | Richard Fu</title>
                 <meta
                     name="description"
-                    content="Version 10.2 of my portfolio website built using Next.js with React, and animated with Framer Motion."
+                    content="I’m an industrial design student at Rhode Island School of Design who specializes in UI/UX design and web development."
                 />
-                <meta property="og:image" content="https://www.richardfxr.com/images/info-OGimage-v10.2.0gold.jpg" />
+                <meta property="og:image" content="https://www.richardfxr.com/images/resume-OGimage-1.jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
             </Head>

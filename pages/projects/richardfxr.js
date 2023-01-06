@@ -56,9 +56,9 @@ export default function Richardfxr() {
                 <title>{headTitle}</title>
                 <meta
                     name="description"
-                    content="Three egg holders I created as part of a form exploration. This project was part of a RISD ID course taught by Joseph Napurano."
+                    content="A redesign of my portfolio site focused on accessibility, animation, and maintainability."
                 />
-                <meta property="og:image" content="https://www.richardfxr.com/images/EggHolders/EggHolders-OGimage-1.jpg" />
+                <meta property="og:image" content="https://www.richardfxr.com/images/richardfxr/richardfxr-OGimage-1.jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
             </Head>
