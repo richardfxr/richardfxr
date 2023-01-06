@@ -4,6 +4,8 @@ import { useEffect } from 'react'
 // Next
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+// Vercel
+import { Analytics } from '@vercel/analytics/react'
 // Framer Motion
 import { AnimatePresence } from "framer-motion"
 // Sass
@@ -72,6 +74,8 @@ function MyApp({ Component, pageProps }) {
                     </AnimatePresence>
                 </AppWrapper>
             </SettingsProvider>
+
+            <Analytics />
         </>
     )
 }
