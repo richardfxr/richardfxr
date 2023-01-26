@@ -41,7 +41,7 @@ export default function Resume() {
                     <div className='basicInfo'>
                         <div className='nameBox'>
                             <Logo />
-                            <h1>Xiangrui (Richard) Fu</h1>
+                            <h1>Richard (Xiangrui) Fu</h1>
                         </div>
                         <p className='risdLabel'>RISD</p>
                         <p className='email'>xfu01@risd.edu</p>
@@ -50,7 +50,7 @@ export default function Resume() {
                         <div className='text'>
                             <p className='url'>richardfxr.com</p>
                             <p className='details'>
-                                <span>v10.2.1</span> 
+                                <span>v10.2.3</span> 
                                 <span>portfolio site</span>
                             </p>
                         </div>
@@ -78,7 +78,7 @@ export default function Resume() {
                         </div>
                     </dl>
 
-                    <p className='md first'>This is the web version of my résumé, last updated on <em>December 22, 2022</em>. Please use the PDF version below for downloading and printing.</p>
+                    <p className='md first'>This is the web version of my résumé, last updated on <em>January 26, 2023</em>. Please use the PDF version below for downloading and printing.</p>
                     <Button href="/RichardFu-resume.pdf" target="_blank" styling="sm">PDF version</Button>
                 </Section>
 
@@ -126,7 +126,7 @@ export default function Resume() {
                         </div>
                         <div>
                             <dt><UnderlinedLink to="/projects/budgetty" print="richardfxr.com/projects/budgetty">Budgetty</UnderlinedLink></dt>
-                            <dd>A circular monochrome interface for a standalone digital wallet. Concepts created with Illustrator and After Effects.</dd>
+                            <dd>A circular monochrome interface for a digital wallet. Part of a team collaboration. Concepts created with Illustrator and After Effects.</dd>
                         </div>
                     </dl>
 
