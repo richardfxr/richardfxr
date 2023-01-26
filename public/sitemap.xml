@@ -4,14 +4,14 @@
 
     <url>
         <loc>https://www.richardfxr.com</loc>
-        <lastmod>2022-08-11</lastmod>
+        <lastmod>2023-01-26</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
         <loc>https://www.richardfxr.com/projects</loc>
-        <lastmod>2022-08-11</lastmod>
+        <lastmod>2023-01-05</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
@@ -24,57 +24,71 @@
     </url>
 
     <url>
+        <loc>https://www.richardfxr.com/about/resume</loc>
+        <lastmod>2023-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
         <loc>https://www.richardfxr.com/info</loc>
-        <lastmod>2022-08-11</lastmod>
+        <lastmod>2023-01-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>https://www.richardfxr.com/settings</loc>
-        <lastmod>2022-08-11</lastmod>
+        <lastmod>2022-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://www.richardfxr.com/projects/archive</loc>
-        <lastmod>2022-08-11</lastmod>
+        <lastmod>2022-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>https://www.richardfxr.com/projects/budgetty</loc>
-        <lastmod>2022-08-11</lastmod>
+        <lastmod>2022-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
         <loc>https://www.richardfxr.com/projects/eggholders</loc>
-        <lastmod>2022-08-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>https://www.richardfxr.com/projects/pframe</loc>
-        <lastmod>2022-08-11</lastmod>
+        <lastmod>2022-08-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
         <loc>https://www.richardfxr.com/projects/exploded1200d</loc>
-        <lastmod>2022-08-11</lastmod>
+        <lastmod>2022-10-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://www.richardfxr.com/projects/pframe</loc>
+        <lastmod>2022-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://www.richardfxr.com/projects/richardfxr</loc>
+        <lastmod>2023-01-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
         <loc>https://www.richardfxr.com/projects/RISDsophomore</loc>
-        <lastmod>2022-08-11</lastmod>
+        <lastmod>2022-12-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
