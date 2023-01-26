@@ -25,10 +25,10 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Richard Fu - Artist, Designer, &amp; Developer</title>
+                <title>Richard Fu - Designer, Developer, &amp; Artist</title>
                 <meta
                     name="description"
-                    content="I’m Richard Fu, an artist, designer, and developer who loves blue. This is my portfolio website which contains recent projects and ways to contact me."
+                    content="I’m Richard Fu, a designer, developer, and artist who loves blue. This is my portfolio website which contains recent projects and ways to contact me."
                 />
                 <meta property="og:image" content="https://www.richardfxr.com/images/richardfxr-OGimage-2.jpg" />
                 <meta property="og:image:width" content="1200" />
@@ -50,7 +50,7 @@ export default function Home() {
                             </li>
                         </ul>
                     </ScrollContainer>
-                    <p className="lg">I’m <em>Richard Fu</em>, an <em>artist</em>, <em>designer</em>, and <em>developer</em> who loves blue - <em className="rblue">#11d3e7</em> to be exact.</p>
+                    <p className="lg">I’m <em>Richard Fu</em>, a <em>designer</em>, <em>developer</em>, and <em>artist</em> who loves blue - <em className="rblue">#11d3e7</em> to be exact.</p>
                     <ul className='row md'>
                         <li><Button href='#works' target="_self" styling="sm rblue"><span className='inter upDw pad--right'>↓</span> Works</Button></li>
                         <li><Button to='/about' styling="sm">About</Button></li>
