@@ -74,6 +74,8 @@
 
 @media print {
     .button {
+        display: none;
+        
         &.rblue {
             // force background color to show
             -webkit-print-color-adjust:exact !important;

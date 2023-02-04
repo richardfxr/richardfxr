@@ -18,97 +18,43 @@
             }
         }
     }
-}
 
+    #projects {
+        .section__main {
+            gap: var(--pad-4xl);
+        }
 
-
-// === BREAKPOINTS ============================
-@media print {
-    #resume {
-        line-height: 1.1em;
-        #printInfo {
-            display: flex !important;
-            flex-direction: row;
-            padding: 0 var(--section-pad-hrz) var(--pad-lg);
-
-            font-size: 15px;
-
-            .basicInfo {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: var(--pad-md);
-
-                .nameBox {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    border: solid var(--border-width) var(--clr-300);
-
-                    svg {
-                        width: 35px;
-                        padding: var(--pad-md);
-                        border-right: solid var(--border-width) var(--clr-300);
-                    }
-
-                    h1 {
-                        font-size: 18px;
-                        font-weight: 700;
-                        padding: var(--pad-md) var(--pad-lg);
-                    }
-                }
-
-                .risdLabel {
-                    color: var(--clr-100);
-                    line-height: 1em;
-
-                    padding: var(--pad-4xs) var(--pad-sm);
-                    background-color: var(--clr-1000);
-                    border: solid var(--border-width) var(--clr-1000);
-
-                    // force background color to show
-                    -webkit-print-color-adjust:exact !important;
-                    print-color-adjust:exact !important;
-                }
-
-                .email {
-                    line-height: 1em;
-                }
+        .dlList {
+            & > div {
+                gap: var(--pad-sm);
             }
 
-            .richardfxrCard {
+            dd {
                 display: flex;
-                flex-direction: row;
-                gap: var(--pad-md);
-                margin-left: auto;
+                flex-direction: column;
+                gap: var(--pad-sm);
+            }
+        }
+    }
 
-                padding: var(--pad-md) var(--pad-lg) var(--pad-md) var(--pad-xl);
-                border: solid var(--border-width) var(--clr-300);
-                border-radius: 5px;
+    #skills {
+        .dlList {
+            dd ul {
+                display: flex;
+                flex-flow: row wrap;
 
-                .text {
-                    display: flex;
-                    flex-direction: column;
+                li {
+                    // prevent space removal
+                    white-space: break-spaces;
 
-                    .url {
-                        font-size: 15px;
-                        font-weight: 600;
+                    &::after {
+                        content: " - ";
+                        color: var(--clr-300);
                     }
 
-                    .details {
-                        display: flex;
-                        flex-direction: column;
-
-                        color: var(--clr-700);
-                        line-height: 1.1em;
-                        text-align: right;
-
-                        margin-top: auto;
+                    &:last-child::after {
+                        display: none;
                     }
-                }
-
-                svg {
-                    width: 75px;
                 }
             }
         }

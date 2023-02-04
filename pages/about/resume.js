@@ -6,9 +6,6 @@ import Layout from "../../components/Layout"
 import Section from "../../components/Section"
 import UnderlinedLink from '../../components/UnderlinedLink'
 import Button from '../../components/Button'
-// SVGs
-import Logo from '../../public/SVGs/logo.svg'
-import RichardfxrQR from '../../public/SVGs/QR-richardfxr.svg'
 
 
 
@@ -36,29 +33,8 @@ export default function Resume() {
                 <meta property="og:image:height" content="630" />
             </Head>
 
-            <Layout heading="Résumé" printHidden id="resume">
-                <div className='screenHidden' id="printInfo">
-                    <div className='basicInfo'>
-                        <div className='nameBox'>
-                            <Logo />
-                            <h1>Richard (Xiangrui) Fu</h1>
-                        </div>
-                        <p className='risdLabel'>RISD</p>
-                        <p className='email'>xfu01@risd.edu</p>
-                    </div>
-                    <div className='richardfxrCard'>
-                        <div className='text'>
-                            <p className='url'>richardfxr.com</p>
-                            <p className='details'>
-                                <span>v10.2.3</span> 
-                                <span>portfolio site</span>
-                            </p>
-                        </div>
-                        <RichardfxrQR />
-                    </div>
-                </div>
-
-                <Section sections={sections} index={0} printHidden skipLinkHidden>
+            <Layout heading="Résumé" id="resume">
+                <Section sections={sections} index={0} skipLinkHidden>
                     <dl className="twoCol dlList">
                         <div>
                             <dt>Legal name</dt>
@@ -78,7 +54,7 @@ export default function Resume() {
                         </div>
                     </dl>
 
-                    <p className='md first'>This is the web version of my résumé, last updated on <em>January 26, 2023</em>. Please use the PDF version below for downloading and printing.</p>
+                    <p className='md first'>This is the web version of my résumé, last updated on <em>February 4, 2023</em>. Please use the PDF version below for downloading and printing.</p>
                     <Button href="/RichardFu-resume.pdf" target="_blank" styling="sm">PDF version</Button>
                 </Section>
 
@@ -97,14 +73,15 @@ export default function Resume() {
                             <dt>Rhode Island School of Design (RISD)</dt>
                             <dd>
                                 <span>2020-2024</span>
-                                <span>Bachelor of Fine Arts, Industrial Design</span>
+                                <span>Bachelor of Fine Arts, Industrial Design.</span>
+                                <span>3.944 GPA. 5x Honors Designation.</span>
                             </dd>
                         </div>
                         <div>
                             <dt>Boston University Academy (BUA)</dt>
                             <dd>
                                 <span>2016-2020</span>
-                                <span>Graduated summa cum laude</span>
+                                <span>Graduated summa cum laude.</span>
                             </dd>
                         </div>
                     </dl>
@@ -114,19 +91,35 @@ export default function Resume() {
                     <dl className="oneCol dlList detailed">
                         <div>
                             <dt><UnderlinedLink href="https://www.machinists-edge.com/" target="_blank" print="machinists-edge.com">Machinist&#39;s Edge</UnderlinedLink></dt>
-                            <dd>A web app with calculators and charts designed for the RISD ID Metal Shop and built with SvelteKit.</dd>
+                            <dd>
+                                <p>A set of calculators and searchable tables designed for the RISD ID Metal Shop.</p>
+                                <p>Improved CNC milling machine’s operator experience and efficiency; removed operator-related calculation errors.</p>
+                                <p>Features developed based on a primary round of user interviews and continual user testing.</p>
+                                <p>A responsive and accessible front-end web app built with SvelteKit in TypeScript.</p>
+                            </dd>
                         </div>
                         <div>
                             <dt><UnderlinedLink href="https://weatherdial.richardfxr.com/" target="_blank" print="weatherdial.richardfxr.com">Weather Dial</UnderlinedLink></dt>
-                            <dd>A simple weather app focused on data visualization and animation. Built with SvelteKit.</dd>
+                            <dd>
+                                <p>A weather app focused on intuitive data visualization and animation.</p>
+                                <p>A responsive and accessible web app built with SvelteKit and high-performance native CSS animations.</p>
+                            </dd>
                         </div>
                         <div>
                             <dt><UnderlinedLink to="/info">richardfxr.com</UnderlinedLink></dt>
-                            <dd>An accessibility-focused redesign of my portfolio site built with React, Next.js, and Framer Motion.</dd>
+                            <dd>
+                                <p>An accessibility-focused redesign of my portfolio site.</p>
+                                <p>Features high contrast mode, low motion, and large touch area in addition to Web Content Accessibility Guidelines (WCAG) 2.0 level AAA compliance.</p>
+                                <p>Website built with React, Next.js, and Framer Motion.</p>
+                            </dd>
                         </div>
                         <div>
-                            <dt><UnderlinedLink to="/projects/budgetty" print="richardfxr.com/projects/budgetty">Budgetty</UnderlinedLink></dt>
-                            <dd>A circular monochrome interface for a digital wallet. Part of a team collaboration. Concepts created with Illustrator and After Effects.</dd>
+                            <dt>Comin</dt>
+                            <dd>
+                                <p>Brand and app redesign that improved brand identity and user experience.</p>
+                                <p>Gamified “post collecting” to drive up user engagement and encourage new posts.</p>
+                                <p>High-fidelity mockups created using Figma, Illustrator, and After Effects.</p>
+                            </dd>
                         </div>
                     </dl>
 
@@ -140,15 +133,65 @@ export default function Resume() {
                     <dl className="oneCol dlList detailed">
                         <div>
                             <dt>Programs</dt>
-                            <dd>Illustrator, Premiere Pro, After Effects, Lightroom Classic, Photoshop, Audition, InDesign, DaVinci Resolve, Figma, SolidWorks, HSMWroks, Blender</dd>
+                            <dd>
+                                <ul>
+                                    <li>Illustrator</li>
+                                    <li>Premiere Pro</li>
+                                    <li>After Effects</li>
+                                    <li>Lightroom Classic</li>
+                                    <li>Photoshop</li>
+                                    <li>Audition</li>
+                                    <li>InDesign</li>
+                                    <li>DaVinci Resolve</li>
+                                    <li>Figma</li>
+                                    <li>SolidWorks</li>
+                                    <li>HSMWroks</li>
+                                    <li>Blender</li>
+                                </ul>
+                            </dd>
                         </div>
                         <div>
                             <dt>Software development</dt>
-                            <dd>HTML, CSS, JavaScript, git, Tailwind CSS, Sass, Node.js, React, Next.js, Framer Motion, SvelteKit, Svelte, Vite, Vue.js, WebGL, Three.js, Python, Java</dd>
+                            <dd>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>TypeScript</li>
+                                    <li>git</li>
+                                    <li>Tailwind CSS</li>
+                                    <li>Sass</li>
+                                    <li>Node.js</li>
+                                    <li>React</li>
+                                    <li>Next.js</li>
+                                    <li>Framer Motion</li>
+                                    <li>SvelteKit</li>
+                                    <li>Svelte</li>
+                                    <li>Vite</li>
+                                    <li>Vue.js</li>
+                                    <li>WebGL</li>
+                                    <li>Three.js</li>
+                                    <li>Python</li>
+                                    <li>Java</li>
+                                </ul>
+                            </dd>
                         </div>
                         <div>
                             <dt>Others</dt>
-                            <dd>Illustration, photography, videography, graphic design, product design, CAD, CAM, metalworking, CNC milling</dd>
+                            <dd>
+                                <ul>
+                                    <li>UI/UX design</li>
+                                    <li>graphic design</li>
+                                    <li>product design</li>
+                                    <li>Illustration</li>
+                                    <li>photography</li>
+                                    <li>videography</li>
+                                    <li>CAD</li>
+                                    <li>CAM</li>
+                                    <li>metalworking</li>
+                                    <li>CNC milling</li>
+                                </ul>
+                            </dd>
                         </div>
                     </dl>
                 </Section>
