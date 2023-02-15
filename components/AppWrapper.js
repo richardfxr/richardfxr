@@ -75,7 +75,7 @@ export const projects = [
         code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/weather-dial" target="_blank" key="WeatherDial-github">GitHub repository</UnderlinedLink>,
     },
     {
-        href: 'https://weatherdial.richardfxr.com/',
+        href: '/projects/weatherdial',
         title: 'Weather Dial',
         image: {
             img: WeatherDialThumb,

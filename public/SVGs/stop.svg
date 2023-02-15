@@ -1,0 +1,6 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 28 28">
+    <rect className="stroke--md" x="3.5" y="3.5" width="21" height="21"/>
+    <line className="stroke--md" x1="24.5" y1="3.5" x2="3.5" y2="24.5"/>
+</svg>

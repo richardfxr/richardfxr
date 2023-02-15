@@ -93,4 +93,10 @@
         <priority>0.5</priority>
     </url>
 
+    <url>
+        <loc>https://www.richardfxr.com/projects/weatherdial</loc>
+        <lastmod>2023-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
 </urlset>

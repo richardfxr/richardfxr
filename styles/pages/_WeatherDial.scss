@@ -1,0 +1,436 @@
+@use '../breakpoints' as *;
+
+#weatherdial {
+    #projectDescText {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        gap: var(--pad-xxl);
+    }
+    
+    #concept {
+        .img {
+            --figcaption-clr: #CCCCCC;
+            --figcaption-bg: none;
+        }
+    }
+
+    #design, #a11y {
+        .img {
+            --figcaption-clr: #1A1A1A;
+            --figcaption-bg: none;
+        }
+
+        .iconAni {
+            // internal variables
+            --_clr-100: #E2D9D4;
+            --_clr-0: #FFFFFF;
+            --_clr-accent-800: #D4401C;
+            --_icon-size: 110px;
+            --_trans-fast: 0.2s ease;
+            --_total-length: 1.8s;
+
+            .iconGrid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                justify-items: center;
+                row-gap: var(--pad-5xl);
+
+                padding: var(--pad-6xl) var(--pad-4xl);
+                background-color: var(--_clr-100);
+            }
+
+            .iconWrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: var(--_icon-size);
+                height: var(--_icon-size);
+
+                border: solid 2px var(--_clr-0);
+                border-radius: var(--bradius-round);
+
+                transition: border-color var(--_trans-fast);
+
+                &[data-animate="true"] {
+                    animation: borderClr 0.45s ease-in-out 1;
+
+                    .clr {
+                        &-main {
+                            fill: #D4401C;
+                        }
+                        
+                        &-secondary {
+                            fill: #E2D9D4;
+                        }
+    
+                        &-tertiary {
+                            fill: #1A1A1A;
+                        }
+                    }
+    
+                    .stroke {
+                        stroke: #1A1A1A;
+                    }
+                }
+
+                .clr {
+                    &-main {
+                        fill: #808080;
+                        transition: fill var(--_trans-fast);
+                    }
+                    
+                    &-secondary {
+                        fill: var(--_clr-100);
+                        transition: fill var(--_trans-fast);
+                    }
+
+                    &-tertiary {
+                        fill: #5E5E5E;
+                        transition: fill var(--_trans-fast);
+                    }
+
+                    &-bg {
+                        fill: var(--_clr-100);
+                    }
+                }
+
+                .stroke {
+                    fill: none;
+                    stroke: #5E5E5E;
+                    stroke-width: 2px;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+
+                    stroke-dasharray: var(--length);
+
+                    transition: stroke var(--_trans-fast);
+                }
+            }
+
+            .navIcon {
+                // icon styling copied from Weather Dial
+                width: 40%;                    
+            }
+
+            .temperature[data-animate="true"] {
+                #bar {
+                    animation: barMove 0.35s ease-out 1;
+                }
+        
+                .dot {
+                    &__right {
+                        animation: dotRightMove calc(0.38s + 0.075s * var(--index)) ease 1;
+                    }
+        
+                    &__left {
+                        animation: dotLeftMove calc(0.38s + 0.075s * var(--index)) ease 1;
+                    }
+                }
+
+                @keyframes barMove {
+                    from {
+                        transform: translateY(9px);
+                        clip-path: polygon(0 0, 100% 0%, 100% 47%, 0% 47%);
+                    }
+            
+                    to {
+                        transform: translateY(0px);
+                        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                    }
+                }
+            
+                @keyframes dotRightMove {
+                    from {
+                        transform: translateX(0px);
+                    }
+            
+                    50% {
+                        transform: translateX(3px);
+                    }
+            
+                    to {
+                        transform: translateX(0px);
+                    }
+                }
+            
+                @keyframes dotLeftMove {
+                    from {
+                        transform: translateX(0px);
+                    }
+            
+                    50% {
+                        transform: translateX(-3px);
+                    }
+            
+                    to {
+                        transform: translateX(0px);
+                    }
+                }
+            }
+
+            .precipitation[data-animate="true"] {
+                .circle {
+                    &__top {
+                        animation: circleTopMove calc(0.3s + 0.1s * var(--index)) ease-out 1;
+                    }
+        
+                    &__bottom {
+                        animation: circleBottomMove calc(0.22s + 0.13s * var(--index)) ease-out 1;
+                    }
+                }
+        
+                .cloud {
+                    animation: cloudMove 0.35s ease 1;
+                }
+
+                @keyframes circleTopMove {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-5px);
+                    }
+            
+                    30% {
+                        opacity: 0;
+                        transform: translateY(-5px);
+                    }
+            
+                    to {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                }
+            
+                @keyframes circleBottomMove {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-7px);
+                    }
+            
+                    to {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                }
+            
+                @keyframes cloudMove {
+                    from {
+                        transform: translateY(0px);
+                    }
+                    
+                    50% {
+                        transform: translateY(2px);
+                    }
+            
+                    to {
+                        transform: translateY(0px);
+                    }
+                }
+            }
+
+            .cloud[data-animate="true"] {
+                .cloud__top {
+                    animation: cloudTopMove 0.45s ease 1;
+                }
+    
+                .cloud__bottom {
+                    animation: cloudBottomMove 0.4s ease 1;
+                }
+
+                @keyframes cloudTopMove {
+                    from {
+                        transform: translateY(0px) translateX(0px);
+                    }
+            
+                    50% {
+                        transform: translateY(2px) translateX(1px);
+                    }
+            
+                    to {
+                        transform: translateY(0px) translateX(0px);
+                    }
+                }
+            
+                @keyframes cloudBottomMove {
+                    from {
+                        transform: translateY(0px) translateX(0px);
+                    }
+            
+                    50% {
+                        transform: translateY(-1px) translateX(-1px);
+                    }
+            
+                    to {
+                        transform: translateY(0px) translateX(0px);
+                    }
+                }
+            }
+
+            .humidity[data-animate="true"] {
+                .drop {
+                    &__top {
+                        animation: dropTopMove 0.45s ease-out 1;
+                    }
+        
+                    &__bottom {
+                        animation: dropBottomMove 0.45s ease 1;
+                    }
+                }
+
+                @keyframes dropTopMove {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-3px);
+                    }
+            
+                    40% {
+                        opacity: 0;
+                        transform: translateY(-3px);
+                    }
+            
+                    from {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                }
+            
+                @keyframes dropBottomMove {
+                    from {
+                        transform: translateY(0px);
+                    }
+            
+                    30% {
+                        transform: translateY(-4px);
+                    }
+            
+                    from {
+                        transform: translateY(0px);
+                    }
+                }
+            }
+
+            .wind[data-animate="true"] {
+                .stroke {
+                    animation: strokeDraw 0.35s ease-out 1;
+        
+                    &.delayed {
+                        animation: strokeDrawDelayed 0.45s ease-out 1;
+                    }
+                }
+        
+                .circle {
+                    animation: circleMove calc(0.35s + 0.05s * var(--offset)) ease-out 1;
+                }
+
+                @keyframes strokeDraw {
+                    from {
+                        stroke-dashoffset: var(--length-ani);
+                    }
+            
+                    to {
+                        stroke-dashoffset: 0;
+                    }
+                }
+            
+                @keyframes strokeDrawDelayed {
+                    from {
+                        stroke-dashoffset: var(--length-ani);
+                    }
+            
+                    20% {
+                        stroke-dashoffset: var(--length-ani);
+                    }
+            
+                    to {
+                        stroke-dashoffset: 0;
+                    }
+                }
+            
+                @keyframes circleMove {
+                    from {
+                        transform: translateX(0px);
+                    }
+            
+                    20% {
+                        transform: translateX(calc(-2px - 2px * var(--offset)));
+                    }
+            
+                    to {
+                        transform: translateX(0px);
+                    }
+                }
+            }
+
+            .uv[data-animate="true"] {
+                @for $i from 1 through 10 {
+                    circle:nth-child(#{$i}) {
+                        animation: circleFade-#{$i} 0.65s ease-out 1;
+                    }
+                }
+
+                @for $i from 1 through 10 {
+                    $start: calc(10% + 5% * $i);
+                    $end: calc(50% + 5% * $i);
+            
+                    @keyframes circleFade-#{$i} {
+                        from { opacity: 0; }
+                        #{$start} {opacity: 0; }
+                        #{$end} {opacity: 1; }
+                    }
+                }
+            }
+
+            @keyframes borderClr {
+                0%, 100% {
+                    border-color: var(--_clr-0);
+                }
+        
+                50% {
+                    border-color: var(--_clr-accent-800);
+                }
+            }
+
+            .button {
+                margin-top: var(--pad-lg);
+            }
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-laptop) {
+    #weatherdial #design .iconAni {
+        // internal variables
+        --_icon-size: 100px;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+    #weatherdial #design .iconAni {
+        // internal variables
+        --_icon-size: 85px;
+
+        .iconGrid {
+            row-gap: var(--pad-4xl);
+
+            padding: var(--pad-5xl) var(--pad-xxxl);
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    #weatherdial #design .iconAni {
+        // internal variables
+        --_icon-size: 85px;
+
+        .iconGrid {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: var(--pad-4xl);
+
+            padding: var(--pad-5xl) 6%;
+        }
+    }
+}
