@@ -137,7 +137,7 @@ export default function Weatherdial() {
             <title>{headTitle}</title>
                 <meta
                     name="description"
-                    content="Weather Dial is a simple weather app that displays information in a circular barplot. The visualization is reminiscent of an analog clock, emphasizing the change in data over time."
+                    content="A simple weather app that displays information in a circular barplot. The visualization is reminiscent of an analog clock, emphasizing the change in data over time."
                 />
                 <meta property="og:image" content="https://www.richardfxr.com/images/WeatherDial/WeatherDial-OGimage-1.jpg" />
                 <meta property="og:image:width" content="1200" />
