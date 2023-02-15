@@ -52,7 +52,7 @@ export default function Home() {
                     </ScrollContainer>
                     <p className="lg">I’m <em>Richard Fu</em>, a <em>designer</em>, <em>developer</em>, and <em>artist</em> who loves blue - <em className="rblue">#11d3e7</em> to be exact.</p>
                     <ul className='row md'>
-                        <li><Button href='#works' target="_self" styling="sm rblue"><span className='inter upDw pad--right'>↓</span> Works</Button></li>
+                        <li><Button href='#works' target="_self" styling="sm colored"><span className='inter upDw pad--right'>↓</span> Works</Button></li>
                         <li><Button to='/about' styling="sm">About</Button></li>
                         <li><Button to='/about/resume' styling="sm">Résumé</Button></li>
                     </ul>
