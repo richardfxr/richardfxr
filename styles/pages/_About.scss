@@ -31,7 +31,7 @@
         }
         
         .card {
-            grid-template-columns: repeat(auto-fit, minmax(calc(var(--twoCol-minWidth) - var(--pad-xxl)), 1fr));
+            grid-template-columns: 1fr 1fr;
             align-items: stretch;
             row-gap: calc(2 * var(--pad-xxl));
             column-gap: var(--pad-xl);

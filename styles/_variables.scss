@@ -12,7 +12,6 @@
    --section-pad-hrz: var(--pad-xxxl);
    --section-pad-vrt: var(--pad-xxl);
    --section-side-width: 280px;
-   --twoCol-minWidth: 20rem;
    --threeCol-minWidth: 14rem;
 
    --indicator-thickness: 4px;
@@ -107,9 +106,7 @@
 @media only screen and (max-width: $breakpoint-tablet) {
    :root {
       --nav-size: 83px;
-      
-      --twoCol-minWidth: 15rem;
-   
+         
       --padRem-6xs: 0.053125rem;
       --padRem-5xs: 0.0625rem;
       --padRem-4xs: 0.1875rem;
@@ -218,7 +215,6 @@
       --section-pad-hrz: var(--pad-xxxl);
       --section-pad-vrt: var(--pad-xxl);
       --section-side-width: 140px;
-      --twoCol-minWidth: 240px;
       --threeCol-minWidth: 168px;
    
       --indicator-thickness: 4px;
