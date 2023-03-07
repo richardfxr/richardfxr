@@ -57,6 +57,12 @@
 
 
 // === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-laptop) {
+    .projectInfo {
+        padding-left: var(--section-pad-hrz);
+    }
+}
+
 @media only screen and (max-width: $breakpoint-tablet) {
     .projectInfo {
         grid-template-columns: 1fr;
@@ -70,12 +76,6 @@
             // reset margins
             margin: 0;
         }
-    }
-}
-
-@media only screen and (max-width: $breakpoint-mobile) {
-    .projectInfo {
-        padding-left: var(--section-pad-hrz);
     }
 }
 

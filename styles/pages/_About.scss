@@ -447,7 +447,7 @@
 @media only screen and (max-width: $breakpoint-laptop) {
     #about {
         .profile {
-            padding-left: calc(var(--section-pad-hrz) + var(--section-side-width) + var(--pad-xxl));
+            padding-left: var(--section-pad-hrz);
         }
     }
 }
@@ -455,8 +455,6 @@
 @media only screen and (max-width: $breakpoint-mobile) {
     #about {
         .profile {
-            padding-left: var(--section-pad-hrz);
-
             .card {
                 grid-template-columns: 1fr;
                 gap: var(--pad-xxl);

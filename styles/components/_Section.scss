@@ -129,7 +129,43 @@
                     border-color: var(--clr-200);
                 }
             }
-        }        
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-xs) {
+    .section, .footer {
+        grid-template-columns: 1fr;
+
+        &__side {
+            position: relative;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+
+            h2 {
+                // reset vertical text
+                writing-mode: unset;
+                overflow-wrap: normal;
+                white-space: normal;
+
+                // reset rotation
+                transform: none;
+            }
+
+            .skipLinks {
+                flex-direction: row;
+
+                &.hidden a {
+                    color: var(--clr-800);
+                    border-color: var(--clr-200);
+                }
+            }
+        }
+
+        &__main {
+            padding-top: 0;
+        }
     }
 }
 
