@@ -12,6 +12,7 @@ import UnderlinedLink from '../../components/UnderlinedLink'
 
 // === SECTIONS ===========================
 const sections = [
+    {heading: "2023", id: "twentythree"},
     {heading: "2022", id: "twentytwo"},
     {heading: "2021", id: "twentyone"},
     {heading: "2020", id: "twenty"},
@@ -21,6 +22,12 @@ const sections = [
 ]
 
 // === ARCHIVE DATA =======================
+const archive2023 = [
+    ['#', 'title', 'type'],
+    [<UnderlinedLink href="https://misc.richardfxr.com/uganglobe" target="_blank" key="uganglobe">Uganda refugee data viz</UnderlinedLink>, 'data visualization, dev'],
+    [<UnderlinedLink href="https://sites.google.com/a/risd.edu/rhino/home/students/id_2477_02_pm/richard-fu" target="_blank" key="rhino">Rhino creations</UnderlinedLink>, '3D modeling, rendering'],
+]
+
 const archive2022 = [
     ['#', 'title', 'type'],
     [<UnderlinedLink href="https://www.machinists-edge.com/" target="_blank" key="machinistsEdge">Machinist&#39;s Edge</UnderlinedLink>, 'web design, dev'],
@@ -177,35 +184,41 @@ export default function Archive() {
             <Layout heading="Archive" id="archive">
                 <Section sections={sections} index={0} first>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2022} caption="2022 Archive" indexed="reverse" />
+                        <Table tableData={archive2023} caption="2023 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
                 <Section sections={sections} index={1}>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2021} caption="2021 Archive" indexed="reverse" />
+                        <Table tableData={archive2022} caption="2022 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
                 <Section sections={sections} index={2}>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2020} caption="2020 Archive" indexed="reverse" />
+                        <Table tableData={archive2021} caption="2021 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
                 <Section sections={sections} index={3}>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2019} caption="2019 Archive" indexed="reverse" />
+                        <Table tableData={archive2020} caption="2020 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
                 <Section sections={sections} index={4}>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2018} caption="2018 Archive" indexed="reverse" />
+                        <Table tableData={archive2019} caption="2019 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
                 <Section sections={sections} index={5}>
+                    <ScrollContainer horizontal>
+                        <Table tableData={archive2018} caption="2018 Archive" indexed="reverse" />
+                    </ScrollContainer>
+                </Section>
+
+                <Section sections={sections} index={6}>
                     <ScrollContainer horizontal>
                         <Table tableData={archive2017} caption="2017 Archive" indexed="reverse" />
                     </ScrollContainer>
