@@ -1,0 +1,13 @@
+<svg
+    id="chartIcon"
+    class="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 82 82">
+    <path class="clr-1000" d="m0,0v82h82V0H0Zm80,2v18H2V2h78ZM2,80V22h78v58H2Z"/>
+    <title id="illus__art--title">Chart icon</title>
+
+    <rect class="clr-1000" x="11" y="35" width="60" height="2"/>
+    <rect class="clr-1000" x="11" y="50" width="60" height="2"/>
+    <rect class="clr-1000" x="11" y="65" width="60" height="2"/>
+    <rect class="clr-600" x="11" y="6" width="24" height="10"/>
+</svg>
