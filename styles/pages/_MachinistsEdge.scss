@@ -1,0 +1,49 @@
+#machinistsedge {
+    #projectDescText {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        gap: var(--pad-xxl);
+    }
+
+    #challenge {
+        #pageList {
+            row-gap: var(--pad-xl);
+            padding-top: var(--pad-sm);
+
+            & > div {
+                gap: var(--pad-sm);
+            }
+
+            dt {
+                color: var(--clr-1000);
+                font-weight: 600;
+                margin-top: var(--pad-xxl);
+            }
+
+            dd {
+                color: var(--clr-700);
+                margin-bottom: var(--pad-md);
+            }
+        }
+
+        .icon {
+            width: 82px;
+            margin-bottom: var(--pad-md);
+
+            .clr-1000 {
+                fill: var(--clr-1000);
+            }
+            
+            .clr-600 {
+                fill: var(--clr-600);
+            }
+        }
+    }
+
+    #status {
+        ul.row {
+            padding-top: calc(var(--pad-xxl) - var(--pad-xl));
+        }
+    }
+}

@@ -38,41 +38,22 @@ export const routes = [
 // === PROJECTS ===========================
 export const projects = [
     {
-        href: '/projects/richardfxr',
-        title: 'Personal site',
-        image: {
-            img: RichardfxrThumb,
-            layoutId: 'richardfxr-thumbnail',
-            alt: 'The home page of richardfxr.com displayed on a floating iPhone 14 Pro in dark mode.'
-        },
-        date: '2022-08',
-        colors: [
-            {hex: '#11d3e7', name: 'Richard blue'},
-            {hex: '#1a1a1a', name: 'dark gray'},
-            {hex: '#ededed', name: 'light gray'},
-        ],
-        filters: ['design'],
-        media: ['web design', 'development'],
-        cardLabels: ['web design', 'dev'],
-        code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/richardfxr" target="_blank" key="richardfxr-github">GitHub repository</UnderlinedLink>,
-    },
-    {
-        href: 'https://www.machinists-edge.com/',
+        href: '/projects/machinists-edge',
         title: "Machinist's Edge",
         image: {
             img: MachinistsEdgeThumb,
             layoutId: 'MachinistsEdge-thumbnail',
             alt: 'The Feed Rate Calculator page displayed on an Asus ZenBook Duo 14. The primary screen shows an illustration of an end mill next to some form input fields; the second screen shows four saves for different end mills.'
         },
-        date: '2022-10',
+        date: '2022-10 to present',
         colors: [
-            {hex: '#fff5db', name: 'warm white'},
+            {hex: '#fcf6f0', name: 'warm white'},
             {hex: '#0d0d0d', name: 'black'},
         ],
         filters: ['design'],
         media: ['web design', 'development'],
         cardLabels: ['web design', 'dev'],
-        code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/weather-dial" target="_blank" key="WeatherDial-github">GitHub repository</UnderlinedLink>,
+        code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/machinists-edge" target="_blank" key="MachinistsEdge-github">GitHub repository</UnderlinedLink>,
     },
     {
         href: '/projects/weatherdial',
@@ -92,6 +73,25 @@ export const projects = [
         media: ['web design', 'development'],
         cardLabels: ['web design', 'dev'],
         code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/weather-dial" target="_blank" key="WeatherDial-github">GitHub repository</UnderlinedLink>,
+    },
+    {
+        href: '/projects/richardfxr',
+        title: 'Personal site',
+        image: {
+            img: RichardfxrThumb,
+            layoutId: 'richardfxr-thumbnail',
+            alt: 'The home page of richardfxr.com displayed on a floating iPhone 14 Pro in dark mode.'
+        },
+        date: '2022-08',
+        colors: [
+            {hex: '#11d3e7', name: 'Richard blue'},
+            {hex: '#1a1a1a', name: 'dark gray'},
+            {hex: '#ededed', name: 'light gray'},
+        ],
+        filters: ['design'],
+        media: ['web design', 'development'],
+        cardLabels: ['web design', 'dev'],
+        code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/richardfxr" target="_blank" key="richardfxr-github">GitHub repository</UnderlinedLink>,
     },
     {
         href: '/projects/budgetty',
