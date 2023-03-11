@@ -409,12 +409,17 @@ figcaption {
 
 @media only screen and (max-width: $breakpoint-mobile) {
    .twoCol {
-      grid-template-columns: 1fr;
       gap: var(--pad-xl);
    }
 
    figcaption {
       font-size: var(--font-md);
+   }
+}
+
+@media only screen and (max-width: $breakpoint-mobile-md) {
+   .twoCol {
+      grid-template-columns: 1fr;
    }
 }
 
