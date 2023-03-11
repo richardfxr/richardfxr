@@ -132,7 +132,7 @@ export const projects = [
         ],
         filters: ['design'],
         media: ['Product design', 'Photography'],
-        cardLabels: ['product design', 'photgraphy', 'RISD'],
+        cardLabels: ['product design', 'photography', 'RISD'],
         labels: ['Rhode Island School of Design'],
     },
     {
