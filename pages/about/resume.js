@@ -12,7 +12,6 @@ import Button from '../../components/Button'
 // === SECTIONS ===========================
 const sections = [
     {heading: "Info", id: "info"},
-    {heading: "Objective", id: "objective"},
     {heading: "Education", id: "education"},
     {heading: "Projects", id: "projects"},
     {heading: "Skills", id: "skills"},
@@ -54,20 +53,11 @@ export default function Resume() {
                         </div>
                     </dl>
 
-                    <p className='md first'>This is the web version of my résumé, last updated on <em>February 4, 2023</em>. Please use the PDF version below for downloading and printing.</p>
+                    <p className='md first'>This is the web version of my résumé, last updated on <em>March 20, 2023</em>. Please use the PDF version below for downloading and printing.</p>
                     <Button href="/RichardFu-resume.pdf" target="_blank" styling="sm">PDF version</Button>
                 </Section>
 
                 <Section sections={sections} index={1} skipLinkHidden>
-                    <p className='md'>Seeking an internship in <em>digital user interface design</em> where I can apply my design and web development skills while working with a professional team.</p>
-
-                    <ul className='row md printHidden'>
-                        <li><Button to='/projects' styling="sm">Portfolio</Button></li>
-                        <li><Button href="https://github.com/richardfxr" target="_blank" styling="sm">GitHub</Button></li>
-                    </ul>
-                </Section>
-
-                <Section sections={sections} index={2} skipLinkHidden>
                     <dl className="oneCol dlList detailed">
                         <div>
                             <dt>Rhode Island School of Design (RISD)</dt>
@@ -87,7 +77,7 @@ export default function Resume() {
                     </dl>
                 </Section>
 
-                <Section sections={sections} index={3} skipLinkHidden>
+                <Section sections={sections} index={2} skipLinkHidden>
                     <dl className="oneCol dlList detailed">
                         <div>
                             <dt><UnderlinedLink href="https://www.machinists-edge.com/" target="_blank" print="machinists-edge.com">Machinist&#39;s Edge</UnderlinedLink></dt>
@@ -125,11 +115,11 @@ export default function Resume() {
 
                     <ul className='row md printHidden'>
                         <li><Button to="/projects" styling="sm">More projects</Button></li>
-                        <li><Button to='/projects/archive' styling="sm">Archive</Button></li>
+                        <li><Button href="https://github.com/richardfxr" target="_blank" styling="sm">GitHub</Button></li>
                     </ul>
                 </Section>
 
-                <Section sections={sections} index={4} skipLinkHidden>
+                <Section sections={sections} index={3} skipLinkHidden>
                     <dl className="oneCol dlList detailed">
                         <div>
                             <dt>Programs</dt>
