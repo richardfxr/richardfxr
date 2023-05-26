@@ -24,6 +24,7 @@ const sections = [
 // === ARCHIVE DATA =======================
 const archive2023 = [
     ['#', 'title', 'type'],
+    [<UnderlinedLink href="https://edu.mini-synth.app/" target="_blank" key="miniSynthEdu">Mini Synth (edu)</UnderlinedLink>, 'web design, dev, audio'],
     [<UnderlinedLink href="https://misc.richardfxr.com/uganglobe" target="_blank" key="uganglobe">Uganda refugee data viz</UnderlinedLink>, 'data visualization, dev'],
     [<UnderlinedLink href="https://sites.google.com/a/risd.edu/rhino/home/students/id_2477_02_pm/richard-fu" target="_blank" key="rhino">Rhino creations</UnderlinedLink>, '3D modeling, rendering'],
 ]
