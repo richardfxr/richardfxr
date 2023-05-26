@@ -26,10 +26,8 @@ export default function ProjectCard({ image, href, title, colors, cardLabels }) 
                 animate="show"
                 exit="exit">
                 {href.charAt(0) === '/' ?
-                    <Link href={href}>
-                        <a className="projectCard__link">
-                            <h3>{title}</h3>
-                        </a>
+                    <Link href={href} className="projectCard__link" scroll={false}>
+                        <h3>{title}</h3>
                     </Link>
                     :
                     <a href={href} className="projectCard__link" target="_blank" rel="noopener noreferrer">

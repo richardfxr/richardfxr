@@ -6,10 +6,8 @@ import Link from 'next/link'
 
 export default function NavLink({ to, className, children }) {
     return (
-        <Link href={to} scroll={false}>
-            <a className={className}>
+        <Link href={to} className={className} scroll={false}>
                 {children}
-            </a>
         </Link>
     )
 }
