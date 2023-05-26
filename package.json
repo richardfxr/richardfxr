@@ -11,14 +11,14 @@
   "dependencies": {
     "@vercel/analytics": "^0.1.6",
     "framer-motion": "^7.1.0",
-    "next": "12.2.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "next": "^13.4.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
     "eslint": "8.21.0",
-    "eslint-config-next": "12.2.5",
+    "eslint-config-next": "^13.4.4",
     "sass": "^1.54.4",
     "sharp": "^0.31.2"
   }
