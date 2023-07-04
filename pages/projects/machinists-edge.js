@@ -205,7 +205,7 @@ export default function MachinistsEdge() {
                         alt="A OnePlus 7T Pro on a workbench displaying the tool length calculator page in dark mode."
                     />
 
-                    <p className='md top-4xl'>Machinist&#39;s Edge is currently in <em>open alpha</em> and undergoing further user testing. General release is planned for <em>Q2 of 2023</em>.</p>
+                    <p className='md top-4xl'>Machinist&#39;s Edge is currently in <em>open alpha</em> and undergoing further user testing. General release is planned for <em>Q3 of 2023</em>.</p>
 
                     <ul className='row md printHidden'>
                         <li><Button styling="sm" href="https://www.machinists-edge.com/" target="_blank">Visit Machinist&#39;s Edge</Button></li>
