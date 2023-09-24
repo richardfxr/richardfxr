@@ -55,7 +55,7 @@ export default function Budgetty() {
 
             <Layout heading={title} id="budgetty">
                 <ProjectInfo project={project}>
-                    Budgetty is a standalone digital wallet that encourages more mindful spending habits in a world of abstract payment methods. I designed and animated the UI for the circular screen which users interact with through the surrounding dial.
+                    <p>Budgetty is a standalone digital wallet that encourages more mindful spending habits in a world of abstract payment methods. I designed and animated the UI for the circular screen which users interact with through the surrounding dial.</p>
                 </ProjectInfo>
 
                 <Section sections={sections} index={0} skipLinkHidden>

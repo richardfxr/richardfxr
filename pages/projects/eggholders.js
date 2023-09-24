@@ -65,7 +65,7 @@ export default function EggHolders() {
 
             <Layout heading={title} id="eggholders">
                 <ProjectInfo project={project}>
-                    As part of a form exploration, I created three egg holders based on various inspirations. This project was part of a RISD ID course taught by <UnderlinedLink styling="em" href="https://www.risd.edu/academics/industrial-design/faculty/joseph-napurano" target="_blank">Joseph Napurano</UnderlinedLink>.
+                    <p>As part of a form exploration, I created three egg holders based on various inspirations. This project was part of a RISD ID course taught by <UnderlinedLink styling="em" href="https://www.risd.edu/academics/industrial-design/faculty/joseph-napurano" target="_blank">Joseph Napurano</UnderlinedLink>.</p>
                 </ProjectInfo>
 
                 <Section sections={sections} index={0}>

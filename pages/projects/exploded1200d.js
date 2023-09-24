@@ -49,7 +49,7 @@ export default function Exploded1200D() {
 
             <Layout heading={title} id="exploded1200d">
                 <ProjectInfo project={project}>
-                    Ever wondered what a DSLR looks like on the inside? I did, so I took apart a broken <UnderlinedLink href="https://en.wikipedia.org/wiki/Canon_EOS_1200D" target="_blank">Canon EOS 1200D</UnderlinedLink> and made it into an exploded view model. This project was part of a RISD ID course taught by <UnderlinedLink href="https://www.prattframeworks.com/" target="_blank">Max Pratt</UnderlinedLink>.
+                    <p>Ever wondered what a DSLR looks like on the inside? I did, so I took apart a broken <UnderlinedLink href="https://en.wikipedia.org/wiki/Canon_EOS_1200D" target="_blank">Canon EOS 1200D</UnderlinedLink> and made it into an exploded view model. This project was part of a RISD ID course taught by <UnderlinedLink href="https://www.prattframeworks.com/" target="_blank">Max Pratt</UnderlinedLink>.</p>
                 </ProjectInfo>
 
                 <Section sections={sections} index={0} skipLinkHidden>

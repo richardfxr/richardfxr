@@ -79,7 +79,7 @@ export default function RISDSophomore() {
 
             <Layout heading={title} id="risdsophomore">
                 <ProjectInfo project={project}>
-                    A collection of projects I created during my sophomore year at RISD as an industrial design major. Most of these remain mere explorations, with more elaborate projects linked in the <UnderlinedLink href="#related">related works</UnderlinedLink> section below.
+                    <p>A collection of projects I created during my sophomore year at RISD as an industrial design major. Most of these remain mere explorations, with more elaborate projects linked in the <UnderlinedLink href="#related">related works</UnderlinedLink> section below.</p>
                 </ProjectInfo>
 
                 <Section sections={sections} index={0}>

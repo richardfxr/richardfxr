@@ -1,13 +1,6 @@
 @use '../breakpoints' as *;
 
 #weatherdial {
-    #projectDescText {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-start;
-        gap: var(--pad-xxl);
-    }
-    
     #concept {
         .img {
             --figcaption-clr: #CCCCCC;

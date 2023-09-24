@@ -71,7 +71,7 @@ export default function MachinistsEdge() {
 
             <Layout heading={title} id="machinistsedge">
                 <ProjectInfo project={project}>
-                    Machinist&#39;s Edge is a collection of calculators and charts created for the RISD Industrial Design Metal Shop&#39;s CNC milling machine. These tools improve the operation experience and reduce calculation errors. 
+                    <p>Machinist&#39;s Edge is a collection of calculators and charts created for the RISD Industrial Design Metal Shop&#39;s CNC milling machine. These tools improve the operation experience and reduce calculation errors.</p>
                     <Button styling="sm" href="https://www.machinists-edge.com/" target="_blank">Visit Machinist&#39;s Edge</Button>
                 </ProjectInfo>
 

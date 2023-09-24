@@ -43,13 +43,22 @@
         // alignment compensation
         margin-top: calc(-1 * var(--padRem-xxs));
 
-        #projectDescTitle, #projectDescText {
+        #projectDescTitle {
             // remove alignment compensation
             margin-top: 0;
         }
 
         #projectDescText {
-            color: var(--clr-1000);
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            gap: var(--pad-xxl);
+            
+            p {
+                color: var(--clr-1000);
+                font-size: var(--font-md);
+            }
+            
         }
     }
 }

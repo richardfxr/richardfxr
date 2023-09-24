@@ -116,7 +116,7 @@ export default function ProjectInfo({ project, children }) {
 
                 <div className="desc">
                     <p id="projectDescTitle" className="md">Description</p>
-                    <p id="projectDescText" className="md" aria-labelledby="projectDescTitle">{children}</p>
+                    <div id="projectDescText" className="md" aria-labelledby="projectDescTitle">{children}</div>
                 </div>
             </motion.div>
         </section>

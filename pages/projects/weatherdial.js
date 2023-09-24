@@ -146,7 +146,7 @@ export default function Weatherdial() {
 
             <Layout heading={title} id="weatherdial">
                 <ProjectInfo project={project}>
-                    Weather Dial is a simple weather app that displays information in a circular barplot. The visualization is reminiscent of an analog clock, emphasizing the change in data over time. This new yet familiar display enables the user to understand the day&#39;s weather at a glance. 
+                    <p>Weather Dial is a simple weather app that displays information in a circular barplot. The visualization is reminiscent of an analog clock, emphasizing the change in data over time. This new yet familiar display enables the user to understand the day&#39;s weather at a glance.</p>
                     <Button styling="sm" href="https://weatherdial.richardfxr.com/" target="_blank">Visit Weather Dial</Button>
                 </ProjectInfo>
 

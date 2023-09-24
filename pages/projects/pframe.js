@@ -52,7 +52,7 @@ export default function PFrame() {
 
             <Layout heading={title} id="pframe">
                 <ProjectInfo project={project}>
-                    Creating complex, curved objects in a solid modeling software like <UnderlinedLink href="https://www.solidworks.com/" target="_blank">SolidWorks</UnderlinedLink> isn’t easy, but that didn’t stop me from modeling P-Frame – a pair of planar magnetic open-back headphones. This project was part of a RISD ID course taught by <UnderlinedLink href="https://www.risd.edu/academics/industrial-design/faculty/diau-hall" target="_blank">Diau Hall</UnderlinedLink>.
+                    <p>Creating complex, curved objects in a solid modeling software like <UnderlinedLink href="https://www.solidworks.com/" target="_blank">SolidWorks</UnderlinedLink> isn’t easy, but that didn’t stop me from modeling P-Frame – a pair of planar magnetic open-back headphones. This project was part of a RISD ID course taught by <UnderlinedLink href="https://www.risd.edu/academics/industrial-design/faculty/diau-hall" target="_blank">Diau Hall</UnderlinedLink>.</p>
                 </ProjectInfo>
 
                 <Section sections={sections} index={0}>

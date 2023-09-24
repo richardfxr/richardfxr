@@ -65,7 +65,7 @@ export default function Richardfxr() {
 
             <Layout heading={title} id="richardfxr">
                 <ProjectInfo project={project}>
-                Two years after the release of <UnderlinedLink styling="em" href="https://v9.richardfxr.com/" target="_blank">richardfxr.com version 9</UnderlinedLink>, it was time for a complete redesign that focused on accessibility, animation, and maintainability while still paying homage to the old design.
+                    <p>Two years after the release of <UnderlinedLink styling="em" href="https://v9.richardfxr.com/" target="_blank">richardfxr.com version 9</UnderlinedLink>, it was time for a complete redesign that focused on accessibility, animation, and maintainability while still paying homage to the old design.</p>
                 </ProjectInfo>
 
                 <Section sections={sections} index={0}>
