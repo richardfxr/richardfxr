@@ -106,6 +106,24 @@ export default function ProjectInfo({ project, children }) {
                         </div>
                     ))}
 
+                {project.sponsors && (project.sponsors.length === 1 ? (
+                        <div>
+                            <dt>Sponsor</dt>
+                            <dd>{project.collaborators[0]}</dd>
+                        </div>
+                    ) : (
+                        <div>
+                            <dt>Sponsors</dt>
+                            <dd>
+                                <ul className="projectInfo__list" aria-label="Sponsors">
+                                    {project.sponsors.map((sponsor, index) => (
+                                        <li key={"sponsor" + index}>{sponsor}</li>
+                                    ))}
+                                </ul>
+                            </dd>
+                        </div>
+                    ))}
+
                     {project.code &&
                         <div>
                             <dt>Code</dt>

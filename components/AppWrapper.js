@@ -10,6 +10,7 @@ import { useMediaQuery} from "../hooks/useMediaQuery"
 import { useSettings } from '../hooks/useSettings'
 import { userSettings } from '../context/Settings'
 // images
+import MiniSynthThumb from '../public/images/MiniSynth/MiniSynth-thumbnail.jpg'
 import RichardfxrThumb from '../public/images/richardfxr/richardfxr-thumbnail.jpg'
 import MachinistsEdgeThumb from '../public/images/MachinistsEdge/MachinistsEdge-thumbnail.jpg'
 import WeatherDialThumb from '../public/images/WeatherDial/WeatherDial-thumbnail.jpg'
@@ -37,6 +38,37 @@ export const routes = [
 
 // === PROJECTS ===========================
 export const projects = [
+    {
+        href: '/projects/mini-synth',
+        title: "Mini Synth",
+        image: {
+            img: MiniSynthThumb,
+            layoutId: 'MiniSynth-thumbnail',
+            alt: 'Mini Synth playing Marble Machine by Wintergatan on an iPhone 14 Pro. The player resembles a cassette tape with a piano keyboard right below it.'
+        },
+        date: '2022-04 to 2022-08',
+        colors: [
+            {hex: '#ff7171', name: 'red'},
+            {hex: '#f7f7f7', name: 'white'},
+            {hex: '#1d1d1d', name: 'black'},
+        ],
+        filters: ['design'],
+        media: ['UI/UX design', 'development'],
+        cardLabels: ['UI/UX design', 'dev'],
+        collaborators: [
+            <UnderlinedLink styling="em" href="https://www.fanashley.com/" target="_blank" key="ashley">Ashley Fan</UnderlinedLink>,
+            <UnderlinedLink styling="em" href="https://www.seansworkroom.com/" target="_blank" key="ashley">Sean Lee</UnderlinedLink>,
+        ],
+        sponsors: [
+            <UnderlinedLink styling="em" href="https://www.samsung.com/us/" target="_blank" key="ashley">Samsung</UnderlinedLink>,
+            <UnderlinedLink styling="em" href="https://www.internationaldisabilityalliance.org/stakeholder/korea-international-cooperation-agency-koica" target="_blank" key="ashley">KOIKA</UnderlinedLink>,
+            <UnderlinedLink styling="em" href="https://community.needslist.co/ysat" target="_blank" key="ashley">YSAT</UnderlinedLink>,
+            <UnderlinedLink styling="em" href="https://www.risd.edu/" target="_blank" key="ashley">RISD</UnderlinedLink>,
+            <UnderlinedLink styling="em" href="https://d-lab.mit.edu/" target="_blank" key="ashley">MIT D-Lab</UnderlinedLink>,
+        ],
+        code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/mini-synth" target="_blank" key="MiniSynth-github">GitHub repository</UnderlinedLink>,
+        
+    },
     {
         href: '/projects/machinists-edge',
         title: "Machinist's Edge",
@@ -113,7 +145,7 @@ export const projects = [
             <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank" key="eduardo">Eduardo Zanforlin Mautner</UnderlinedLink>,
             'Leo Baek',
             'Sanghyuk Seo',
-            'Sean Lee',
+            <UnderlinedLink styling="em" href="https://www.seansworkroom.com/" target="_blank" key="ashley">Sean Lee</UnderlinedLink>,
         ],
     },
     {

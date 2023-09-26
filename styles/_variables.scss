@@ -75,7 +75,8 @@
    --font-md: calc(1.3rem + var(--fontSize-increase));
    --font-lg: calc(1.5rem + var(--fontSize-increase));
    --font-xl: calc(2rem + var(--fontSize-increase));
-   --font-xxl: 7rem;
+   --font-2xl: calc(3rem + var(--fontSize-increase));
+   --font-enormous: 7rem;
 
    // === TRANSFORMS =========================
    --active-translateY-sm: translateY(2px);
@@ -147,7 +148,7 @@
       --font-md: calc(1.2rem + var(--fontSize-increase));
       --font-lg: calc(1.3rem + var(--fontSize-increase));
       --font-xl: calc(1.8rem + var(--fontSize-increase));
-      --font-xxl: 5rem;
+      --font-enormous: 5rem;
    }
 }
 
@@ -203,7 +204,7 @@
       --font-md: calc(1.15rem + var(--fontSize-increase));
       --font-lg: calc(1.3rem + var(--fontSize-increase));
       --font-xl: calc(1.75rem + var(--fontSize-increase));
-      --font-xxl: 3.8rem;
+      --font-enormous: 3.8rem;
    }
 }
 
@@ -275,7 +276,7 @@
       --font-md: 13.5px;
       --font-lg: 16px;
       --font-xl: 24px;
-      --font-xxl: 64px;
+      --font-enormous: 64px;
    }
 }
 

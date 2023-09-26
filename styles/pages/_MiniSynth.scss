@@ -1,0 +1,77 @@
+// === USE ====================================
+@use '../breakpoints' as *;
+
+
+
+#minisynth {
+    // internal variables
+    --_icon-width: 38px;
+    --_icons-gap: 30px;
+
+    #design {
+        #icons {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(var(--_icon-width), 1fr));
+            align-items: center;
+            gap: var(--_icons-gap);
+
+            color: var(--clr-900);
+        }
+    }
+
+    #impact {
+        #stats {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            column-gap: var(--pad-xxxl);
+            row-gap: var(--pad-xxl);
+
+            padding-bottom: var(--pad-4xl);
+
+            span {
+                display: block;
+                // text-align: center;
+
+                &.number {
+                    color: var(--clr-900);
+                    font-size: var(--font-2xl);
+                    font-weight: 600;
+                    line-height: 1em;
+                }
+
+                &.label {
+                    color: var(--clr-700);
+                    font-size: var(--font-md);
+                }
+            }
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-laptop) {
+    #minisynth {
+        // internal variables
+        --_icon-width: 33px;
+        --_icons-gap: 27px;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    #minisynth {
+        // internal variables
+        --_icon-width: 30px;
+        --_icons-gap: 24px;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile-md) {
+    #minisynth {
+        // internal variables
+        --_icon-width: 25px;
+        --_icons-gap: 20px;
+    }
+}
