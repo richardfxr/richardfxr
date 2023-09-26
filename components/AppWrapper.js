@@ -83,8 +83,8 @@ export const projects = [
             {hex: '#0d0d0d', name: 'black'},
         ],
         filters: ['design'],
-        media: ['web design', 'development'],
-        cardLabels: ['web design', 'dev'],
+        media: ['UI/UX design', 'development'],
+        cardLabels: ['UI/UX design', 'dev'],
         code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/machinists-edge" target="_blank" key="MachinistsEdge-github">GitHub repository</UnderlinedLink>,
     },
     {
@@ -102,8 +102,8 @@ export const projects = [
             {hex: '#e2d9d4', name: 'light gray'},
         ],
         filters: ['design'],
-        media: ['web design', 'development'],
-        cardLabels: ['web design', 'dev'],
+        media: ['UI/UX design', 'development'],
+        cardLabels: ['UI/UX design', 'dev'],
         code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/weather-dial" target="_blank" key="WeatherDial-github">GitHub repository</UnderlinedLink>,
     },
     {
@@ -121,8 +121,8 @@ export const projects = [
             {hex: '#ededed', name: 'light gray'},
         ],
         filters: ['design'],
-        media: ['web design', 'development'],
-        cardLabels: ['web design', 'dev'],
+        media: ['UI/UX design', 'development'],
+        cardLabels: ['UI/UX design', 'dev'],
         code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/richardfxr" target="_blank" key="richardfxr-github">GitHub repository</UnderlinedLink>,
     },
     {
@@ -140,7 +140,7 @@ export const projects = [
         ],
         filters: ['design'],
         media: ['UI/UX design', 'Product design'],
-        cardLabels: ['UI design', 'product design'],
+        cardLabels: ['UI/UX design', 'product design'],
         collaborators: [
             <UnderlinedLink styling="em" href="https://www.eduardozmautner.com/" target="_blank" key="eduardo">Eduardo Zanforlin Mautner</UnderlinedLink>,
             'Leo Baek',
