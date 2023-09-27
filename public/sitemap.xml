@@ -5,14 +5,14 @@
     <url>
         <loc>https://www.richardfxr.com</loc>
         <lastmod>2023-01-26</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
         <loc>https://www.richardfxr.com/projects</loc>
         <lastmod>2023-01-05</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
@@ -46,8 +46,8 @@
 
     <url>
         <loc>https://www.richardfxr.com/projects/archive</loc>
-        <lastmod>2022-12-19</lastmod>
-        <changefreq>weekly</changefreq>
+        <lastmod>2023-09-25</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
@@ -103,6 +103,13 @@
     <url>
         <loc>https://www.richardfxr.com/projects/machinists-edge</loc>
         <lastmod>2023-03-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://www.richardfxr.com/projects/mini-synth</loc>
+        <lastmod>2023-09-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
