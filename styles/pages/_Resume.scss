@@ -1,6 +1,20 @@
 #resume {
-    #info, #objective, #education, #projects, #skills {
+    .section {
         padding-bottom: var(--pad-6xl);
+    }
+
+    .dlList {
+        .ddList {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: var(--pad-sm);
+        }
+        
+        .bulletPoints {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: var(--pad-sm);
+        }
     }
 
     #info, #objective, #projects {
@@ -10,29 +24,21 @@
         }
     }
 
+    #experience, #projects {
+        .section__main {
+            gap: var(--pad-4xl);
+        }
+
+        .dlList > div {
+            gap: var(--pad-sm);
+        }
+    }
+
     #education {
         .dlList {
             dd {
                 display: flex;
                 flex-direction: column;
-            }
-        }
-    }
-
-    #projects {
-        .section__main {
-            gap: var(--pad-4xl);
-        }
-
-        .dlList {
-            & > div {
-                gap: var(--pad-sm);
-            }
-
-            dd {
-                display: flex;
-                flex-direction: column;
-                gap: var(--pad-sm);
             }
         }
     }
@@ -57,6 +63,126 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+
+
+// === BREAKPOINTS ============================
+@media print {
+    #resume {
+        // varaible override
+        --section-pad-vrt: 18px;
+
+        #printHeader {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            gap: var(--pad-xl);
+
+            padding: var(--pad-sm) 0 var(--pad-xs) 0;
+            border-top: solid var(--border-width) var(--clr-300);
+            margin-right: var(--section-pad-hrz);
+            margin-left: var(--section-pad-hrz);
+
+            svg {
+                width: 26px;
+                padding-top: 3px;
+                padding-right: var(--pad-lg);
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 1.4em;
+            }
+
+            .name h1, .contactInfo p:first-child {
+                font-family: 'Clash Display', sans-serif;
+                font-size: 15px;
+                line-height: 1.1em;
+                text-transform: uppercase;
+            }
+
+            .name h1 {
+                font-weight: 700;
+            }
+
+            .contactInfo {
+                margin-left: auto;
+
+                p {
+                    text-align: right;
+
+                    &:first-child {
+                        color: var(--clr-600);
+                        font-weight: 600;
+                    }
+                }
+            } 
+        }
+
+        .section {
+            padding-bottom: var(--section-pad-vrt);
+
+            h2 {
+                font-weight: 800;
+            }
+        }
+
+        #experience, #projects {
+            .dlList > div {
+                gap: var(--pad-xxxs);
+            }
+        }
+
+        #experience hr.separator {
+            border-color: var(--clr-300);
+        }
+        
+        #education {
+            .dlList {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: var(--pad-xxxl);
+            }
+        }
+
+        .dlList {
+            &.oneCol {
+                gap: 18px;
+            }
+
+            &.detailed dd {
+                color: var(--clr-600);
+            }
+
+            & > div {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+
+            dt, dd {
+                font-size: 12.5px;
+            }
+
+            dt {
+                font-weight: 700;
+            }
+
+            .ddList, .bulletPoints {
+                gap: unset;
+            }
+
+            .bulletPoints {
+                list-style-type: disc;
+                margin-left: 13px;
+            }
+        }
+
+        hr.separator {
+            border-color: #d1d3d4;
         }
     }
 }

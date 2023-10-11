@@ -387,7 +387,7 @@ figcaption {
 }
 
 .screenHidden {
-   display: none !important;
+   display: none;
 }
 
 .forcedClr {
@@ -440,7 +440,7 @@ figcaption {
    }
 
    .screenHidden {
-      display: block !important;
+      display: block;
 
       &.inline {
          display: inline !important;
