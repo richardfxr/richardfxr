@@ -24,6 +24,7 @@ const sections = [
 // === ARCHIVE DATA =======================
 const archive2023 = [
     ['#', 'title', 'type'],
+    [<UnderlinedLink href="https://misc.richardfxr.com/hypnosis" target="_blank" key="hypnosis">Hypnosis</UnderlinedLink>, 'web dev'],
     [<UnderlinedLink href="https://misc.richardfxr.com/scatter" target="_blank" key="scatter">Scatter</UnderlinedLink>, 'web dev'],
     ['Fidelity project', 'web design, dev'],
     [<UnderlinedLink href="https://www.mini-synth.app/" target="_blank" key="miniSynthEdu">Mini Synth</UnderlinedLink>, 'web design, dev, audio'],
