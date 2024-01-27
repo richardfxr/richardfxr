@@ -22,19 +22,6 @@
         row-gap: var(--padRem-xxxs);
     }
 
-    .project {
-        &__colors {
-            gap: calc(var(--padRem-xxs) - 2 * var(--border-width));
-
-            padding-top: var(--pad-xxxs);
-
-            li, div {
-                padding: var(--padRem-xs);
-                border: solid var(--border-width) var(--clr-200);
-            }
-        }
-    }
-
     .desc {
         display: flex;
         flex-direction: column;
@@ -53,12 +40,28 @@
             flex-flow: column nowrap;
             align-items: flex-start;
             gap: var(--pad-xxl);
+
+            padding-bottom: var(--pad-4xl);
+            border-bottom: solid var(--border-width) var(--clr-200);
             
             p {
                 color: var(--clr-1000);
                 font-size: var(--font-md);
             }
             
+        }
+    }
+
+    .project {
+        &__colors {
+            gap: calc(var(--padRem-xxs) - 2 * var(--border-width));
+
+            padding-top: var(--pad-xxxs);
+
+            li, div {
+                padding: var(--padRem-xs);
+                border: solid var(--border-width) var(--clr-200);
+            }
         }
     }
 }

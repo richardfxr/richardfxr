@@ -20,6 +20,11 @@ export default function ProjectInfo({ project, children }) {
                 initial="hidden"
                 animate="show"
                 exit="exit">
+                <div className="desc">
+                    <p id="projectDescTitle" className="md">Description</p>
+                    <div id="projectDescText" className="md" aria-labelledby="projectDescTitle">{children}</div>
+                </div>
+
                 <dl className="twoCol dlList" aria-label="project information">
                     <div>
                         <dt>Date</dt>
@@ -47,7 +52,6 @@ export default function ProjectInfo({ project, children }) {
                             </dd>
                         </div>                       
                     )}
-                    
 
                     {project.media.length === 1 ? (
                         <div>
@@ -106,7 +110,7 @@ export default function ProjectInfo({ project, children }) {
                         </div>
                     ))}
 
-                {project.sponsors && (project.sponsors.length === 1 ? (
+                    {project.sponsors && (project.sponsors.length === 1 ? (
                         <div>
                             <dt>Sponsor</dt>
                             <dd>{project.collaborators[0]}</dd>
@@ -131,11 +135,6 @@ export default function ProjectInfo({ project, children }) {
                         </div>
                     }
                 </dl>
-
-                <div className="desc">
-                    <p id="projectDescTitle" className="md">Description</p>
-                    <div id="projectDescText" className="md" aria-labelledby="projectDescTitle">{children}</div>
-                </div>
             </motion.div>
         </section>
     )
