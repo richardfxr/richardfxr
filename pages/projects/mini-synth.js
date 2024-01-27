@@ -65,7 +65,7 @@ const sections = [
     {heading: "Design", id: "design"},
     {heading: "Accessibility", id: "a11y"},
     {heading: "Impact", id: "impact"},
-    {heading: "Status", id: "status"},
+    {heading: "Code", id: "code"},
     {heading: "Credits", id: "credits"},
 ]
 
@@ -177,7 +177,7 @@ export default function MiniSynth() {
                         <li><TapeArrows /></li>
                     </ul>
 
-                    <p className='md top-4xl'>Mini Synth uses an iconography-based interface to <em>avoid alienating refugees</em> who speak different languages. Through <em>course activities</em> and general usage, refugees would become familiar with the meaning of these icons.</p>
+                    <p className='md top-4xl'>I designed a set of icons for Mini Synth to <em>avoid alienating refugees</em> who speak different languages. Through <em>course activities</em> and general usage, refugees would become familiar with the meaning of these icons.</p>
                 </Section>
 
                 <Section sections={sections} index={3}>
