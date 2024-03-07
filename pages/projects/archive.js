@@ -12,6 +12,7 @@ import UnderlinedLink from '../../components/UnderlinedLink'
 
 // === SECTIONS ===========================
 const sections = [
+    {heading: "2024", id: "twentyfour"},
     {heading: "2023", id: "twentythree"},
     {heading: "2022", id: "twentytwo"},
     {heading: "2021", id: "twentyone"},
@@ -22,13 +23,21 @@ const sections = [
 ]
 
 // === ARCHIVE DATA =======================
+const archive2024 = [
+    ['#', 'title', 'type'],
+    [<UnderlinedLink href="https://vimeo.com/920316540" target="_blank" key="shapes">Shapes - Unity Exploration</UnderlinedLink>, 'motion design, dev'],
+    [<UnderlinedLink href="https://experiments.richardfxr.com/pixel-viewer" target="_blank" key="pixelViewer">Pixel Viewer</UnderlinedLink>, 'web dev'],
+    [<UnderlinedLink href="https://experiments.richardfxr.com/" target="_blank" key="experiments">Experiments</UnderlinedLink>, 'web dev'],
+    ['Power efficient OLED interfaces', 'UI design'],
+]
+
 const archive2023 = [
     ['#', 'title', 'type'],
-    [<UnderlinedLink href="https://misc.richardfxr.com/hypnosis" target="_blank" key="hypnosis">Hypnosis</UnderlinedLink>, 'web dev'],
-    [<UnderlinedLink href="https://misc.richardfxr.com/scatter" target="_blank" key="scatter">Scatter</UnderlinedLink>, 'web dev'],
+    [<UnderlinedLink href="https://experiments.richardfxr.com/hypnosis" target="_blank" key="hypnosis">Hypnosis</UnderlinedLink>, 'web dev'],
+    [<UnderlinedLink href="https://experiments.richardfxr.com/scatter" target="_blank" key="scatter">Scatter</UnderlinedLink>, 'web dev'],
     ['Fidelity project', 'web design, dev'],
-    [<UnderlinedLink href="https://www.mini-synth.app/" target="_blank" key="miniSynthEdu">Mini Synth</UnderlinedLink>, 'web design, dev, audio'],
-    [<UnderlinedLink href="https://misc.richardfxr.com/uganglobe" target="_blank" key="uganglobe">Uganda refugee data viz</UnderlinedLink>, 'data visualization, dev'],
+    [<UnderlinedLink href="https://www.mini-synth.app/" target="_blank" key="miniSynth">Mini Synth</UnderlinedLink>, 'web design, dev, audio'],
+    [<UnderlinedLink href="https://experiments.richardfxr.com/uganglobe" target="_blank" key="uganglobe">Uganda refugee data viz</UnderlinedLink>, 'data visualization, dev'],
     ['Rhino creations', '3D modeling, rendering'],
 ]
 
@@ -186,43 +195,49 @@ export default function Archive() {
             </Head>
 
             <Layout heading="Archive" id="archive">
-                <Section sections={sections} index={0} first>
+            <Section sections={sections} index={0} first>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2023} caption="2023 Archive" indexed="reverse" />
+                        <Table tableData={archive2024} caption="2024 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
                 <Section sections={sections} index={1}>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2022} caption="2022 Archive" indexed="reverse" />
+                        <Table tableData={archive2023} caption="2023 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
                 <Section sections={sections} index={2}>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2021} caption="2021 Archive" indexed="reverse" />
+                        <Table tableData={archive2022} caption="2022 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
                 <Section sections={sections} index={3}>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2020} caption="2020 Archive" indexed="reverse" />
+                        <Table tableData={archive2021} caption="2021 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
                 <Section sections={sections} index={4}>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2019} caption="2019 Archive" indexed="reverse" />
+                        <Table tableData={archive2020} caption="2020 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
                 <Section sections={sections} index={5}>
                     <ScrollContainer horizontal>
-                        <Table tableData={archive2018} caption="2018 Archive" indexed="reverse" />
+                        <Table tableData={archive2019} caption="2019 Archive" indexed="reverse" />
                     </ScrollContainer>
                 </Section>
 
                 <Section sections={sections} index={6}>
+                    <ScrollContainer horizontal>
+                        <Table tableData={archive2018} caption="2018 Archive" indexed="reverse" />
+                    </ScrollContainer>
+                </Section>
+
+                <Section sections={sections} index={7}>
                     <ScrollContainer horizontal>
                         <Table tableData={archive2017} caption="2017 Archive" indexed="reverse" />
                     </ScrollContainer>
