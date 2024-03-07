@@ -126,8 +126,11 @@ export default function Projects() {
                     </Reorder.Group>
 
                     <div id="archive" className="message">
-                        <p className='md'>You can find <em>a complete collection of all my work</em> dating back to 2017 in the archive.</p>
-                        <Button to='/projects/archive' styling="sm">Archive</Button>
+                        <p className='md'>You can find <em>a complete collection of all my work</em> dating back to 2017 in the archive. <em>Smaller explorations</em> can be found on the experiments page. </p>
+                        <ul className='row md'>
+                            <li><Button to='/projects/archive' styling="sm">Archive</Button></li>
+                            <li><Button href='https://experiments.richardfxr.com/' target='_blank' styling="sm">Experiments</Button></li>
+                        </ul>
                     </div>
                 </Section>
             </Layout>
