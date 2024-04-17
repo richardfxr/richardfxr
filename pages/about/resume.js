@@ -56,7 +56,7 @@ export default function Resume() {
                         </div>
                     </dl>
 
-                    <p className='md first'>This is the web version of my résumé, last updated on <em>October 11, 2023</em>. Please use the PDF version below for downloads and prints.</p>
+                    <p className='md first'>This is the web version of my résumé, last updated on <em>April 17, 2024</em>. Please use the PDF version below for downloads and prints.</p>
                     <Button href="/RichardFu-resume.pdf" target="_blank" styling="sm">PDF version</Button>
                 </Section>
 
@@ -167,6 +167,8 @@ export default function Resume() {
                                     <li>SolidWorks</li>
                                     <li>HSMWroks</li>
                                     <li>Blender</li>
+                                    <li>Unity</li>
+                                    <li>Substance 3D Painter</li>
                                 </ul>
                             </dd>
                         </div>
@@ -195,6 +197,7 @@ export default function Resume() {
                                     <li>GLSL</li>
                                     <li>Python</li>
                                     <li>Java</li>
+                                    <li>C#</li>
                                 </ul>
                             </dd>
                         </div>
