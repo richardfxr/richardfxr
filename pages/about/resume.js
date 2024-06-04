@@ -47,8 +47,8 @@ export default function Resume() {
                             <dd>Richard</dd>
                         </div>
                         <div>
-                            <dt>RISD email</dt>
-                            <dd><UnderlinedLink href="mailto:xfu01@risd.edu?subject=A%20Witty%20Title" target="_blank" styling="block">xfu01@risd.edu</UnderlinedLink></dd>
+                            <dt>Email</dt>
+                            <dd><UnderlinedLink href="mailto:theguy@richardfxr.com?subject=A%20Witty%20Title" target="_blank" styling="block">theguy@richardfxr.com</UnderlinedLink></dd>
                         </div>
                         <div>
                             <dt>Website</dt>
@@ -56,7 +56,7 @@ export default function Resume() {
                         </div>
                     </dl>
 
-                    <p className='md first'>This is the web version of my résumé, last updated on <em>April 17, 2024</em>. Please use the PDF version below for downloads and prints.</p>
+                    <p className='md first'>This is the web version of my résumé, last updated on <em>June 3, 2024</em>. Please use the PDF version below for downloads and prints.</p>
                     <Button href="/RichardFu-resume.pdf" target="_blank" styling="sm">PDF version</Button>
                 </Section>
 
@@ -64,11 +64,11 @@ export default function Resume() {
                     <Logo />
                     <div className="name">
                         <h1>Richard (Xiangrui) Fu</h1>
-                        <p>UI/UX designer & front-end developer @ RISD</p>
+                        <p>UI/UX designer & front-end developer</p>
                     </div>
                     <div className="contactInfo">
                         <p><a href="https://www.richardfxr.com/" target="_blank">richardfxr.com</a></p>
-                        <p><a href="mailto:xfu01@risd.edu?subject=A%20Witty%20Title" target="_blank">xfu01@risd.edu</a></p>
+                        <p><a href="mailto:theguy@richardfxr.com?subject=A%20Witty%20Title" target="_blank">theguy@richardfxr.com</a></p>
                     </div>
                 </header>
 
@@ -111,33 +111,36 @@ export default function Resume() {
                 <Section sections={sections} index={3} skipLinkHidden>
                     <dl className="oneCol dlList detailed">
                         <div>
-                            <dt><UnderlinedLink href="https://www.machinists-edge.com/" target="_blank" print="mini-synth.app">Mini Synth</UnderlinedLink></dt>
+                            <dt><UnderlinedLink href="https://testing.raidpools.gg/" target="_blank" print="testing.raidpools.gg">RaidPools</UnderlinedLink></dt>
+                            <dd>
+                                <ul className="bulletPoints">
+                                    <li>Conducted user interviews and created the founding design strategy.</li>
+                                    <li>Created a unique and cohesive brand identity.</li>
+                                    <li>Designed and developed an accessible web front-end.</li>
+                                    <li>Collaborated closely with back-end engineer to implement core functionalities.</li>
+                                    <li>Implemented sprint-based iteration process based on user testing.</li>
+                                </ul>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt><UnderlinedLink href="https://www.fixel.io/canvas/1" target="_blank" print="fixel.io/canvas/1">Fixel</UnderlinedLink></dt>
+                            <dd>
+                                <ul className="bulletPoints">
+                                    <li>Implemented real-time interactions and database.</li>
+                                    <li>Developed touch and trackpad gesture detection for interactions.</li>
+                                    <li>Created novel ways to style unusual UI components.</li>
+                                </ul>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt><UnderlinedLink href="https://www.mini-synth.app/" target="_blank" print="mini-synth.app">Mini Synth</UnderlinedLink></dt>
                             <dd>
                                 <ul className="bulletPoints">
                                     <li>Worked with NGOs and refugees to identify digital education shortcomings.</li>
                                     <li>Collaborated with refugees to design a solution that satisfies their unique needs.</li>
-                                    <li>Developed and deployed a web-based synthesizer app that is used to teach music theory and improve digital literacy.</li>
+                                    <li>Designed and developed a web-based synthesizer that teaches music theory.</li>
                                     <li>Ensured stability and offline functionality through extensive testing.</li>
                                     <li>Resulted in the creation of 184 songs and 1 teaching session in the first week of deployment.</li>
-                                </ul>
-                            </dd>
-                        </div>
-                        <div>
-                            <dt><UnderlinedLink href="https://www.machinists-edge.com/" target="_blank" print="machinists-edge.com">Machinist&#39;s Edge</UnderlinedLink></dt>
-                            <dd>
-                                <ul className="bulletPoints">
-                                    <li>Conducted user interviews to determine needs regarding CNC machining.</li>
-                                    <li>Designed and Developed a set of calculators and charts to improve operational efficiency and safety.</li>
-                                    <li>Feature updates based on feedback from user testing.</li>
-                                </ul>
-                            </dd>
-                        </div>
-                        <div>
-                            <dt><UnderlinedLink href="https://weatherdial.richardfxr.com/" target="_blank" print="weatherdial.richardfxr.com">Weather Dial</UnderlinedLink></dt>
-                            <dd>
-                                <ul className="bulletPoints">
-                                    <li>Experimented with data visualization and animations.</li>
-                                    <li>Designed and developed a performance-optimized circular barplot that is accessible to assistive technologies.</li>
                                 </ul>
                             </dd>
                         </div>
