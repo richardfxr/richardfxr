@@ -25,6 +25,7 @@ const sections = [
 // === ARCHIVE DATA =======================
 const archive2024 = [
     ['#', 'title', 'type'],
+    [<UnderlinedLink href="https://experiments.richardfxr.com/mnca" target="_blank" key="mnca">Multiple Neighborhood Cellular Automaton</UnderlinedLink>, 'web, graphics dev'],
     [<UnderlinedLink href="https://vimeo.com/932316575" target="_blank" key="marbleRun">Marble Run - Unity Exploration</UnderlinedLink>, 'game dev'],
     [<UnderlinedLink href="https://experiments.richardfxr.com/face-draw" target="_blank" key="faceDraw">Face Draw</UnderlinedLink>, 'web dev'],
     [<UnderlinedLink href="https://vimeo.com/920316540" target="_blank" key="shapes">Shapes - Unity Exploration</UnderlinedLink>, 'motion design, dev'],
@@ -35,7 +36,7 @@ const archive2024 = [
 
 const archive2023 = [
     ['#', 'title', 'type'],
-    [<UnderlinedLink href="https://experiments.richardfxr.com/hypnosis" target="_blank" key="hypnosis">Hypnosis</UnderlinedLink>, 'web dev'],
+    [<UnderlinedLink href="https://experiments.richardfxr.com/hypnosis" target="_blank" key="hypnosis">Hypnosis</UnderlinedLink>, 'web, graphics dev'],
     [<UnderlinedLink href="https://experiments.richardfxr.com/scatter" target="_blank" key="scatter">Scatter</UnderlinedLink>, 'web dev'],
     ['Fidelity project', 'web design, dev'],
     [<UnderlinedLink href="https://www.mini-synth.app/" target="_blank" key="miniSynth">Mini Synth</UnderlinedLink>, 'web design, dev, audio'],
