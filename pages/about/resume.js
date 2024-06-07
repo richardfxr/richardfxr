@@ -56,7 +56,7 @@ export default function Resume() {
                         </div>
                     </dl>
 
-                    <p className='md first'>This is the web version of my résumé, last updated on <em>June 3, 2024</em>. Please use the PDF version below for downloads and prints.</p>
+                    <p className='md first'>This is the web version of my résumé, last updated on <em>June 7, 2024</em>. Please use the PDF version below for downloads and prints.</p>
                     <Button href="/RichardFu-resume.pdf" target="_blank" styling="sm">PDF version</Button>
                 </Section>
 
@@ -75,7 +75,20 @@ export default function Resume() {
                 <Section sections={sections} index={1} skipLinkHidden>
                     <dl className="oneCol dlList detailed">
                         <div>
-                            <dt>UX Designer & Front-end Developer @ Fidelity (intern)</dt>
+                            <dt><UnderlinedLink href="https://testing.raidpools.gg/" target="_blank" print="testing.raidpools.gg">Founding Designer & Front-end Developer @ RaidPools</UnderlinedLink></dt>
+                            <dd className="ddList">
+                                <p>09/2023 to present</p>
+                                <ul className="bulletPoints">
+                                    <li>Conducted user interviews and created the founding design strategy.</li>
+                                    <li>Created a unique and cohesive brand identity.</li>
+                                    <li>Designed and developed an accessible web front-end.</li>
+                                    <li>Collaborated closely with back-end engineer to implement core functionalities.</li>
+                                    <li>Implemented sprint-based iteration process based on user testing.</li>
+                                </ul>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>UX Designer & Front-end Developer Intern @ Fidelity</dt>
                             <dd className="ddList">
                                 <p>06/2023 to 08/2023</p>
                                 <ul className="bulletPoints">
@@ -111,18 +124,6 @@ export default function Resume() {
                 <Section sections={sections} index={3} skipLinkHidden>
                     <dl className="oneCol dlList detailed">
                         <div>
-                            <dt><UnderlinedLink href="https://testing.raidpools.gg/" target="_blank" print="testing.raidpools.gg">RaidPools</UnderlinedLink></dt>
-                            <dd>
-                                <ul className="bulletPoints">
-                                    <li>Conducted user interviews and created the founding design strategy.</li>
-                                    <li>Created a unique and cohesive brand identity.</li>
-                                    <li>Designed and developed an accessible web front-end.</li>
-                                    <li>Collaborated closely with back-end engineer to implement core functionalities.</li>
-                                    <li>Implemented sprint-based iteration process based on user testing.</li>
-                                </ul>
-                            </dd>
-                        </div>
-                        <div>
                             <dt><UnderlinedLink href="https://www.fixel.io/canvas/1" target="_blank" print="fixel.io/canvas/1">Fixel</UnderlinedLink></dt>
                             <dd>
                                 <ul className="bulletPoints">
@@ -139,7 +140,6 @@ export default function Resume() {
                                     <li>Worked with NGOs and refugees to identify digital education shortcomings.</li>
                                     <li>Collaborated with refugees to design a solution that satisfies their unique needs.</li>
                                     <li>Designed and developed a web-based synthesizer that teaches music theory.</li>
-                                    <li>Ensured stability and offline functionality through extensive testing.</li>
                                     <li>Resulted in the creation of 184 songs and 1 teaching session in the first week of deployment.</li>
                                 </ul>
                             </dd>
