@@ -28,7 +28,7 @@ export default function Resume() {
                 <title>Résumé | Richard Fu</title>
                 <meta
                     name="description"
-                    content="I’m an industrial design student at Rhode Island School of Design who specializes in UI/UX design and web development."
+                    content="UI/UX designer & front-end web developer who loves blue."
                 />
                 <meta property="og:image" content="https://www.richardfxr.com/images/resume-OGimage-1.jpg" />
                 <meta property="og:image:width" content="1200" />
@@ -56,7 +56,7 @@ export default function Resume() {
                         </div>
                     </dl>
 
-                    <p className='md first'>This is the web version of my résumé, last updated on <em>June 7, 2024</em>. Please use the PDF version below for downloads and prints.</p>
+                    <p className='md first'>This is the web version of my résumé, last updated on <em>June 19, 2024</em>. Please use the PDF version below for downloads and prints.</p>
                     <Button href="/RichardFu-resume.pdf" target="_blank" styling="sm">PDF version</Button>
                 </Section>
 
@@ -79,10 +79,10 @@ export default function Resume() {
                             <dd className="ddList">
                                 <p>09/2023 to present</p>
                                 <ul className="bulletPoints">
-                                    <li>Conducted user interviews and created the founding design strategy.</li>
-                                    <li>Created a unique and cohesive brand identity.</li>
+                                    <li>Created founding design strategy and brand identity.</li>
+                                    <li>Pioneered accessibility-first design process.</li>
                                     <li>Designed and developed an accessible web front-end.</li>
-                                    <li>Collaborated closely with back-end engineer to implement core functionalities.</li>
+                                    <li>Collaborated with back-end engineer to implement core functionalities.</li>
                                     <li>Implemented sprint-based iteration process based on user testing.</li>
                                 </ul>
                             </dd>
