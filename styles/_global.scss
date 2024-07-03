@@ -164,6 +164,17 @@ ul, ol {
       margin-bottom: calc(-1 * var(--padRem-xxxs));
    }
 
+   &.inverse {
+      dt {
+            color: var(--clr-1000);
+            font-weight: 600;
+      }
+
+      dd {
+            color: var(--clr-700);
+      }
+   }
+
    &.detailed {
       dt {
          color: var(--clr-1000);
@@ -210,6 +221,29 @@ ul, ol {
    padding-top: var(--pad-xxxl);
    border-top: solid var(--border-width) var(--clr-200);
    margin-top: var(--pad-5xl);
+}
+
+.codeBlock {
+   white-space: pre-wrap;
+
+   padding: var(--pad-xxxl) 0;
+   border-top: solid var(--border-width) var(--clr-200);
+   border-bottom: solid var(--border-width) var(--clr-200);
+   margin: 0;
+}
+
+.indent {
+   &-1 {
+      padding-left: 4ch;
+   }
+
+   &-2 {
+      padding-left: 8ch;
+   }
+
+   &-3 {
+      padding-left: 12ch;
+   }
 }
 
 
@@ -332,8 +366,12 @@ em {
    }
 }
 
-code {
-   font-family: 'Courier New', monospace;
+code, .mono {
+   font-family: 'JetBrains Mono', monospace;
+   font-size: var(--font-sm);
+   font-weight: 400;
+   line-height: 1.55em;
+   color: var(--clr-700);
 }
 
 figcaption {

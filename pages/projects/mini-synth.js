@@ -96,7 +96,7 @@ export default function MiniSynth() {
                 </ProjectInfo>
 
                 <Section sections={sections} index={0}>
-                    <p className='md bottom-4xl'><UnderlinedLink styling="em" href="https://community.needslist.co/ysat" target="_blank">Youth Social Advocacy Team (YSAT)</UnderlinedLink>, a Ugandan NGO, needed an educational activity that could <em>improve refugee computer literacy</em> using Galaxy S21 phones provided by Samsung.</p>
+                    <p className='md bottom-4xl'><UnderlinedLink styling="em" href="https://youthsat.org/" target="_blank">Youth Social Advocacy Team (YSAT)</UnderlinedLink>, a Ugandan NGO, needed an educational activity that could <em>improve refugee computer literacy</em> using Galaxy S21 phones provided by Samsung.</p>
 
                     <Img
                         img={MiniSynthBackground1}

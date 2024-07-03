@@ -39,6 +39,10 @@
         }
     }
 
+    &.flexChild {
+        align-self: flex-start;
+    }
+
     &.colored {
         // internal variables
         --_clr-bg: var(--clr-rblue);

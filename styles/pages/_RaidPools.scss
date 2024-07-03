@@ -1,0 +1,167 @@
+@use '../breakpoints' as *;
+
+$_play-easing: cubic-bezier(.28,.5,.36,1);
+
+#raidpools {
+    #principlesList{
+        padding-top: var(--pad-xxl);
+        border-top: solid var(--border-width) var(--clr-200);
+    }
+
+    #logoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        color: #FFA245;
+        background-color: #000000;
+        padding: var(--pad-8xl) 0;
+
+        &[data-animate="play"] {
+            svg {
+                .r {
+                    --_magnitudeX: -40px;
+                    --_magnitudeY: 40px;
+
+                    animation: 0.55s $_play-easing 0.3s backwards _slideAndFadeXY;
+                }
+        
+                .a {
+                    --_magnitudeX: -40px;
+                    --_magnitudeY: 40px;
+
+                    animation: 0.5s $_play-easing 0.2s backwards _slideAndFadeXY;
+                }
+        
+                .i {
+                    --_magnitude: 47px;
+
+                    animation: 0.5s $_play-easing 0.15s backwards _slideAndFadeY;
+                }
+        
+                .d {
+                    --_magnitude: 45px;
+
+                    animation: 0.5s $_play-easing _slideAndFadeX;
+                }
+        
+                .p {
+                    --_magnitude: -47px;
+
+                    animation: 0.5s $_play-easing _slideAndFadeY;
+                }
+        
+                .firstO {
+                    --_magnitude: -45px;
+
+                    animation: 0.5s $_play-easing _slideAndFadeX;
+                }
+        
+                .secondO {
+                    --_magnitudeX: -40px;
+                    --_magnitudeY: 40px;
+
+                    animation: 0.5s $_play-easing 0.15s backwards _slideAndFadeXY;
+                }
+        
+                .l {
+                    --_magnitude: 47px;
+
+                    animation: 0.5s $_play-easing 0.2s backwards _slideAndFadeY;
+                }
+        
+                .s {
+                    --_magnitudeX: 40px;
+                    --_magnitudeY: 40px;
+
+                    animation: 0.55s $_play-easing 0.3s backwards _slideAndFadeXY;
+                }
+            }
+        }
+
+        &[data-animate="fade"] {
+            svg {
+                animation: 0.2s ease-in-out forwards _fade;
+            }
+        }
+
+        & + .button {
+            margin-top: var(--pad-lg);
+        }
+        
+        svg {
+            width: 60%;
+            fill: currentColor;
+        }
+    }
+}
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-tablet) {
+    #raidpools {
+        #logoContainer {
+            svg {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    #raidpools {
+        #logoContainer {
+            padding: 20% 0;
+
+            svg {
+                width: 85%;
+            }
+        }
+    }
+}
+
+// === KEYFRAMES ==============================
+@keyframes _slideAndFadeX {
+    from {
+        transform: translateX(var(--_magnitude));
+        fill-opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        fill-opacity: 1;
+    }
+}
+
+@keyframes _slideAndFadeY {
+    from {
+        transform: translateY(var(--_magnitude));
+        fill-opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        fill-opacity: 1;
+    }
+}
+
+@keyframes _slideAndFadeXY {
+    from {
+        transform: translate(var(--_magnitudeX), var(--_magnitudeY));
+        fill-opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        fill-opacity: 1;
+    }
+}
+
+@keyframes _fade {
+    from {
+        fill-opacity: 1;
+    }
+
+    to {
+        fill-opacity: 0;
+    }
+}

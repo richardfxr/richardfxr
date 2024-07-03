@@ -96,7 +96,7 @@ export default function MachinistsEdge() {
 
                     <p className='md top-4xl'>User interviews determined that the following four tools would greatly <em>improve operator efficiency</em>, <em>reduce errors</em>, and <em>improve overall safety</em>:</p>
 
-                    <dl id="pageList" className="twoCol dlList">
+                    <dl id="pageList" className="twoCol dlList inverse">
                         <div>
                             <dt>
                                 <FeedRateIcon />

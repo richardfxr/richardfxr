@@ -10,6 +10,7 @@ import { useMediaQuery} from "../hooks/useMediaQuery"
 import { useSettings } from '../hooks/useSettings'
 import { userSettings } from '../context/Settings'
 // images
+import RaidPoolsThumb from '../public/images/RaidPools/RaidPools-thumbnail.jpg'
 import MiniSynthThumb from '../public/images/MiniSynth/MiniSynth-thumbnail.jpg'
 import RichardfxrThumb from '../public/images/richardfxr/richardfxr-thumbnail.jpg'
 import MachinistsEdgeThumb from '../public/images/MachinistsEdge/MachinistsEdge-thumbnail.jpg'
@@ -39,6 +40,25 @@ export const routes = [
 // === PROJECTS ===========================
 export const projects = [
     {
+        href: '/projects/raidpools',
+        title: "RaidPools",
+        image: {
+            img: RaidPoolsThumb,
+            layoutId: 'RaidPools-thumbnail',
+            alt: 'RaidPools dashboard displayed on an iPad Air. A grid of stacked barplots in orange and white on a black background.'
+        },
+        date: '2023-09 to present',
+        colors: [
+            {hex: '#FFA245', name: 'orange'},
+            {hex: '#000000', name: 'black'},
+            {hex: '#f7eee6', name: 'white'},
+        ],
+        filters: ['design'],
+        media: ['UI/UX design', 'brand identity design', 'development'],
+        cardLabels: ['UI/UX design', 'dev'],
+        roles: ['foundng designer', 'front-end web developer'],
+    },
+    {
         href: '/projects/mini-synth',
         title: "Mini Synth",
         image: {
@@ -67,7 +87,6 @@ export const projects = [
             <UnderlinedLink styling="em" href="https://d-lab.mit.edu/" target="_blank" key="ashley">MIT D-Lab</UnderlinedLink>,
         ],
         code: <UnderlinedLink styling="em" href="https://github.com/richardfxr/mini-synth" target="_blank" key="MiniSynth-github">GitHub repository</UnderlinedLink>,
-        
     },
     {
         href: '/projects/machinists-edge',

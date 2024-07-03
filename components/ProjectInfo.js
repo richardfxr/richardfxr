@@ -134,6 +134,24 @@ export default function ProjectInfo({ project, children }) {
                             <dd>{project.code}</dd>
                         </div>
                     }
+
+                    {project.roles && (project.roles.length === 1 ? (
+                        <div>
+                            <dt>Role</dt>
+                            <dd>{project.roles[0]}</dd>
+                        </div>
+                    ) : (
+                        <div>
+                            <dt>Roles</dt>
+                            <dd>
+                                <ul className="projectInfo__list" aria-label="Roles">
+                                    {project.roles.map((role, index) => (
+                                        <li key={"role" + index}>{role}</li>
+                                    ))}
+                                </ul>
+                            </dd>
+                        </div>
+                    ))}
                 </dl>
             </motion.div>
         </section>
