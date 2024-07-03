@@ -144,7 +144,7 @@ export default function Raidpools() {
 
                     <p className='md top-4xl'>Interviews revealed that growth is difficult for small streamers as <em>viewers cannot discover them organically</em>.</p>
 
-                    <p className='md'>Streamers seek <em>reliable ways</em> to discover other streamers in the <em>same community</em>, exposing them to <em>new viewers</em> who like similar content.</p>
+                    <p className='md'>Streamers seek reliable ways to <em>discover other streamers in the same community</em>, exposing them to <em>new viewers</em> who like similar content.</p>
                 </Section>
 
                 <Section sections={sections} index={1}>

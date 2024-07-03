@@ -56,7 +56,7 @@ export const projects = [
         filters: ['design'],
         media: ['UI/UX design', 'brand identity design', 'development'],
         cardLabels: ['UI/UX design', 'dev'],
-        roles: ['foundng designer', 'front-end web developer'],
+        roles: ['founding designer', 'front-end web developer'],
     },
     {
         href: '/projects/mini-synth',
@@ -66,7 +66,7 @@ export const projects = [
             layoutId: 'MiniSynth-thumbnail',
             alt: 'Mini Synth playing Marble Machine by Wintergatan on an iPhone 14 Pro. The player resembles a cassette tape with a piano keyboard right below it.'
         },
-        date: '2022-04 to 2022-08',
+        date: '2023-04 to 2023-08',
         colors: [
             {hex: '#ff7171', name: 'red'},
             {hex: '#f7f7f7', name: 'white'},

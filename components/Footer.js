@@ -59,7 +59,7 @@ export default function Footer() {
                     </div>
                     
                     <div className='text'>
-                        <p className='xs'><UnderlinedLink href='https://github.com/richardfxr/richardfxr' target='_blank' styling="block">Open source code available on GitHub</UnderlinedLink></p>
+                        <p className='xs'><UnderlinedLink href='https://github.com/richardfxr/richardfxr' target='_blank' styling="block">Source code available on GitHub</UnderlinedLink></p>
                         <p className='xs'>Designed and developed by yours truly. Copyright © 2024 Xiangrui Fu. All rights reserved.</p>
                     </div>
                 </div>
