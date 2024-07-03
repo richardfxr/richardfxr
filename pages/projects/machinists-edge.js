@@ -1,8 +1,6 @@
 // === IMPORTS ============================
 // Next
 import Head from 'next/head'
-// React
-import { useState, useRef, useEffect } from 'react'
 // components
 import { projects } from '../../components/AppWrapper'
 import Layout from "../../components/Layout"
@@ -10,9 +8,6 @@ import ProjectInfo from "../../components/ProjectInfo"
 import Button from "../../components/Button"
 import Section from "../../components/Section"
 import Img from "../../components/Img"
-import ScrollContainer from "../../components/ScrollContainer"
-import Table from "../../components/Table"
-import UnderlinedLink from '../../components/UnderlinedLink'
 // hooks
 import { useIsMotionOK } from "../../hooks/useMediaQuery"
 // images
@@ -52,9 +47,6 @@ export default function MachinistsEdge() {
     const headTitle =`${title} | Richard Fu`
     // get corresponding project object from projects array
     const project = projects.find(elem => elem.title === title)
-
-    // states
-    const isMotionOK = useIsMotionOK()
 
     return (
         <>
@@ -205,7 +197,7 @@ export default function MachinistsEdge() {
                         alt="A OnePlus 7T Pro on a workbench displaying the tool length calculator page in dark mode."
                     />
 
-                    <p className='md top-4xl'>Machinist&#39;s Edge is currently in <em>open alpha</em> and undergoing further user testing. General release is planned for <em>Q3 of 2023</em>.</p>
+                    <p className='md top-4xl'>Machinist&#39;s Edge is currently in <em>open alpha</em>. The project is open source and may see more development in the future.</p>
 
                     <ul className='row md printHidden'>
                         <li><Button styling="sm" href="https://www.machinists-edge.com/" target="_blank">Visit Machinist&#39;s Edge</Button></li>

@@ -135,7 +135,7 @@ export default function Raidpools() {
                 </ProjectInfo>
 
                 <Section sections={sections} index={0}>
-                    <p className='md bottom-4xl'><UnderlinedLink styling="em" href="https://www.twitch.tv/" target="_blank">Twitch</UnderlinedLink> is a video game live-streaming platform that dominates the industry. While it boasts <em>35 million</em> average daily viewers, <UnderlinedLink styling="em" href="https://sullygnome.com/channels/30/metadata" target="_blank">more than 90% of steamers have fewer than 6 viewers</UnderlinedLink>.</p>
+                    <p className='md bottom-4xl'><UnderlinedLink styling="em" href="https://www.twitch.tv/" target="_blank">Twitch</UnderlinedLink> is a video game live-streaming platform that dominates the industry. While it boasts <em>35 million</em> average daily viewers, <UnderlinedLink styling="em" href="https://sullygnome.com/channels/30/metadata" target="_blank">more than 90% of streamers have fewer than 6 viewers</UnderlinedLink>.</p>
 
                     <Img
                         img={RaidPoolsResearch1}

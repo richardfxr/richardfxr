@@ -96,7 +96,7 @@ export const projects = [
             layoutId: 'MachinistsEdge-thumbnail',
             alt: 'The Feed Rate Calculator page displayed on an Asus ZenBook Duo 14. The primary screen shows an illustration of an end mill next to some form input fields; the second screen shows four saves for different end mills.'
         },
-        date: '2022-10 to present',
+        date: '2022-10 to 2023-02',
         colors: [
             {hex: '#fcf6f0', name: 'warm white'},
             {hex: '#0d0d0d', name: 'black'},
