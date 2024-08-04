@@ -123,7 +123,7 @@ export default function Raidpools() {
                     name="description"
                     content="Branding and web app for a SaaS startup that helps small streamers grow."
                 />
-                <meta property="og:image" content="https://www.richardfxr.com/images/RaidPools/RaidPools-OGimage-1.jpg" />
+                <meta property="og:image" content="https://www.richardfxr.com/images/RaidPools/RaidPools-OGimage-2.jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
             </Head>
@@ -271,11 +271,11 @@ export default function Raidpools() {
                     <div className='twoCol'>
                         <Img
                             img={RaidPoolsA11y2}
-                            alt="RaidPools home page displayed on a Nothing Phone 1 in light mode. Red text and graphics on a beige background."
+                            alt="RaidPools home page displayed on a Nothing Phone 1 in high-contrast light mode. Dark red text and graphics on a white background."
                         />
                         <Img
                             img={RaidPoolsA11y3}
-                            alt="RaidPools home page displayed on a Nothing Phone 1 in high-contrast light mode. Dark red text and graphics on a white background."
+                            alt="RaidPools dashboard bar plot displayed on a Nothing Phone 1 in light mode. Red text and graphics on an off-white background."
                         />
                     </div>
 
